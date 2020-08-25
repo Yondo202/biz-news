@@ -10,7 +10,7 @@ function bigVideo(props) {
                     playing={true}
                     // fixed-bottom
                     className='react-player '
-                    url={`http://localhost:1337${big.video[0].url}`}
+                    url={`http://66.181.166.84:1337${big.video[0].url}`}
                     // url='/videos/video3.mp4'
                     width='100%'
                     height='100%'

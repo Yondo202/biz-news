@@ -21,7 +21,7 @@ export class HomeVideo extends Component {
                                     <div className="conPar">
                                         <div className="img">
                                             <div><FaRegPlayCircle></FaRegPlayCircle></div>
-                                            <img src={`http://localhost:1337${el.image.url}`} />
+                                            <img src={`http://66.181.166.84:1337${el.image.url}`} />
                                         </div>
                                         <h6>{el.title} </h6>
                                         <Link href="/videos/[id]" as={`/videos/${el.slug}`} >

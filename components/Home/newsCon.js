@@ -63,7 +63,7 @@ export class newsCon extends Component {
                                 return (
                                     <div key={i} className="conPar" >
                                         <div className="myImg" >
-                                            <img src={`http://localhost:1337${el.image.url}`} />
+                                            <img src={`http://66.181.166.84:1337${el.image.url}`} />
                                             <Link href="/audio/[id]" as={`/audio/${el.id}`}>
                                                 <IoIosPlayCircle />
                                             </Link>

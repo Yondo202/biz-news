@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import Head from 'next/head'
 import Layout from '../../components/Layout'
-import Audio from '../../components/audio/indexAudio'
-
+import Audio from '../../components/audio/Audio'
+import axios from 'axios'
 
 
 export class audio extends Component {
@@ -16,7 +16,7 @@ export class audio extends Component {
                     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap" rel="stylesheet" />
                 </Head>
                 <Layout>
-                    <Audio />
+                    <Audio MainAudio={this.props.allPost} />
                 </Layout>
             </>
 
@@ -25,3 +25,12 @@ export class audio extends Component {
 }
 
 export default audio
+
+export async function getServerSideProps(){
+    const MainAudio = await axios('http://66.181.166.84:1337/posts');
+    //  console.log(ctx.params.id,'heehehe')
+     // let param = ctx.params.id
+     return {props: {
+         allPost: MainAudio.data
+     }}
+ }

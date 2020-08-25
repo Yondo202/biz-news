@@ -22,7 +22,7 @@ function allMain(props) {
                             <div className="flexPar">
                                 <div className="flex1">
                                     {/* <img src={el.image.url} /> */}
-                                    <img src={`http://localhost:1337${el.photos[0].url}`} />
+                                    <img src={`http://66.181.166.84:1337${el.photos[0].url}`} />
                                     <div className="flex1Text">
                                         <Link href="/posts/[slug]" as={`/posts/${el.slug}`}>
                                             <h6 >{el.title}</h6>

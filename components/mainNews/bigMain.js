@@ -29,7 +29,7 @@ function bigMain(props) {
 
                 <div className="title">
                     <h3>{slugData.title}</h3>
-                    <img src={`http://localhost:1337${slugData.photos[0].url}`} />
+                    <img src={`http://66.181.166.84:1337${slugData.photos[0].url}`} />
                     <p>{slugData.desc}</p>
                 </div>
             </div>

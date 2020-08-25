@@ -86,7 +86,7 @@ export class mainNews extends Component {
                                 return (
                                     <div key={i} className="conPar" >
                                         <div className="myImg" >
-                                            <img src={`http://localhost:1337${el.photos[0].url}`} />
+                                            <img src={`http://66.181.166.84:1337${el.photos[0].url}`} />
                                         </div>
                                         <div className="textCon">
                                             <Link href="/posts/[slug]" as={`/posts/${el.slug}`} >

@@ -27,7 +27,7 @@ export class indexNews extends Component {
                                     <Link href="/posts/[slug]" as={`/posts/${el.slug}`} >
                                         <div className="conPar">
                                             <div className="img">
-                                                <img src={`http://localhost:1337${el.photos[0].url}`} />
+                                                <img src={`http://66.181.166.84:1337${el.photos[0].url}`} />
                                             </div>
                                             <h6>{el.title} </h6>
                                             <button type="button">Дэлгэрэнгүй...<BsBoxArrowInLeft /></button>

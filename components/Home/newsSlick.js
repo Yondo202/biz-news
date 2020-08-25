@@ -59,8 +59,8 @@ export class newsSlick extends Component {
 
                         {VideoData.map((el, i) => {
                             return (
-                                <div key={i} className="ConPar" style={{ backgroundImage: `url(http://localhost:1337${el.image.url})` }}>
-                                    <img src={`http://localhost:1337${el.image.url}`} />
+                                <div key={i} className="ConPar" style={{ backgroundImage: `url(http://66.181.166.84:1337${el.image.url})` }}>
+                                    <img src={`http://66.181.166.84:1337${el.image.url}`} />
                                     <div className="svg">
                                         <Link href="/videos/[slug]" as={`/videos/${el.slug}`} >
                                             <RiPlayCircleLine />

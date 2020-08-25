@@ -4,8 +4,10 @@ import axios from 'axios'
 
 
 
-function HomeCon() {
+function HomeCon(props) {
 
+    const videoUrl = props.homeVideo.video.url
+    console.log(props.homeVideo.video.url, 'hahahhahahhaha')
     return (
         <div className="test">
             <section className="homeVide"
@@ -43,7 +45,8 @@ function HomeCon() {
                         minWidth: `100%`,
                     }}
                 >
-                    <source src='/videos/back1.mp4' type="video/mp4" />
+                    {/* <source src='/videos/back1.mp4' type="video/mp4" /> */}
+                    <source src={`http://66.181.166.84:1337${videoUrl}`} type={props.homeVideo.video.mime} />
                 </video>
             </section>
 

@@ -8,7 +8,7 @@ function bigAudio(props) {
     return (
         <Col md={8}>
             <div className="audioPlay">
-                <img src={`http://localhost:1337${MainData.image.url}`} />
+                <img src={`http://66.181.166.84:1337${MainData.image.url}`} />
                 <AudioPlayer
                     // autoPlay
 
@@ -18,7 +18,7 @@ function bigAudio(props) {
                     //     }} 
                     layout="stacked-reverse"
                     header={MainData.title}
-                    src={`http://localhost:1337${MainData.audio.url}`}
+                    src={`http://66.181.166.84:1337${MainData.audio.url}`}
                     onPlay={e => console.log("onPlay")}
                 />
             </div>

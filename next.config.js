@@ -5,13 +5,16 @@ const withVideos = require('next-videos');
 
  
 
+const nextJsConfig = {
+  target: 'serverless',
+};
+
 
 module.exports = withCSS({
   cssLoaderOptions: {
     url: false
   }
 });
-
 
 
 module.exports = withSass({

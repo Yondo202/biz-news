@@ -18,7 +18,7 @@ const Auto = () => {
         const allData = []
 
         const MainPosts = new Array(3).fill().map((e, i) => {
-            axios.get(`http://localhost:1337/posts?id=${i + 1}`).then((res) => {
+            axios.get(`http://66.181.166.84:1337/posts?id=${i + 1}`).then((res) => {
                 // console.log(res.data, 'this my data')
                 allData.push(res.data[0]);
             }).catch((error) => {
@@ -85,7 +85,7 @@ const Auto = () => {
                                 <Link href={`${path}/[slug]`} as={`${path}/${el.slug}`} >
                                     {!search ? '' : (
                                         <div className="resCon">
-                                            <img src={`http://localhost:1337${el.photos[0].url}`} />
+                                            <img src={`http://66.181.166.84:1337${el.photos[0].url}`} />
                                             <h6 className="title" >{el.title}</h6>
                                         </div>
                                     )

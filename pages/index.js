@@ -19,7 +19,7 @@ export default function Home(props) {
       </Head>
       <>
         <Layout>
-          <HomePar allData={newsData} VideoNews={props.VideoNewsHome} AuidoNews={props.AuidoNews} />
+          <HomePar homeVideo={props.homeVideo} allData={newsData} VideoNews={props.VideoNewsHome} AuidoNews={props.AuidoNews} />
         </Layout >
       </>
 
@@ -30,14 +30,16 @@ export default function Home(props) {
 
 
 export async function getServerSideProps(){
-  const VideoNews = await axios(`http://localhost:1337/videos`);
-   const MainNews = await axios(`http://localhost:1337/posts`);
-   const AuidoNews = await axios(`http://localhost:1337/audio`);
+  const VideoNews = await axios(`http://66.181.166.84:1337/videos`);
+   const MainNews = await axios(`http://66.181.166.84:1337/posts`);
+   const AuidoNews = await axios(`http://66.181.166.84:1337/audio`);
+   const HomeVideo = await axios(`http://66.181.166.84:1337/home-background`);
   //  const data = await MainNews.json()
     return {props: {
         MainNews: MainNews.data,
         VideoNewsHome: VideoNews.data,
-        AuidoNews: AuidoNews.data
+        AuidoNews: AuidoNews.data,
+        homeVideo: HomeVideo.data
     }}
 }
 

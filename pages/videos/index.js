@@ -33,7 +33,7 @@ export default videoNews
 
 
 export async function getServerSideProps() {
-    const MainNews = await axios('http://localhost:1337/videos');
+    const MainNews = await axios('http://66.181.166.84:1337/videos');
     //  console.log(ctx.params.id,'heehehe')
     // let param = ctx.params.id
     return {

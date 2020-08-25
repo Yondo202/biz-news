@@ -31,8 +31,8 @@ export default function Home(props) {
 
 export async function getServerSideProps(context) {
   const { id } = context.query
-  const audioNews = await axios(`http://localhost:1337/audio?id=${id}`);
-  const allData = await axios(`http://localhost:1337/audio`);
+  const audioNews = await axios(`http://66.181.166.84:1337/audio?id=${id}`);
+  const allData = await axios(`http://66.181.166.84:1337/audio`);
   //  const data = await audioNews.json()
   console.log(id)
   return {
