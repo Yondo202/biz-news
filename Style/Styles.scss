@@ -277,6 +277,12 @@ body {
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        // .react-parallax-content{
+
+        // }
+            .react-parallax-bgimage{
+                filter: blur(6px);
+            }
         .bigNewsBackground{
             width: 100%;
             height: 90vh;
