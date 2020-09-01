@@ -4,7 +4,8 @@ import HomePar from '../components/home'
 import axios from 'axios'
 
 export default function Home(props) {
-  const newsData = props.MainNews
+  // const newsData = props.MainNews
+
   // console.log(props.VideoNewsHome, 'lalala')
   return (
     <div>
@@ -15,11 +16,15 @@ export default function Home(props) {
 
         <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap" rel="stylesheet" />
+
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet"></link>
+        {/* <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet"></link>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet"></link> */}
       </Head>
       <>
-        <Layout>
-          <HomePar homeVideo={props.homeVideo} allData={newsData} VideoNews={props.VideoNewsHome} AuidoNews={props.AuidoNews} />
+        <Layout AllNews={props.AllNews} bunner1={props.bunner1}>
+          {/* <HomePar homeVideo={props.homeVideo} allData={newsData} VideoNews={props.VideoNewsHome} AuidoNews={props.AuidoNews} /> */}
+          <HomePar TopNews1={props.TopNews1} TopNews2={props.TopNews2} TopNews3={props.TopNews3} AllNews={props.AllNews} HomeVideos={props.HomeVideos}  />
         </Layout >
       </>
 
@@ -30,16 +35,21 @@ export default function Home(props) {
 
 
 export async function getServerSideProps(){
-  const VideoNews = await axios(`http://66.181.166.84:1337/videos`);
-   const MainNews = await axios(`http://66.181.166.84:1337/posts`);
-   const AuidoNews = await axios(`http://66.181.166.84:1337/audio`);
-   const HomeVideo = await axios(`http://66.181.166.84:1337/home-background`);
-  //  const data = await MainNews.json()
+   const TopNews1 = await axios(`http://localhost:1337/posts?slug=top-1`);
+   const TopNews2 = await axios(`http://localhost:1337/posts?slug=top-2`);
+   const TopNews3 = await axios(`http://localhost:1337/posts?slug=top-3`);
+  const AllNews = await axios(`http://localhost:1337/posts`);
+  const HomeVideos = await axios(`http://localhost:1337/videos`);
+  const bunner1 = await axios(`http://localhost:1337/Bunner-1`);
+  // const bunner2 = await axios(`http://localhost:1337/Bunner-2`);
+  // const Vbunner = await axios(`http://localhost:1337/video-bunner`);
     return {props: {
-        MainNews: MainNews.data,
-        VideoNewsHome: VideoNews.data,
-        AuidoNews: AuidoNews.data,
-        homeVideo: HomeVideo.data
+      TopNews1: TopNews1.data,
+      TopNews2: TopNews2.data,
+      TopNews3: TopNews3.data,
+      AllNews: AllNews.data,
+      HomeVideos: HomeVideos.data,
+      bunner1: bunner1.data,
     }}
 }
 

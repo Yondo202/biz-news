@@ -1,8 +1,5 @@
 import React, { Component } from 'react'
-import ReactAudioPlayer from 'react-audio-player';
-
-
-import AudioPlayer from 'react-h5-audio-player';
+// import AudioPlayer from 'react-h5-audio-player';
 import { Container, Row, Col } from 'react-bootstrap';
 import BigAudio from './bigAudio'
 import AllAudio from './smallAudio'
@@ -15,19 +12,17 @@ export class Audio extends Component {
         // console.log('object', big, )
         // console.log('object2', all)
         return (
-            <div style={{  backgroundColor: '#f2f2f2 ' }} className="audioPar">
-                <div style={{height:70, backgroundColor:'rgba(0, 0,0, 0.9)', marginBottom:60}}></div>
+            <div style={{  backgroundColor: '#f2f2f2' }} className="audioPar">
                 {/* <ReactAudioPlayer
                     src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
                     autoPlay
                     controls
                 /> */}
-                <Container fluid>
+                <Container fluid style={{width:'100%'}}>
                     <Row >
                         <BigAudio big={big} />
-                        <AllAudio all={all} />
+                        <AllAudio all={all} big={big}  />
                     </Row>
-
                 </Container>
 
             </div>

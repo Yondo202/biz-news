@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
-import HomeCon from './Home/HomeCon'
-import Slick from './Home/newsSlick'
-import AudioCon from './Home/newsCon'
-import MainNews from '../components/Home/mainNews'
-import Search from '../components/Home/search'
+import TopNews from '../components/Home2/topNews'
+import Bunner from '../components/Home2/bunners'
+import BetweenNews from './Home2/BetweenNews'
+import TopReadNews from './Home2/topReadNews'
 
 
 export class homePar extends Component {
@@ -12,11 +11,14 @@ export class homePar extends Component {
         // console.log(this.props.homeVideo, 'lalallaadadadada')
         return (
             <>
-                <HomeCon homeVideo={this.props.homeVideo} />
+                <TopNews TopNews1={this.props.TopNews1} TopNews2={this.props.TopNews2} TopNews3={this.props.TopNews3} />
+                <Bunner />
+                <BetweenNews HomeVideos={this.props.HomeVideos} />
+                <TopReadNews AllNews={this.props.AllNews}  />
+                {/* <HomeCon homeVideo={this.props.homeVideo} />
                 <Slick VideoNews={this.props.VideoNews} />
                 <MainNews myProp2={this.props.allData} />
-                <AudioCon AuidoNews={this.props.AuidoNews} />
-                {/* <Search /> */}
+                <AudioCon AuidoNews={this.props.AuidoNews} /> */}
             </>
         )
     }

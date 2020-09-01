@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
-import Layout from '../../components/Layout'
+import Layout from '../../components/layout2'
 import HomeVideo from '../../components/Video/indexVideo'
 import Head from 'next/head'
 import axios from 'axios'
-
 
 
 export class videoNews extends Component {
@@ -33,7 +32,7 @@ export default videoNews
 
 
 export async function getServerSideProps() {
-    const MainNews = await axios('http://66.181.166.84:1337/videos');
+    const MainNews = await axios('http://localhost:1337/videos');
     //  console.log(ctx.params.id,'heehehe')
     // let param = ctx.params.id
     return {

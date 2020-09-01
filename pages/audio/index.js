@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Head from 'next/head'
-import Layout from '../../components/Layout'
+import Layout from '../../components/Layout2'
 import Audio from '../../components/audio/Audio'
 import axios from 'axios'
 
@@ -27,7 +27,7 @@ export class audio extends Component {
 export default audio
 
 export async function getServerSideProps(){
-    const MainAudio = await axios('http://66.181.166.84:1337/posts');
+    const MainAudio = await axios('http://localhost:1337/posts');
     //  console.log(ctx.params.id,'heehehe')
      // let param = ctx.params.id
      return {props: {

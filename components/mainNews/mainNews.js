@@ -10,6 +10,9 @@ import Allmain from './allMain'
 
 
 
+
+
+
 export class mainNews extends Component {
 
     state = {
@@ -33,9 +36,9 @@ export class mainNews extends Component {
         console.log(this.props.big, 'big hehe')
 
         return (
-            <div style={{ marginTop: 100 }} className="BackMainNewsPar">
+            <div  className="BackMainNewsPar">
                 <Container className="containers" fluid>
-                    <Row>
+                    <Row style={{marginTop:60}}>
                         < BigMain big={this.props.big} />
                         <Allmain small={this.props.all} />
                     </Row>

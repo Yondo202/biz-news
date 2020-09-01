@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Layout from '../../components/Layout'
+import Layout from '../../components/Layout2'
 import HomePar from '../../components/home'
 import axios from 'axios'
 import Aduios from '../../components/audio/Audio'
@@ -30,11 +30,11 @@ export default function Home(props) {
 }
 
 export async function getServerSideProps(context) {
-  const { id } = context.query
-  const audioNews = await axios(`http://66.181.166.84:1337/audio?id=${id}`);
-  const allData = await axios(`http://66.181.166.84:1337/audio`);
+  const { slug } = context.query
+  const audioNews = await axios(`http://localhost:1337/audio?slug=${slug}`);
+  const allData = await axios(`http://localhost:1337/audio`);
   //  const data = await audioNews.json()
-  console.log(id)
+//   console.log(id)
   return {
     props: {
       big: audioNews.data[0],

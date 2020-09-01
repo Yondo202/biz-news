@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Head from 'next/head'
 
-import Layout from '../../components/Layout'
+import Layout from '../../components/layout2'
 import MainNews from '../../components/mainNews/mainNews'
 import Index from '../../components/mainNews/indexNews'
 
@@ -34,7 +34,7 @@ export default news
 
 
 export async function getServerSideProps(){
-    const MainNews = await axios('http://66.181.166.84:1337/posts');
+    const MainNews = await axios('http://localhost:1337/posts');
     //  console.log(ctx.params.id,'heehehe')
      // let param = ctx.params.id
      return {props: {

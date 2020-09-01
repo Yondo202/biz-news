@@ -18,7 +18,7 @@ class footer extends Component {
                             </Col>
                             <Col md={3}>
                                 <div className="footLogo">
-                                    <img src={require('./image/logo.png')} />
+                                    <img src={require('./image/bizlogo1.png')} />
                                     <p>Find B2B and B2C business contact addresses, phone numbers, city events and news.</p>
                                 </div>
                             </Col>

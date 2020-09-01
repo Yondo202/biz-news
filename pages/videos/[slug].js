@@ -1,6 +1,6 @@
 import React from 'react'
 import axios from 'axios'
-import Layout from '../../components/Layout'
+import Layout from '../../components/Layout2'
 import HomeVideo from '../../components/Video/HomeVideo'
 import Head from 'next/head'
 
@@ -35,8 +35,8 @@ export default Home
 
 export async function getServerSideProps(context) {
     const { slug } = context.query
-    const VideoNews = await axios(`http://66.181.166.84:1337/videos?slug=${slug}`);
-    const allData = await axios(`http://66.181.166.84:1337/videos`);
+    const VideoNews = await axios(`http://localhost:1337/videos?slug=${slug}`);
+    const allData = await axios(`http://localhost:1337/videos`);
     //  const data = await VideoNews.json()
     return {
       props: {

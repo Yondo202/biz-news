@@ -10,8 +10,9 @@ import AllVideo from './allVideo'
 
 
 
+
 export class HomeVideo extends Component {
-    constructor(props ) {
+    constructor(props) {
         super(props);
 
         this.state = {
@@ -43,7 +44,7 @@ export class HomeVideo extends Component {
                 >
                     <div className="bigNewsBackground">
 
-                        <div className="videoPAr player-wrapper" style={{ marginTop: 70 }}>
+                        <div className="videoPAr player-wrapper" >
                             {/* <Player fluid={false} autoplay={true} ref={player => { this.player = player;}}
                                             autoPlay>
                                             <ControlBar autoHide={true} className="my-class">
@@ -58,7 +59,7 @@ export class HomeVideo extends Component {
 
                             <BigVideo big={big} />
                             <AllVideo allData={allData} />
-
+                             
                         </div>
 
 
@@ -80,7 +81,7 @@ export class HomeVideo extends Component {
                     </button>
                 </div> */}
 
-            </div>
+            </div >
         )
     }
 }

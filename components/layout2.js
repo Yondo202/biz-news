@@ -1,12 +1,10 @@
 import React from 'react'
 import Nav from '../components/nav'
 import Footer from '../components/footer'
-import OtherNav from '../components/otherNav'
 
-function Layout(props) {
+function Layout2(props) {
     return (
         <>
-            <OtherNav AllNews={props.AllNews} bunner1={props.bunner1} />
             <Nav />
             {props.children}
             <Footer />
@@ -14,4 +12,4 @@ function Layout(props) {
     )
 }
 
-export default Layout
+export default Layout2
