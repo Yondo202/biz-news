@@ -27,7 +27,6 @@ function bigVideo(props) {
                         height='100%'
                         controls={true}
                     />
-
         </div>
  
 
