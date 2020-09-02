@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Layout from '../../components/Layout2'
+import Layout from '../../components/layout2'
 import HomePar from '../../components/home'
 import axios from 'axios'
 import MainNews from '../../components/mainNews/mainNews'
