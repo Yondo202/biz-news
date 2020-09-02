@@ -6,7 +6,7 @@ import AllAudio from './smallAudio'
 
 export class Audio extends Component {
     render() {
-        console.log(this.props, 'dadada')
+        // console.log(this.props, 'dadada')
         const big = this.props.big
         const all = this.props.all
         // console.log('object', big, )

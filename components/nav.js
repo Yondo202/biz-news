@@ -81,7 +81,7 @@ export class Nav extends Component {
                                         <span >Video news</span><div className="line ln3"></div>
                                     </div>
                                 </Link>
-                                <Link href="/audio/[slug]" as={`/audio/audio-1`}>
+                                <Link href="/audio">
                                     <div className="li">
                                         <span >Podcast</span><div className="line ln4"></div>
                                     </div>
