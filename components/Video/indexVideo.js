@@ -31,7 +31,7 @@ export class indexNews extends Component {
                             return (
                                 <Col md={4} key={i}>
                                     <div className="TopSmall">
-                                        <img src={`http://localhost:1337${el.image.url}`} />
+                                        <img src={`${el.image.url}`} />
                                         <div className="background"></div>
                                         <div className="content">
                                             <div className="catigory">
@@ -63,74 +63,6 @@ export class indexNews extends Component {
                                 </Col>
                             )
                         })}
-
-
-
-
-
-
-
-
-                        {/* <Col md={4}>
-                            <div className="TopSmall">
-                                <img src={require('../image/last1.jpg')} />
-                                <div className="background"></div>
-                                <div className="content">
-                                    <div className="catigory">
-                                        <span>Business</span>
-                                    </div>
-                                    <div className="Title">
-                                        <h2>
-                                            8Bit Coin Sets Market Alight With Initial Performance
-                                </h2>
-                                    </div>
-                                    <div className="smallCont">
-                                        <div className="date">
-                                            <MdDateRange />
-                                            <span>
-                                                March 23, 2019
-                                    </span>
-                                        </div>
-                                        <div className="SeeCount">
-                                            <AiOutlineEye />
-                                            <span>
-                                                185
-                                    </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </Col>
-                        <Col md={4}>
-                            <div className="TopSmall">
-                                <img src={require('../image/last2.jpg')} />
-                                <div className="background"></div>
-                                <div className="content">
-                                    <div className="catigory">
-                                        <span>Business</span>
-                                    </div>
-                                    <div className="Title">
-                                        <h2>
-                                            8Bit Coin Sets Market Alight With Initial Performance
-                                </h2>
-                                    </div>
-                                    <div className="smallCont">
-                                        <div className="date">
-                                            <MdDateRange />
-                                            <span>
-                                                March 23, 2019
-                                    </span>
-                                        </div>
-                                        <div className="SeeCount">
-                                            <AiOutlineEye />
-                                            <span>
-                                                185
-                                    </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </Col> */}
                     </Row>
                 </motion.div>
             </Container>
@@ -211,7 +143,7 @@ export default indexNews
 //                                             <div className="conPar">
 //                                                 <div className="img">
 //                                                     <div><FaRegPlayCircle></FaRegPlayCircle></div>
-//                                                     <img src={`http://localhost:1337${el.image.url}`} />
+//                                                     <img src={`${el.image.url}`} />
 //                                                 </div>
 //                                                 <h6>{el.title} </h6>
 //                                                 <Link href="/videos/[id]" as={`/videos/${el.slug}`} >

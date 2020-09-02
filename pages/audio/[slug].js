@@ -31,8 +31,8 @@ export default function Home(props) {
 
 export async function getServerSideProps(context) {
   const { slug } = context.query
-  const audioNews = await axios(`http://localhost:1337/audio?slug=${slug}`);
-  const allData = await axios(`http://localhost:1337/audio`);
+  const audioNews = await axios(`https://biz-admin.herokuapp.com/audio?slug=${slug}`);
+  const allData = await axios(`https://biz-admin.herokuapp.com/audio`);
   //  const data = await audioNews.json()
 //   console.log(id)
   return {

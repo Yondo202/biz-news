@@ -22,7 +22,7 @@ export class bunners extends Component {
                                     </a>
                                 </div>
                                 <div className="image">
-                                    <img src={`http://localhost:1337${bunner2.image.url}`} />
+                                    <img src={`${bunner2.image.url}`} />
                                     <div className="title">
                                         <h5>{bunner2.nemelt}</h5>
                                     </div>

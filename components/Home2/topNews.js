@@ -28,7 +28,7 @@ export class topNews extends Component {
                         <Row>
                             <Col md={7}>
                                 <div className="TopBig">
-                                    <img src={`http://localhost:1337${this.props.TopNews1[0].photos[0].url}`} />
+                                    <img src={`${this.props.TopNews1[0].photos[0].url}`} />
                                     <div className="background"></div>
                                     <div className="content">
                                         <div className="catigory">
@@ -66,7 +66,7 @@ export class topNews extends Component {
                             </Col>
                             <Col md={5}>
                                 <div className="TopSmall">
-                                    <img src={`http://localhost:1337${this.props.TopNews2[0].photos[0].url}`} />
+                                    <img src={`${this.props.TopNews2[0].photos[0].url}`} />
                                     <div className="background"></div>
                                     <div className="content">
                                         <div className="catigory">
@@ -102,7 +102,7 @@ export class topNews extends Component {
                                     </div>
                                 </div>
                                 <div className="TopSmall2">
-                                     <img src={`http://localhost:1337${this.props.TopNews3[0].photos[0].url}`} />
+                                     <img src={`${this.props.TopNews3[0].photos[0].url}`} />
                                     <div className="background"></div>
                                     <div className="content">
                                         <div className="catigory">

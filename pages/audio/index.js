@@ -27,7 +27,7 @@ export class audio extends Component {
 export default audio
 
 export async function getServerSideProps(){
-    const MainAudio = await axios('http://localhost:1337/audio');
+    const MainAudio = await axios('https://biz-admin.herokuapp.com/audio');
     //  console.log(ctx.params.id,'heehehe')
      // let param = ctx.params.id
      return {props: {

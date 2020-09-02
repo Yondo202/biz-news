@@ -35,8 +35,8 @@ export default Home
 
 export async function getServerSideProps(context) {
     const { slug } = context.query
-    const VideoNews = await axios(`http://localhost:1337/videos?slug=${slug}`);
-    const allData = await axios(`http://localhost:1337/videos`);
+    const VideoNews = await axios(`https://biz-admin.herokuapp.com/videos?slug=${slug}`);
+    const allData = await axios(`https://biz-admin.herokuapp.com/videos`);
     //  const data = await VideoNews.json()
     return {
       props: {

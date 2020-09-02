@@ -95,7 +95,7 @@ export class otherNav extends Component {
                         <div className="golMenu">
                             <Col md={4} sm={12} xs={12}>
                                 <div className="logo">
-                                <img src={`http://localhost:1337${this.props.Logo.logo.url}`} />
+                                <img src={`${this.props.Logo.logo.url}`} />
                                 </div>
                             </Col>
                             <Col md={8} sm={12} xs={12}>
@@ -108,7 +108,7 @@ export class otherNav extends Component {
                                         </a>
                                     </div>
                                     <div className="image">
-                                        <img src={`http://localhost:1337${bunner1.image.url}`} />
+                                        <img src={`${bunner1.image.url}`} />
                                         <div className="title">
                                             <h5>{bunner1.nemelt}</h5>
                                         </div>

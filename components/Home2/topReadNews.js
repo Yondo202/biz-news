@@ -30,7 +30,7 @@ export class topReadNews extends Component {
                                             <Row>
                                                 <Col md={4}>
                                                     <div className="imgPar">
-                                                        <img src={`http://localhost:1337${el.photos[0].url}`} />
+                                                        <img src={`${el.photos[0].url}`} />
                                                         <div className="hover1"></div>
                                                         <div className="hover2"></div>
                                                     </div>

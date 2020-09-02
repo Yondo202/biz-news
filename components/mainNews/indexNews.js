@@ -30,7 +30,7 @@ export class indexNews extends Component {
                             return (
                                 <Col key={i} md={4}>
                                     <div className="TopSmall">
-                                        <img src={`http://localhost:1337${el.photos[0].url}`} />
+                                        <img src={`${el.photos[0].url}`} />
                                         <div className="background"></div>
                                         <div className="content">
                                             <div className="catigory">
@@ -140,7 +140,7 @@ export default indexNews
 //                                             <Link href="/posts/[slug]" as={`/posts/${el.slug}`} >
 //                                                 <div className="conPar">
 //                                                     <div className="img">
-//                                                         <img src={`http://localhost:1337${el.photos[0].url}`} />
+//                                                         <img src={`${el.photos[0].url}`} />
 //                                                     </div>
 //                                                     <h6>{el.title} </h6>
 //                                                     <button type="button">Дэлгэрэнгүй...<BsBoxArrowInLeft /></button>

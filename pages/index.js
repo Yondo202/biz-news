@@ -35,14 +35,14 @@ export default function Home(props) {
 
 
 export async function getServerSideProps(){
-   const TopNews1 = await axios(`http://localhost:1337/posts?slug=top-1`);
-   const TopNews2 = await axios(`http://localhost:1337/posts?slug=top-2`);
-   const TopNews3 = await axios(`http://localhost:1337/posts?slug=top-3`);
-  const AllNews = await axios(`http://localhost:1337/posts`);
-  const HomeVideos = await axios(`http://localhost:1337/videos`);
-  const bunner1 = await axios(`http://localhost:1337/Bunner-1`);
-  const bunner2 = await axios(`http://localhost:1337/Bunner-2`);
-  const Logo = await axios(`http://localhost:1337/logo`);
+   const TopNews1 = await axios(`https://biz-admin.herokuapp.com/posts?slug=top-1`);
+   const TopNews2 = await axios(`https://biz-admin.herokuapp.com/posts?slug=top-2`);
+   const TopNews3 = await axios(`https://biz-admin.herokuapp.com/posts?slug=top-3`);
+  const AllNews = await axios(`https://biz-admin.herokuapp.com/posts`);
+  const HomeVideos = await axios(`https://biz-admin.herokuapp.com/videos`);
+  const bunner1 = await axios(`https://biz-admin.herokuapp.com/Bunner-1`);
+  const bunner2 = await axios(`https://biz-admin.herokuapp.com/Bunner-2`);
+  const Logo = await axios(`https://biz-admin.herokuapp.com/logo`);
   // const Vbunner = await axios(`http://localhost:1337/video-bunner`);
     return {props: {
       TopNews1: TopNews1.data,

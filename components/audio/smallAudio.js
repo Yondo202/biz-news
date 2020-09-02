@@ -37,7 +37,7 @@ function smallAudio(props) {
                         layout="horizontal-reverse"
                         
                         header={MainData.title}
-                        src={`http://localhost:1337${MainData.audio.url}`}
+                        src={`${MainData.audio.url}`}
                         onPlay={e => console.log("onPlay")}
                     />
                 </div>

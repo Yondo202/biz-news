@@ -43,7 +43,6 @@ export class HomeVideo extends Component {
                     blur={{ min: -1, max: 1 }}
                 >
                     <div className="bigNewsBackground">
-
                         <div className="videoPAr player-wrapper" >
                             {/* <Player fluid={false} autoplay={true} ref={player => { this.player = player;}}
                                             autoPlay>
@@ -55,15 +54,9 @@ export class HomeVideo extends Component {
                                             <BigPlayButton position="center" />
                                             <source src={'/videos/video3.mp4'} />
                                         </Player> */}
-
-
                             <BigVideo big={big} />
                             <AllVideo allData={allData} />
-                             
                         </div>
-
-
-
                     </div>
                 </Parallax>
                 {/* <div className="pb-3">

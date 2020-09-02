@@ -39,7 +39,7 @@ function bigAudio(props) {
 
                 <div className="ImgPAr">
                     <div className="img">
-                        <img src={`http://localhost:1337${MainData.image.url}`} />
+                        <img src={`${MainData.image.url}`} />
                         <div className="background"></div>
                     </div>
                     <div className="Contents">

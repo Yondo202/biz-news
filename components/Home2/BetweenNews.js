@@ -19,7 +19,7 @@ export class BetweenNews extends Component {
                             return (
                                 <Col Col md={4} key={i} >
                                     <div className="TopSmall">
-                                        <img src={`http://localhost:1337${el.image.url}`} />
+                                        <img src={`${el.image.url}`} />
                                         <div className="background"></div>
                                         <div className="content">
                                             <div className="catigory">
