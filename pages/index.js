@@ -27,18 +27,16 @@ export default function Home(props) {
           <HomePar bunner2={props.bunner2} TopNews1={props.TopNews1} TopNews2={props.TopNews2} TopNews3={props.TopNews3} AllNews={props.AllNews} HomeVideos={props.HomeVideos}  />
         </Layout >
       </>
-
-
     </div>
   )
 }
 
 
 export async function getServerSideProps(){
-   const TopNews1 = await axios(`https://biz-admin.herokuapp.com/posts?slug=top-1`);
-   const TopNews2 = await axios(`https://biz-admin.herokuapp.com/posts?slug=top-2`);
-   const TopNews3 = await axios(`https://biz-admin.herokuapp.com/posts?slug=top-3`);
   const AllNews = await axios(`https://biz-admin.herokuapp.com/posts`);
+  const TopNews1 = await axios(`https://biz-admin.herokuapp.com/posts?slug=top-1`);
+  const TopNews2 = await axios(`https://biz-admin.herokuapp.com/posts?slug=top-2`);
+  const TopNews3 = await axios(`https://biz-admin.herokuapp.com/posts?slug=top-3`);
   const HomeVideos = await axios(`https://biz-admin.herokuapp.com/videos`);
   const bunner1 = await axios(`https://biz-admin.herokuapp.com/Bunner-1`);
   const bunner2 = await axios(`https://biz-admin.herokuapp.com/Bunner-2`);

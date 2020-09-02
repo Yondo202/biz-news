@@ -25,8 +25,6 @@ export class indexNews extends Component {
             <Container className="betweenNewsPar">
                 <motion.div initial="exit" animate="enter" exit="exit" variants={textVariants}>
                     <Row style={{ marginTop: 30 }}>
-
-
                         {allVideo.map((el, i) => {
                             return (
                                 <Col md={4} key={i}>
