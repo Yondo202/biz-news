@@ -5,7 +5,6 @@ import axios from 'axios'
 
 export default function Home(props) {
   // const newsData = props.MainNews
-
   // console.log(props.VideoNewsHome, 'lalala')
   return (
     <div>
@@ -22,9 +21,10 @@ export default function Home(props) {
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet"></link> */}
       </Head>
       <>
-        <Layout AllNews={props.AllNews} bunner1={props.bunner1} Logo={props.Logo}>
+        {/* <Layout AllNews={props.AllNews} bunner1={props.bunner1} Logo={props.Logo}> */}
+        <Layout AllNews={props.AllNews} bunner1={props.bunner1} >
           {/* <HomePar homeVideo={props.homeVideo} allData={newsData} VideoNews={props.VideoNewsHome} AuidoNews={props.AuidoNews} /> */}
-          <HomePar bunner2={props.bunner2} TopNews1={props.TopNews1} TopNews2={props.TopNews2} TopNews3={props.TopNews3} AllNews={props.AllNews} HomeVideos={props.HomeVideos}  />
+          <HomePar  AllNews={props.AllNews} HomeVideos={props.HomeVideos}  />
         </Layout >
       </>
     </div>
@@ -34,23 +34,27 @@ export default function Home(props) {
 
 export async function getServerSideProps(){
   const AllNews = await axios(`https://biz-admin.herokuapp.com/posts`);
-  const TopNews1 = await axios(`https://biz-admin.herokuapp.com/posts?slug=top-1`);
-  const TopNews2 = await axios(`https://biz-admin.herokuapp.com/posts?slug=top-2`);
-  const TopNews3 = await axios(`https://biz-admin.herokuapp.com/posts?slug=top-3`);
-  const HomeVideos = await axios(`https://biz-admin.herokuapp.com/videos`);
   const bunner1 = await axios(`https://biz-admin.herokuapp.com/Bunner-1`);
-  const bunner2 = await axios(`https://biz-admin.herokuapp.com/Bunner-2`);
-  const Logo = await axios(`https://biz-admin.herokuapp.com/logo`);
+  const HomeVideos = await axios(`https://biz-admin.herokuapp.com/videos`);
+
+ // const TopNews1 = await axios(`https://biz-admin.herokuapp.com/posts?slug=top-1`);
+  // const TopNews2 = await axios(`https://biz-admin.herokuapp.com/posts?slug=top-2`);
+  // const TopNews3 = await axios(`https://biz-admin.herokuapp.com/posts?slug=top-3`);
+  // const bunner2 = await axios(`https://biz-admin.herokuapp.com/Bunner-2`);
+  // const Logo = await axios(`https://biz-admin.herokuapp.com/logo`);
+
+
   // const Vbunner = await axios(`http://localhost:1337/video-bunner`);
     return {props: {
-      TopNews1: TopNews1.data,
-      TopNews2: TopNews2.data,
-      TopNews3: TopNews3.data,
       AllNews: AllNews.data,
       HomeVideos: HomeVideos.data,
       bunner1: bunner1.data,
-      Logo: Logo.data,
-      bunner2: bunner2.data
+
+      // TopNews1: TopNews1.data,
+      // TopNews2: TopNews2.data,
+      // TopNews3: TopNews3.data,
+      // Logo: Logo.data,
+      // bunner2: bunner2.data
     }}
 }
 

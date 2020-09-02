@@ -11,8 +11,8 @@ export class homePar extends Component {
         // console.log(this.props.homeVideo, 'lalallaadadadada')
         return (
             <>
-                <TopNews TopNews1={this.props.TopNews1} TopNews2={this.props.TopNews2} TopNews3={this.props.TopNews3} />
-                <Bunner bunner2={this.props.bunner2} />
+                <TopNews AllNews={this.props.AllNews}  />
+                <Bunner  />
                 <BetweenNews HomeVideos={this.props.HomeVideos} />
                 <TopReadNews AllNews={this.props.AllNews}  />
                 {/* <HomeCon homeVideo={this.props.homeVideo} />

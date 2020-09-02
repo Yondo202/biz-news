@@ -18,9 +18,15 @@ const textVariants = {
 
 export class topNews extends Component {
     render() {
-        console.log(this.props.TopNews1[0].title, 'main Data1')
-        console.log(this.props.TopNews2, 'main Data2')
-        console.log(this.props.TopNews3, 'main Data3')
+
+        // console.log(this.props.TopNews1[0].title, 'main Data1')
+        // console.log(this.props.TopNews2, 'main Data2')
+        // console.log(this.props.TopNews3, 'main Data3')
+        console.log(this.props.AllNews[0].slug, 'myAllData');
+        const myData1 = this.props.AllNews.filter(e => e.slug == 'top-1')
+        const myData2 = this.props.AllNews.filter(e => e.slug == 'top-2')
+        const myData3 = this.props.AllNews.filter(e => e.slug == 'top-3')
+        console.log(myData1, ' this top data')
         return (
             <Container>
                 <motion.div initial="exit" animate="enter" exit="exit" variants={textVariants}>
@@ -28,23 +34,23 @@ export class topNews extends Component {
                         <Row>
                             <Col md={7}>
                                 <div className="TopBig">
-                                    <img src={`${this.props.TopNews1[0].photos[0].url}`} />
+                                    <img src={`${myData1[0].photos[0].url}`} />
                                     <div className="background"></div>
                                     <div className="content">
                                         <div className="catigory">
                                             <span>Business</span>
                                         </div>
                                         <div className="Title">
-                                            <Link href="/posts/[slug]" as={`/posts/${this.props.TopNews1[0].slug}`}>
-                                                <h2>
-                                                    {this.props.TopNews1[0].title}
+                                            <Link href="/posts/[slug]" as={`/posts/${myData1[0].slug}`}>
+                                            <h2>
+                                                {myData1[0].title}
                                                 </h2>
                                             </Link>
                                         </div>
                                         <div className="smallCont">
                                             <div className="date">
                                                 <span>
-                                                    {this.props.TopNews1[0].date}
+                                                    {myData1[0].date}
                                                 </span>
                                             </div>
                                             <div className="SeeCount">
@@ -66,23 +72,23 @@ export class topNews extends Component {
                             </Col>
                             <Col md={5}>
                                 <div className="TopSmall">
-                                    <img src={`${this.props.TopNews2[0].photos[0].url}`} />
+                                <img src={`${myData2[0].photos[0].url}`} />
                                     <div className="background"></div>
                                     <div className="content">
                                         <div className="catigory">
                                             <span>Business</span>
                                         </div>
                                         <div className="Title">
-                                            <Link href="/posts/[slug]" as={`/posts/${this.props.TopNews2[0].slug}`}>
-                                                <h2>
-                                                    {this.props.TopNews2[0].title}
+                                            <Link href="/posts/[slug]" as={`/posts/${myData2[0].slug}`}>
+                                            <h2>
+                                                {myData2[0].title}
                                                 </h2>
                                             </Link>
                                         </div>
                                         <div className="smallCont">
                                             <div className="date">
                                                 <span>
-                                                    {this.props.TopNews2[0].date}
+                                                    {myData2[0].date}
                                                 </span>
                                             </div>
                                             <div className="SeeCount">
@@ -102,23 +108,23 @@ export class topNews extends Component {
                                     </div>
                                 </div>
                                 <div className="TopSmall2">
-                                     <img src={`${this.props.TopNews3[0].photos[0].url}`} />
+                                <img src={`${myData3[0].photos[0].url}`} />
                                     <div className="background"></div>
                                     <div className="content">
                                         <div className="catigory">
                                             <span>Business</span>
                                         </div>
                                         <div className="Title">
-                                        <Link href="/posts/[slug]" as={`/posts/${this.props.TopNews3[0].slug}`}>
-                                                <h2>
-                                                    {this.props.TopNews3[0].title}
+                                            <Link href="/posts/[slug]" as={`/posts/${myData3[0].slug}`}>
+                                            <h2>
+                                                {myData3[0].title}
                                                 </h2>
                                             </Link>
                                         </div>
                                         <div className="smallCont">
                                             <div className="date">
                                                 <span>
-                                                {this.props.TopNews3[0].date}
+                                                    {myData3[0].date}
                                             </span>
                                             </div>
                                             <div className="SeeCount">

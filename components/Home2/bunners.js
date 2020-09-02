@@ -15,16 +15,16 @@ export class bunners extends Component {
                         <Col md={8} sm={12} xs={12}>
                             <div className="TopBunner">
                                 <div className="text">
-                                    <a href={bunner2.url} target="_blank">
+                                    <a href="http://youtube.com" target="_blank">
                                         <h5>
-                                            {bunner2.title}
+                                            Best Business website 
                                         </h5>
                                     </a>
                                 </div>
                                 <div className="image">
-                                    <img src={`${bunner2.image.url}`} />
+                                    <img src={require('../image/forest.jpg')} />
                                     <div className="title">
-                                        <h5>{bunner2.nemelt}</h5>
+                                        <h5>" Bunner Ads "</h5>
                                     </div>
                                 </div>
                                 <div className="ghost">
