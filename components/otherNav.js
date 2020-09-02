@@ -48,7 +48,8 @@ export class otherNav extends Component {
         };
 
         const bunner1 = this.props.bunner1
-        console.log(bunner1, 'bunner1')
+        // console.log(bunner1, 'bunner1')
+        console.log(this.props.Logo.logo.url, 'datalogo')
         return (
             <div className="OtherHeader">
                 <div className="TopHead">
@@ -94,7 +95,7 @@ export class otherNav extends Component {
                         <div className="golMenu">
                             <Col md={4} sm={12} xs={12}>
                                 <div className="logo">
-                                    <img src={require('../components/image/bizlogo1.png')} />
+                                <img src={`http://localhost:1337${this.props.Logo.logo.url}`} />
                                 </div>
                             </Col>
                             <Col md={8} sm={12} xs={12}>

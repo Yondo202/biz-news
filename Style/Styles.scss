@@ -380,7 +380,7 @@ body {
             color: white;
             position: relative;
             overflow: hidden;
-            height: 66.2vh;
+            height: 435px;
             img {
                 width: 100%;
                 height: 100%;
@@ -2241,6 +2241,7 @@ $rhap_font-family: inherit !default;
         .col-md-7 {
             padding-right: 15px;
             .TopBig {
+                height: 210px;
                 margin-bottom: 9.25px;
                 .content {
                     .Title {

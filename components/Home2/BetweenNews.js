@@ -15,7 +15,6 @@ export class BetweenNews extends Component {
 
             <Container className="betweenNewsPar">
                 <Row>
-
                     {HomeVideos.slice(0,3).map((el, i) => {
                             return (
                                 <Col Col md={4} key={i} >

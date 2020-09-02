@@ -22,9 +22,9 @@ export default function Home(props) {
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet"></link> */}
       </Head>
       <>
-        <Layout AllNews={props.AllNews} bunner1={props.bunner1}>
+        <Layout AllNews={props.AllNews} bunner1={props.bunner1} Logo={props.Logo}>
           {/* <HomePar homeVideo={props.homeVideo} allData={newsData} VideoNews={props.VideoNewsHome} AuidoNews={props.AuidoNews} /> */}
-          <HomePar TopNews1={props.TopNews1} TopNews2={props.TopNews2} TopNews3={props.TopNews3} AllNews={props.AllNews} HomeVideos={props.HomeVideos}  />
+          <HomePar bunner2={props.bunner2} TopNews1={props.TopNews1} TopNews2={props.TopNews2} TopNews3={props.TopNews3} AllNews={props.AllNews} HomeVideos={props.HomeVideos}  />
         </Layout >
       </>
 
@@ -41,7 +41,8 @@ export async function getServerSideProps(){
   const AllNews = await axios(`http://localhost:1337/posts`);
   const HomeVideos = await axios(`http://localhost:1337/videos`);
   const bunner1 = await axios(`http://localhost:1337/Bunner-1`);
-  // const bunner2 = await axios(`http://localhost:1337/Bunner-2`);
+  const bunner2 = await axios(`http://localhost:1337/Bunner-2`);
+  const Logo = await axios(`http://localhost:1337/logo`);
   // const Vbunner = await axios(`http://localhost:1337/video-bunner`);
     return {props: {
       TopNews1: TopNews1.data,
@@ -50,6 +51,8 @@ export async function getServerSideProps(){
       AllNews: AllNews.data,
       HomeVideos: HomeVideos.data,
       bunner1: bunner1.data,
+      Logo: Logo.data,
+      bunner2: bunner2.data
     }}
 }
 
