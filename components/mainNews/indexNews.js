@@ -62,6 +62,7 @@ export class indexNews extends Component {
                                             </div>
                                         </div>
                                     </div>
+                                    <div style={{marginBottom:20}}></div>
                                 </Col>
                             )
                         })}

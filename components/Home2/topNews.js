@@ -151,5 +151,4 @@ export class topNews extends Component {
         )
     }
 }
-
 export default topNews

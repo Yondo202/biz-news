@@ -15,15 +15,16 @@ export class BetweenNews extends Component {
 
             <Container className="betweenNewsPar">
                 <Row>
-                    {HomeVideos.slice(0,3).map((el, i) => {
-                            return (
-                                <Col Col md={4} key={i} >
+                    {HomeVideos.slice(0, 3).map((el, i) => {
+                        return (
+                            <Col Col md={4} key={i} >
+                                <div style={{marginBottom:40}}>
                                     <div className="TopSmall">
                                         <img src={`${el.image.url}`} />
                                         <div className="background"></div>
                                         <div className="content">
                                             <div className="catigory">
-                                                <span>Video</span>
+                                                <span>Brand</span>
                                             </div>
                                             <div className="Title">
                                                 <Link href='videos/[slug]' as={`videos/${el.slug}`}>
@@ -49,32 +50,111 @@ export class BetweenNews extends Component {
                                             </div>
                                         </div>
                                     </div>
-                                </Col>
-                            )
+
+                                    <div className='contPar'>
+                                        <Row>
+                                            <Col md={4} sm={4} xs={4}>
+                                                <div className="imgPar">
+                                                    <img src={require('../image/last2.jpg')} />
+                                                    <div className="hover1"></div>
+                                                    <div className="hover2"></div>
+                                                </div>
+                                            </Col>
+                                            <Col md={8} sm={8} xs={8}>
+                                                <div className="content">
+                                                    <div className="catigory">
+                                                        <span>Brand</span>
+                                                    </div>
+                                                    <div className="Title1">
+                                                        <span>
+                                                            Франкфуртаас 261 иргэн эх орондоо ирлээsdgs dgsdgsdgsd gsdgsdgsdg
+                                                </span>
+                                                    </div>
+                                                    <div className="smallCont">
+                                                        <div className="date">
+                                                            <MdDateRange />
+                                                            <span>
+                                                                March 23, 2019
+                                                 </span>
+                                                        </div>
+                                                        <div className="SeeCount">
+                                                            <AiOutlineEye />
+                                                            <span>
+                                                                185
+                                                     </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </Col>
+                                        </Row>
+                                    </div>
+
+                                    <div className='contPar'>
+                                        <Row>
+                                            <Col md={4} sm={4} xs={4}>
+                                                <div className="imgPar">
+                                                    <img src={require('../image/last2.jpg')} />
+                                                    <div className="hover1"></div>
+                                                    <div className="hover2"></div>
+                                                </div>
+                                            </Col>
+                                            <Col md={8} sm={8} xs={8}>
+                                                <div className="content">
+                                                    <div className="catigory">
+                                                        <span>Brand</span>
+                                                    </div>
+                                                    <div className="Title1">
+                                                        <span>
+                                                            Франкфуртаас 261 иргэн эх орондоо ирлээsdgs dgsdgsdgsd gsdgsdgsdg
+                                                </span>
+                                                    </div>
+                                                    <div className="smallCont">
+                                                        <div className="date">
+                                                            <MdDateRange />
+                                                            <span>
+                                                                March 23, 2019
+                                                 </span>
+                                                        </div>
+                                                        <div className="SeeCount">
+                                                            <AiOutlineEye />
+                                                            <span>
+                                                                185
+                                                     </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </Col>
+                                        </Row>
+                                    </div>
+                                </div>
+                            </Col>
+                        )
                     })}
 
 
-
-                    {/* {HomeVideos.filter == 'video' ? HomeVideos.map((el, i) => {
+                    {HomeVideos.slice(0, 3).map((el, i) => {
                         return (
-                            <Col Col md={4} >
+                            <Col Col md={4} key={i} >
                                 <div className="TopSmall">
-                                    <img src={require('../image/top2.jpg')} />
+                                    <img src={`${el.image.url}`} />
                                     <div className="background"></div>
                                     <div className="content">
                                         <div className="catigory">
-                                            <span>{el.filter}</span>
+                                            <span>Startup</span>
                                         </div>
                                         <div className="Title">
-                                            <h2>
-                                                8Bit Coin Sets Market Alight With Initial Performance
-                                            </h2>
+                                            <Link href='videos/[slug]' as={`videos/${el.slug}`}>
+                                                <h2>
+                                                    {el.title}
+                                                </h2>
+                                            </Link>
+
                                         </div>
                                         <div className="smallCont">
                                             <div className="date">
                                                 <MdDateRange />
                                                 <span>
-                                                    March 23, 2019
+                                                    {el.date}
                                                 </span>
                                             </div>
                                             <div className="SeeCount">
@@ -86,9 +166,86 @@ export class BetweenNews extends Component {
                                         </div>
                                     </div>
                                 </div>
+
+                                <div className='contPar'>
+                                    <Row>
+                                        <Col md={4} sm={4} xs={4}>
+                                            <div className="imgPar">
+                                                <img src={require('../image/last2.jpg')} />
+                                                <div className="hover1"></div>
+                                                <div className="hover2"></div>
+                                            </div>
+                                        </Col>
+                                        <Col md={8} sm={8} xs={8}>
+                                            <div className="content">
+                                                <div className="catigory">
+                                                    <span>Startup</span>
+                                                </div>
+                                                <div className="Title1">
+                                                    <span>
+                                                        Франкфуртаас 261 иргэн эх орондоо ирлээsdgs dgsdgsdgsd gsdgsdgsdg
+                                                </span>
+                                                </div>
+                                                <div className="smallCont">
+                                                    <div className="date">
+                                                        <MdDateRange />
+                                                        <span>
+                                                            March 23, 2019
+                                                 </span>
+                                                    </div>
+                                                    <div className="SeeCount">
+                                                        <AiOutlineEye />
+                                                        <span>
+                                                            185
+                                                     </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </Col>
+                                    </Row>
+                                </div>
+
+                                <div className='contPar'>
+                                    <Row>
+                                        <Col md={4} sm={4} xs={4}>
+                                            <div className="imgPar">
+                                                <img src={require('../image/last2.jpg')} />
+                                                <div className="hover1"></div>
+                                                <div className="hover2"></div>
+                                            </div>
+                                        </Col>
+                                        <Col md={8} sm={8} xs={8}>
+                                            <div className="content">
+                                                <div className="catigory">
+                                                    <span>Startup</span>
+                                                </div>
+                                                <div className="Title1">
+                                                    <span>
+                                                        Франкфуртаас 261 иргэн эх орондоо ирлээsdgs dgsdgsdgsd gsdgsdgsdg
+                                                </span>
+                                                </div>
+                                                <div className="smallCont">
+                                                    <div className="date">
+                                                        <MdDateRange />
+                                                        <span>
+                                                            March 23, 2019
+                                                 </span>
+                                                    </div>
+                                                    <div className="SeeCount">
+                                                        <AiOutlineEye />
+                                                        <span>
+                                                            185
+                                                     </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </Col>
+                                    </Row>
+                                </div>
                             </Col>
                         )
-                    }) : false} */}
+                    })}
+
 
 
 

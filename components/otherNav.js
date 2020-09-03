@@ -46,9 +46,8 @@ export class otherNav extends Component {
                 },
             ]
         };
-
         const bunner1 = this.props.bunner1
-        // console.log(bunner1, 'bunner1')
+        console.log(bunner1, 'bunner1')
         // console.log(this.props.Logo.logo.url, 'datalogo')
         return (
             <div className="OtherHeader">
@@ -68,9 +67,6 @@ export class otherNav extends Component {
                                                 </Link>
                                             )
                                         })}
-                                        {/* <span>С.Ганбаатар: 500 сая төгрөгийн цэцэрлэгт хүрээлэнг  С.Ганбаатар: 500 сая төгрөгийн цэцэрлэгт хүрээлэнг С.Ганбаатар: 500 сая төгрөгийн цэцэрлэгт хүрээлэнг</span>
-                                        <span>С.Ганбаатар: 500 сая төгрөгийн цэцэрлэгт хүрээлэнг </span>
-                                        <span>С.Ганбаатар: 500 сая төгрөгийн цэцэрлэгт хүрээлэнг </span> */}
                                     </Slider>
                                 </div>
                             </div>
@@ -95,28 +91,38 @@ export class otherNav extends Component {
                         <div className="golMenu">
                             <Col md={4} sm={12} xs={12}>
                                 <div className="logo">
-                                {/* <img src={`${this.props.Logo.logo.url}`} /> */}
-                                <img src={require('../components/image/bizlogo1.png')} />
+                                    {/* <img src={`${this.props.Logo.logo.url}`} /> */}
+                                    <img src={require('../components/image/bizlogo1.png')} />
                                 </div>
                             </Col>
                             <Col md={8} sm={12} xs={12}>
-                                <div className="TopBunner">
-                                    <div className="text">
-                                        <a href={bunner1.url} target="_blank">
-                                            <h5>
-                                                {bunner1.title}
-                                            </h5>
-                                        </a>
-                                    </div>
-                                    <div className="image">
-                                        <img src={`${bunner1.image.url}`} />
-                                        <div className="title">
-                                            <h5>{bunner1.nemelt}</h5>
-                                        </div>
-                                    </div>
-                                    <div className="ghost">
-                                    </div>
-                                </div>
+                                <Slider {...settings}>
+                                    {bunner1.map((el, i) => {
+                                        return (
+                                            <div key={i}>
+                                                <div className="TopBunner">
+                                                    <div className="text">
+                                                        <a target="_blank">
+                                                            <h5>
+                                                               {el.title}
+                                                {/* {bunner1.title} */}
+                                                            </h5>
+                                                        </a>
+                                                    </div>
+                                                    <div className="image">
+                                                        <img src={`${el.image.url}`} />
+                                                        <div className="title">
+                                                            {el.nemelt}
+                                            {/* <h5>{bunner1.nemelt}</h5> */}
+                                                        </div>
+                                                    </div>
+                                                    <div className="ghost">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        )
+                                    })}
+                                </Slider>
                             </Col>
                         </div>
                     </Row>

@@ -6,7 +6,7 @@ import OtherNav from '../components/otherNav'
 function Layout(props) {
     return (
         <>
-            <OtherNav AllNews={props.AllNews} bunner1={props.bunner1} />
+            {/* <OtherNav AllNews={props.AllNews} bunner1={props.bunner1} /> */}
             <Nav />
             {props.children}
             <Footer />

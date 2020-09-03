@@ -1,6 +1,6 @@
 import React from 'react'
 import axios from 'axios'
-import Layout from '../../components/layout2'
+import Layout from '../../components/Layout'
 import HomeVideo from '../../components/Video/HomeVideo'
 import Head from 'next/head'
 

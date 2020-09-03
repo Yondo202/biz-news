@@ -10,9 +10,7 @@ export class bunners extends Component {
             <Container className="bunnerPar">
                 <Row>
                     <div className="golMenu">
-                        <Col md={2}>
-                        </Col>
-                        <Col md={8} sm={12} xs={12}>
+                        <Col md={12} sm={12} xs={12}>
                             <div className="TopBunner">
                                 <div className="text">
                                     <a href="http://youtube.com" target="_blank">
@@ -30,8 +28,6 @@ export class bunners extends Component {
                                 <div className="ghost">
                                 </div>
                             </div>
-                        </Col>
-                        <Col md={2}>
                         </Col>
                     </div>
                 </Row>

@@ -28,24 +28,24 @@ export class topReadNews extends Component {
                                     return (
                                         <div className='contPar' key={index}>
                                             <Row>
-                                                <Col md={4}>
+                                                <Col md={3}>
                                                     <div className="imgPar">
                                                         <img src={`${el.photos[0].url}`} />
                                                         <div className="hover1"></div>
                                                         <div className="hover2"></div>
                                                     </div>
                                                 </Col>
-                                                <Col md={8}>
+                                                <Col md={9}>
                                                     <div className="content">
                                                         <div className="catigory">
                                                             <span>Business</span>
                                                         </div>
                                                         <div className="Title1">
                                                             <Link href="/posts/[slug]" as={`/posts/${el.slug}`} >
-                                                                <h5>
+                                                                <h6>
                                                                     {/* 8Bit Coin Sets Market Alight With Initial Performance */}
                                                                     {el.title}
-                                                                </h5>
+                                                                </h6>
                                                             </Link>
                                                         </div>
                                                         <div className="smallCont">

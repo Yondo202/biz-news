@@ -13,7 +13,7 @@ class footer extends Component {
             <>
                 <div className="footPar">
                     <Container fluid >
-                        <Row style={{ paddingTop: 80 }} >
+                        <Row style={{ paddingTop: 36}} >
                             <Col md={1}>
                             </Col>
                             <Col md={3}>
@@ -73,9 +73,6 @@ class footer extends Component {
                                         <p className="After" data-tool='dada, mama' >ReteWorld@gmail.com</p>
                                     </div>
                                 </div>
-
-
-
                             </Col>
                             <Col md={3}>
                                 <div className="footMenu3">

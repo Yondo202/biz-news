@@ -206,6 +206,8 @@ body {
             .image {
                 width: 64%;
                 height: 100%;
+                position: relative;
+                object-fit: cover;
                 img {
                     width: 100%;
                     height: 100%;
@@ -215,14 +217,17 @@ body {
                 .title {
                     position: absolute;
                     top: 30%;
-                    left: 50%;
+                    left: 20%;
                     color: white;
+                    height: 48px;
+                    width: 300px;
+                    object-fit: cover;
                 }
             }
-            .ghost {
-                height: 100%;
-                width: 6%;
-            }
+            // .ghost {
+            //     height: 100%;
+            //     width: 2%;
+            // }
         }
     }
 }
@@ -470,6 +475,7 @@ body {
         overflow: hidden;
         position: relative;
         color: white;
+        margin-bottom: 20px;
         img {
             width: 100%;
             height: 210px;
@@ -648,6 +654,9 @@ body {
 }
 
 .bunnerPar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     .golMenu {
         width: 100%;
         flex-direction: row;
@@ -701,7 +710,7 @@ body {
         overflow: hidden;
         position: relative;
         color: white;
-        margin-bottom: 30px;
+        margin-bottom: 0px;
         img {
             width: 100%;
             height: 240px;
@@ -728,15 +737,19 @@ body {
             flex-direction: column;
             transition: all 0.3s ease;
             .catigory {
-                padding: 3px 4px;
-                font-size: 13px;
+                background-color: $myFavColor;
+                padding: 3px 7px;
+                font-size: 12px;
                 // background-color: #ff1744;
-                width: 60px;
                 margin-bottom: 10px;
-                color: $myFavColor;
-                font-weight: 600;
+                color: white;
+                font-weight: 500;
+                text-align: center;
+                align-self: flex-start;
             }
             .Title {
+                height: 49px;
+                overflow: hidden;
                 cursor: pointer;
                 h2 {
                     font-size: 3vh;
@@ -788,6 +801,125 @@ body {
             }
         }
     }
+    .contPar {
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        margin-bottom: 10px;
+        &:hover {
+            .imgPar {
+                img {
+                    height: 100%;
+                    width: 100%;
+                    transform: scale(1);
+                }
+                .hover1 {
+                    top: 0;
+                }
+                .hover2 {
+                    top: -180px;
+                }
+            }
+        }
+        .imgPar {
+            width: 100%;
+            height: 90px;
+            overflow: hidden;
+            position: relative;
+            img {
+                height: 100%;
+                width: 98%;
+                object-fit: cover;
+                transform: scale(1.1);
+                transition: all 0.4s ease;
+                z-index: -1;
+                object-fit: cover;
+            }
+            .hover1 {
+                top: 180px;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                background-color: $myFavColor;
+                opacity: 0.4;
+                position: absolute;
+                z-index: 1;
+                transition: all 0.6s ease;
+            }
+            .hover2 {
+                top: 90px;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                background-color: rgba(255, 255, 255, 0.6);
+                position: absolute;
+                z-index: 1;
+                transition: all 0.6s ease;
+            }
+        }
+        .content {
+            padding-right: 15px;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s ease;
+            .catigory {
+                padding: 3px 0px;
+                font-size: 13px;
+                // background-color: #ff1744;
+                width: 60px;
+                margin-bottom: 0px;
+                color: $myFavColor;
+                font-weight: 500;
+            }
+            .Title1 {
+                cursor: pointer;
+                height: 26px;
+                overflow: hidden;
+                span {
+                    font-size: 14px;
+                    transition: all 0.5s ease;
+                    &:hover {
+                        color: $myFavColor;
+                    }
+                }
+            }
+            .smallCont {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                // width: 36%;
+                // justify-content: space-between;
+                font-size: 11px;
+                margin-bottom: 8px;
+
+                .date {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    span {
+                        padding-left: 5px;
+                        color: rgba(0, 0, 0, 0.7);
+                    }
+                    svg {
+                        color: $myFavColor;
+                        font-size: 13px;
+                    }
+                }
+                .SeeCount {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    padding-left: 25px;
+                    span {
+                        color: rgba(0, 0, 0, 0.7);
+                    }
+                    svg {
+                        color: $myFavColor;
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+    }
 }
 .topReadNews {
     .NewsPar {
@@ -830,7 +962,7 @@ body {
         }
         .imgPar {
             width: 100%;
-            height: 180px;
+            height: 134px;
             overflow: hidden;
             position: relative;
             img {
@@ -881,7 +1013,7 @@ body {
                 cursor: pointer;
                 height: 29px;
                 overflow: hidden;
-                h5 {
+                h6 {
                     transition: all 0.5s ease;
                     &:hover {
                         color: $myFavColor;
@@ -897,7 +1029,6 @@ body {
                 // justify-content: space-between;
                 font-size: 13px;
                 margin-bottom: 8px;
-
                 .date {
                     display: flex;
                     flex-direction: row;
@@ -926,7 +1057,7 @@ body {
                 }
             }
             .Desc {
-                height: 75px;
+                height: 50px;
                 overflow: hidden;
                 opacity: 0.7;
                 p {
@@ -1124,10 +1255,10 @@ body {
 
 
 .footPar {
-    margin-top: 200px;
+    margin-top: 100px;
     width: 100%;
     background-color: #252525;
-    padding-bottom: 100px;
+    padding-bottom: 10px;
     // height:350px;
     .footLogo {
         color: white;
@@ -2134,6 +2265,7 @@ $rhap_font-family: inherit !default;
                 .image {
                     width: 64%;
                     height: 100%;
+                    position: relative;
                     img {
                         width: 100%;
                         height: 100%;
@@ -2143,8 +2275,11 @@ $rhap_font-family: inherit !default;
                     .title {
                         position: absolute;
                         top: 30%;
-                        left: 50%;
+                        left: 10%;
                         color: white;
+                        height: 48px;
+                        width: 200px;
+                        object-fit: cover;
                     }
                 }
                 .ghost {
@@ -2235,6 +2370,27 @@ $rhap_font-family: inherit !default;
     .betweenNewsPar {
         .TopSmall {
             margin-bottom: 10px;
+            .Title {
+                height: 60px;
+                overflow: hidden;
+                cursor: pointer;
+                h2 {
+                    font-size: 3vh;
+                    transition: all 0.5s ease;
+                    &:hover {
+                        color: $myFavColor;
+                    }
+                }
+            }
+        }
+        .contPar{
+            .imgPar{
+                height: 80px;
+            }
+            .content{
+                align-items: flex-start;
+                padding-left: 0px;
+            }
         }
     }
     .TopNewsPar {
@@ -2362,6 +2518,7 @@ $rhap_font-family: inherit !default;
                 .image {
                     width: 64%;
                     height: 100%;
+                    position: relative;
                     img {
                         width: 100%;
                         height: 100%;
@@ -2371,8 +2528,9 @@ $rhap_font-family: inherit !default;
                     .title {
                         position: absolute;
                         top: 30%;
-                        left: 50%;
+                        left: 20%;
                         color: white;
+                        object-fit: cover;
                     }
                 }
                 .ghost {
@@ -3031,7 +3189,7 @@ $rhap_font-family: inherit !default;
                     .title {
                         position: absolute;
                         top: 30%;
-                        left: 30%;
+                        left: 20%;
                         color: white;
                     }
                 }
