@@ -66,11 +66,6 @@ export class indexNews extends Component {
                                 </Col>
                             )
                         })}
-
-
-
-
-
                     </Row>
                 </motion.div>
             </Container>

@@ -120,9 +120,8 @@ export async function getServerSideProps() {
   const AllNews = await axios(`https://biz-admin.herokuapp.com/posts`);
   const bunner1 = await axios(`https://biz-admin.herokuapp.com/bunner-1-s`);
   const HomeVideos = await axios(`https://biz-admin.herokuapp.com/videos`);
-  // const TopNews1 = await axios(`https://biz-admin.herokuapp.com/posts?slug=top-1`);
-  // const TopNews2 = await axios(`https://biz-admin.herokuapp.com/posts?slug=top-2`);
-  // const TopNews3 = await axios(`https://biz-admin.herokuapp.com/posts?slug=top-3`);
+
+  //const HomeAudio = await axios(`https://biz-admin.herokuapp.com/audio`);
   // const bunner2 = await axios(`https://biz-admin.herokuapp.com/Bunner-2`);
   // const Logo = await axios(`https://biz-admin.herokuapp.com/logo`);
   // const Vbunner = await axios(`http://localhost:1337/video-bunner`);
@@ -131,6 +130,7 @@ export async function getServerSideProps() {
       AllNews: AllNews.data,
       HomeVideos: HomeVideos.data,
       bunner1: bunner1.data,
+    //   HomeAudio:HomeAudio.data
       // TopNews1: TopNews1.data,
       // TopNews2: TopNews2.data,
       // TopNews3: TopNews3.data,

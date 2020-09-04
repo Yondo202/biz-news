@@ -7,24 +7,37 @@ import { FaRegComment } from 'react-icons/fa'
 import { MdDateRange } from 'react-icons/md'
 
 export class BetweenNews extends Component {
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            //  AllData : []
+        }
+    }
+
+    // componentDidMount(){
+    //     this.setState({
+    //         AllData: data1,
+    //     })
+    // }
+
+
     render() {
         const HomeVideos = this.props.HomeVideos
-        // console.log(HomeVideos, 'bababba')
-        // const videoData = HomeVideos.slice(0,3)
+        // console.log(this.props.HomeVideos, 'video news')
         return (
-
             <Container className="betweenNewsPar">
                 <Row>
                     {HomeVideos.slice(0, 3).map((el, i) => {
                         return (
                             <Col Col md={4} key={i} >
-                                <div style={{marginBottom:40}}>
+                                <div style={{ marginBottom: 40 }}>
                                     <div className="TopSmall">
                                         <img src={`${el.image.url}`} />
                                         <div className="background"></div>
                                         <div className="content">
                                             <div className="catigory">
-                                                <span>Brand</span>
+                                                <span>{el.filter}</span>
                                             </div>
                                             <div className="Title">
                                                 <Link href='videos/[slug]' as={`videos/${el.slug}`}>
@@ -32,7 +45,6 @@ export class BetweenNews extends Component {
                                                         {el.title}
                                                     </h2>
                                                 </Link>
-
                                             </div>
                                             <div className="smallCont">
                                                 <div className="date">
@@ -50,7 +62,6 @@ export class BetweenNews extends Component {
                                             </div>
                                         </div>
                                     </div>
-
                                     <div className='contPar'>
                                         <Row>
                                             <Col md={4} sm={4} xs={4}>
