@@ -38,7 +38,7 @@ function allMain(props) {
                                     <div className="flexPar">
                                         <div className="flex1">
                                             {/* <img src={el.image.url} /> */}
-                                            <img src={`${el.photos[0].url}`} />
+                                            <img src={`${el.image.url}`} />
                                             <div className="flex1Text">
                                                 <Link href="/posts/[slug]" as={`/posts/${el.slug}`}>
                                                     <h6 >{el.title}</h6>

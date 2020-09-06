@@ -10,7 +10,7 @@ import { MdDateRange } from 'react-icons/md'
 export class topReadNews extends Component {
     render() {
         const AllNews = this.props.AllNews
-        const myData = AllNews.slice(0, 3);
+        const myData = AllNews.reverse().slice(0, 3);
         // console.log(myData, 'odoo jinken');
         return (
             <Container className="topReadNews">
@@ -30,7 +30,7 @@ export class topReadNews extends Component {
                                             <Row>
                                                 <Col md={3}>
                                                     <div className="imgPar">
-                                                        <img src={`${el.photos[0].url}`} />
+                                                        <img src={`${el.image.url}`} />
                                                         <div className="hover1"></div>
                                                         <div className="hover2"></div>
                                                     </div>

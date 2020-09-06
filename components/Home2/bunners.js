@@ -4,7 +4,7 @@ import { Container, Row, Col } from 'react-bootstrap'
 
 export class bunners extends Component {
     render() {
-        console.log(this.props.bunner2, 'bunner yma')
+        // console.log(this.props.bunner2, 'bunner yma')
         const bunner2 = this.props.bunner2
         return (
             <Container className="bunnerPar">

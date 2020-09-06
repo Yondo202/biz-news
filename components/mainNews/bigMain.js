@@ -43,7 +43,7 @@ function bigMain(props) {
 
                         <div className="title">
                             <h3>{slugData.title}</h3>
-                            <img src={`${slugData.photos[0].url}`} />
+                            <img src={`${slugData.image.url}`} />
                             <p>{slugData.desc}</p>
                         </div>
                     </div>
