@@ -3,6 +3,21 @@ import { Container, Row, Col } from 'react-bootstrap'
 import { FaFacebook, FaEye, FaComments } from 'react-icons/fa'
 import { BsFillClockFill } from 'react-icons/bs'
 import { motion } from 'framer-motion'
+import {
+    FacebookShareButton,
+    TwitterShareButton,
+    EmailShareButton,
+} from 'react-share';
+
+import {
+    FacebookShareCount,
+} from 'react-share';
+
+import {
+    FacebookIcon,
+    EmailIcon,
+    TwitterIcon,
+} from 'react-share';
 
 
 let easing = [0.5, 0.9, 0.16, 0.95];
@@ -17,7 +32,7 @@ const textVariants = {
 
 function bigMain(props) {
 
-    console.log(props.big, 'hiahia')
+    console.log(props.big, 'hiahia big big big')
     console.log(props.small, 'small hehe')
 
     const slugData = props.big
@@ -49,9 +64,13 @@ function bigMain(props) {
                     </div>
                 </motion.div>
             </motion.div>
+            <FacebookShareButton url={`https://biznet-news.vercel.app/${slugData.path}/${slugData.slug}`} style={{ width: 50, height: 50 }} >
+                <FacebookIcon size={30} />
+                <FacebookShareCount url={`https://biznet-news.vercel.app/${slugData.path}/${slugData.slug}`}>
+                    {shareCount => <h1 className="myShareCountWrapper">{shareCount}</h1>}
+                </FacebookShareCount>
+            </FacebookShareButton>
         </Col>
-
-
     )
 }
 
