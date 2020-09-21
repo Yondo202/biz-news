@@ -9,7 +9,7 @@ import { FaSearch } from 'react-icons/fa'
 import HamburgerMenu from 'react-hamburger-menu'
 import { useRouter } from 'next/router'
 import { Container } from 'react-bootstrap'
-
+import SearchBtn from '../components/search'
 
 
 export class Nav extends Component {
@@ -19,8 +19,19 @@ export class Nav extends Component {
         this.state = {
             open: '',
             className: "headPar",
-            color: 'white'
+            color: 'white',
+            search: '',
+            selectedContent: newsData[0]
         }
+    }
+
+
+    setSearch = (e) => {
+        this.setState({ search: e.target.value });
+    }
+    clickHandler = (e) => {
+        console.log(e.target, 'heey');
+        this.setState({ selectedContent: newsData[e.target.tabIndex] })
     }
 
     componentDidMount() {
@@ -88,7 +99,8 @@ export class Nav extends Component {
                                 </Link>
                             </ul>
                             <div className="searchInp">
-                                <input type="input" placeholder="Хайх" />
+                                {/* <input type="input" placeholder="Хайх" /> */}
+                                <SearchBtn AllNews={this.props.AllNews} />
                                 <div className="icon">
                                     <FaSearch />
                                 </div>
@@ -122,6 +134,40 @@ export class Nav extends Component {
 
 export default Nav
 
+
+
+const newsData = [
+    {
+        title: 'ШОРОНГИЙН ДУУЛИАНААР АМЖУУЛСАН ХУУЛЬ БУС ТОМИЛГОО',
+        desc: 'Ерөнхий сайд У.Хүрэлсүх “Надаас болон миний тэргүүлсэн Засгийн газраас хууль бус зүйл битгий хүсээрэй, хууль бус зүйл хийлгэх гэж битгий шахаж шаардаарай. Би зөвхөн хуулинд захирагдаж ажиллах',
+        date: '2019.05.10',
+        img: require('./image/news.jpg')
+    },
+    {
+        title: ' АНУ МАНЛАЙЛЛАА ГЕРМАНД АЛДЖЭЭ',
+        desc: '11Think You’re Cut Out for Doing political? Take This Quiz. There are many variations of passages of have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly believable',
+        date: '2019.05.11',
+        img: require('./image/slider2.jpg')
+    },
+    {
+        title: 'КИМ ЖОН УН ТОМ СОРИЛТЫН ӨМНӨ ИРЭЭД БАЙНА',
+        desc: 'Хойд Солонгосын үе үеийн удирдагч нар хэдэн арван жилийн турш улс эх орноо гаднын ертөнцөөс, капиталистууд, АНУ эсвэл бусад дайсагнасан хүчинүүдээс хамгаална гэсэн үзэл баримтлал',
+        date: '2016.01.10',
+        img: require('./image/slider2.jpg')
+    },
+    {
+        title: 'УОК сургууль, цэцэрлэгийг нээх эсэхийг хэлэлцэнэ',
+        desc: 'Одоогоор дэлхий даяар 150 гаруй лаборатори, сургууль эмнэлэг коронавирусийн эсрэг вакцин бүтээхээр ажиллаж байгаа ба үүний 20 гаруй нь хүн дээр турших туршилтаа эхлүүлээд',
+        date: '2016.01.10',
+        img: require('./image/slider2.jpg')
+    },
+    {
+        title: 'Улсын онцгой комиссын шийдвэрээр энэ сард үйлдэх тусгай нислэгийг нэмэгдүүлж 14 нислэгээр',
+        desc: '22Think You’re Cut Out for Doing political? Take This Quiz. There are many variations of passages of have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly believable',
+        date: '2016.01.10',
+        img: require('./image/slider2.jpg')
+    }
+]
 
 
 

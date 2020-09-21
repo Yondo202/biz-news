@@ -75,6 +75,6 @@ const newsData = [
         title: 'Улсын онцгой комиссын шийдвэрээр энэ сард үйлдэх тусгай нислэгийг нэмэгдүүлж 14 нислэгээр',
         desc: '22Think You’re Cut Out for Doing political? Take This Quiz. There are many variations of passages of have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly believable',
         date: '2016.01.10',
-        img: require('../image/download.jpg')
+        img: require('../image/slider2.jpg')
     }
 ]

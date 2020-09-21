@@ -154,10 +154,6 @@ export class BetweenNews extends Component {
                     </Col>
 
 
-
-
-
-
                     <Col Col md={4} >
                         <div style={{ marginBottom: 40 }}>
                             <div className="TopSmall">

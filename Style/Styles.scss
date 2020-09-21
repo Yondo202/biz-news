@@ -44,6 +44,47 @@ body {
 //     clip-path: polygon(0 0, 50% 0, 100% 50%, 0 100%);
 // }
 
+.searchPAr {
+    input {
+        border-style: none;
+        border-bottom: 1px solid black;
+        padding: 5px 5px;
+    }
+    svg {
+        // background-color: rgba(0, 200, 250, 0.2);
+        padding: 5px 5px;
+        font-size: 26px;
+    }
+    .ResultPar {
+        z-index: 99;
+        position: absolute;
+        background-color: rgb(255, 255, 255);
+        margin: 10px 0px;
+        transition: all ease 0.4s;
+        .resCon {
+            cursor: pointer;
+            display: flex;
+            flex-direction: row;
+            padding: 10px 10px;
+            align-items: center;
+            border-bottom: 1px solid rgba(82, 37, 37, 0.5);
+            border-right: 1px solid rgba(82, 37, 37, 0.5);
+            img {
+                width: 60px;
+                height: 60px;
+                object-fit: cover;
+            }
+            .title {
+                margin-left: 10px;
+                width: 300px;
+                font-size: 16px;
+                height: 38px;
+                overflow: hidden;
+            }
+        }
+    }
+}
+
 .homeVide {
     position: relative;
     .background {
@@ -351,7 +392,7 @@ body {
             input {
                 width: 250px;
                 height: 100%;
-                padding: 5px 10px;
+                padding: 15px 10px;
                 font-size: 14px;
                 background-color: #37393b;
                 border-style: none;
@@ -3071,6 +3112,46 @@ $rhap_font-family: inherit !default;
 }
 
 @media only screen and (max-width: 500px) {
+    .searchPAr {
+        input {
+            border-style: none;
+            border-bottom: 1px solid black;
+            padding: 5px 5px;
+        }
+        svg {
+            // background-color: rgba(0, 200, 250, 0.2);
+            padding: 5px 5px;
+            font-size: 26px;
+        }
+        .ResultPar {
+            z-index: 99;
+            position: absolute;
+            background-color: rgb(255, 255, 255);
+            margin: 10px 0px;
+            transition: all ease 0.4s;
+            .resCon {
+                cursor: pointer;
+                display: flex;
+                flex-direction: row;
+                padding: 10px 10px;
+                align-items: center;
+                border-bottom: 1px solid rgba(82, 37, 37, 0.5);
+                border-right: 1px solid rgba(82, 37, 37, 0.5);
+                img {
+                    width: 60px;
+                    height: 60px;
+                    object-fit: cover;
+                }
+                .title {
+                    margin-left: 10px;
+                    width: 250px;
+                    font-size: 16px;
+                    height: 38px;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
     .rhap_header {
         height: 63px;
         overflow: hidden;
@@ -3279,7 +3360,7 @@ $rhap_font-family: inherit !default;
                 input {
                     width: 180px;
                     height: 100%;
-                    padding: 5px 10px;
+                    padding: 15px 10px;
                     font-size: 14px;
                     background-color: #37393b;
                     border-style: none;
@@ -3308,46 +3389,6 @@ $rhap_font-family: inherit !default;
 
 
 
-.searchPAr {
-    input {
-        border-style: none;
-        border-bottom: 1px solid black;
-        padding: 5px 5px;
-    }
-    svg {
-        // background-color: rgba(0, 200, 250, 0.2);
-        padding: 5px 5px;
-        font-size: 26px;
-    }
-    .ResultPar {
-        z-index: 99;
-        position: absolute;
-        background-color: rgb(255, 255, 255);
-        margin: 10px 0px;
-        transition: all ease 0.4s;
-        .resCon {
-            cursor: pointer;
-            display: flex;
-            flex-direction: row;
-            padding: 10px 10px;
-            align-items: center;
-            border-bottom: 1px solid rgba(82, 37, 37, 0.5);
-            border-right: 1px solid rgba(82, 37, 37, 0.5);
-            img {
-                width: 60px;
-                height: 60px;
-                object-fit: cover;
-            }
-            .title {
-                margin-left: 10px;
-                width: 400px;
-                font-size: 16px;
-                height: 38px;
-                overflow: hidden;
-            }
-        }
-    }
-}
 
 // .test {
 //     position: relative;

@@ -7,7 +7,7 @@ function Layout(props) {
     return (
         <>
             {/* <OtherNav AllNews={props.AllNews} bunner1={props.bunner1} /> */}
-            <Nav />
+            <Nav AllNews={props.AllNews} />
             {props.children}
             <Footer />
         </>
