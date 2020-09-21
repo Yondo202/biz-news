@@ -8,12 +8,7 @@ import BigMain from './bigMain'
 import Allmain from './allMain'
 
 
-
-
-
-
-
-export class mainNews extends Component {
+export class mainNews extends Component {   
 
     state = {
         search: '',

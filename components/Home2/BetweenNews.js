@@ -165,7 +165,7 @@ export class BetweenNews extends Component {
                                 <div className="background"></div>
                                 <div className="content">
                                     <div className="catigory">
-                                        <span>{Brandfilter[0].filter}</span>
+                                        <span>{Businessfilter[0].filter}</span>
                                     </div>
                                     <div className="Title">
                                         <Link href={`${Businessfilter[0].path}/[slug]`} as={`${Businessfilter[0].path}/${Businessfilter[0].slug}`}>
