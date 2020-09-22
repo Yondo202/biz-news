@@ -12,7 +12,6 @@ import Link from 'next/link';
 import axios from 'axios'
 
 
-
 export class news extends Component {
     render() {
         // console.log(this.props.test)
@@ -153,9 +152,7 @@ export class news extends Component {
         )
     }
 }
-
 export default news
-
 
 export async function getServerSideProps(){
     const MainNews = await axios('https://biz-admin.herokuapp.com/posts');

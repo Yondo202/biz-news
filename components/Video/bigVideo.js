@@ -21,7 +21,9 @@ function bigVideo(props) {
                         playing={true}
                         // fixed-bottom
                         className='react-player '
-                        url={`${big.video[0].url}`}
+                        // url={`${big.video[0].url}`}
+                        url={`${big.video}`}
+                        // url="https://www.facebook.com/100213924895572/videos/1838876309584888/"
                         // url='/videos/video3.mp4'
                         width='100%'
                         height='100%'

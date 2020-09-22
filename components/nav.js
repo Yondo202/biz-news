@@ -122,7 +122,6 @@ export class Nav extends Component {
                                     animationDuration={0.5}
                                 />
                             </label>
-
                         </div>
                     </Container>
                 </div>
