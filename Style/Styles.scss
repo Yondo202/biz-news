@@ -238,7 +238,7 @@ body {
                 padding: 0px 10px;
                 h5 {
                     height: 50px;
-                    width: 200px;
+                    width: 100%;
                     overflow: hidden;
                     color: white;
                 }
@@ -459,11 +459,12 @@ body {
                     margin-bottom: 10px;
                 }
                 .Title {
-                    height: 77px;
+                    height: 67px;
                     overflow: hidden;
                     cursor: pointer;
                     h2 {
                         // font-size: 3vh;
+                        line-height: 100%;
                         transition: all 0.5s ease;
                         &:hover {
                             color: $myFavColor;
@@ -2554,6 +2555,7 @@ $rhap_font-family: inherit !default;
                 background-color: $myFavColor;
                 display: flex;
                 .text {
+                    display: none;
                     display: flex;
                     width: 30%;
                     justify-content: center;
@@ -2561,7 +2563,7 @@ $rhap_font-family: inherit !default;
                     padding: 0px 10px;
                     h5 {
                         height: 50px;
-                        width: 200px;
+                        width: 100%;
                         overflow: hidden;
                         color: white;
                     }
