@@ -41,7 +41,6 @@ function allVideo(props) {
                                     <div className="date">{el.date}</div>
                                 </div>
                             </motion.div>
-
                         </motion.div>
 
                     )

@@ -7,8 +7,24 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { FaPlay } from 'react-icons/fa'
 import BigVideo from './bigVideo'
 import AllVideo from './allVideo'
+import { AiOutlineEye } from 'react-icons/ai'
+import { FaRegComment } from 'react-icons/fa'
+import { MdDateRange } from 'react-icons/md'
+import {
+    FacebookShareButton,
+    TwitterShareButton,
+    EmailShareButton,
+} from 'react-share';
 
+import {
+    FacebookShareCount,
+} from 'react-share';
 
+import {
+    FacebookIcon,
+    EmailIcon,
+    TwitterIcon,
+} from 'react-share';
 
 
 export class HomeVideo extends Component {
@@ -17,18 +33,16 @@ export class HomeVideo extends Component {
 
         this.state = {
             search: '',
-            selectedContent: VideoData[0],
             myClass: 'offMenu'
         };
 
     }
-
     setSearch = (e) => {
         this.setState({ search: e.target.value });
     }
 
     render() {
-        console.log(this.props.big, 'big shuu ')
+        console.log(this.props.big, 'big shuu deeeeeeeeeeeee ')
         console.log(this.props.all, 'tiimee all')
 
         const big = this.props.big
@@ -36,7 +50,8 @@ export class HomeVideo extends Component {
         return (
             <div className="VideoParent">
                 <Parallax
-                    bgImage={require(`../image/slider3.jpg`)}
+                    // bgImage={require(`../image/slider3.jpg`)}
+                    bgImage={`${this.props.big.image.url}`}
                     bgImageAlt="the cat"
                     strength={500}
                     className="bigNews"
@@ -55,25 +70,64 @@ export class HomeVideo extends Component {
                                             <source src={'/videos/video3.mp4'} />
                                         </Player> */}
                             <BigVideo big={big} />
-                            <AllVideo allData={allData} />
+                            {/* <AllVideo allData={allData} /> */}
+                            <div className="VideoContents">
+                                <div className="mainCon">
+                                    <div className="filterPAr">
+                                        <span>
+                                            Business
+                                        </span>
+                                        <div className="line"></div>
+                                    </div>
+                                    <span>
+
+                                    </span>
+                                    <div className="titlePAr">
+                                        <span>
+                                            Газар нутгийн халдашгүй Монгол Улсын тусгаар тогтнол, газар нутгийн халдашгүй
+                                        </span>
+                                    </div>
+                                    <div className="date">
+                                        <MdDateRange />
+                                        <span>
+                                            2020.03.19
+                                        </span>
+                                    </div>
+                                </div>
+                                <div className="SeeAndCount">
+                                    <div className="shareParents">
+                                        <FacebookShareButton url={`https://biznet-news.vercel.app/${big.path}/${big.slug}`} style={{ width: 50, height: 50 }} >
+                                            <FacebookIcon size={30} >hahahahah</FacebookIcon>
+                                            <FacebookShareCount url={`https://biznet-news.vercel.app/${big.path}/${big.slug}`}>
+                                                {shareCount => <h1 className="myShareCountWrapper">{shareCount}</h1>}
+                                            </FacebookShareCount>
+                                        </FacebookShareButton>
+
+                                        <TwitterShareButton url={`https://biznet-news.vercel.app/${big.path}/${big.slug}`} style={{ width: 50, height: 50 }} >
+                                            <TwitterIcon size={30} >hahahahah</TwitterIcon>
+                                        </TwitterShareButton>
+
+                                        <EmailShareButton url={`https://biznet-news.vercel.app/${big.path}/${big.slug}`} style={{ width: 50, height: 50 }} >
+                                            <EmailIcon size={30} >hahahahah</EmailIcon>
+                                        </EmailShareButton>
+                                    </div>
+                                    <div className="counts">
+                                        <div className="seeCount">
+                                            <AiOutlineEye />
+                                            <span>255</span>
+                                        </div>
+                                        <div className="commentCount">
+                                            <FaRegComment />
+                                            <span>33</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </Parallax>
-                {/* <div className="pb-3">
-                    <button onClick={this.changeSource('sintelTrailer')} className="mr-3">
-                        Sintel teaser
-                    </button>
-                    <button onClick={this.changeSource('bunnyTrailer')} className="mr-3">
-                        Bunny trailer
-                    </button>
-                    <button onClick={this.changeSource('bunnyMovie')} className="mr-3">
-                        Bunny movie
-                  </button>
-                    <button onClick={this.changeSource('test')} className="mr-3">
-                        Test movie
-                    </button>
-                </div> */}
-
+                {/* <AllVideo allData={allData} /> */}
             </div >
         )
     }
@@ -82,52 +136,5 @@ export class HomeVideo extends Component {
 export default HomeVideo
 
 
-const VideoData = [
-    {
-        title: "Нийтийн албанд томилогдохоор нэр дэвшсэн",
-        url: "https://www.youtube.com/watch?v=ehYPGS4WHlg",
-        date: 'July 27, 2019,',
-    },
-    {
-        title: "Коронавируст халдвар (Covid-19) 2020-07-28-ны байдлаар,",
-        url: "https://www.youtube.com/watch?v=DiJzNNewpXA",
-        date: 'July 27, 1020'
-    },
-    {
-        title: "Эрүүл мэндийн яамнаас коронавирусийн халдварын талаар",
-        url: "/videos/video3.mp4",
-        date: 'June 27, 2020'
-    },
-    {
-        title: "Хятадын Ухань хотын шинжлэх, ухаан технологийн их сургууль",
-        url: "https://www.facebook.com/FIVBVolleyballWorld/videos/563353680895130/",
-        date: 'July 24, 2220'
-    },
-    {
-        title: " Паркинсоны өвчтэй 2000 хүн, тэдгээрийн гэр бүл",
-        url: "/videos/video3.mp4",
-        date: 'July 27, 2020'
-    },
-    {
-        title: "Нийтийн албанд томилогдохоор нэр дэвшсэн",
-        url: "https://www.youtube.com/watch?v=ehYPGS4WHlg",
-        date: 'July 27, 2019,'
-    },
-    {
-        title: "Коронавируст халдвар (Covid-19) 2020-07-28-ны байдлаар,",
-        url: "https://www.youtube.com/watch?v=DiJzNNewpXA",
-        date: 'July 27, 1020'
-    },
-    {
-        title: "Эрүүл мэндийн яамнаас коронавирусийн халдварын талаар",
-        url: "https://www.facebook.com/kazenn1/videos/184744319737784",
-        date: 'June 27, 2020'
-    },
-    {
-        title: "Хятадын Ухань хотын шинжлэх, ухаан технологийн их сургууль",
-        url: "https://www.facebook.com/FIVBVolleyballWorld/videos/563353680895130/",
-        date: 'July 24, 2220'
-    },
-]
 
 

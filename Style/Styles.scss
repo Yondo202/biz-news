@@ -313,8 +313,16 @@ body {
                 width: 45px;
                 height: 100%;
                 background-color: $myFavColor;
+                transition: all 0.5s ease-in;
                 svg {
                     font-size: 18px;
+                }
+                cursor: pointer;
+                &:hover {
+                    background-color: white;
+                    svg {
+                        color: $myFavColor;
+                    }
                 }
             }
             .li {
@@ -1055,7 +1063,7 @@ body {
             }
             .Title1 {
                 cursor: pointer;
-                height: 29px;
+                height: 22px;
                 overflow: hidden;
                 h6 {
                     transition: all 0.5s ease;
@@ -1157,7 +1165,7 @@ body {
     .bigNewsBackground {
         width: 100%;
         height: 80vh;
-        background-color: rgba(0, 0, 0, 0.7);
+        // background-color: rgba(0, 0, 0, 0.7);
     }
 }
 
@@ -1171,22 +1179,109 @@ body {
 
         // }
         .react-parallax-bgimage {
-            filter: blur(6px);
+            filter: blur(4px);
         }
         .bigNewsBackground {
             width: 100%;
-            height: 90vh;
-            background-color: rgba(0, 0, 0, 0.5);
-
+            height: 118vh;
+            max-height: 130vh;
+            background-color: rgba(0, 0, 0, 0.3);
             .videoPAr {
-                display: flex;
-                flex-direction: row;
+                // display: flex;
+                // flex-direction: row;
+                .VideoContents {
+                    margin-top: 40px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    margin-left: 5%;
+                    width: 90%;
+                    float: left;
+                    .mainCon {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        .filterPAr {
+                            margin-bottom: 10px;
+                            span {
+                                color: white;
+                                font-size: 16px;
+                                font-weight: 600;
+                            }
+                            .line {
+                                height: 3px;
+                                width: 100%;
+                                background-color: $myFavColor;
+                            }
+                        }
+                        .titlePAr {
+                            text-align: start;
+                            width: 70%;
+                            height: 84px;
+                            overflow: hidden;
+                            span {
+                                color: white;
+                                font-size: 28px;
+                                font-weight: 600;
+                            }
+                        }
+                        .date {
+                            display: flex;
+                            flex-direction: row;
+                            color: white;
+                            // justify-content: center;
+                            align-items: center;
+                            svg {
+                                margin-right: 15px;
+                            }
+                        }
+                    }
+                    .SeeAndCount {
+                        display: flex;
+                        align-items: flex-end;
+                        flex-direction: column;
+                        justify-content: space-around;
+                        width: 14%;
+                        .shareParents {
+                            display: flex;
+                            .react-share__ShareButton {
+                                svg {
+                                }
+                            }
+                        }
+                        .counts {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-around;
+                            width: 100%;
+                            .seeCount {
+                                color: white;
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                svg {
+                                    margin-right: 5px;
+                                }
+                            }
+                            .commentCount {
+                                color: white;
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                svg {
+                                    margin-right: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
                 .reactPlayr {
-                    margin-left: 20px;
+                    margin-left: 13%;
                     height: 82vh;
-                    width: 65%;
+                    width: 74%;
                     margin-top: 30px;
-                    border: 1px solid white;
+                    border: 0px solid white;
                 }
                 .videoMenu {
                     padding: 15px 30px;
@@ -1493,19 +1588,18 @@ body {
                     letter-spacing: 0.31px;
                     width: 95%;
                     font-family: $myFontFamily !important;
-                    
-                    p{
-                        font-family: $myFontFamily !important;
-                    }
-                    span{
-                        font-family: $myFontFamily !important;
-                    }
 
+                    p {
+                        font-family: $myFontFamily !important;
+                    }
+                    span {
+                        font-family: $myFontFamily !important;
+                    }
                 }
-                .sun-editor-editable .sun-editor{
+                .sun-editor-editable .sun-editor {
                     font-family: $myFontFamily;
                 }
-              
+
                 // p {
                 //     line-height: 28px;
                 //     // color: #888888;
@@ -2895,14 +2989,106 @@ $rhap_font-family: inherit !default;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
+
             .bigNewsBackground {
                 width: 100%;
-                height: 1200px;
-                background-color: rgba(0, 0, 0, 0.5);
+                height: 130vh;
+                // background-color: rgba(0, 0, 0, 0.5);
 
                 .videoPAr {
                     display: flex;
                     flex-direction: column;
+
+                    .VideoContents {
+                        margin-top: 40px;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        margin-left: 5%;
+                        width: 90%;
+                        float: left;
+                        .mainCon {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: flex-start;
+                            align-items: flex-start;
+                            .filterPAr {
+                                margin-bottom: 10px;
+                                span {
+                                    color: white;
+                                    font-size: 13px;
+                                    font-weight: 600;
+                                }
+                                .line {
+                                    height: 3px;
+                                    width: 100%;
+                                    background-color: $myFavColor;
+                                }
+                            }
+                            .titlePAr {
+                                text-align: start;
+                                width: 100%;
+                                height: 165px;
+                                overflow: hidden;
+                                span {
+                                    color: white;
+                                    font-size: 22px;
+                                    font-weight: 600;
+                                }
+                            }
+                            .date {
+                                display: flex;
+                                flex-direction: row;
+                                color: white;
+                                // justify-content: center;
+                                align-items: center;
+                                svg {
+                                    margin-right: 15px;
+                                }
+                            }
+                        }
+                        .SeeAndCount {
+                            display: flex;
+                            align-items: flex-end;
+                            flex-direction: column;
+                            justify-content: space-around;
+                            width: 26%;
+                            .shareParents {
+                                display: flex;
+                                flex-direction: column;
+                                .react-share__ShareButton {
+                                    svg {
+                                    }
+                                }
+                            }
+                            .counts {
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: space-around;
+                                width: 100%;
+                                .seeCount {
+                                    color: white;
+                                    display: flex;
+                                    flex-direction: row;
+                                    align-items: center;
+                                    margin-right: 5px;
+                                    svg {
+                                        margin-right: 5px;
+                                    }
+                                }
+                                .commentCount {
+                                    color: white;
+                                    display: flex;
+                                    flex-direction: row;
+                                    align-items: center;
+                                    svg {
+                                        margin-right: 5px;
+                                    }
+                                }
+                            }
+                        }
+            
+                    }
                     .reactPlayr {
                         margin-left: 0px;
                         height: 82vh;
