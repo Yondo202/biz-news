@@ -41,7 +41,7 @@ function bigMain(props) {
 
     return (
 
-        <Col md={7}>
+        <Col md={8}>
             <motion.div initial="exit" animate="enter" exit="exit">
                 <motion.div variants={textVariants}>
                     <div className="mainCon">

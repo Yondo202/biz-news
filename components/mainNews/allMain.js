@@ -19,7 +19,7 @@ function allMain(props) {
     console.log(props.small, ' zangilga data')
     const allData = props.small
     return (
-        <Col md={5}>
+        <Col md={4}>
             <div className="dailyTitle">
                 <h1 >Daily News</h1>
                 <div className="linePAr">
@@ -46,12 +46,12 @@ function allMain(props) {
                                                 <span>Biz-News</span>
                                             </div>
                                         </div>
-                                        <div className="flex2">
+                                        {/* <div className="flex2">
                                             <Link href="/posts/[slug]" as={`/posts/${el.slug}`}>
                                                 <button style={{ backgroundColor: "#22AC8A" }}>Дэлгэрэнгүй</button>
                                             </Link>
                                             <button style={{ backgroundColor: "#C42F63" }}>Хуваалцах</button>
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </div>
                             </motion.div>

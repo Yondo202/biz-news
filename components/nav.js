@@ -99,8 +99,8 @@ export class Nav extends Component {
                                 </Link>
                             </ul>
                             <div className="searchInp">
-                                <input type="input" placeholder="Хайх" />
-                                {/* <SearchBtn AllNews={this.props.AllNews} /> */}
+                                {/* <input type="input" placeholder="Хайх" /> */}
+                                <SearchBtn AllNews={this.props.AllNews} />
                                 <div className="icon">
                                     <FaSearch />
                                 </div>

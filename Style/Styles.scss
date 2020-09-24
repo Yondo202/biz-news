@@ -1,5 +1,5 @@
 $myFontFamily: "Roboto", sans-serif;
-$myFavColor:#ff1744;
+$myFavColor: #ff1744;
 
 * {
     padding: 0px;
@@ -80,6 +80,10 @@ body {
                 font-size: 16px;
                 height: 38px;
                 overflow: hidden;
+                transition: all 0.2s ease;
+                &:hover{
+                    color: $myFavColor;
+                }
             }
         }
     }
@@ -148,14 +152,13 @@ body {
                     background-color: $myFavColor;
                     padding: 3px 15px;
                     padding-right: 20px;
-                  
+
                     span {
                         cursor: pointer;
                         width: 100%;
                         color: white;
                         font-size: 13px;
                         font-weight: 600;
-                       
                     }
                 }
                 .trendCont {
@@ -164,10 +167,10 @@ body {
                     width: 72%;
                     color: white;
                     font-size: 15px;
-                    span{
+                    span {
                         cursor: pointer;
                         transition: all 0.5s ease;
-                        &:hover{
+                        &:hover {
                             color: $myFavColor;
                             font-weight: 600;
                         }
@@ -204,7 +207,7 @@ body {
                     padding: 2px 2px;
                     font-size: 22px;
                     transition: all 0.4s ease;
-                    &:hover{    
+                    &:hover {
                         background-color: $myFavColor;
                     }
                 }
@@ -793,7 +796,7 @@ body {
                 overflow: hidden;
                 cursor: pointer;
                 h2 {
-                    font-size: 3vh;
+                    font-size: 19px;
                     transition: all 0.5s ease;
                     &:hover {
                         color: $myFavColor;
@@ -1277,8 +1280,6 @@ body {
     }
 }
 
-
-
 .videoPAr {
     text-align: center;
 
@@ -1293,7 +1294,6 @@ body {
         }
     }
 }
-
 
 .footPar {
     margin-top: 100px;
@@ -1412,13 +1412,29 @@ body {
     }
 }
 
-
-
 .BackMainNewsPar {
     font-family: $myFontFamily !important;
     .containers {
         width: 90%;
+        .react-share__ShareButton {
+
+            svg {
+                position: fixed;
+                top: 200px;
+                left: 0px;
+                // display: block;
+                width: 40px;
+                height: 40px;
+                transition: all 0.1s ease-in;
+                &:hover{
+                    left: 0px;
+                    width: 56px;
+                    height: 56px;
+                }
+            }
+        }
         .mainCon {
+          
             padding: 20px 20px;
             border: 1.5px solid rgba(0, 0, 0, 0.2);
             .smMenu {
@@ -1474,7 +1490,8 @@ body {
                 }
                 p {
                     line-height: 28px;
-                    color: #888888;
+                    // color: #888888;
+                    color: black;
                     letter-spacing: 0.31px;
                     width: 95%;
                 }
@@ -1510,7 +1527,7 @@ body {
         }
         .ScrollPar {
             overflow-y: scroll;
-            height: 100vh;
+            height: 110vh;
             &::-webkit-scrollbar {
                 width: 3px;
             }
@@ -1572,6 +1589,7 @@ body {
                                 margin-bottom: 0px;
                                 overflow: hidden;
                                 transition: all ease 0.3s;
+                                font-family: $myFontFamily;
                                 cursor: pointer;
                                 &:hover {
                                     color: $myFavColor;
@@ -1600,16 +1618,16 @@ body {
 }
 
 .audioPar {
-    .col-md-7{
+    .col-md-7 {
         padding: 0px 0px;
     }
-    .col-md-5{
+    .col-md-5 {
         padding: 0px 0px;
     }
     font-family: $myFontFamily;
-    .MainPar{
+    .MainPar {
         font-family: $myFontFamily;
-        background-color: #F5F5F5;
+        background-color: #f5f5f5;
         .videoMenu {
             padding: 15px 25px;
             text-align: start;
@@ -1634,23 +1652,23 @@ body {
                 height: 46.5vh;
                 overflow-y: scroll;
                 // border-bottom: 2px solid black;
-    
+
                 &::-webkit-scrollbar {
                     width: 0px;
                 }
-    
+
                 /* Track */
                 &::-webkit-scrollbar-track {
                     box-shadow: inset 0 0 5px grey;
                     border-radius: 10px;
                 }
-    
+
                 /* Handle */
                 &::-webkit-scrollbar-thumb {
                     background: #f7f2eb;
                     border-radius: 10px;
                 }
-    
+
                 /* Handle on hover */
                 &::-webkit-scrollbar-thumb:hover {
                     background: black;
@@ -1660,7 +1678,7 @@ body {
                     align-items: center;
                     height: 67px;
                     border-bottom: 1.5px solid rgba(0, 0, 0, 0.15);
-    
+
                     //   .activeMenu{
                     //     align-items: center;
                     //     width: 332px;
@@ -1681,7 +1699,7 @@ body {
                         color: rgba(0, 0, 0, 0.8);
                         cursor: pointer;
                         transition: all ease 0.3s;
-    
+
                         &:hover {
                             color: rgba(0, 0, 0, 1);
                         }
@@ -1702,7 +1720,7 @@ body {
                 }
             }
         }
-    
+
         .audioPlay {
             position: relative;
             margin-top: 10px;
@@ -1719,19 +1737,19 @@ body {
             // }
         }
     }
-    .ImgPAr{
+    .ImgPAr {
         margin-top: 0px;
         width: 100%;
         height: 80vh;
         position: relative;
-        .img{
-            img{
+        .img {
+            img {
                 height: 80vh;
                 width: 100%;
                 object-fit: cover;
                 filter: blur(1px);
             }
-            .background{
+            .background {
                 position: absolute;
                 left: 0;
                 top: 0;
@@ -1741,20 +1759,19 @@ body {
                 opacity: 0.7;
             }
         }
-        .Contents{
+        .Contents {
             position: absolute;
             bottom: 80px;
             left: 30px;
             right: 30px;
-            
-            h2{
+
+            h2 {
                 // -webkit-text-stroke-color:white;
                 // -webkit-text-stroke-width: 2px;
                 color: white;
                 font-size: 4vh;
             }
         }
-       
     }
 }
 
@@ -1842,7 +1859,7 @@ $rhap_font-family: inherit !default;
     display: flex;
     flex: 2 1 auto;
     align-items: center;
-    .rhap_time{
+    .rhap_time {
         font-size: 13px;
     }
 }
@@ -1884,7 +1901,7 @@ $rhap_font-family: inherit !default;
     position: absolute;
     z-index: 2;
     background-color: #ffffff;
-  
+
     border-radius: 2px;
 }
 
@@ -1912,7 +1929,6 @@ $rhap_font-family: inherit !default;
     background: $rhap_theme-color;
     border-radius: 50px;
     box-shadow: rgba($rhap_theme-color, 0.5) 0 0 5px;
-    
 }
 
 .rhap_controls-section {
@@ -1944,10 +1960,10 @@ $rhap_font-family: inherit !default;
     justify-content: center;
     align-items: center;
 }
-.rhap_rewind-button{
+.rhap_rewind-button {
     display: none;
 }
-.rhap_forward-button{
+.rhap_forward-button {
     display: none;
 }
 
@@ -2001,7 +2017,6 @@ $rhap_font-family: inherit !default;
         outline: 0;
     }
 }
-
 
 .rhap_volume-bar {
     box-sizing: border-box;
@@ -2168,12 +2183,9 @@ $rhap_font-family: inherit !default;
 }
 
 @media only screen and (max-width: 1444px) {
-
 }
 
 @media only screen and (max-width: 1200px) /* Tablet */ {
-
-
     .videoPAr {
         text-align: center;
 
@@ -2427,7 +2439,7 @@ $rhap_font-family: inherit !default;
                 overflow: hidden;
                 cursor: pointer;
                 h2 {
-                    font-size: 3vh;
+                    font-size: 19px;
                     transition: all 0.5s ease;
                     &:hover {
                         color: $myFavColor;
@@ -2435,11 +2447,11 @@ $rhap_font-family: inherit !default;
                 }
             }
         }
-        .contPar{
-            .imgPar{
+        .contPar {
+            .imgPar {
                 height: 80px;
             }
-            .content{
+            .content {
                 align-items: flex-start;
                 padding-left: 0px;
             }
@@ -2712,7 +2724,6 @@ $rhap_font-family: inherit !default;
         }
     }
 
-
     .mainNewsPar {
         .slick-slider {
             width: 98%;
@@ -2958,25 +2969,25 @@ $rhap_font-family: inherit !default;
     }
 
     .audioPar {
-        .col-md-7{
+        .col-md-7 {
             padding: 0px 0px;
         }
-        .col-md-5{
+        .col-md-5 {
             padding: 0px 0px;
         }
-        .ImgPAr{
+        .ImgPAr {
             margin-top: 10px;
             width: 100%;
             height: 40vh;
             position: relative;
-            .img{
-                img{
+            .img {
+                img {
                     height: 40vh;
                     width: 100%;
                     object-fit: cover;
                     filter: blur(1px);
                 }
-                .background{
+                .background {
                     position: absolute;
                     left: 0;
                     top: 0;
@@ -2986,22 +2997,20 @@ $rhap_font-family: inherit !default;
                     opacity: 0.7;
                 }
             }
-            .Contents{
+            .Contents {
                 position: absolute;
                 bottom: 80px;
                 left: 30px;
                 right: 30px;
                 height: 19vh;
                 overflow: hidden;
-                h2{
+                h2 {
                     // -webkit-text-stroke-color:white;
                     // -webkit-text-stroke-width: 2px;
                     color: white;
                     font-size: 4vh;
-                   
                 }
             }
-           
         }
         .videoMenu {
             padding: 15px 30px;
@@ -3387,9 +3396,6 @@ $rhap_font-family: inherit !default;
         }
     }
 }
-
-
-
 
 // .test {
 //     position: relative;
