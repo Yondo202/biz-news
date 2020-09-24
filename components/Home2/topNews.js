@@ -17,6 +17,19 @@ const textVariants = {
 };
 
 export class topNews extends Component {
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            count: 0
+        }
+    }
+    increment = () => {
+        this.setState({
+            count: this.state.count + 1
+        })
+    }
+
     render() {
 
         // console.log(this.props.TopNews1[0].title, 'main Data1')
@@ -42,8 +55,8 @@ export class topNews extends Component {
                                         </div>
                                         <div className="Title">
                                             <Link href="/posts/[slug]" as={`/posts/${myData1[0].slug}`}>
-                                            <h2>
-                                                {myData1[0].title}
+                                                <h2 onClick={this.increment}>
+                                                    {myData1[0].title}
                                                 </h2>
                                             </Link>
                                         </div>
@@ -56,7 +69,7 @@ export class topNews extends Component {
                                             <div className="SeeCount">
                                                 <AiOutlineEye />
                                                 <span>
-                                                    185
+                                                    {this.state.count}
                                             </span>
                                             </div>
                                             <div className="comments">
@@ -72,7 +85,7 @@ export class topNews extends Component {
                             </Col>
                             <Col md={5}>
                                 <div className="TopSmall">
-                                <img src={`${myData2[0].image.url}`} />
+                                    <img src={`${myData2[0].image.url}`} />
                                     <div className="background"></div>
                                     <div className="content">
                                         <div className="catigory">
@@ -80,8 +93,8 @@ export class topNews extends Component {
                                         </div>
                                         <div className="Title">
                                             <Link href="/posts/[slug]" as={`/posts/${myData2[0].slug}`}>
-                                            <h2>
-                                                {myData2[0].title}
+                                                <h2>
+                                                    {myData2[0].title}
                                                 </h2>
                                             </Link>
                                         </div>
@@ -108,7 +121,7 @@ export class topNews extends Component {
                                     </div>
                                 </div>
                                 <div className="TopSmall2">
-                                <img src={`${myData3[0].image.url}`} />
+                                    <img src={`${myData3[0].image.url}`} />
                                     <div className="background"></div>
                                     <div className="content">
                                         <div className="catigory">
@@ -116,8 +129,8 @@ export class topNews extends Component {
                                         </div>
                                         <div className="Title">
                                             <Link href="/posts/[slug]" as={`/posts/${myData3[0].slug}`}>
-                                            <h2>
-                                                {myData3[0].title}
+                                                <h2>
+                                                    {myData3[0].title}
                                                 </h2>
                                             </Link>
                                         </div>
@@ -125,7 +138,7 @@ export class topNews extends Component {
                                             <div className="date">
                                                 <span>
                                                     {myData3[0].date}
-                                            </span>
+                                                </span>
                                             </div>
                                             <div className="SeeCount">
                                                 <AiOutlineEye />

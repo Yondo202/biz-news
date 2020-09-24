@@ -81,7 +81,7 @@ body {
                 height: 38px;
                 overflow: hidden;
                 transition: all 0.2s ease;
-                &:hover{
+                &:hover {
                     color: $myFavColor;
                 }
             }
@@ -558,7 +558,7 @@ body {
                 overflow: hidden;
                 margin-bottom: 6px;
                 h2 {
-                    font-size: 3vh;
+                    font-size: 16px;
                     transition: all 0.5s ease;
                     &:hover {
                         color: $myFavColor;
@@ -647,7 +647,7 @@ body {
                 overflow: hidden;
                 margin-bottom: 6px;
                 h2 {
-                    font-size: 3vh;
+                    font-size: 16px;
 
                     // font-size: 3vh;
                     transition: all 0.5s ease;
@@ -1417,7 +1417,6 @@ body {
     .containers {
         width: 90%;
         .react-share__ShareButton {
-
             svg {
                 position: fixed;
                 top: 200px;
@@ -1426,7 +1425,7 @@ body {
                 width: 40px;
                 height: 40px;
                 transition: all 0.1s ease-in;
-                &:hover{
+                &:hover {
                     left: 0px;
                     width: 56px;
                     height: 56px;
@@ -1434,7 +1433,6 @@ body {
             }
         }
         .mainCon {
-          
             padding: 20px 20px;
             border: 1.5px solid rgba(0, 0, 0, 0.2);
             .smMenu {
@@ -1488,13 +1486,33 @@ body {
                     height: 400px;
                     object-fit: cover;
                 }
-                p {
+                .content {
                     line-height: 28px;
                     // color: #888888;
                     color: black;
                     letter-spacing: 0.31px;
                     width: 95%;
+                    font-family: $myFontFamily !important;
+                    
+                    p{
+                        font-family: $myFontFamily !important;
+                    }
+                    span{
+                        font-family: $myFontFamily !important;
+                    }
+
                 }
+                .sun-editor-editable .sun-editor{
+                    font-family: $myFontFamily;
+                }
+              
+                // p {
+                //     line-height: 28px;
+                //     // color: #888888;
+                //     color: black;
+                //     letter-spacing: 0.31px;
+                //     width: 95%;
+                // }
             }
         }
 

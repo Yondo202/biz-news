@@ -18,7 +18,9 @@ import {
     EmailIcon,
     TwitterIcon,
 } from 'react-share';
+import {Parser} from 'html-to-react';
 
+const huwirgagch = new Parser();
 
 let easing = [0.5, 0.9, 0.16, 0.95];
 const textVariants = {
@@ -59,7 +61,7 @@ function bigMain(props) {
                         <div className="title">
                             <h3>{slugData.title}</h3>
                             <img src={`${slugData.image.url}`} />
-                            <p>{slugData.desc}</p>
+                            <div className="content sun-editor-editable sun-editor">{huwirgagch.parse(slugData.desc)}</div>
                         </div>
                     </div>
                 </motion.div>

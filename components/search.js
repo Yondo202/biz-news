@@ -17,6 +17,11 @@ const textVariants = {
 function search(props) {
     console.log(props.AllNews, 'niahahah')
 
+    // state = {
+    //     services: []
+    // }
+
+
     const Auto = () => {
         const [display, setDisplay] = useState(false)
         const [options, setOptions] = useState([])
@@ -27,19 +32,22 @@ function search(props) {
 
         console.log(options, 'my Options ')
         useEffect(() => {
-            // const allData = []
-            // const MainPosts = new Array(3).fill().map((e, i) => {
-            //     // axios.get(`https://biz-admin.herokuapp.com/posts?id=${i + 1}`).then((res) => {
-            //     //     console.log(res.data, 'this my data')
-            //     //     allData.push(res.data[0]);
-            //     // }).catch((error) => {
-            //     //     console.log(error)
-            //     // })
+            // const MainPosts = axios.get(`https://biz-admin.herokuapp.com/posts`).then((res) => {
+            //     console.log(res.data, 'this my data')
+            //     allData.push(res.data);
+            // }).catch((error) => {
+            //     console.log(error)
+            // })
 
-            // });
-            console.log(props.AllNews, 'this is my data All')
+
+            const allData = [];
+
+
+            // console.log(props.AllNews, 'this is my data All')
+            console.log(allData, 'this is my data All')
 
             setOptions(props.AllNews)
+            // setOptions(allData);
         }, [])
 
         useEffect(() => {
@@ -73,7 +81,7 @@ function search(props) {
                 />
                 {/* <BsSearch /> */}
                 {display && (
-                    <motion.div style={{zIndex:"99"}} initial="exit" animate="enter" exit="exit" variants={textVariants}>
+                    <motion.div style={{ zIndex: "99" }} initial="exit" animate="enter" exit="exit" variants={textVariants}>
                         <div className="ResultPar" ref={wrapperRef} >
                             {options.filter(({ title }) => title.indexOf(search.toLowerCase()) > -1).map((el, i) => {
                                 return (
