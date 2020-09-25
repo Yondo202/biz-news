@@ -1,10 +1,6 @@
 import React, { Component } from 'react'
 import { Parallax, Background } from 'react-parallax';
-import { Player, ControlBar, BigPlayButton, ReplayControl, ForwardControl, PlaybackRateMenuButton } from 'video-react';
-
-import ReactPlayer from 'react-player'
 import { Container, Row, Col } from 'react-bootstrap';
-import { FaPlay } from 'react-icons/fa'
 import BigVideo from './bigVideo'
 import AllVideo from './allVideo'
 import { AiOutlineEye } from 'react-icons/ai'
