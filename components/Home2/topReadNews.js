@@ -24,52 +24,52 @@ export class topReadNews extends Component {
 
                             {AllNews.slice(0, 3).map((el, index) => {
                                 console.log(index, ' this is index')
-                                    //  const CondIndex = index
-                                    return (
-                                        <div className='contPar' key={index}>
-                                            <Row>
-                                                <Col md={3}>
-                                                    <div className="imgPar">
-                                                        <img src={`${el.image.url}`} />
-                                                        <div className="hover1"></div>
-                                                        <div className="hover2"></div>
-                                                    </div>
-                                                </Col>
-                                                <Col md={9}>
-                                                    <div className="content">
-                                                        <div className="catigory">
-                                                            <span>Business</span>
-                                                        </div>
-                                                        <div className="Title1">
-                                                            <Link href="/posts/[slug]" as={`/posts/${el.slug}`} >
-                                                                <h6>
-                                                                    {/* 8Bit Coin Sets Market Alight With Initial Performance */}
-                                                                    {el.title}
-                                                                </h6>
-                                                            </Link>
-                                                        </div>
-                                                        <div className="smallCont">
-                                                            <div className="date">
-                                                                <MdDateRange />
-                                                                <span>
-                                                                    {el.date}
-                                                                </span>
-                                                            </div>
-                                                            <div className="SeeCount">
-                                                                <AiOutlineEye />
-                                                                <span>
-                                                                    185
-                                                         </span>
-                                                            </div>
-                                                        </div>
-                                                        <div className="Desc">
-                                                           {el.desc}
+                                //  const CondIndex = index
+                                return (
+                                    <div className='contPar' key={index}>
+                                        <Row>
+                                            <Col md={3}>
+                                                <div className="imgPar">
+                                                    <img src={`${el.image.url}`} />
+                                                    <div className="hover1"></div>
+                                                    <div className="hover2"></div>
                                                 </div>
+                                            </Col>
+                                            <Col md={9}>
+                                                <div className="content">
+                                                    <div className="catigory">
+                                                        <span>Business</span>
                                                     </div>
-                                                </Col>
-                                            </Row>
-                                        </div>
-                                    )
+                                                    <div className="Title1">
+                                                        <Link href="/posts/[slug]" as={`/posts/${el.slug}`} >
+                                                            <h6>
+                                                                {/* 8Bit Coin Sets Market Alight With Initial Performance */}
+                                                                {el.title}
+                                                            </h6>
+                                                        </Link>
+                                                    </div>
+                                                    <div className="smallCont">
+                                                        <div className="date">
+                                                            <MdDateRange />
+                                                            <span>
+                                                                {el.date}
+                                                            </span>
+                                                        </div>
+                                                        <div className="SeeCount">
+                                                            <AiOutlineEye />
+                                                            <span>
+                                                                185
+                                                         </span>
+                                                        </div>
+                                                    </div>
+                                                    <div className="Desc">
+                                                        {el.desc}
+                                                    </div>
+                                                </div>
+                                            </Col>
+                                        </Row>
+                                    </div>
+                                )
                             })}
 
 

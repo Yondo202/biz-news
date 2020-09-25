@@ -18,7 +18,7 @@ import {
     EmailIcon,
     TwitterIcon,
 } from 'react-share';
-import {Parser} from 'html-to-react';
+import { Parser } from 'html-to-react';
 
 const huwirgagch = new Parser();
 
@@ -43,7 +43,7 @@ function bigMain(props) {
 
     return (
 
-        <Col md={8}>
+        <Col md={9}>
             <motion.div initial="exit" animate="enter" exit="exit">
                 <motion.div variants={textVariants}>
                     <div className="mainCon">
@@ -66,12 +66,22 @@ function bigMain(props) {
                     </div>
                 </motion.div>
             </motion.div>
-            <FacebookShareButton url={`https://biznet-news.vercel.app/${slugData.path}/${slugData.slug}`} style={{ width: 50, height: 50 }} >
-                <FacebookIcon size={30} />
-                <FacebookShareCount url={`https://biznet-news.vercel.app/${slugData.path}/${slugData.slug}`}>
-                    {shareCount => <h1 className="myShareCountWrapper">{shareCount}</h1>}
-                </FacebookShareCount>
-            </FacebookShareButton>
+            <div className="shareBtnPar">
+                <FacebookShareButton url={`https://biznet-news.vercel.app/${slugData.path}/${slugData.slug}`} style={{ width: 50, height: 50 }} >
+                    <FacebookIcon size={30} />
+                    <FacebookShareCount url={`https://biznet-news.vercel.app/${slugData.path}/${slugData.slug}`}>
+                        {shareCount => <h1 className="myShareCountWrapper">{shareCount}</h1>}
+                    </FacebookShareCount>
+                </FacebookShareButton>
+                <TwitterShareButton url={`https://biznet-news.vercel.app/${slugData.path}/${slugData.slug}`} style={{ width: 50, height: 50 }} >
+                    <TwitterIcon size={30} ></TwitterIcon>
+                </TwitterShareButton>
+
+                <EmailShareButton url={`https://biznet-news.vercel.app/${slugData.path}/${slugData.slug}`} style={{ width: 50, height: 50 }} >
+                    <EmailIcon size={30} ></EmailIcon>
+                </EmailShareButton>
+            </div>
+
         </Col>
     )
 }

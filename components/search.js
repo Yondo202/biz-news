@@ -44,7 +44,7 @@ function search(props) {
 
 
             // console.log(props.AllNews, 'this is my data All')
-            console.log(allData, 'this is my data All')
+            // console.log(allData, 'this is my data All')
 
             setOptions(props.AllNews)
             // setOptions(allData);
@@ -69,7 +69,7 @@ function search(props) {
             setDisplay(false)
         };
 
-        console.log(options, ' lalalalasdadadadada')
+        // console.log(options, ' lalalalasdadadadada')
         return (
             <div className='searchPAr'>
                 <input

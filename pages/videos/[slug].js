@@ -18,7 +18,7 @@ function Home(props) {
                         rel="stylesheet"
                         href="https://video-react.github.io/assets/video-react.css"
                     />
-
+                    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet"></link>
                 </Head>
 
                 <Layout>
@@ -39,9 +39,9 @@ export async function getServerSideProps(context) {
     const allData = await axios(`https://biz-admin.herokuapp.com/videos`);
     //  const data = await VideoNews.json()
     return {
-      props: {
-        big: VideoNews.data[0],
-        all: allData.data
-      }
+        props: {
+            big: VideoNews.data[0],
+            all: allData.data
+        }
     }
-  }
+}

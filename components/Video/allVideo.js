@@ -2,6 +2,10 @@ import React from 'react'
 import { GiPlayButton } from 'react-icons/gi'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
+import { Accordion, AccordionItem } from 'react-sanfona';
+import { RiPlayList2Line, RiPlayList2Fill } from 'react-icons/ri'
+import { MdSlowMotionVideo } from 'react-icons/md'
+
 
 
 let easing = [0.5, 0.9, 0.16, 0.95];
@@ -19,15 +23,21 @@ const textVariants = {
 function allVideo(props) {
     const allData = props.allData
     console.log(allData, 'my all data')
+    const myData1 = props.allData.filter(e => e.bulan == 'BOOK LOVER').slice(0, 1)
+    const myData2 = props.allData.filter(e => e.bulan == 'TREND NEWS').slice(0, 1)
+    const titleData = [...myData1, ...myData2]
+    console.log(myData1, 'jejejejjee')
+    console.log(myData2, 'jejejejjee2')
+    console.log(titleData, 'jejejejjee2123123')
     return (
         <div className="videoMenu">
             <div className="bigTitle">
-                <h2>Video News</h2>
-                <div className="line"></div>
+                <h3>Video News</h3>
+                {/* <div className="line"></div> */}
+                <div className="line"><div className="line2"></div></div>
+
             </div>
-            <div className="scroll">
-
-
+            {/* <div className="scroll">
                 {allData.map((el, i) => {
                     return (
                         <motion.div initial="exit" animate="enter" exit="exit">
@@ -45,14 +55,41 @@ function allVideo(props) {
 
                     )
                 })}
-                {/* <a activeClassName="navbar__link--active" className={this.state.myClass} tabIndex={i} onClick={this.clickHandler} >{el.title}</a> */}
+ 
+            </div> */}
+            <Accordion>
+                {titleData.map((item, i) => {
+                    return (
+                        <AccordionItem key={i} isHovered={true} title={`${item.bulan}`} expanded={item === 1}>
+                            {allData.map((items, i) => {
+                                if (item.bulan === items.bulan) {
+                                    return (
+                                        <div className="contentPar" key={i}>
+                                            {/* <Link href="/videos/[slug]" as={`/videos/${items.slug}`}>
+                                                {items.title}
+                                            </Link> */}
+                                            <Link href="/videos/[slug]" as={`/videos/${items.slug}`}>
+                                                <span className="contents"><MdSlowMotionVideo /> {items.title}</span>
+                                            </Link>
+                                        </div>
 
-                {/* <div className="menuCon">
-                                        <GiPlayButton /><span> News headlines today: July 27, 2020News headlines today: July 27, 2020</span>
-                                        <div className="date">July 27, 2020</div>
-                                    </div> */}
-
-            </div>
+                                    )
+                                }
+                            })}
+                            {/* 
+                            <div>
+                                {`Item ${item} content`}
+                            </div>
+                            <div>
+                                {`Item ${item} content`}
+                            </div>
+                            <div>
+                                {`Item ${item} content`}
+                            </div> */}
+                        </AccordionItem>
+                    );
+                })}
+            </Accordion>
         </div>
     )
 }

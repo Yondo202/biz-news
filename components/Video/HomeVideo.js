@@ -127,7 +127,7 @@ export class HomeVideo extends Component {
                         </div>
                     </div>
                 </Parallax>
-                {/* <AllVideo allData={allData} /> */}
+                <AllVideo allData={allData} />
             </div >
         )
     }
