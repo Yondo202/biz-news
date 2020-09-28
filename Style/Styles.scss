@@ -1619,7 +1619,7 @@ body {
                     padding-left: 60px;
                     padding-right: 60px;
                     word-spacing: 1px;
-                    line-height: 32px;
+                    line-height: 20px;
                     // color: #888888;
                     color: black;
                     letter-spacing: -0.2px;
@@ -1630,6 +1630,7 @@ body {
                     }
                     span {
                         font-family: $myFontFamily !important;
+                        
                     }
                 }
                 .sun-editor-editable .sun-editor {
