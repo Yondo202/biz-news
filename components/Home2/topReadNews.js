@@ -24,7 +24,6 @@ export class topReadNews extends Component {
 
                             {AllNews.slice(0, 3).map((el, index) => {
                                 console.log(index, ' this is index')
-                                //  const CondIndex = index
                                 return (
                                     <div className='contPar' key={index}>
                                         <Row>
@@ -43,7 +42,6 @@ export class topReadNews extends Component {
                                                     <div className="Title1">
                                                         <Link href="/posts/[slug]" as={`/posts/${el.slug}`} >
                                                             <h6>
-                                                                {/* 8Bit Coin Sets Market Alight With Initial Performance */}
                                                                 {el.title}
                                                             </h6>
                                                         </Link>
@@ -71,99 +69,14 @@ export class topReadNews extends Component {
                                     </div>
                                 )
                             })}
-
-
-
-
-
-
-
-                            {/* <div className='contPar'>
-                                <Row>
-                                    <Col md={4}>
-                                        <div className="imgPar">
-                                            <img src={require('../image/last2.jpg')} />
-                                            <div className="hover1"></div>
-                                            <div className="hover2"></div>
-                                        </div>
-                                    </Col>
-                                    <Col md={8}>
-                                        <div className="content">
-                                            <div className="catigory">
-                                                <span>Business</span>
-                                            </div>
-                                            <div className="Title1">
-                                                <h5>
-                                                    Франкфуртаас 261 иргэн эх орондоо ирлээ
-                                                </h5>
-                                            </div>
-                                            <div className="smallCont">
-                                                <div className="date">
-                                                    <MdDateRange />
-                                                    <span>
-                                                        March 23, 2019
-                                                 </span>
-                                                </div>
-                                                <div className="SeeCount">
-                                                    <AiOutlineEye />
-                                                    <span>
-                                                        185
-                                                     </span>
-                                                </div>
-                                            </div>
-                                            <div className="Desc">
-                                                Франкфурт-Улаанбаатар чиглэлийн тусгай үүргийн онгоц өнөөдөр 06:05 цагт Буянт-Ухаа олон улсын нисэх буудалд газардлаа.sdgsd sd gs dfh df hfh dfhdh  Франкфурт-Улаанбаатар чиглэлийн тусгай үүргийн онгоц өнөөдөр 06:05 цагт Буянт-Ухаа олон улсын нисэх буудалд газардлаа.sdgsd sd gs dfh df hfh dfhdh  Франкфурт-Улаанбаатар чиглэлийн тусгай үүргийн онгоц өнөөдөр 06:05 цагт Буянт-Ухаа олон улсын нисэх буудалд газардлаа.sdgsd sd gs dfh df hfh dfhdh
-                                            </div>
-                                        </div>
-                                    </Col>
-                                </Row>
-                            </div>
-                            <div className='contPar'>
-                                <Row>
-                                    <Col md={4}>
-                                        <div className="imgPar">
-                                            <img src={require('../image/last1.jpg')} />
-                                            <div className="hover1"></div>
-                                            <div className="hover2"></div>
-                                        </div>
-                                    </Col>
-                                    <Col md={8}>
-                                        <div className="content">
-                                            <div className="catigory">
-                                                <span>Business</span>
-                                            </div>
-                                            <div className="Title1">
-                                                <h5>
-                                                    Франкфуртаас 261 иргэн эх орондоо ирлээ
-                                                </h5>
-                                            </div>
-                                            <div className="smallCont">
-                                                <div className="date">
-                                                    <MdDateRange />
-                                                    <span>
-                                                        March 23, 2019
-                                                 </span>
-                                                </div>
-                                                <div className="SeeCount">
-                                                    <AiOutlineEye />
-                                                    <span>
-                                                        185
-                                                     </span>
-                                                </div>
-                                            </div>
-                                            <div className="Desc">
-                                                Франкфурт-Улаанбаатар чиглэлийн тусгай үүргийн онгоц өнөөдөр 06:05 цагт Буянт-Ухаа олон улсын нисэх буудалд газардлаа.sdgsd sd gs dfh df hfh dfhdh  Франкфурт-Улаанбаатар чиглэлийн тусгай үүргийн онгоц өнөөдөр 06:05 цагт Буянт-Ухаа олон улсын нисэх буудалд газардлаа.sdgsd sd gs dfh df hfh dfhdh  Франкфурт-Улаанбаатар чиглэлийн тусгай үүргийн онгоц өнөөдөр 06:05 цагт Буянт-Ухаа олон улсын нисэх буудалд газардлаа.sdgsd sd gs dfh df hfh dfhdh
-                                            </div>
-                                        </div>
-                                    </Col>
-                                </Row>
-                            </div> */}
                         </div>
                     </Col>
 
 
-                    <Col md={3}>
 
+
+
+                    <Col md={3}>
                         <div className="BunnerPaR">
                             <Row>
                                 <Col md={12}>

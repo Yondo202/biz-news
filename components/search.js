@@ -3,6 +3,7 @@ import Link from 'next/link';
 import axios from 'axios'
 import { BsSearch } from 'react-icons/bs'
 import { motion } from 'framer-motion'
+import { TiArrowSync } from 'react-icons/ti';
 
 
 let easing = [0.5, 0.9, 0.16, 0.95];
@@ -14,15 +15,15 @@ const textVariants = {
     }
 };
 
+// const useComponentDidMount = func => useEffect(func, []);
+
+
+
 function search(props) {
     console.log(props.AllNews, 'niahahah')
 
-    // state = {
-    //     services: []
-    // }
-
-
     const Auto = () => {
+
         const [display, setDisplay] = useState(false)
         const [options, setOptions] = useState([])
         const [search, setSearch] = useState('')
@@ -30,7 +31,7 @@ function search(props) {
 
         const wrapperRef = useRef(null);
 
-        console.log(options, 'my Options ')
+        // console.log(options, 'my Options ')
         useEffect(() => {
             // const MainPosts = axios.get(`https://biz-admin.herokuapp.com/posts`).then((res) => {
             //     console.log(res.data, 'this my data')
@@ -38,13 +39,19 @@ function search(props) {
             // }).catch((error) => {
             //     console.log(error)
             // })
+            // const allData = []
+            // async function DataGet() {
+            //     const MainDatas = await axios.get('https://biz-admin.herokuapp.com/posts').then((res) => {
+            //         console.log(res.data, 'this is my real data')
+            //         allData.push(res.data)
+            //         console.log(allData, 'my real data 2')
+            //     })
+               
+            // }
+            // DataGet()
+            // const allData = [];
+            // console.log(allData, 'bas l veegu data')
 
-
-            const allData = [];
-
-
-            // console.log(props.AllNews, 'this is my data All')
-            // console.log(allData, 'this is my data All')
 
             setOptions(props.AllNews)
             // setOptions(allData);
@@ -112,9 +119,11 @@ function search(props) {
             </div>
         )
     }
+
     return (
         <Auto />
     )
 }
 
 export default search 
+

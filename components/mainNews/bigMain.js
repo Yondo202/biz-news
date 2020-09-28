@@ -61,7 +61,7 @@ function bigMain(props) {
                         <div className="title">
                             <h3>{slugData.title}</h3>
                             <img src={`${slugData.image.url}`} />
-                            <div className="content sun-editor-editable sun-editor">{huwirgagch.parse(slugData.desc)}</div>
+                            <div className="content sun-editor-editable sun-editor">{huwirgagch.parse(slugData.desc)}hahahhahhah hahahhahhah hahahhahhah hahahhahhah hahahhahhah hahahhahhah hahahhahhah hahahhahhah hahahhahhah hahahhahhah hahahhahhah hahahhahhah hahahhahhah hahahhahhah hahahhahhah hahahhahhah hahahhahhah hahahhahhah hahahhahhah hahahhahhah hahahhahhah hahahhahhah hahahhahhah hahahhahhah hahahhahhah hahahhahhah hahahhahhah hahahhahhah hahahhahhah hahahhahhah hahahhahhah hahahhahhah hahahhahhah hahahhahhah hahahhahhah hahahhahhah hahahhahhah hahahhahhah hahahhahhah hahahhahhah hahahhahhah hahahhahhah hahahhahhah hahahhahhah hahahhahhah hahahhahhah hahahhahhah hahahhahhah hahahhahhah hahahhahhah hahahhahhah hahahhahhah hahahhahhah hahahhahhah hahahhahhah hahahhahhah hahahhahhah hahahhahhah hahahhahhah hahahhahhah hahahhahhah hahahhahhah hahahhahhah hahahhahhah </div>
                         </div>
                     </div>
                 </motion.div>

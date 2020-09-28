@@ -31,15 +31,9 @@ export class topNews extends Component {
     }
 
     render() {
-
-        // console.log(this.props.TopNews1[0].title, 'main Data1')
-        // console.log(this.props.TopNews2, 'main Data2')
-        // console.log(this.props.TopNews3, 'main Data3')
-        // console.log(this.props.AllNews[0].slug, 'myAllData');
         const myData1 = this.props.AllNews.filter(e => e.slug == 'top-1')
         const myData2 = this.props.AllNews.filter(e => e.slug == 'top-2')
         const myData3 = this.props.AllNews.filter(e => e.slug == 'top-3')
-        // console.log(myData1, ' this top data')
         return (
             <Container>
                 <motion.div initial="exit" animate="enter" exit="exit" variants={textVariants}>

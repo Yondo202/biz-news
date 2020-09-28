@@ -105,8 +105,6 @@ export default function Home(props) {
                     </Container>
                 </div>
 
-
-
                 <Layout AllNews={props.AllNews}>
                     {/* <HomePar homeVideo={props.homeVideo} allData={newsData} VideoNews={props.VideoNewsHome} AuidoNews={props.AuidoNews} /> */}
                     <HomePar HomeAudio={props.HomeAudio} AllNews={props.AllNews} HomeVideos={props.HomeVideos} />
