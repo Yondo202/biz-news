@@ -1663,6 +1663,7 @@ body {
                 margin-left: 5%;
                 // font-weight: 600;
                 font-size: 18px;
+                width: 50%;
             }
             .Line {
                 width: 1px;
@@ -1698,6 +1699,8 @@ body {
                 margin-left: 5%;
                 // font-weight: 600;
                 font-size: 18px;
+                width: 50%;
+                overflow: hidden;
             }
             .Line {
                 width: 1px;
@@ -3298,11 +3301,12 @@ $rhap_font-family: inherit !default;
                 justify-content: flex-start;
                 align-items: center;
                 position: fixed;
-                top: -90px;
+                top: -110px;
                 left: 0;
                 width: 100%;
                 height: 60px;
                 z-index: 99;
+                
                 .TitlePar {
                     margin-left: 5%;
                     // font-weight: 600;
@@ -3328,6 +3332,9 @@ $rhap_font-family: inherit !default;
                 padding-left: 20px;
                 border-right: 0px solid rgba(0, 0, 0, 0.2);
                 .title {
+                    .content{
+                        padding: 0px 0px;
+                    }
                     .shareBtnPar {
                         display: flex;
                         flex-direction: column;
