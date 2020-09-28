@@ -3,7 +3,7 @@ import TopNews from '../components/Home2/topNews'
 import Bunner from '../components/Home2/bunners'
 import BetweenNews from './Home2/BetweenNews'
 import TopReadNews from './Home2/topReadNews'
-
+import VideoNews from '../components/Home2/HomeVideo'
 
 export class homePar extends Component {
     render() {
@@ -14,6 +14,7 @@ export class homePar extends Component {
                 <TopNews AllNews={this.props.AllNews}  />
                 <Bunner  />
                 <BetweenNews HomeAudio={this.props.HomeAudio} HomeVideos={this.props.HomeVideos} AllNews={this.props.AllNews} />
+                <VideoNews HomeVideos={this.props.HomeVideos} />
                 <TopReadNews AllNews={this.props.AllNews}  />
                 {/* <HomeCon homeVideo={this.props.homeVideo} />
                 <Slick VideoNews={this.props.VideoNews} />

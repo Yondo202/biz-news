@@ -753,6 +753,116 @@ body {
     }
 }
 
+.VideoConPar {
+    .TopSmall {
+        overflow: hidden;
+        position: relative;
+        color: white;
+        margin-bottom: 0px;
+        .mainImg {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            transition: all 0.3s ease;
+        }
+        .logoImg {
+            height: 50px;
+            width: 50px;
+            object-fit: cover;
+            position: absolute;
+            top: 2%;
+            left: 2%;
+            transition: all 0.3s ease;
+        }
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgb(0, 0, 0);
+            opacity: 0.7;
+        }
+        .content {
+            position: absolute;
+            left: 0px;
+            right: 0px;
+            bottom: 25px;
+            padding: 0px 30px;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s ease;
+            .catigory {
+                background-color: $myFavColor;
+                padding: 3px 7px;
+                font-size: 12px;
+                // background-color: #ff1744;
+                margin-bottom: 10px;
+                color: white;
+                font-weight: 500;
+                text-align: center;
+                align-self: flex-start;
+            }
+            .Title {
+                height: 49px;
+                overflow: hidden;
+                cursor: pointer;
+                h2 {
+                    font-size: 19px;
+                    transition: all 0.5s ease;
+                    &:hover {
+                        color: $myFavColor;
+                    }
+                }
+            }
+            .smallCont {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                // width: 36%;
+                // justify-content: space-between;
+                font-size: 15px;
+                .date {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    span {
+                        padding-left: 5px;
+                    }
+                    svg {
+                        color: $myFavColor;
+                        font-size: 15px;
+                    }
+                }
+                .SeeCount {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    padding-left: 25px;
+
+                    svg {
+                        color: $myFavColor;
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+        &:hover {
+            .logoImg {
+                transform: scale(1.2);
+            }
+            .mainImg {
+                transform: scale(1.06);
+            }
+            .content {
+                bottom: 30px;
+            }
+        }
+    }
+}
+
 .betweenNewsPar {
     .TopSmall {
         overflow: hidden;
@@ -969,6 +1079,7 @@ body {
         }
     }
 }
+
 .topReadNews {
     .NewsPar {
         .Title {
@@ -1166,7 +1277,6 @@ body {
 }
 
 .VideoParent {
-
     .videoMenu {
         padding: 10px 30px;
         text-align: start;
@@ -1536,31 +1646,79 @@ body {
     font-family: $myFontFamily !important;
     .containers {
         width: 90%;
-        .shareBtnPar {
+
+        .ScrollHead2 {
+            background-color: white;
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
             position: fixed;
-            top: 200px;
-            left: 0px;
-            .react-share__ShareButton {
-                left: 0px;
-                svg {
-                    // display: block;
-                    width: 40px;
-                    height: 40px;
-                    transition: all 0.2s ease-in;
-                    &:hover {
-                        left: 0px;
-                        // width: 56px;
-                        // height: 56px;
-                        transform: scale(1.4);
-                    }
-                }
+            top: -60px;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            z-index: 99;
+            .TitlePar {
+                margin-left: 5%;
+                // font-weight: 600;
+                font-size: 18px;
             }
+            .Line {
+                width: 1px;
+                height: 80%;
+                background-color: rgba(0, 0, 0, 0.2);
+                margin-left: 3%;
+            }
+            img {
+                cursor: pointer;
+                width: 150px;
+                height: 100%;
+                object-fit: cover;
+                margin-left: 7%;
+            }
+            transition: all 0.5s ease;
+            opacity: 1;
+        }
+        .ScrollHead {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            background-color: white;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            z-index: 99;
+            .TitlePar {
+                margin-left: 5%;
+                // font-weight: 600;
+                font-size: 18px;
+            }
+            .Line {
+                width: 1px;
+                height: 80%;
+                background-color: rgba(0, 0, 0, 0.2);
+                margin-left: 3%;
+            }
+            img {
+                width: 150px;
+                height: 100%;
+                object-fit: cover;
+                cursor: pointer;
+                margin-left: 7%;
+            }
+            transition: all 0.5s ease;
+            opacity: 1;
         }
 
         .mainCon {
             padding: 20px 20px;
+            padding-left: 60px;
             border-right: 1.5px solid rgba(0, 0, 0, 0.2);
             .smMenu {
                 display: flex;
@@ -1603,12 +1761,183 @@ body {
                 }
             }
             .title {
-                h3 {
+                h2 {
                     font-weight: 600;
                     // opacity: 0.8;
                 }
+                .shareBtnPar {
+                    display: flex;
+                    flex-direction: column;
+                    position: fixed;
+                    top: 100px;
+                    left: 0px;
+                    transition: all 0.4s ease-in;
+                    align-items: center;
+                    margin-left: 20px;
+                    .ButtonsPAr {
+                        display: flex;
+                        flex-direction: row;
+                        .react-share__ShareButton {
+                            transition: all 0.4s ease;
+                            left: 0px;
+                            svg {
+                                // display: block;
+                                width: 35px;
+                                height: 35px;
+                                transition: all 0.2s ease-in;
+                                &:hover {
+                                    left: 0px;
+                                    // width: 56px;
+                                    // height: 56px;
+                                    transform: scale(1.4);
+                                }
+                            }
+                        }
+                    }
+
+                    .ProfileCon {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        img {
+                            border-radius: 50%;
+                            width: 60px;
+                            height: 60px;
+                            object-fit: cover;
+                            margin: 12px 10px;
+                            align-self: flex-start;
+                        }
+                        .textPar {
+                            display: flex;
+                            flex-direction: column;
+                            font-size: 14px;
+                            .Name {
+                                margin-bottom: 10px;
+                                font-weight: 600;
+                            }
+                            .other {
+                                display: flex;
+                                flex-direction: column;
+                                align-items: flex-start;
+                                margin-bottom: 10px;
+                                .filter {
+                                    color: $myFavColor;
+                                    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+                                    padding-right: 0px;
+                                    cursor: pointer;
+                                    &:hover {
+                                        color: black;
+                                    }
+                                    margin-bottom: 5px;
+                                }
+                                .filter2 {
+                                    margin-bottom: 5px;
+                                    margin-left: 0px;
+                                    color: $myFavColor;
+                                    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+                                    padding-right: 5px;
+                                    cursor: pointer;
+                                    &:hover {
+                                        color: black;
+                                    }
+                                }
+                                .date {
+                                    margin-left: 0px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .shareBtnPar2 {
+                    display: flex;
+                    flex-direction: row;
+                    // position: fixed;
+                    transition: all 0.4s ease-in;
+                    margin-bottom: 10px;
+                    justify-content: space-between;
+                    align-items: center;
+                    .react-share__ShareButton {
+                        transition: all 0.4s ease;
+                        svg {
+                            // display: block;
+                            width: 40px;
+                            height: 40px;
+                            transition: all 0.2s ease-in;
+                            &:hover {
+                                left: 0px;
+                                // width: 56px;
+                                // height: 56px;
+                                transform: scale(1.4);
+                            }
+                        }
+                    }
+                    .ProfileCon {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        img {
+                            border-radius: 50%;
+                            width: 60px;
+                            height: 60px;
+                            object-fit: cover;
+                            margin: 12px 10px;
+                        }
+                        .textPar {
+                            display: flex;
+                            flex-direction: column;
+                            font-size: 14px;
+                            .Name {
+                                font-weight: 600;
+                            }
+                            .other {
+                                .filter {
+                                    color: $myFavColor;
+                                    border-right: 1px solid rgba(0, 0, 0, 0.4);
+                                    padding-right: 5px;
+                                    cursor: pointer;
+                                    &:hover {
+                                        color: black;
+                                    }
+                                }
+                                .filter2 {
+                                    margin-left: 5px;
+                                    color: $myFavColor;
+                                    border-right: 1px solid rgba(0, 0, 0, 0.4);
+                                    padding-right: 5px;
+                                    cursor: pointer;
+                                    &:hover {
+                                        color: black;
+                                    }
+                                }
+                                .date {
+                                    margin-left: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .linePAr {
+                    position: relative;
+                    height: 6px;
+                    .line {
+                        width: 100%;
+                        border-top: 1px solid rgba(0, 0, 0, 0.2);
+                        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+                        height: 100%;
+                    }
+                    .line2 {
+                        position: absolute;
+                        width: 50%;
+                        background-color: $myFavColor;
+                        height: 6px;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                    }
+                }
                 img {
-                    margin: 20px 0px;
+                    margin-bottom: 20px;
+                    margin-top: 10px;
                     width: 100%;
                     height: 500px;
                     object-fit: cover;
@@ -1630,7 +1959,6 @@ body {
                     }
                     span {
                         font-family: $myFontFamily !important;
-                        
                     }
                 }
                 .sun-editor-editable .sun-editor {
@@ -1679,7 +2007,6 @@ body {
                 }
             }
             .ScrollPar {
-
                 border-bottom: 1px solid rgba(0, 0, 0, 0.2);
                 overflow-y: scroll;
                 height: 86vh;
@@ -2964,6 +3291,204 @@ $rhap_font-family: inherit !default;
     .BackMainNewsPar {
         .containers {
             width: 100% !important;
+            .ScrollHead2 {
+                background-color: white;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                position: fixed;
+                top: -90px;
+                left: 0;
+                width: 100%;
+                height: 60px;
+                z-index: 99;
+                .TitlePar {
+                    margin-left: 5%;
+                    // font-weight: 600;
+                    font-size: 18px;
+                }
+                .Line {
+                    width: 1px;
+                    height: 80%;
+                    background-color: rgba(0, 0, 0, 0.2);
+                    margin-left: 3%;
+                }
+                img {
+                    width: 150px;
+                    height: 100%;
+                    object-fit: cover;
+                    margin-left: 7%;
+                }
+                transition: all 0.5s ease;
+                opacity: 1;
+            }
+            .mainCon {
+                padding: 20px 20px;
+                padding-left: 20px;
+                border-right: 0px solid rgba(0, 0, 0, 0.2);
+                .title {
+                    .shareBtnPar {
+                        display: flex;
+                        flex-direction: column;
+                        position: fixed;
+                        top: 100px;
+                        left: 0px;
+                        transition: all 0.4s ease-in;
+                        align-items: center;
+                        margin-left: 0px;
+                        .ButtonsPAr {
+                            display: flex;
+                            flex-direction: column;
+                            .react-share__ShareButton {
+                                transition: all 0.4s ease;
+                                left: 0px;
+                                svg {
+                                    // display: block;
+                                    width: 35px;
+                                    height: 35px;
+                                    transition: all 0.2s ease-in;
+                                    &:hover {
+                                        left: 0px;
+                                        // width: 56px;
+                                        // height: 56px;
+                                        transform: scale(1.4);
+                                    }
+                                }
+                            }
+                        }
+
+                        .ProfileCon {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            img {
+                                width: 60px;
+                                height: 60px;
+                                object-fit: cover;
+                                margin: 12px 10px;
+                                align-self: flex-start;
+                                display: none;
+                            }
+                            .textPar {
+                                display: none;
+                                display: flex;
+                                flex-direction: column;
+                                font-size: 14px;
+                                .Name {
+                                    display: none;
+                                    margin-bottom: 10px;
+                                    font-weight: 600;
+                                }
+                                .other {
+                                    display: none;
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: flex-start;
+                                    margin-bottom: 10px;
+                                    .filter {
+                                        display: none;
+                                        color: $myFavColor;
+                                        border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+                                        padding-right: 0px;
+                                        cursor: pointer;
+                                        &:hover {
+                                            color: black;
+                                        }
+                                        margin-bottom: 5px;
+                                    }
+                                    .filter2 {
+                                        display: none;
+                                        margin-bottom: 5px;
+                                        margin-left: 0px;
+                                        color: $myFavColor;
+                                        border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+                                        padding-right: 5px;
+                                        cursor: pointer;
+                                        &:hover {
+                                            color: black;
+                                        }
+                                    }
+                                    .date {
+                                        display: none;
+                                        margin-left: 0px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .shareBtnPar2 {
+                        display: flex;
+                        flex-direction: row;
+                        // position: fixed;
+                        transition: all 0.4s ease-in;
+                        margin-bottom: 10px;
+                        justify-content: space-between;
+                        align-items: center;
+                        .react-share__ShareButton {
+                            transition: all 0.4s ease;
+                            svg {
+                                // display: block;
+                                width: 40px;
+                                height: 40px;
+                                transition: all 0.2s ease-in;
+                                &:hover {
+                                    left: 0px;
+                                    // width: 56px;
+                                    // height: 56px;
+                                    transform: scale(1.4);
+                                }
+                            }
+                        }
+                        .ProfileCon {
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            img {
+                                width: 60px;
+                                height: 60px;
+                                object-fit: cover;
+                                margin: 12px 10px;
+                            }
+                            .textPar {
+                                display: flex;
+                                flex-direction: column;
+                                font-size: 14px;
+                                .Name {
+                                    font-weight: 600;
+                                }
+                                .other {
+                                    .filter {
+                                        display: none;
+                                        color: $myFavColor;
+                                        border-right: 1px solid rgba(0, 0, 0, 0.4);
+                                        padding-right: 5px;
+                                        cursor: pointer;
+                                        &:hover {
+                                            color: black;
+                                        }
+                                    }
+                                    .filter2 {
+                                        display: none;
+                                        margin-left: 5px;
+                                        color: $myFavColor;
+                                        border-right: 1px solid rgba(0, 0, 0, 0.4);
+                                        padding-right: 5px;
+                                        cursor: pointer;
+                                        &:hover {
+                                            color: black;
+                                        }
+                                    }
+                                    .date {
+                                        margin-left: 5px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
             .ScrollPar {
                 overflow-y: scroll;
                 height: 100vh;
