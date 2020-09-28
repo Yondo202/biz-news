@@ -74,8 +74,6 @@ export class topReadNews extends Component {
 
 
 
-
-
                     <Col md={3}>
                         <div className="BunnerPaR">
                             <Row>
