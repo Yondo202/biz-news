@@ -101,7 +101,7 @@ export class bigMain extends Component {
                                             <span className="Name">Д.Цацрал</span>
                                             <div className="other">
                                                 <span className="filter">{slugData.filter}</span>
-                                                <span className="filter2">ЯРИЛЦЛАГ</span>
+                                                <span className="filter2">Ярилцлага</span>
                                                 <span className="date">{slugData.date}</span>
                                             </div>
                                         </div>
@@ -119,10 +119,10 @@ export class bigMain extends Component {
 
                                     </div>
                                 </div>
-                                <div className="linePAr">
+                                {/* <div className="linePAr">
                                     <div className="line"></div>
                                     <div className="line2"></div>
-                                </div>
+                                </div> */}
                                 <img src={`${slugData.image.url}`} />
                                 <div className="content sun-editor-editable sun-editor">{huwirgagch.parse(slugData.desc)}</div>
                             </div>
