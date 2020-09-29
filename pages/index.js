@@ -62,47 +62,43 @@ export default function Home(props) {
 
                         </Container>
                     </div>
-                    <Container>
-                        <Row>
-                            <div className="golMenu">
-                                <Col lg={4} md={4} sm={4} xs={12}>
-                                    <div className="logo">
-                                        {/* <img src={`${this.props.Logo.logo.url}`} /> */}
-                                        <img src={require('../components/image/bizlogo1.png')} />
-                                    </div>
-                                </Col>
-                                <Col lg={8} md={8} sm={8} xs={12}>
-                                    <Slider {...settings}>
-                                        {props.bunner1.map((el, i) => {
-                                            return (
-                                                <div key={i}>
-                                                    <a href={el.url} target="_blank">
-                                                        <div className="TopBunner">
-                                                            <div className="text">
-                                                                <h5>
-                                                                    {el.title}
-                                                                    {/* {bunner1.title} */}
-                                                                </h5>
-                                                            </div>
-                                                            <div className="image">
-                                                                <img src={`${el.image.url}`} />
-                                                                <div className="title">
-                                                                    {el.nemelt}
-                                                                    {/* <h5>{bunner1.nemelt}</h5> */}
-                                                                </div>
-                                                            </div>
-                                                            {/* <div className="ghost">
-                                                    </div> */}
+                    <div className="golMenu22">
+                        <div className="logo">
+                            {/* <img src={`${this.props.Logo.logo.url}`} /> */}
+                            <Link href="/">
+                                <img src={require('../components/image/bizlogo1.png')} />
+                            </Link>
+                        </div>
+                        <div className="SliderPAr">
+                            <Slider {...settings}>
+                                {props.bunner1.map((el, i) => {
+                                    return (
+                                        <div key={i}>
+                                            <a href={el.url} target="_blank">
+                                                <div className="TopBunner">
+                                                    <div className="text">
+                                                        <h5>
+                                                            {el.title}
+                                                            {/* {bunner1.title} */}
+                                                        </h5>
+                                                    </div>
+                                                    <div className="image">
+                                                        <img src={`${el.image.url}`} />
+                                                        <div className="title">
+                                                            {el.nemelt}
+                                                            {/* <h5>{bunner1.nemelt}</h5> */}
                                                         </div>
-                                                    </a>
+                                                    </div>
+                                                    {/* <div className="ghost">
+                                                    </div> */}
                                                 </div>
-                                            )
-                                        })}
-                                    </Slider>
-                                </Col>
-                            </div>
-                        </Row>
-                    </Container>
+                                            </a>
+                                        </div>
+                                    )
+                                })}
+                            </Slider>
+                        </div>
+                    </div>
                 </div>
 
                 <Layout AllNews={props.AllNews}>
@@ -130,7 +126,7 @@ export async function getServerSideProps() {
             AllNews: AllNews.data,
             HomeVideos: HomeVideos.data,
             bunner1: bunner1.data,
-              HomeAudio:HomeAudio.data
+            HomeAudio: HomeAudio.data
             // TopNews1: TopNews1.data,
             // TopNews2: TopNews2.data,
             // TopNews3: TopNews3.data,

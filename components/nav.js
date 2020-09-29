@@ -18,35 +18,27 @@ export class Nav extends Component {
 
         this.state = {
             open: '',
-            className: "headPar",
+            className: "TopestHeader",
             color: 'white',
             search: '',
         }
     }
 
 
-    // setSearch = (e) => {
-    //     this.setState({ search: e.target.value });
-    // }
-    // clickHandler = (e) => {
-    //     console.log(e.target, 'heey');
-    //     this.setState({ selectedContent: newsData[e.target.tabIndex] })
-    // }
+    componentDidMount() {
+        window.addEventListener("scroll", this.handleScroll);
+    }
 
-    // componentDidMount() {
-    //     window.addEventListener("scroll", this.handleScroll);
-    // }
+    handleScroll = () => {
+        if (window.pageYOffset > 189) {
 
-    // handleScroll = () => {
-    //     if (window.pageYOffset > 1) {
+            this.setState({ className: "TopestHeader2" });
+        } else {
+            this.setState({ className: "TopestHeader"});
 
-    //         this.setState({ className: "scrollDown", color: "black" });
-    //     } else {
-    //         this.setState({ className: "headPar", color: "black" });
-
-    //     }
-    //     // console.log('lalalall', window.pageYOffset)
-    // }
+        }
+        console.log('lalalall', window.pageYOffset)
+    }
 
     handleClick() {
         this.setState({
@@ -56,7 +48,7 @@ export class Nav extends Component {
 
     render() {
         return (
-            <div className="TopestHeader" >
+            <div className={this.state.className} >
                 {/* <OtherNav AllNews={this.props.AllNews} bunner1={this.props.bunner1} />s */}
                 <div className="Headerghost">
                     <Container>

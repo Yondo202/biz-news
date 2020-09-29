@@ -64,83 +64,85 @@ export class news extends Component {
 
 
                 <div className="OtherHeader">
-                        <div className="TopHead">
-                            <Container style={{ height: '100%' }}>
-                                <div className="flexHead">
-                                    <div className="TrendPar">
-                                        <div className="trend">
-                                            <span>Trending News</span>
-                                        </div>
-                                        <div className="trendCont">
-                                            <Slider {...settings}>
-                                                {this.props.allPost.map((el, i) => {
-                                                    return (
-                                                        <Link key={i} href='/posts/[slug]' as={`/posts/${el.slug}`}>
-                                                            <span key={i} >{el.title}</span>
-                                                        </Link>
-                                                    )
-                                                })}
-                                            </Slider>
-                                        </div>
+                    <div className="TopHead">
+                        <Container style={{ height: '100%' }}>
+                            <div className="flexHead">
+                                <div className="TrendPar">
+                                    <div className="trend">
+                                        <span>Trending News</span>
                                     </div>
-                                    <div className="icons">
-                                        <div className="date">
-                                            <span>Thursday, 31 June</span>
-                                        </div>
-                                        <div className="icons">
-                                            <GrFacebookOption />
-                                            <AiOutlineTwitter />
-                                            <AiOutlineGooglePlus />
-                                            <AiFillInstagram />
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </Container>
-                        </div>
-
-                        <Container>
-                            <Row>
-                                <div className="golMenu">
-                                    <Col md={4} sm={12} xs={12}>
-                                        <div className="logo">
-                                            {/* <img src={`${this.props.Logo.logo.url}`} /> */}
-                                            <img src={require('../../components/image/bizlogo1.png')} />
-                                        </div>
-                                    </Col>
-                                    <Col md={8} sm={12} xs={12}>
+                                    <div className="trendCont">
                                         <Slider {...settings}>
-                                            {this.props.bunner1.map((el, i) => {
+                                            {this.props.allPost.map((el, i) => {
                                                 return (
-                                                    <div key={i}>
-                                                        <div className="TopBunner">
-                                                            <div className="text">
-                                                                <a target="_blank">
-                                                                    <h5>
-                                                                        {el.title}
-                                                                        {/* {bunner1.title} */}
-                                                                    </h5>
-                                                                </a>
-                                                            </div>
-                                                            <div className="image">
-                                                                <img src={`${el.image.url}`} />
-                                                                <div className="title">
-                                                                    {el.nemelt}
-                                                                    {/* <h5>{bunner1.nemelt}</h5> */}
-                                                                </div>
-                                                            </div>
-                                                            <div className="ghost">
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                                    <Link key={i} href='/posts/[slug]' as={`/posts/${el.slug}`}>
+                                                        <span key={i} >{el.title}</span>
+                                                    </Link>
                                                 )
                                             })}
                                         </Slider>
-                                    </Col>
+                                    </div>
                                 </div>
-                            </Row>
+                                <div className="icons">
+                                    <div className="date">
+                                        <span>Thursday, 31 June</span>
+                                    </div>
+                                    <div className="icons">
+                                        <GrFacebookOption />
+                                        <AiOutlineTwitter />
+                                        <AiOutlineGooglePlus />
+                                        <AiFillInstagram />
+                                    </div>
+                                </div>
+                            </div>
+
                         </Container>
                     </div>
+
+
+
+                    <div className="golMenu22">
+                        <div className="logo">
+                            {/* <img src={`${this.props.Logo.logo.url}`} /> */}
+                            <Link href="/">
+                                <img src={require('../../components/image/bizlogo1.png')} />
+                            </Link>
+                        </div>
+                        <div className="SliderPAr">
+                            <Slider {...settings}>
+                                {this.props.bunner1.map((el, i) => {
+                                    return (
+                                        <div key={i}>
+                                            <a href={el.url} target="_blank">
+                                                <div className="TopBunner">
+                                                    <div className="text">
+                                                        <a target="_blank">
+                                                            <h5>
+                                                                {el.title}
+                                                                {/* {bunner1.title} */}
+                                                            </h5>
+                                                        </a>
+                                                    </div>
+                                                    <div className="image">
+                                                        <img src={`${el.image.url}`} />
+                                                        <div className="title">
+                                                            {el.nemelt}
+                                                            {/* <h5>{bunner1.nemelt}</h5> */}
+                                                        </div>
+                                                    </div>
+                                                    <div className="ghost">
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    )
+                                })}
+                            </Slider>
+                        </div>
+                    </div>
+
+
+                </div>
 
                 <Layout>
                     <Index allPost={this.props.allPost} />
@@ -152,13 +154,15 @@ export class news extends Component {
 }
 export default news
 
-export async function getServerSideProps(){
+export async function getServerSideProps() {
     const MainNews = await axios('https://biz-admin.herokuapp.com/posts');
     const bunner1 = await axios(`https://biz-admin.herokuapp.com/bunner-1-s`);
     //  console.log(ctx.params.id,'heehehe')
-     // let param = ctx.params.id
-     return {props: {
-         allPost: MainNews.data,
-         bunner1:bunner1.data
-     }}
- }
+    // let param = ctx.params.id
+    return {
+        props: {
+            allPost: MainNews.data,
+            bunner1: bunner1.data
+        }
+    }
+}
