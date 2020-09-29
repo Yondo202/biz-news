@@ -9,46 +9,50 @@ import { AiOutlineTwitter, AiOutlineGooglePlus, AiFillInstagram } from 'react-ic
 import Slider from "react-slick";
 import Link from 'next/link';
 
-
+var settings = {
+    autoplay: true,
+    autoplaySpeed: 3000,
+    dots: false,
+    infinite: true,
+    speed: 1000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    lazyLoad: 'progressive',
+    waitForAnimate: true,
+    responsive: [
+        {
+            breakpoint: 1024,
+            settings: {
+                autoPlay: true,
+                autoplaySpeed: 3000,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: true,
+            }
+        },
+        {
+            breakpoint: 600,
+            settings: {
+                autoPlay: true,
+                autoplaySpeed: 3000,
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                initialSlide: 2
+            }
+        },
+    ]
+};
 export class audio extends Component {
+    state = {
+        curTime: new Date().toLocaleString()
+    }
     render() {
+        const Dates = this.state.curTime.slice(0, 9);
         // console.log(this.props.test)
-        var settings = {
-            autoplay: true,
-            autoplaySpeed: 3000,
-            dots: false,
-            infinite: true,
-            speed: 1000,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: false,
-            lazyLoad: 'progressive',
-            waitForAnimate: true,
-            responsive: [
-                {
-                    breakpoint: 1024,
-                    settings: {
-                        autoPlay: true,
-                        autoplaySpeed: 3000,
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        infinite: true,
-                        dots: true,
-                    }
-                },
-                {
-                    breakpoint: 600,
-                    settings: {
-                        autoPlay: true,
-                        autoplaySpeed: 3000,
-                        infinite: true,
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        initialSlide: 2
-                    }
-                },
-            ]
-        };
+
         return (
             <>
                 <Head>
@@ -82,7 +86,7 @@ export class audio extends Component {
                                 </div>
                                 <div className="icons">
                                     <div className="date">
-                                        <span>Thursday, 31 June</span>
+                                        <span style={{ letterSpacing: 2 }}>{Dates}</span>
                                     </div>
                                     <div className="icons">
                                         <GrFacebookOption />

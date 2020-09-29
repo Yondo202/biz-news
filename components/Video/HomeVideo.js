@@ -51,7 +51,7 @@ export class HomeVideo extends Component {
                     bgImageAlt="the cat"
                     strength={500}
                     className="bigNews"
-                    blur={{ min: -1, max: 1 }}
+                    blur={{ min: -1, max: 5 }}
                 >
                     <div className="bigNewsBackground">
                         <div className="videoPAr player-wrapper" >

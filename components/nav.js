@@ -21,6 +21,7 @@ export class Nav extends Component {
             className: "TopestHeader",
             color: 'white',
             search: '',
+            style: 'none'
         }
     }
 
@@ -33,8 +34,10 @@ export class Nav extends Component {
         if (window.pageYOffset > 189) {
 
             this.setState({ className: "TopestHeader2" });
+            this.setState({ style: "block" });
         } else {
-            this.setState({ className: "TopestHeader"});
+            this.setState({ className: "TopestHeader" });
+            this.setState({ style: "none" });
 
         }
         console.log('lalalall', window.pageYOffset)
@@ -48,70 +51,74 @@ export class Nav extends Component {
 
     render() {
         return (
-            <div className={this.state.className} >
-                {/* <OtherNav AllNews={this.props.AllNews} bunner1={this.props.bunner1} />s */}
-                <div className="Headerghost">
-                    <Container>
-                        <div ref={(r) => this.ref = r} className="scrollDown" >
-                            <input type="checkbox" id="check" />
-                            <ul className="menu">
-                                <Link href="/">
-                                    <div className="homeMenu">
-                                        <div>
-                                            <FaHome />
+            <>
+            <div className="Ghost" style={{width:"100%", height:50, backgroundColor:"black", display:`${this.state.style}`}}></div>
+                <div className={this.state.className} >
+                    {/* <OtherNav AllNews={this.props.AllNews} bunner1={this.props.bunner1} />s */}
+                    <div className="Headerghost">
+                        <Container>
+                            <div ref={(r) => this.ref = r} className="scrollDown" >
+                                <input type="checkbox" id="check" />
+                                <ul className="menu">
+                                    <Link href="/">
+                                        <div className="homeMenu">
+                                            <div>
+                                                <FaHome />
+                                            </div>
                                         </div>
+                                    </Link>
+                                    <Link href="/">
+                                        <div className="li">
+                                            <span className="active">Нүүр</span><div className="line ln1"></div>
+                                        </div>
+                                    </Link>
+                                    <Link href="/posts">
+                                        <div className="li">
+                                            <span >News</span><div className="line ln2"></div>
+                                        </div>
+                                    </Link>
+                                    <Link href="/videos">
+                                        <div className="li">
+                                            <span >Video news</span><div className="line ln3"></div>
+                                        </div>
+                                    </Link>
+                                    <Link href="/audio">
+                                        <div className="li">
+                                            <span >Podcast</span><div className="line ln4"></div>
+                                        </div>
+                                    </Link>
+                                </ul>
+                                <div className="searchInp">
+                                    {/* <input type="input" placeholder="Хайх" /> */}
+                                    <SearchBtn AllNews={this.props.AllNews} />
+                                    {/* <SearchBtn /> */}
+                                    <div className="icon">
+                                        <FaSearch />
                                     </div>
-                                </Link>
-                                <Link href="/">
-                                    <div className="li">
-                                        <span className="active">Нүүр</span><div className="line ln1"></div>
-                                    </div>
-                                </Link>
-                                <Link href="/posts">
-                                    <div className="li">
-                                        <span >News</span><div className="line ln2"></div>
-                                    </div>
-                                </Link>
-                                <Link href="/videos">
-                                    <div className="li">
-                                        <span >Video news</span><div className="line ln3"></div>
-                                    </div>
-                                </Link>
-                                <Link href="/audio">
-                                    <div className="li">
-                                        <span >Podcast</span><div className="line ln4"></div>
-                                    </div>
-                                </Link>
-                            </ul>
-                            <div className="searchInp">
-                                {/* <input type="input" placeholder="Хайх" /> */}
-                                <SearchBtn AllNews={this.props.AllNews} />
-                                {/* <SearchBtn /> */}
-                                <div className="icon">
-                                    <FaSearch />
                                 </div>
+
+
+                                <label for="check" className="checkBtn">
+                                    {/* <IoIosMenu /> */}
+                                    <HamburgerMenu
+                                        isOpen={this.state.open}
+                                        menuClicked={this.handleClick.bind(this)}
+                                        width={32}
+                                        height={15}
+                                        strokeWidth={2}
+                                        rotate={0}
+                                        // color={this.state.color}
+                                        color="white"
+                                        borderRadius={0}
+                                        animationDuration={0.5}
+                                    />
+                                </label>
                             </div>
-
-
-                            <label for="check" className="checkBtn">
-                                {/* <IoIosMenu /> */}
-                                <HamburgerMenu
-                                    isOpen={this.state.open}
-                                    menuClicked={this.handleClick.bind(this)}
-                                    width={32}
-                                    height={15}
-                                    strokeWidth={2}
-                                    rotate={0}
-                                    // color={this.state.color}
-                                    color="white"
-                                    borderRadius={0}
-                                    animationDuration={0.5}
-                                />
-                            </label>
-                        </div>
-                    </Container>
+                        </Container>
+                    </div>
                 </div>
-            </div>
+            </>
+
 
         )
     }

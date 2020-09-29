@@ -9,7 +9,7 @@ import { AiOutlineTwitter, AiOutlineGooglePlus, AiFillInstagram } from 'react-ic
 import Slider from "react-slick";
 import Link from 'next/link';
 
-
+const Dates = new Date().toLocaleString()
 
 
 export default function Home(props) {
@@ -49,7 +49,7 @@ export default function Home(props) {
                                 </div>
                                 <div className="icons">
                                     <div className="date">
-                                        <span>Thursday, 31 June</span>
+                                        <span style={{letterSpacing:2}}>{Dates.slice(0,9)}</span>
                                     </div>
                                     <div className="icons">
                                         <GrFacebookOption />
