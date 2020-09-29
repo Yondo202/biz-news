@@ -25,7 +25,6 @@ export class Nav extends Component {
         }
     }
 
-
     componentDidMount() {
         window.addEventListener("scroll", this.handleScroll);
     }

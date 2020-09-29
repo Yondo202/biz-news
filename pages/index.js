@@ -11,7 +11,6 @@ import Link from 'next/link';
 
 const Dates = new Date().toLocaleString()
 
-
 export default function Home(props) {
     // const newsData = props.MainNews
     // console.log(props.VideoNewsHome, 'lalala')
@@ -19,7 +18,7 @@ export default function Home(props) {
     return (
         <div>
             <Head>
-                <title>Biz-Insider</title>
+                <title>BIZI.mn</title>
                 <link rel="icon" href="/favicon.ico" />
                 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"></link>
                 <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
