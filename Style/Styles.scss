@@ -1904,8 +1904,8 @@ body {
         }
 
         .mainCon {
-            padding: 20px 20px;
-            padding-left: 60px;
+            padding: 20px 60px;
+            // padding-left: 60px;
             border-right: 1.5px solid rgba(0, 0, 0, 0.2);
             .smMenu {
                 display: flex;
@@ -2137,7 +2137,7 @@ body {
                     word-spacing: 1px;
                     line-height: 24px;
                     // color: #888888;
-                    color: rgba(0, 0, 0, 0.9);
+                    color: black;
                     letter-spacing: -0.2px;
                     width: 100%;
                     font-family: $myFontFamily !important;
@@ -2156,7 +2156,11 @@ body {
                         transition: font-size 0.2s ease-in-out;
                         word-spacing: 2px;
                     }
-
+                    img{
+                        height: 330px !important;
+                        width: 100% !important;
+                        object-fit: cover;
+                    }
                 }
                 .sun-editor-editable .sun-editor {
                     font-family: $myFontFamily;

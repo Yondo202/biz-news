@@ -5,14 +5,21 @@ import axios from 'axios'
 import MainNews from '../../components/mainNews/mainNews'
 import BigNews from '../../components/mainNews/bigMain'
 
+const imageURL = '';
+
 export default function Home(props) {
 
-  console.log(props.big,  'this is my big data')
+  console.log(props.big, 'this is my big data')
 
   return (
     <div>
       <Head>
         <title>{props.big.title}</title>
+        {/* <meta property="og:image" content={`%PUBLIC_URL%/${props.big.image.url}`}></meta> */}
+        <meta property="og:description" content='hahahahha' />
+        {/* <meta property="og:image" content={props.big.image.url}></meta> */}
+        <meta property="og:image:secure_url" content={props.big.image.url}></meta>
+        <meta property="og:image" content={imageURL!==''?`${props.big.image.url}`: ''} />
         <link rel="icon" href="/favicon.ico" />
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"></link>
 
@@ -23,7 +30,7 @@ export default function Home(props) {
       </Head>
       <>
         <Layout>
-          <MainNews big={props.big} all={props.all}/>
+          <MainNews big={props.big} all={props.all} />
         </Layout>
       </>
 
