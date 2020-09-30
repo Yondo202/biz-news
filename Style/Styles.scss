@@ -1,4 +1,4 @@
-$myFontFamily: "Roboto", sans-serif;
+$myFontFamily: "Roboto";
 $myFavColor: #ff1744;
 
 * {
@@ -8,6 +8,11 @@ $myFavColor: #ff1744;
 }
 
 body {
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 1px hsla(0, 0%, 100%, 0.004);
+    -moz-osx-font-smoothing: grayscale;
+    // color: #6c6c6c;
+    // font: normal 14px/22px PT Sans,sans-serif;
     font-family: "Roboto", sans-serif !important;
     letter-spacing: 0px;
     overflow-x: hidden;
@@ -2137,16 +2142,33 @@ body {
                     width: 100%;
                     font-family: $myFontFamily !important;
                     p {
+                        font-size: 15px !important;
+                        // color: rgba(0, 0, 0, 1);
+                        color: #3c414e;
                         font-family: $myFontFamily !important;
                     }
                     span {
+                        font-size: 15px !important;
+                        // color: rgba(0, 0, 0, 1);
+                        color: #26282c;
                         font-family: $myFontFamily !important;
+                        line-height: 26px;
+                        transition: font-size 0.2s ease-in-out;
+                        word-spacing: 2px;
                     }
+
                 }
                 .sun-editor-editable .sun-editor {
                     font-family: $myFontFamily;
+                    // .sun-editor-editable table td,
+                    // .sun-editor-editable table th {
+                    //     border: 1px solid #c2e8f8 !important;
+                    //     padding: 10em;
+                    //     background-clip: padding-box;
+                    //     span {
+                    //     }
+                    // }
                 }
-
                 // p {
                 //     line-height: 28px;
                 //     // color: #888888;
@@ -2160,7 +2182,6 @@ body {
         .otherNewsParent {
             // position: fixed;
             // top: -220px;
-
             .dailyTitle {
                 margin-bottom: 10px;
                 h1 {
@@ -3334,7 +3355,6 @@ $rhap_font-family: inherit !default;
             align-items: center;
             justify-content: space-between;
             .logo {
-                
                 margin: 10px 0px;
                 width: 70%;
                 text-align: center;

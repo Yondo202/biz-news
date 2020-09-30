@@ -1,5 +1,5 @@
 .sun-editor-editable {
-    font-family: inherit;
+    font-family: "Roboto", sans-serif !important;
     font-size: 16px;
     color: #333;
     line-height: 1.5;
@@ -12,7 +12,7 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    font-family: inherit;
+    font-family: "Roboto", sans-serif !important;
     font-size: inherit;
     color: inherit;
   }
@@ -244,10 +244,10 @@
   .sun-editor-editable table {
     display: table;
     table-layout: auto;
-    border: 1px solid #ccc;
+    border: 1px solid #c2e8f8 !important;
     width: 100%;
-    max-width: 100%;
-    margin: 0 0 10px;
+    max-width: 50%;
+    margin: 40px 40px 20px 0px;
     background-color: transparent;
     border-spacing: 0;
     border-collapse: collapse;
@@ -263,9 +263,12 @@
   }
   .sun-editor-editable table td,
   .sun-editor-editable table th {
-    border: 1px solid #e1e1e1;
-    padding: 0.4em;
+    border: 1px solid #c2e8f8;
+    padding: 1.2em;
     background-clip: padding-box;
+    span{
+      word-spacing: 2px;
+    }
   }
   .sun-editor-editable table.se-table-size-auto {
     width: auto !important;
