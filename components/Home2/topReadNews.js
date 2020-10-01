@@ -11,7 +11,7 @@ export class topReadNews extends Component {
     render() {
         const AllNews = this.props.AllNews
         const myData = AllNews.reverse().slice(0, 3);
-        // console.log(myData, 'odoo jinken');
+        console.log(myData[0].desc.slice(600, 1000), 'odoo jinken');
         return (
             <Container className="topReadNews">
                 <Row style={{ marginTop: 50 }}>
@@ -37,7 +37,7 @@ export class topReadNews extends Component {
                                             <Col md={9}>
                                                 <div className="content">
                                                     <div className="catigory">
-                                                        <span>Business</span>
+                                                        <span>{el.filter}</span>
                                                     </div>
                                                     <div className="Title1">
                                                         <Link href="/posts/[slug]" as={`/posts/${el.slug}`} >
@@ -61,7 +61,7 @@ export class topReadNews extends Component {
                                                         </div>
                                                     </div>
                                                     <div className="Desc">
-                                                        {el.desc}
+                                                        {el.title} 
                                                     </div>
                                                 </div>
                                             </Col>

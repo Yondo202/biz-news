@@ -51,7 +51,7 @@ export class Nav extends Component {
     render() {
         return (
             <>
-            <div className="Ghost" style={{width:"100%", height:50, backgroundColor:"black", display:`${this.state.style}`}}></div>
+            <div className="Ghost" style={{width:"100%", height:50, backgroundColor:"white", display:`${this.state.style}`}}></div>
                 <div className={this.state.className} >
                     {/* <OtherNav AllNews={this.props.AllNews} bunner1={this.props.bunner1} />s */}
                     <div className="Headerghost">

@@ -49,7 +49,7 @@ export class HomeVideo extends Component {
                     // bgImage={require(`../image/slider3.jpg`)}
                     bgImage={`${this.props.big.image.url}`}
                     bgImageAlt="the cat"
-                    strength={500}
+                    strength={600}
                     className="bigNews"
                     blur={{ min: -1, max: 5 }}
                 >
@@ -93,18 +93,18 @@ export class HomeVideo extends Component {
                                 <div className="SeeAndCount">
                                     <div className="shareParents">
                                         <FacebookShareButton url={`https://biznet-news.vercel.app/${big.path}/${big.slug}`} style={{ width: 50, height: 50 }} >
-                                            <FacebookIcon size={30} >hahahahah</FacebookIcon>
+                                            <FacebookIcon size={30} ></FacebookIcon>
                                             <FacebookShareCount url={`https://biznet-news.vercel.app/${big.path}/${big.slug}`}>
                                                 {shareCount => <h1 className="myShareCountWrapper">{shareCount}</h1>}
                                             </FacebookShareCount>
                                         </FacebookShareButton>
 
                                         <TwitterShareButton url={`https://biznet-news.vercel.app/${big.path}/${big.slug}`} style={{ width: 50, height: 50 }} >
-                                            <TwitterIcon size={30} >hahahahah</TwitterIcon>
+                                            <TwitterIcon size={30} ></TwitterIcon>
                                         </TwitterShareButton>
 
                                         <EmailShareButton url={`https://biznet-news.vercel.app/${big.path}/${big.slug}`} style={{ width: 50, height: 50 }} >
-                                            <EmailIcon size={30} >hahahahah</EmailIcon>
+                                            <EmailIcon size={30} ></EmailIcon>
                                         </EmailShareButton>
                                     </div>
                                     <div className="counts">

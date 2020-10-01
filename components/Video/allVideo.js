@@ -34,7 +34,7 @@ function allVideo(props) {
     console.log(titleData, 'jejejejjee2123123')
     return (
         <div className="videoMenu">
-            <Container fluid style={{width:'97%'}}>
+            <Container fluid style={{ width: '97%' }}>
                 <Row>
                     <Col md={8}>
                         <div className="bigTitle">
@@ -43,27 +43,26 @@ function allVideo(props) {
                             <div className="line"><div className="line2"></div></div>
 
                         </div>
-
-                        <Accordion>
+                        <Accordion  >
                             {titleData.map((item, i) => {
                                 return (
-                                    <AccordionItem key={i} isHovered={true} title={`${item.bulan}`} expanded={item === 1}>
+                                    <AccordionItem  key={i} title={`⏯️ ${item.bulan}`} expanded={item === 1}>
                                         {allData.map((items, i) => {
                                             if (item.bulan === items.bulan) {
                                                 return (
                                                     <div className="contentPar" key={i}>
-                                                        {/* <Link href="/videos/[slug]" as={`/videos/${items.slug}`}>
-                                                {items.title}
-                                            </Link> */}
+                                                        <div>
+                                                            <img src={items.image.url} />
+                                                        </div>
                                                         <Link href="/videos/[slug]" as={`/videos/${items.slug}`}>
-                                                            <span className="contents"><MdSlowMotionVideo /> {items.title}</span>
+                                                              <span className="contents"> {items.title} </span>
+                                                              
                                                         </Link>
                                                     </div>
 
                                                 )
                                             }
                                         })}
-
                                     </AccordionItem>
                                 );
                             })}
