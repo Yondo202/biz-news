@@ -75,7 +75,7 @@ export class bigMain extends Component {
         console.log(this.props.small, 'small hehe')
         const slugData = this.props.big
         return (
-            <Col md={9}>
+            <Col md={8}>
                 <div className={this.state.className2}>
                     <Link href="/">
                         <img src={require('../image/bizlogo1.png')}></img>

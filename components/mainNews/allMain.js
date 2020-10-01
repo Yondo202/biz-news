@@ -50,7 +50,7 @@ export class allMain extends Component {
         console.log(this.props.small, ' zangilga data')
         const allData = this.props.small
         return (
-            <Col md={3} style={{position:"relative"}}>
+            <Col md={4} style={{position:"relative"}}>
                 <div className="otherNewsParent">
                     <div className="dailyTitle">
                         <h1 >Daily News</h1>
