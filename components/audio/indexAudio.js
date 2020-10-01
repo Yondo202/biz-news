@@ -24,7 +24,7 @@ export class Audio extends Component {
             <div className="audioPar">
                 <Container className="betweenNewsPar">
                     <motion.div initial="exit" animate="enter" exit="exit" variants={textVariants}>
-                        <Row >
+                        <Row style={{marginTop:30}}>
                             {MainAudio.map((el, i) => {
                                 return (
 

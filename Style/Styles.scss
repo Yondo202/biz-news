@@ -1,7 +1,9 @@
+
 $myFontFamily: "medium-content-serif-font";
 $myFontFamily2: "Roboto";
 $myFavColor: #ff1744;
 $myFontFamilyBold: 'medium-content-sans-serif-font';
+// @import '../Style/Fonts/georgia.ttf';
 
 
 @font-face {
@@ -1996,7 +1998,7 @@ body {
             }
             .title {
                 h2 {
-                    font-weight: 600;
+                    font-weight: 500;
                     // opacity: 0.8;
                 }
                 .shareBtnPar {
@@ -2007,17 +2009,19 @@ body {
                     left: 0px;
                     transition: all 0.4s ease-in;
                     align-items: center;
-                    margin-left: 20px;
+                    margin-left: 10px;
                     .ButtonsPAr {
                         display: flex;
                         flex-direction: row;
                         .react-share__ShareButton {
                             transition: all 0.4s ease;
                             left: 0px;
+                            width: 35px !important;
+                            height: 35px !important;
                             svg {
                                 // display: block;
-                                width: 26px;
-                                height: 26px;
+                                width: 30px;
+                                height: 30px;
                                 transition: all 0.2s ease-in;
                                 &:hover {
                                     left: 0px;
@@ -2055,7 +2059,7 @@ body {
                                 align-items: flex-start;
                                 margin-bottom: 10px;
                                 .filter {
-                                    color: $myFavColor;
+                                    color: rgb(87, 118, 154);
                                     border-bottom: 1px solid rgba(0, 0, 0, 0.4);
                                     padding-right: 0px;
                                     cursor: pointer;
@@ -2067,7 +2071,7 @@ body {
                                 .filter2 {
                                     margin-bottom: 5px;
                                     margin-left: 0px;
-                                    color: $myFavColor;
+                                    color: rgb(87, 118, 154);
                                     border-bottom: 1px solid rgba(0, 0, 0, 0.4);
                                     padding-right: 5px;
                                     cursor: pointer;
@@ -2077,6 +2081,7 @@ body {
                                 }
                                 .date {
                                     margin-left: 0px;
+                                    font-size: 12px;
                                 }
                             }
                         }
@@ -2090,12 +2095,15 @@ body {
                     margin-bottom: 10px;
                     justify-content: space-between;
                     align-items: center;
+                    margin-right: 13px;
                     .react-share__ShareButton {
+                        width: 35px !important;
+                        height: 35px !important;
                         transition: all 0.4s ease;
                         svg {
                             // display: block;
-                            width: 40px;
-                            height: 40px;
+                            width: 30px;
+                            height: 30px;
                             transition: all 0.2s ease-in;
                             &:hover {
                                 left: 0px;
@@ -2125,7 +2133,7 @@ body {
                             }
                             .other {
                                 .filter {
-                                    color: $myFavColor;
+                                    color: rgb(87, 118, 154);
                                     border-right: 1px solid rgba(0, 0, 0, 0.4);
                                     padding-right: 5px;
                                     cursor: pointer;
@@ -2135,7 +2143,7 @@ body {
                                 }
                                 .filter2 {
                                     margin-left: 5px;
-                                    color: $myFavColor;
+                                    color: rgb(87, 118, 154);
                                     border-right: 1px solid rgba(0, 0, 0, 0.4);
                                     padding-right: 5px;
                                     cursor: pointer;
@@ -2144,6 +2152,7 @@ body {
                                     }
                                 }
                                 .date {
+                                    font-size: 14px;
                                     margin-left: 5px;
                                 }
                             }
@@ -2201,6 +2210,7 @@ body {
                     }
                     span {
                         font-size: 19px !important;
+                        
                         // color: rgba(0, 0, 0, 1);
                         color: rgba(41, 41, 41, 1);
                         font-family: $myFontFamily !important;
@@ -2325,15 +2335,15 @@ body {
                             .flex1Text {
                                 padding-left: 15px;
                                 h6 {
-                                    width: 100%;
-                                    height: 60px;
-                                    font-weight: 600;
-                                    margin-top: 10px;
+                                    width: 98%;
+                                    height: 62px;
+                                    font-weight: 500;
+                                    margin-top: 5px;
                                     margin-bottom: 0px;
                                     overflow: hidden;
                                     transition: all ease 0.3s;
                                     font-family: $myFontFamily;
-                                    font-size: 16px;
+                                    font-size: 18px;
                                     
                                     cursor: pointer;
                                     &:hover {
@@ -2390,9 +2400,9 @@ body {
     .col-md-5 {
         padding: 0px 0px;
     }
-    font-family: $myFontFamily;
+    font-family: $myFontFamily2;
     .MainPar {
-        font-family: $myFontFamily;
+        font-family: $myFontFamily2;
         background-color: #f5f5f5;
         .videoMenu {
             padding: 15px 25px;
