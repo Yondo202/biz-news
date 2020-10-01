@@ -24,10 +24,9 @@ export class Audio extends Component {
             <div className="audioPar">
                 <Container className="betweenNewsPar">
                     <motion.div initial="exit" animate="enter" exit="exit" variants={textVariants}>
-                        <Row style={{marginTop:30}}>
+                        <Row style={{ marginTop: 30 }}>
                             {MainAudio.map((el, i) => {
                                 return (
-
                                     <Col md={4} key={i}>
                                         <div className="TopSmall">
                                             <img src={`${el.image.url}`} />
@@ -60,7 +59,7 @@ export class Audio extends Component {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div style={{marginBottom:20}}></div>
+                                        <div style={{ marginBottom: 20 }}></div>
                                     </Col>
                                 )
                             })}
