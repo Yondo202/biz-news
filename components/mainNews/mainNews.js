@@ -36,6 +36,7 @@ export class mainNews extends Component {
             <div  className="BackMainNewsPar">
                 <Container className="containers" fluid>
                     <Row style={{marginTop:20}}>
+                    
                         < BigMain big={this.props.big} />
                         <Allmain small={this.props.all} />
                     </Row>
