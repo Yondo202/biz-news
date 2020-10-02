@@ -71,7 +71,7 @@ export class HomeVideo extends Component {
                                 <div className="mainCon">
                                     <div className="filterPAr">
                                         <span>
-                                            Business
+                                            {big.filter}
                                         </span>
                                         <div className="line"></div>
                                     </div>
@@ -80,13 +80,13 @@ export class HomeVideo extends Component {
                                     </span>
                                     <div className="titlePAr">
                                         <span>
-                                            Газар нутгийн халдашгүй Монгол Улсын тусгаар тогтнол, газар нутгийн халдашгүй
+                                            {big.title}
                                         </span>
                                     </div>
                                     <div className="date">
                                         <MdDateRange />
                                         <span>
-                                            2020.03.19
+                                            {big.date}
                                         </span>
                                     </div>
                                 </div>
@@ -120,6 +120,8 @@ export class HomeVideo extends Component {
 
                                 </div>
                             </div>
+
+                            
                         </div>
                     </div>
                 </Parallax>

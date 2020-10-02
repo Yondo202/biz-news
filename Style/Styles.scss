@@ -34,24 +34,24 @@ body {
     letter-spacing: 0px;
     overflow-x: hidden;
     &::-webkit-scrollbar {
-        width: 5px;
+        width: 8px;
     }
 
     /* Track */
     &::-webkit-scrollbar-track {
-        box-shadow: inset 0 0 5px grey;
+        box-shadow: inset 0 0 5px black;
         border-radius: 10px;
     }
 
     /* Handle */
     &::-webkit-scrollbar-thumb {
-        background: #f7f2eb;
+        background: rgba(40, 40, 40, 1);
         border-radius: 10px;
     }
 
     /* Handle on hover */
     &::-webkit-scrollbar-thumb:hover {
-        background: black;
+        background: $myFavColor;
     }
 }
 // .TopHead{
@@ -1549,7 +1549,7 @@ body {
             }
         }
         .react-sanfona {
-            font-size: $myFontFamily !important;
+            font-size: $myFontFamily2 !important;
             // margin-left: 5%;
             // width: 45%;
 
@@ -1566,14 +1566,13 @@ body {
                 transition: all 0.4s ease-in;
                 color: white;
                 background-color: $myFavColor;
-                font-family: $myFontFamily !important;
+                font-family: $myFontFamily2 !important;
                 font-weight: 400;
                 .react-sanfona-item-body {
                     padding: 5px 15px;
                     color: black;
                     background-color: white;
                     // border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-
                     .contentPar {
                         border-bottom: 1px solid rgba(0, 0, 0, 0.2);
                         padding: 5px;
@@ -1677,7 +1676,9 @@ body {
                             color: white;
                             // justify-content: center;
                             align-items: center;
+                            margin-top: 10px;
                             svg {
+
                                 margin-right: 15px;
                             }
                         }
@@ -1992,8 +1993,7 @@ body {
             }
             .title {
                 h2 {
-                    font-weight: 500;
-                    // opacity: 0.8;
+                    // font-weight: 600;
                 }
                 .shareBtnPar {
                     display: flex;
@@ -2346,8 +2346,8 @@ body {
                                     margin-bottom: 0px;
                                     overflow: hidden;
                                     transition: all ease 0.3s;
-                                    font-family: $myFontFamily;
-                                    font-size: 18px;
+                                    font-family: $myFontFamily2;
+                                    font-size: 17px;
 
                                     cursor: pointer;
                                     &:hover {
