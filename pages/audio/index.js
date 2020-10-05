@@ -157,7 +157,7 @@ export class audio extends Component {
 
 export default audio
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
     const MainAudio = await axios('https://biz-admin.herokuapp.com/audio');
     const bunner1 = await axios(`https://biz-admin.herokuapp.com/bunner-1-s`);
     //  console.log(ctx.params.id,'heehehe')
@@ -166,6 +166,7 @@ export async function getServerSideProps() {
         props: {
             allPost: MainAudio.data,
             bunner1: bunner1.data
-        }
+        },
+        revalidate: 1
     }
 }

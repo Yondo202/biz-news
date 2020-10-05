@@ -42,6 +42,7 @@ export async function getServerSideProps(context) {
         props: {
             big: VideoNews.data[0],
             all: allData.data
-        }
+        },
+        revalidate: 1
     }
 }

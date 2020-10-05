@@ -16,7 +16,7 @@
     "framer-motion": "^2.6.1",
     "html-to-react": "^1.4.3",
     "module-alias": "^2.2.2",
-    "next": "9.4.4",
+    "next": "^9.5.3",
     "next-optimized-images": "^2.6.1",
     "next-videos": "^1.2.0",
     "node-sass": "^4.14.1",
