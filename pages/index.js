@@ -62,6 +62,7 @@ export default function Home(props) {
 
                         </Container>
                     </div>
+                    <Container>
                     <div className="golMenu22">
                         <div className="logo">
                             {/* <img src={`${this.props.Logo.logo.url}`} /> */}
@@ -99,6 +100,7 @@ export default function Home(props) {
                             </Slider>
                         </div>
                     </div>
+                    </Container>
                 </div>
 
                 <Layout AllNews={props.AllNews}>

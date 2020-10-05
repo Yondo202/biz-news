@@ -50,12 +50,12 @@ var settings = {
 export class news extends Component {
     constructor(props) {
         super(props)
-    
+
         this.state = {
-            curTime : new Date().toLocaleString(),
+            curTime: new Date().toLocaleString(),
         }
     }
-    
+
     render() {
         const Dates = this.state.curTime.slice(0, 9)
         // console.log(this.props.test)
@@ -94,7 +94,7 @@ export class news extends Component {
                                 </div>
                                 <div className="icons">
                                     <div className="date">
-                                    <span style={{letterSpacing:2}}>{Dates}</span>
+                                        <span style={{ letterSpacing: 2 }}>{Dates}</span>
                                     </div>
                                     <div className="icons">
                                         <GrFacebookOption />
@@ -109,46 +109,48 @@ export class news extends Component {
                     </div>
 
 
-
-                    <div className="golMenu22">
-                        <div className="logo">
-                            {/* <img src={`${this.props.Logo.logo.url}`} /> */}
-                            <Link href="/">
-                                <img src={require('../../components/image/bizlogo1.png')} />
-                            </Link>
-                        </div>
-                        <div className="SliderPAr">
-                            <Slider {...settings}>
-                                {this.props.bunner1.map((el, i) => {
-                                    return (
-                                        <div key={i}>
-                                            <a href={el.url} target="_blank">
-                                                <div className="TopBunner">
-                                                    <div className="text">
-                                                        <a target="_blank">
-                                                            <h5>
-                                                                {el.title}
-                                                                {/* {bunner1.title} */}
-                                                            </h5>
-                                                        </a>
-                                                    </div>
-                                                    <div className="image">
-                                                        <img src={`${el.image.url}`} />
-                                                        <div className="title">
-                                                            {el.nemelt}
-                                                            {/* <h5>{bunner1.nemelt}</h5> */}
+                    <Container>
+                        <div className="golMenu22">
+                            <div className="logo">
+                                {/* <img src={`${this.props.Logo.logo.url}`} /> */}
+                                <Link href="/">
+                                    <img src={require('../../components/image/bizlogo1.png')} />
+                                </Link>
+                            </div>
+                            <div className="SliderPAr">
+                                <Slider {...settings}>
+                                    {this.props.bunner1.map((el, i) => {
+                                        return (
+                                            <div key={i}>
+                                                <a href={el.url} target="_blank">
+                                                    <div className="TopBunner">
+                                                        <div className="text">
+                                                            <a target="_blank">
+                                                                <h5>
+                                                                    {el.title}
+                                                                    {/* {bunner1.title} */}
+                                                                </h5>
+                                                            </a>
+                                                        </div>
+                                                        <div className="image">
+                                                            <img src={`${el.image.url}`} />
+                                                            <div className="title">
+                                                                {el.nemelt}
+                                                                {/* <h5>{bunner1.nemelt}</h5> */}
+                                                            </div>
+                                                        </div>
+                                                        <div className="ghost">
                                                         </div>
                                                     </div>
-                                                    <div className="ghost">
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    )
-                                })}
-                            </Slider>
+                                                </a>
+                                            </div>
+                                        )
+                                    })}
+                                </Slider>
+                            </div>
                         </div>
-                    </div>
+                    </Container>
+
 
 
                 </div>

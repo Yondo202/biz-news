@@ -199,11 +199,12 @@ body {
         .icons {
             display: flex;
             flex-direction: row;
-            width: 40%;
-            justify-content: space-evenly;
+            width: 50%;
+            justify-content: flex-end;
             align-items: center;
             height: 100%;
             .date {
+                margin-right: 20px;
                 padding: 6px 10px;
                 background-color: #2c2e30;
                 color: white;
@@ -213,8 +214,10 @@ body {
                 }
             }
             .icons {
+                display: flex;
                 color: white;
-                width: 35%;
+                width: 30%;
+                justify-content: space-around;
                 border-right: 1px solid rgba(255, 255, 255, 0.2);
                 border-left: 1px solid rgba(255, 255, 255, 0.2);
                 height: 100%;
@@ -233,10 +236,10 @@ body {
         }
     }
     .golMenu22 {
-        width: 81.5%;
+        width: 100%;
         // display: flex;
         // flex-direction: row;
-        margin-left: 9.23%;
+        // margin-left: 9.23%;
         display: flex;
         flex-direction: row;
         height: 140px;
@@ -648,7 +651,7 @@ body {
                 height: 100%;
                 width: 100%;
                 background-color: rgb(0, 0, 0);
-                opacity: 0.7;
+                opacity: 0.4;
             }
             .content {
                 position: absolute;
@@ -1108,7 +1111,7 @@ body {
                 align-self: flex-start;
             }
             .Title {
-                height: 49px;
+                height: 47px;
                 overflow: hidden;
                 cursor: pointer;
                 h2 {
@@ -1902,8 +1905,8 @@ body {
                 object-fit: cover;
                 margin-left: 7%;
             }
-            transition: all 0.5s ease;
-            opacity: 1;
+            transition: all 0.6s ease;
+            opacity: 0;
         }
         .ScrollHead {
             border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -1943,14 +1946,13 @@ body {
                 cursor: pointer;
                 margin-left: 5%;
             }
-            transition: all 0.5s ease;
+            transition: all 0.6s ease;
             opacity: 1;
         }
 
         .mainCon {
             padding: 20px 0px;
             padding-left: 30px;
-            // border-right: 1px solid rgba(0, 0, 0, 0.1);
             .smMenu {
                 display: flex;
                 flex-direction: row;
