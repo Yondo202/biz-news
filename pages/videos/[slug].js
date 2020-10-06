@@ -21,7 +21,7 @@ function Home(props) {
                     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet"></link>
                 </Head>
 
-                <Layout>
+                <Layout AllNews={props.all}>
                     <HomeVideo big={props.big} all={props.all} />
                     {/* keke */}
                 </Layout>
@@ -33,16 +33,46 @@ function Home(props) {
 export default Home
 
 
-export async function getServerSideProps(context) {
-    const { slug } = context.query
-    const VideoNews = await axios(`https://biz-admin.herokuapp.com/videos?slug=${slug}`);
+export const getStaticPaths = async () => {
+    const allData = await axios.get(
+        `https://biz-admin.herokuapp.com/videos`
+    );
+    const parks = allData.data;
+  
+    const paths = parks.map((allDatas) => ({
+      params: { slug: allDatas.slug },
+    }));
+  
+    return { paths, fallback: false };
+  };
+  
+  export const getStaticProps = async ({ params }) => {
+    const VideoNews = await axios.get(
+      `https://biz-admin.herokuapp.com/videos?slug=${params.slug}`
+    );
     const allData = await axios(`https://biz-admin.herokuapp.com/videos`);
-    //  const data = await VideoNews.json()
+    console.log(VideoNews, 'дэдэдэдэ')
     return {
-        props: {
-            big: VideoNews.data[0],
-            all: allData.data
-        },
-        revalidate: 1
-    }
-}
+      props: {
+        big : VideoNews.data[0],
+        all: allData.data
+      },
+      revalidate: 1
+    };
+  };
+  
+
+// export async function getServerSideProps(context) {
+//     const { slug } = context.query
+//     const VideoNews = await axios(`https://biz-admin.herokuapp.com/videos?slug=${slug}`);
+//     const allData = await axios(`https://biz-admin.herokuapp.com/videos`);
+//     //  const data = await VideoNews.json()
+//     return {
+//         props: {
+//             big: VideoNews.data[0],
+//             all: allData.data
+//         },
+//         revalidate: 1
+//     }
+// }
+

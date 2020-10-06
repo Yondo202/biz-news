@@ -30,31 +30,8 @@ function search(props) {
         const [path, setPath] = useState('/posts')
 
         const wrapperRef = useRef(null);
-
-        // console.log(options, 'my Options ')
         useEffect(() => {
-            // const MainPosts = axios.get(`https://biz-admin.herokuapp.com/posts`).then((res) => {
-            //     console.log(res.data, 'this my data')
-            //     allData.push(res.data);
-            // }).catch((error) => {
-            //     console.log(error)
-            // })
-            // const allData = []
-            // async function DataGet() {
-            //     const MainDatas = await axios.get('https://biz-admin.herokuapp.com/posts').then((res) => {
-            //         console.log(res.data, 'this is my real data')
-            //         allData.push(res.data)
-            //         console.log(allData, 'my real data 2')
-            //     })
-               
-            // }
-            // DataGet()
-            // const allData = [];
-            // console.log(allData, 'bas l veegu data')
-
-
             setOptions(props.AllNews)
-            // setOptions(allData);
         }, [])
 
         useEffect(() => {

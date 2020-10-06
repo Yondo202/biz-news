@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Head from 'next/head'
-import Layout from '../../components/layout2'
+import Layout from '../../components/layout'
 import Audio from '../../components/audio/indexAudio'
 import axios from 'axios'
 import { Container, Row, Col } from 'react-bootstrap'
@@ -76,7 +76,7 @@ export class audio extends Component {
                                         <Slider {...settings}>
                                             {this.props.allPost.map((el, i) => {
                                                 return (
-                                                    <Link key={i} href='/posts/[slug]' as={`/posts/${el.slug}`}>
+                                                    <Link key={i} href='/audio/[slug]' as={`/audio/${el.slug}`}>
                                                         <span key={i} >{el.title}</span>
                                                     </Link>
                                                 )
@@ -146,8 +146,8 @@ export class audio extends Component {
                 </div>
 
 
-                <Layout>
-                    <Audio MainAudio={this.props.allPost} />
+                <Layout AllNews={this.props.allPost}>
+                    <Audio  MainAudio={this.props.allPost} />
                 </Layout>
             </>
 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Head from 'next/head'
 
-import Layout from '../../components/layout2'
+import Layout from '../../components/layout'
 import MainNews from '../../components/mainNews/mainNews'
 import Index from '../../components/mainNews/indexNews'
 import { Container, Row, Col } from 'react-bootstrap'
@@ -155,7 +155,7 @@ export class news extends Component {
 
                 </div>
 
-                <Layout>
+                <Layout AllNews={this.props.allPost}>
                     <Index allPost={this.props.allPost} />
                 </Layout>
             </>
@@ -178,3 +178,5 @@ export async function getStaticProps() {
         revalidate: 1
     }
 }
+
+

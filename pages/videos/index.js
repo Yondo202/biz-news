@@ -86,7 +86,7 @@ export class videoNews extends Component {
                                             <Slider {...settings}>
                                                 {this.props.allVideo.map((el, i) => {
                                                     return (
-                                                        <Link key={i} href='/posts/[slug]' as={`/posts/${el.slug}`}>
+                                                        <Link key={i} href='/videos/[slug]' as={`/videos/${el.slug}`}>
                                                             <span key={i} >{el.title}</span>
                                                         </Link>
                                                     )
@@ -154,11 +154,10 @@ export class videoNews extends Component {
 
                     </div>
 
-                    <Layout allVideo={this.props.allVideo}>
+                    <Layout AllNews={this.props.allVideo}>
                         <HomeVideo allVideo={this.props.allVideo} />
                     </Layout>
                 </>
-
             </div>
         )
     }

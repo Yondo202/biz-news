@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Layout from '../../components/layout2'
+import Layout from '../../components/layout'
 import HomePar from '../../components/home'
 import axios from 'axios'
 import Aduios from '../../components/audio/Audio'
@@ -19,7 +19,7 @@ export default function Home(props) {
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet"></link>
       </Head>
       <>
-        <Layout>
+        <Layout AllNews={props.all}>
           <Aduios big={props.big} all={props.all}  />
         </Layout>
       </>
@@ -29,28 +29,47 @@ export default function Home(props) {
   )
 }
 
-export async function getServerSideProps(context) {
-  const { slug } = context.query
-  const audioNews = await axios(`https://biz-admin.herokuapp.com/audio?slug=${slug}`);
+
+export const getStaticPaths = async () => {
+  const allData = await axios.get(
+      `https://biz-admin.herokuapp.com/audio`
+  );
+  const parks = allData.data;
+
+  const paths = parks.map((allDatas) => ({
+    params: { slug: allDatas.slug },
+  }));
+
+  return { paths, fallback: false };
+};
+
+export const getStaticProps = async ({ params }) => {
+  const audioNews = await axios.get(
+    `https://biz-admin.herokuapp.com/audio?slug=${params.slug}`
+  );
   const allData = await axios(`https://biz-admin.herokuapp.com/audio`);
-  //  const data = await audioNews.json()
-//   console.log(id)
+  console.log(audioNews, 'дэдэдэдэ')
   return {
     props: {
-      big: audioNews.data[0],
+      big : audioNews.data[0],
       all: allData.data
-    }
-  }
-}
+    },
+    revalidate: 1
+  };
+};
 
 
 
-
-// export async function getServerSideProps(ctx) {
-//   console.log(ctx.params.id, 'heehehe')
+// export async function getServerSideProps(context) {
+//   const { slug } = context.query
+//   const audioNews = await axios(`https://biz-admin.herokuapp.com/audio?slug=${slug}`);
+//   const allData = await axios(`https://biz-admin.herokuapp.com/audio`);
+//   //  const data = await audioNews.json()
+// //   console.log(id)
 //   return {
 //     props: {
-//       test: 'hehe'
+//       big: audioNews.data[0],
+//       all: allData.data
 //     }
 //   }
 // }
