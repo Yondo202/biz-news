@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import Head from 'next/head'
-
-import Layout from '../../components/layout'
+import Layout from '../../components/Layout'
 import MainNews from '../../components/mainNews/mainNews'
 import Index from '../../components/mainNews/indexNews'
 import { Container, Row, Col } from 'react-bootstrap'
