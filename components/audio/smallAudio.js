@@ -42,14 +42,18 @@ function smallAudio(props) {
                             return (
                                 <motion.div initial="exit" animate="enter" exit="exit" variants={textVariants}>
                                     {myRoute == el.slug ? <div key={i} className="menuCon">
-                                        <CgPlayPauseO />
+                                        <Link href="/audio/[slug]" as={`/audio/${el.slug}`} >
+                                            <CgPlayPauseO />
+                                        </Link>
                                         <Link href="/audio/[slug]" as={`/audio/${el.slug}`} >
                                             <a className="listText">{el.title}</a>
                                         </Link>
                                         <div className="date">{el.date}</div>
                                         <img className="gif" src={require('../image/sound.gif')} />
                                     </div> : <div key={i} className="menuCon">
-                                            <CgPlayButtonO />
+                                            <Link href="/audio/[slug]" as={`/audio/${el.slug}`} >
+                                                <CgPlayButtonO />
+                                            </Link>
                                             <Link href="/audio/[slug]" as={`/audio/${el.slug}`} >
                                                 <a >{el.title}</a>
                                             </Link>
