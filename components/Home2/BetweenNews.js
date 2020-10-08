@@ -31,7 +31,7 @@ export class BetweenNews extends Component {
         // console.log(Startup, 'ene bol filter Startup')
 
         return (
-            <Container className="betweenNewsPar">
+            <Container fluid style={{width:'60%'}} className="betweenNewsPar">
                 <Row>
                     <Col Col md={4} >
                         <div style={{ marginBottom: 40 }}>

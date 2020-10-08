@@ -76,7 +76,7 @@ export class videoNews extends Component {
                 <>
                     <div className="OtherHeader">
                         <div className="TopHead">
-                            <Container style={{ height: '100%' }}>
+                            <Container fluid  style={{ height: '100%', width: '60%'  }}>
                                 <div className="flexHead">
                                     <div className="TrendPar">
                                         <div className="trend">
@@ -110,7 +110,7 @@ export class videoNews extends Component {
                             </Container>
                         </div>
 
-                        <Container>
+                        <Container fluid  style={{ width: '60%'  }}>
                             <div className="golMenu22">
                                 <div className="logo">
                                     {/* <img src={`${this.props.Logo.logo.url}`} /> */}

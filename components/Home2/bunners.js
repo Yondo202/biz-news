@@ -7,7 +7,7 @@ export class bunners extends Component {
         // console.log(this.props.bunner2, 'bunner yma')
         const bunner2 = this.props.bunner2
         return (
-            <Container className="bunnerPar">
+            <Container fluid style={{width:'60%'}} className="bunnerPar">
                 <Row>
                     <div className="golMenu">
                         <Col md={12} sm={12} xs={12}>

@@ -17,7 +17,7 @@ export class HomeVideo extends Component {
         console.log(HomeVideos, 'its is my video news')
 
         return (
-            <Container className="VideoConPar">
+            <Container fluid style={{width:'60%'}} className="VideoConPar">
                 <Row style={{ marginBottom: 30 }}>
                     {HomeVideos.slice(0, 3).map((el, i) => {
                         return (

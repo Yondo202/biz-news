@@ -64,7 +64,7 @@ function Nav(props) {
             <div className="Ghost" style={{ width: "100%", height: 50, backgroundColor: "white", display: `${style}` }}></div>
             <div className={className} >
                 <div className="Headerghost">
-                    <Container>
+                    <Container fluid style={{width:'60%'}}>
                         <div className="scrollDown" >
                             <input type="checkbox" id="check" />
 

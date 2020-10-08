@@ -13,7 +13,7 @@ export class topReadNews extends Component {
         const myData = AllNews.reverse().slice(0, 3);
         console.log(myData[0].desc.slice(600, 1000), 'odoo jinken');
         return (
-            <Container className="topReadNews">
+            <Container fluid style={{width:'60%'}} className="topReadNews">
                 <Row style={{ marginTop: 50 }}>
                     <Col md={9}>
                         <div className="NewsPar">

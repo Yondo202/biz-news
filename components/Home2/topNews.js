@@ -35,7 +35,7 @@ export class topNews extends Component {
         const myData2 = this.props.AllNews.filter(e => e.slug == 'top-2')
         const myData3 = this.props.AllNews.filter(e => e.slug == 'top-3')
         return (
-            <Container>
+            <Container fluid style={{width:'60%'}}>
                 <motion.div initial="exit" animate="enter" exit="exit" variants={textVariants}>
                     <div className="TopNewsPar">
                         <Row>

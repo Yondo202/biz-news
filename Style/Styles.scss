@@ -1896,7 +1896,7 @@ body {
 .BackMainNewsPar {
     font-family: $myFontFamily !important;
     .containers {
-        width: 90%;
+        width: 60%;
 
         .ScrollHead2 {
             background-color: white;
@@ -1976,7 +1976,7 @@ body {
 
         .mainCon {
             padding: 20px 0px;
-            padding-left: 30px;
+            padding-left: 0px;
             .smMenu {
                 display: flex;
                 flex-direction: row;
@@ -2019,14 +2019,17 @@ body {
             }
             .title {
                 h2 {
+                    --x-height-multiplier: 0.375;
+                    --baseline-multiplier: 0.17;
                     // font-weight: 600;
+                    font-size: 40px;
                 }
                 .shareBtnPar {
                     display: flex;
                     flex-direction: column;
                     position: fixed;
                     top: 100px;
-                    left: 0px;
+                    left: 100px;
                     transition: all 0.4s ease-in;
                     align-items: center;
                     margin-left: 20px;
@@ -2208,8 +2211,8 @@ body {
                 .content {
                     // margin-right:50px;
                     // margin-left:50px;
-                    padding-left: 120px;
-                    padding-right: 0px;
+                    padding-left: 100px;
+                    padding-right: 50px;
                     word-spacing: 1px;
                     word-break: break-word;
                     line-height: 32px;
@@ -2220,7 +2223,7 @@ body {
                     word-break: break-word;
                     letter-spacing: -0.003em;
                     p {
-                        font-size: 19px !important;
+                        font-size: 22px !important;
                         // color: rgba(0, 0, 0, 1);
                         color: rgba(41, 41, 41, 1);
                         font-family: $myFontFamily !important;
@@ -2229,7 +2232,7 @@ body {
                         word-break: break-word;
                     }
                     span {
-                        font-size: 19px !important;
+                        font-size: 22px !important;
 
                         // color: rgba(0, 0, 0, 1);
                         color: rgba(41, 41, 41, 1);

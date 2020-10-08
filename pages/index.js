@@ -29,7 +29,7 @@ export default function Home(props) {
             <>
                 <div className="OtherHeader">
                     <div className="TopHead">
-                        <Container style={{ height: '100%' }}>
+                        <Container fluid  style={{ height: '100%', width: '60%'  }}>
                             <div className="flexHead">
                                 <div className="TrendPar">
                                     <div className="trend">
@@ -49,7 +49,7 @@ export default function Home(props) {
                                 </div>
                                 <div className="icons">
                                     <div className="date">
-                                        <span style={{letterSpacing:2}}>{Dates.slice(0,9)}</span>
+                                        <span style={{ letterSpacing: 2 }}>{Dates.slice(0, 9)}</span>
                                     </div>
                                     <div className="icons">
                                         <GrFacebookOption />
@@ -62,44 +62,44 @@ export default function Home(props) {
 
                         </Container>
                     </div>
-                    <Container>
-                    <div className="golMenu22">
-                        <div className="logo">
-                            {/* <img src={`${this.props.Logo.logo.url}`} /> */}
-                            <Link href="/">
-                                <img src={require('../components/image/bizlogo1.png')} />
-                            </Link>
-                        </div>
-                        <div className="SliderPAr">
-                            <Slider {...settings}>
-                                {props.bunner1.map((el, i) => {
-                                    return (
-                                        <div key={i}>
-                                            <a href={el.url} target="_blank">
-                                                <div className="TopBunner">
-                                                    <div className="text">
-                                                        <h5>
-                                                            {el.title}
-                                                            {/* {bunner1.title} */}
-                                                        </h5>
-                                                    </div>
-                                                    <div className="image">
-                                                        <img src={`${el.image.url}`} />
-                                                        <div className="title">
-                                                            {el.nemelt}
-                                                            {/* <h5>{bunner1.nemelt}</h5> */}
+                    <Container fluid style={{ width: '60%' }}>
+                        <div className="golMenu22">
+                            <div className="logo">
+                                {/* <img src={`${this.props.Logo.logo.url}`} /> */}
+                                <Link href="/">
+                                    <img src={require('../components/image/bizlogo1.png')} />
+                                </Link>
+                            </div>
+                            <div className="SliderPAr">
+                                <Slider {...settings}>
+                                    {props.bunner1.map((el, i) => {
+                                        return (
+                                            <div key={i}>
+                                                <a href={el.url} target="_blank">
+                                                    <div className="TopBunner">
+                                                        <div className="text">
+                                                            <h5>
+                                                                {el.title}
+                                                                {/* {bunner1.title} */}
+                                                            </h5>
                                                         </div>
-                                                    </div>
-                                                    {/* <div className="ghost">
+                                                        <div className="image">
+                                                            <img src={`${el.image.url}`} />
+                                                            <div className="title">
+                                                                {el.nemelt}
+                                                                {/* <h5>{bunner1.nemelt}</h5> */}
+                                                            </div>
+                                                        </div>
+                                                        {/* <div className="ghost">
                                                     </div> */}
-                                                </div>
-                                            </a>
-                                        </div>
-                                    )
-                                })}
-                            </Slider>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        )
+                                    })}
+                                </Slider>
+                            </div>
                         </div>
-                    </div>
                     </Container>
                 </div>
 
