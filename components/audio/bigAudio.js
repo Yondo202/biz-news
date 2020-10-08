@@ -1,6 +1,5 @@
 import React from 'react'
-import { Container, Row, Col } from 'react-bootstrap';
-import AudioPlayer from 'react-h5-audio-player';
+import { Col } from 'react-bootstrap';
 import { motion } from 'framer-motion'
 
 
@@ -21,22 +20,6 @@ function bigAudio(props) {
     return (
         <Col md={7} >
             <motion.div initial="exit" animate="enter" exit="exit" variants={textVariants}>
-                {/* <div className="audioPlay">
-                    <img src={`http://localhost:1337${MainData.image.url}`} />
-                    <AudioPlayer
-                        // autoPlay
-
-                        defaultDuration="Loading"
-                        // customIcons={{
-                        //     play: sampleIcon
-                        //     }} 
-                        layout="stacked-reverse"
-                        header={MainData.title}
-                        src={`http://localhost:1337${MainData.audio.url}`}
-                        onPlay={e => console.log("onPlay")}
-                    />
-                </div> */}
-
                 <div className="ImgPAr">
                     <div className="img">
                         <img src={`${MainData.image.url}`} />

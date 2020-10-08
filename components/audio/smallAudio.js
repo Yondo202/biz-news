@@ -1,7 +1,9 @@
 import React from 'react'
+import { useRouter } from 'next/router'
 import { Container, Row, Col } from 'react-bootstrap';
 import { GiPlayButton } from 'react-icons/gi'
 import { MdPlayCircleOutline } from 'react-icons/md'
+import { CgPlayButtonO, CgPlayPauseO } from 'react-icons/cg'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import AudioPlayer from 'react-h5-audio-player';
@@ -16,49 +18,44 @@ const textVariants = {
     }
 };
 
-
-
 function smallAudio(props) {
-    
+    const router = useRouter();
+    const myRoute = router.query.slug
+
     const MainData = props.big
-    console.log(props.all, 'this my all')
     const allNews = props.all
     return (
         <Col md={5} >
             <div className="MainPar" >
                 <div className="audioPlay">
-                    {/* <img src={`http://localhost:1337${MainData.image.url}`} /> */}
                     <AudioPlayer
-                        // autoPlay
                         defaultDuration="Loading"
-                        // customIcons={{
-                        //     play: sampleIcon
-                        //     }} 
                         layout="horizontal-reverse"
-                        
                         header={MainData.title}
                         src={`${MainData.audio.url}`}
                         onPlay={e => console.log("onPlay")}
                     />
                 </div>
                 <div className="videoMenu">
-                    {/* <div className="bigTitle">
-                    <h2><MdPlayCircleOutline />Audio</h2>
-                    <div className="line"></div>
-                </div> */}
                     <div className="scroll">
-
                         {allNews.map((el, i) => {
                             return (
                                 <motion.div initial="exit" animate="enter" exit="exit" variants={textVariants}>
-                                    <div key={i} className="menuCon">
-                                        <div></div>
-                                        <GiPlayButton />
+                                    {myRoute == el.slug ? <div key={i} className="menuCon">
+                                        <CgPlayPauseO />
                                         <Link href="/audio/[slug]" as={`/audio/${el.slug}`} >
-                                            <a activeClassName="navbar__link--active"  >{el.title}</a>
+                                            <a className="listText">{el.title}</a>
                                         </Link>
                                         <div className="date">{el.date}</div>
-                                    </div>
+                                        <img className="gif" src={require('../image/sound.gif')} />
+                                    </div> : <div key={i} className="menuCon">
+                                            <CgPlayButtonO />
+                                            <Link href="/audio/[slug]" as={`/audio/${el.slug}`} >
+                                                <a >{el.title}</a>
+                                            </Link>
+                                            <div className="date">{el.date}</div>
+                                            {/* <img className="gif" src={require('../image/sound.gif')} /> */}
+                                        </div>}
                                 </motion.div>
                             )
                         })}

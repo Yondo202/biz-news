@@ -399,6 +399,18 @@ body {
                         z-index: 0;
                         transition: all 0.4s ease;
                     }
+                    .lineActive {
+                        height: 4px;
+                        background-color: white;
+                        transition: width ease 0.3s;
+                        width: 100%;
+                        position: absolute;
+                        bottom: -1px;
+                        z-index: 0;
+                        transition: all 0.4s ease;
+                        height: 100%;
+                        z-index: -1;
+                    }
                     .ln1 {
                         background-color: #337ab7;
                     }
@@ -559,6 +571,18 @@ body {
                         bottom: 0;
                         z-index: 0;
                         transition: all 0.4s ease;
+                    }
+                    .lineActive {
+                        height: 4px;
+                        background-color: white;
+                        transition: width ease 0.3s;
+                        width: 100%;
+                        position: absolute;
+                        bottom: -1px;
+                        z-index: 0;
+                        transition: all 0.4s ease;
+                        height: 100%;
+                        z-index: -1;
                     }
                     .ln1 {
                         background-color: #337ab7;
@@ -2486,18 +2510,39 @@ body {
                             color: rgba(0, 0, 0, 1);
                         }
                     }
+                    .listText {
+                        align-items: center;
+                        width: 332px;
+                        height: 40%;
+                        overflow: hidden;
+                        font-size: 15px;
+                        font-weight: 500;
+                        color: #ff1744;
+                        cursor: pointer;
+                        transition: all ease 0.3s;
+
+                        &:hover {
+                            color: rgba(0, 0, 0, 1);
+                        }
+                    }
                     .date {
                         margin-top: 40px;
                         width: 80px;
-                        font-size: 9px;
-                        margin-left: 30px;
+                        font-size: 12px;
+                        margin-left: 40px;
                         color: black;
                     }
                     svg {
                         margin-left: 10px;
                         margin-right: 15px;
-                        font-size: 22px;
+                        font-size: 38px;
                         color: black;
+                    }
+                    .gif{
+                        height: 60%;
+                        width: 18%;
+                        opacity: 0.6;
+                        margin-left: 20px;
                     }
                 }
             }
