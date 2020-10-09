@@ -8,11 +8,11 @@ import Link from 'next/link'
 
 let easing = [0.5, 0.3, 0.11, 0.95];
 const textVariants = {
-    exit: { scale: 0.5, opacity: 0, transition: { duration: 0.9, ease: easing } },
+    exit: { scale: 0.5, opacity: 0, transition: { duration: 0.5, ease: easing } },
     enter: {
         scale: 1,
         opacity: 1,
-        transition: { delay: 0.2, duration: 0.9, ease: easing }
+        transition: { duration: 0.5, ease: easing }
     }
 };
 
