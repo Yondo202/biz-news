@@ -8,7 +8,7 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 
 
-let easing = [0.5, 0.3, 0.11, 1.45];
+let easing = [0.5, 0.3, 0.11, 0.95];
 const textVariants = {
     exit: { scale: 0.5, opacity: 0, transition: { duration: 0.9, ease: easing } },
     enter: {
