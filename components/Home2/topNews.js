@@ -8,13 +8,14 @@ import Link from 'next/link'
 
 let easing = [0.5, 0.9, 0.16, 0.95];
 const textVariants = {
-    exit: { y: 100, opacity: 0, transition: { duration: 0.9, ease: easing } },
+    exit: { scale: 0.7, opacity: 0.5, transition: { duration: 0.9, ease: easing } },
     enter: {
-        y: 0,
+        scale: 1,
         opacity: 1,
         transition: { delay: 0.2, duration: 0.9, ease: easing }
     }
 };
+
 
 export class topNews extends Component {
     constructor(props) {
@@ -35,11 +36,11 @@ export class topNews extends Component {
         const myData2 = this.props.AllNews.filter(e => e.slug == 'top-2')
         const myData3 = this.props.AllNews.filter(e => e.slug == 'top-3')
         return (
-            <Container fluid style={{width:'60%'}}>
-                <motion.div initial="exit" animate="enter" exit="exit" variants={textVariants}>
-                    <div className="TopNewsPar">
-                        <Row>
-                            <Col md={7}>
+            <Container fluid style={{ width: '60%' }}>
+                <div className="TopNewsPar">
+                    <Row>
+                        <Col md={7}>
+                            <motion.div initial="exit" animate="enter" exit="exit" variants={textVariants}>
                                 <div className="TopBig">
                                     <img src={`${myData1[0].image.url}`} />
                                     <div className="background"></div>
@@ -64,7 +65,7 @@ export class topNews extends Component {
                                                 <AiOutlineEye />
                                                 <span>
                                                     {this.state.count}
-                                            </span>
+                                                </span>
                                             </div>
                                             <div className="comments">
                                                 <FaRegComment />
@@ -76,8 +77,11 @@ export class topNews extends Component {
                                         </div>
                                     </div>
                                 </div>
-                            </Col>
-                            <Col md={5}>
+                            </motion.div>
+                        </Col>
+                        <Col md={5}>
+                            <motion.div initial="exit" animate="enter" exit="exit" variants={textVariants}>
+
                                 <div className="TopSmall">
                                     <img src={`${myData2[0].image.url}`} />
                                     <div className="background"></div>
@@ -114,6 +118,8 @@ export class topNews extends Component {
                                         </div>
                                     </div>
                                 </div>
+                            </motion.div>
+                            <motion.div initial="exit" animate="enter" exit="exit" variants={textVariants}>
                                 <div className="TopSmall2">
                                     <img src={`${myData3[0].image.url}`} />
                                     <div className="background"></div>
@@ -150,10 +156,10 @@ export class topNews extends Component {
                                         </div>
                                     </div>
                                 </div>
-                            </Col>
-                        </Row>
-                    </div>
-                </motion.div>
+                            </motion.div>
+                        </Col>
+                    </Row>
+                </div>
             </Container>
         )
     }

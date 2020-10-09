@@ -8,66 +8,74 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 
 
-let easing = [0.5, 0.9, 0.16, 0.95];
+let easing = [0.5, 0.3, 0.11, 1.45];
 const textVariants = {
-    exit: { y: 100, opacity: 0, transition: { duration: 0.9, ease: easing } },
+    exit: { scale: 0.5, opacity: 0, transition: { duration: 0.9, ease: easing } },
     enter: {
-        y: 0,
+
+        scale: 1,
         opacity: 1,
         transition: { delay: 0.2, duration: 0.9, ease: easing }
     }
 };
 
+
+const item = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1
+    }
+  };
+
 export class indexNews extends Component {
     render() {
         const Data = this.props.allPost
         return (
-            <Container className="betweenNewsPar">
-                <motion.div initial="exit" animate="enter" exit="exit" variants={textVariants}>
+            <Container className="betweenNewsPar" fluid style={{width:'60%'}}>
                     <Row style={{ marginTop: 30 }}>
-
                         {Data.map((el, i) => {
                             return (
                                 <Col key={i} md={4}>
-                                    <div className="TopSmall">
-                                        <img src={`${el.image.url}`} />
-                                        <div className="background"></div>
-                                        <div className="content">
-                                            <div className="catigory">
-                                                <span>Business</span>
-                                            </div>
-                                            <div className="Title">
-                                                <Link href="/posts/[slug]" as={`/posts/${el.slug}`} >
-                                                    <h2>
-                                                        {/* 8Bit Coin Sets Market Alight With Initial Performance */}
-                                                        {el.title}
-                                                    </h2>
-                                                </Link>
-
-                                            </div>
-                                            <div className="smallCont">
-                                                <div className="date">
-                                                    <MdDateRange />
-                                                    <span>
-                                                        {/* March 23, 2019 */}
-                                                        {el.date}
-                                                    </span>
+                                    <motion.div initial="exit" animate="enter" exit="exit" variants={textVariants}>
+                                        <div className="TopSmall">
+                                            <img src={`${el.image.url}`} />
+                                            <div className="background"></div>
+                                            <div className="content">
+                                                <div className="catigory">
+                                                    <span>Business</span>
                                                 </div>
-                                                <div className="SeeCount">
-                                                    <AiOutlineEye />
-                                                    <span>
-                                                        185
-                                    </span>
+                                                <div className="Title">
+                                                    <Link href="/posts/[slug]" as={`/posts/${el.slug}`} >
+                                                        <h2>
+                                                            {/* 8Bit Coin Sets Market Alight With Initial Performance */}
+                                                            {el.title}
+                                                        </h2>
+                                                    </Link>
+                                                </div>
+                                                <div className="smallCont">
+                                                    <div className="date">
+                                                        <MdDateRange />
+                                                        <span>
+                                                            {/* March 23, 2019 */}
+                                                            {el.date}
+                                                        </span>
+                                                    </div>
+                                                    <div className="SeeCount">
+                                                        <AiOutlineEye />
+                                                        <span>
+                                                            185
+                                                    </span>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div style={{marginBottom:20}}></div>
+                                        <div style={{ marginBottom: 20 }}></div>
+                                    </motion.div>
                                 </Col>
                             )
                         })}
                     </Row>
-                </motion.div>
             </Container>
         )
     }

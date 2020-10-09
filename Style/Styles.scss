@@ -661,7 +661,7 @@ body {
             color: white;
             position: relative;
             overflow: hidden;
-            height: 435px;
+            height: 440px;
             img {
                 width: 100%;
                 height: 100%;
@@ -675,7 +675,7 @@ body {
                 height: 100%;
                 width: 100%;
                 background-color: rgb(0, 0, 0);
-                opacity: 0.4;
+                opacity: 0.7;
             }
             .content {
                 position: absolute;
@@ -695,7 +695,7 @@ body {
                     margin-bottom: 10px;
                 }
                 .Title {
-                    height: 67px;
+                    height: 63px;
                     overflow: hidden;
                     cursor: pointer;
                     h2 {
@@ -3394,7 +3394,8 @@ $rhap_font-family: inherit !default;
                 height: 210px;
                 margin-bottom: 9.25px;
                 .content {
-                    .Title {
+                    .Title {height: 62px;
+                        overflow: hidden;
                         cursor: pointer;
                         h2 {
                             font-size: 3vh;

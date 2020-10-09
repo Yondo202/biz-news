@@ -6,11 +6,11 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 
 
-let easing = [0.5, 0.9, 0.16, 0.95];
+let easing = [0.5, 0.3, 0.11, 1.4];
 const textVariants = {
-    exit: { y: 100, opacity: 0, transition: { duration: 0.9, ease: easing } },
+    exit: { scale: 0.5, opacity: 0, transition: { duration: 0.9, ease: easing } },
     enter: {
-        y: 0,
+        scale: 1,
         opacity: 1,
         transition: { delay: 0.2, duration: 0.9, ease: easing }
     }
@@ -22,12 +22,12 @@ export class Audio extends Component {
         const MainAudio = this.props.MainAudio
         return (
             <div className="audioPar">
-                <Container className="betweenNewsPar">
-                    <motion.div initial="exit" animate="enter" exit="exit" variants={textVariants}>
-                        <Row style={{ marginTop: 30 }}>
-                            {MainAudio.map((el, i) => {
-                                return (
-                                    <Col md={4} key={i}>
+                <Container className="betweenNewsPar" fluid style={{ width: '60%' }}>
+                    <Row style={{ marginTop: 30 }}>
+                        {MainAudio.map((el, i) => {
+                            return (
+                                <Col md={4} key={i}>
+                                    <motion.div initial="exit" animate="enter" exit="exit" variants={textVariants}>
                                         <div className="TopSmall">
                                             <img src={`${el.image.url}`} />
                                             <div className="background"></div>
@@ -60,11 +60,11 @@ export class Audio extends Component {
                                             </div>
                                         </div>
                                         <div style={{ marginBottom: 20 }}></div>
-                                    </Col>
-                                )
-                            })}
-                        </Row>
-                    </motion.div>
+                                    </motion.div>
+                                </Col>
+                            )
+                        })}
+                    </Row>
                 </Container>
             </div>
         )
