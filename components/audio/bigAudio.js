@@ -13,7 +13,6 @@ const textVariants = {
     }
 };
 
-
 function bigAudio(props) {
     console.log(props.big, 'this my big')
     const MainData = props.big
