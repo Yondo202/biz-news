@@ -1,5 +1,6 @@
 import { Container, Row, Col } from 'react-bootstrap'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import { motion } from 'framer-motion'
 import React, { Component, useEffect, useState } from 'react'
 
@@ -25,6 +26,10 @@ function allMain(props) {
         }
         // console.log('lalalall', window.pageYOffset)
     }
+
+    const router = useRouter()
+    const myRoute = router.query.slug
+    console.log(myRoute, ' this is my router shuu')
     return (
         <Col md={4} style={{ position: "relative" }}>
             <div className="otherNewsParent">
@@ -41,7 +46,7 @@ function allMain(props) {
                         return (
                             <motion.div initial="exit" animate="enter" exit="exit">
                                 <motion.div variants={textVariants} >
-                                    <div key={i} className="contentPar" >
+                                    {myRoute == el.slug ? <div style={{ display: 'none' }} key={i} className="contentPar" >
                                         <div className="flexPar">
                                             <div className="flex1">
                                                 {/* <img src={el.image.url} /> */}
@@ -53,12 +58,24 @@ function allMain(props) {
                                                     <span className="date">{el.date}</span>
                                                 </div>
                                             </div>
-
                                         </div>
-                                    </div>
+                                    </div> : <div key={i} className="contentPar" >
+                                            <div className="flexPar">
+                                                <div className="flex1">
+                                                    {/* <img src={el.image.url} /> */}
+                                                    <img src={`${el.image.url}`} />
+                                                    <div className="flex1Text">
+                                                        <Link href="/posts/[slug]" as={`/posts/${el.slug}`}>
+                                                            <h6 >{el.title}</h6>
+                                                        </Link>
+                                                        <span className="date">{el.date}</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>}
+
                                 </motion.div>
                             </motion.div>
-
                         )
                     })}
                 </div>

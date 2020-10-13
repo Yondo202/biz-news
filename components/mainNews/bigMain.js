@@ -67,7 +67,7 @@ export class bigMain extends Component {
             this.setState({ className2: "ScrollHead2" });
 
         }
-        console.log('lalalall', window.pageYOffset)
+        console.log('lalalall', window)
     }
 
     render() {
