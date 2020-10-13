@@ -46,8 +46,8 @@ function allMain(props) {
                         return (
                             <motion.div initial="exit" animate="enter" exit="exit">
                                 <motion.div variants={textVariants} >
-                                    {myRoute == el.slug ? <div style={{ display: 'none' }} key={i} className="contentPar" >
-                                        <div className="flexPar">
+                                    {myRoute == el.slug ? <div style={{display:'none'}} key={i} className="contentPar" >
+                                        <div  className="flexPar">
                                             <div className="flex1">
                                                 {/* <img src={el.image.url} /> */}
                                                 <img src={`${el.image.url}`} />

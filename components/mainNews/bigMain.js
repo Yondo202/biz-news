@@ -89,7 +89,7 @@ export class bigMain extends Component {
                     <motion.div variants={textVariants}>
                         <div className="mainCon">
                             <div className="title">
-                                <h2>"{slugData.title}"</h2>
+                                <h2>{slugData.title}</h2>
                                 <div className={this.state.className}>
                                     <div className="ProfileCon">
                                         <img src={require('../image/103804281_10220809760368036_8805337625036517462_n.jpg')}></img>
