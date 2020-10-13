@@ -13,18 +13,12 @@ export class Audio extends Component {
         // console.log('object2', all)
         return (
             <div style={{  backgroundColor: '#f2f2f2' }} className="audioPar">
-                {/* <ReactAudioPlayer
-                    src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
-                    autoPlay
-                    controls
-                /> */}
                 <Container fluid style={{width:'100%'}}>
                     <Row >
                         <BigAudio big={big} />
                         <AllAudio all={all} big={big}  />
                     </Row>
                 </Container>
-
             </div>
         )
     }

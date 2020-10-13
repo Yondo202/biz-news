@@ -3,6 +3,8 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { motion } from 'framer-motion'
 import React, { Component, useEffect, useState } from 'react'
+export const config = { amp: 'hybrid' }
+import {useAmp} from 'next/amp'
 
 
 let easing = [0.5, 0.9, 0.16, 0.95];
@@ -29,7 +31,11 @@ function allMain(props) {
 
     const router = useRouter()
     const myRoute = router.query.slug
-    console.log(myRoute, ' this is my router shuu')
+    // console.log(myRoute, ' this is my router shuu')
+
+    const myAmp = useAmp();
+    console.log(myAmp, 'this is my Amp ........')
+    console.log(config , 'my Config')
     return (
         <Col md={4} style={{ position: "relative" }}>
             <div className="otherNewsParent">

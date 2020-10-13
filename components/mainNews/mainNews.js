@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 import { Container, Row, Col } from 'react-bootstrap';
 import BigMain from './bigMain'
 import Allmain from './allMain'
-
+import ScrollToTop from "react-scroll-to-top";
 
 
 function mainNews(props) {
@@ -12,6 +12,7 @@ function mainNews(props) {
     // console.log(myRoute, ' this is my router shuu')
     return (
         <div className="BackMainNewsPar">
+            <ScrollToTop smooth />
             <Container className="containers" fluid >
                 <Row style={{ marginTop: 20 }}>
                     < BigMain big={props.big} />
