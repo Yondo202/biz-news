@@ -19,7 +19,7 @@ export default function Home(props) {
         <div>
             <Head>
                 <title>BIZI.mn</title>
-                <link rel="icon" href="/favicon.ico" />
+                <link rel="icon" href="/business.png" />
                 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"></link>
                 <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
                 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
@@ -67,7 +67,7 @@ export default function Home(props) {
                             <div className="logo">
                                 {/* <img src={`${this.props.Logo.logo.url}`} /> */}
                                 <Link href="/">
-                                    <img src={require('../components/image/bizlogo1.png')} />
+                                    <img src={require('../components/image/busness.png')} />
                                 </Link>
                             </div>
                             <div className="SliderPAr">

@@ -106,7 +106,7 @@ export class audio extends Component {
                             <div className="logo">
                                 {/* <img src={`${this.props.Logo.logo.url}`} /> */}
                                 <Link href="/">
-                                    <img src={require('../../components/image/bizlogo1.png')} />
+                                    <img src={require('../../components/image/audio.png')} />
                                 </Link>
                             </div>
                             <div className="SliderPAr">
