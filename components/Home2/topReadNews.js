@@ -18,7 +18,7 @@ export class topReadNews extends Component {
                     <Col md={9}>
                         <div className="NewsPar">
                             <div className="Title">
-                                <h3>Famous News</h3>
+                                <h3>Их уншсан</h3>
                                 <div className="line"><div className="line2"></div></div>
                             </div>
 
@@ -71,8 +71,6 @@ export class topReadNews extends Component {
                             })}
                         </div>
                     </Col>
-
-
 
                     <Col md={3}>
                         <div className="BunnerPaR">

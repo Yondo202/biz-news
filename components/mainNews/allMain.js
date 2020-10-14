@@ -40,7 +40,7 @@ function allMain(props) {
         <Col md={4} style={{ position: "relative" }}>
             <div className="otherNewsParent">
                 <div className="dailyTitle">
-                    <h1 >Daily News</h1>
+                    <h1 >Мэдээнүүд</h1>
                     <div className="linePAr">
                         <div className="line"></div>
                         <div className="line2"></div>

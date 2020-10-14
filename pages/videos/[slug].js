@@ -12,13 +12,14 @@ function Home(props) {
 
                 <Head>
                     <title>{props.big.title}</title>
-                    <link rel="icon" href="/favicon.ico" />
+                    <link rel="icon" href="/business.png" />
                     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"></link>
                     <link
                         rel="stylesheet"
                         href="https://video-react.github.io/assets/video-react.css"
                     />
                     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet"></link>
+                    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet"></link>
                 </Head>
 
                 <Layout AllNews={props.all}>

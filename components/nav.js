@@ -21,20 +21,20 @@ function Nav(props) {
         },
         {
             id: 2,
-            name: "News",
+            name: "Мэдээ",
             to: "/posts",
             className: "lineActive"
         },
         {
             id: 3,
-            name: "Video news",
-            to: "/videos",
+            name: "Ярилцлага",
+            to: "/audio",
             className: "lineActive"
         },
         {
             id: 4,
-            name: "Audio",
-            to: "/audio",
+            name: "Видео",
+            to: "/videos",
             className: "lineActive"
         }
     ]);

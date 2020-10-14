@@ -18,8 +18,8 @@ class footer extends Component {
                             </Col>
                             <Col md={3}>
                                 <div className="footLogo">
-                                    <img src={require('./image/bizlogo1.png')} />
-                                    <p>Find B2B and B2C business contact addresses, phone numbers, city events and news.</p>
+                                    <img src={require('./image/Logo.png')} />
+                                    <p>Завгүй хүмүүст зориулав. Бизнесийн болон бусад мэдээллийг нэг дороос.</p>
                                 </div>
                             </Col>
                             <Col md={2}>
@@ -28,48 +28,43 @@ class footer extends Component {
                                     <div className="menu">
                                         <Link href="/">
                                             <div className="float">
-                                                <MdKeyboardArrowRight /><p>Home</p>
+                                                <MdKeyboardArrowRight /><p>Нүүр</p>
                                             </div>
                                         </Link>
 
                                         <Link href="/posts">
                                             <div className="float">
-                                                <MdKeyboardArrowRight /><p>News</p>
-                                            </div>
-                                        </Link>
-
-                                        <Link href="/videos">
-                                            <div className="float">
-                                                <MdKeyboardArrowRight /><p>Video</p>
+                                                <MdKeyboardArrowRight /><p>Мэдээ</p>
                                             </div>
                                         </Link>
 
                                         <Link href="/audio">
                                             <div className="float">
-                                                <MdKeyboardArrowRight /><p>Audio</p>
+                                                <MdKeyboardArrowRight /><p>Ярилцлага</p>
                                             </div>
                                         </Link>
 
-                                        <div className="float">
-                                            <MdKeyboardArrowRight /><p>GiveAway</p>
-                                        </div>
-
+                                        <Link href="/videos">
+                                            <div className="float">
+                                                <MdKeyboardArrowRight /><p>Видео</p>
+                                            </div>
+                                        </Link>
                                     </div>
                                 </div>
                             </Col>
                             <Col md={2}>
                                 <div className="footMenu2">
-                                    <h5>Contact Us</h5>
+                                    <h5>Холбоо барих</h5>
                                     <div className="menu">
-                                        <span>Phone:</span>
-                                        <p>(976) 9965 7890</p>
+                                        <span>Утас:</span>
+                                        <p>(976) 99132989</p>
                                     </div>
                                     <div className="menu">
-                                        <span>Location:</span>
+                                        <span>Хаяг:</span>
                                         <p>СХД - 15-р хорооо 34р байр 55тоот</p>
                                     </div>
                                     <div className="menu">
-                                        <span>Email:</span>
+                                        <span>Е мэйл:</span>
                                         <p className="After" data-tool='dada, mama' >ReteWorld@gmail.com</p>
                                     </div>
                                 </div>

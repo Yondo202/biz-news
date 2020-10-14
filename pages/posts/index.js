@@ -63,11 +63,12 @@ export class news extends Component {
             <>
                 <Head>
                     <title>BIZI.mn</title>
-                    <link rel="icon" href="/favicon.ico" />
+                    <link rel="icon" href="/business.png" />
                     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"></link>
                     <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
                     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
                     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet"></link>
+                    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet"></link>
                 </Head>
 
 
@@ -77,7 +78,7 @@ export class news extends Component {
                             <div className="flexHead">
                                 <div className="TrendPar">
                                     <div className="trend">
-                                        <span>Trending News</span>
+                                        <span>Товч</span>
                                     </div>
                                     <div className="trendCont">
                                         <Slider {...settings}>
@@ -106,7 +107,6 @@ export class news extends Component {
 
                         </Container>
                     </div>
-
 
                     <Container fluid  style={{ width: '60%'  }}>
                         <div className="golMenu22">
@@ -149,8 +149,6 @@ export class news extends Component {
                             </div>
                         </div>
                     </Container>
-
-
 
                 </div>
 

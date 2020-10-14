@@ -25,6 +25,7 @@ export default function Home(props) {
                 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
                 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet"></link>
                 <link href="https://ufonts.com/q175265" ></link>
+                <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet"></link>
             </Head>
             <>
                 <div className="OtherHeader">
@@ -33,7 +34,7 @@ export default function Home(props) {
                             <div className="flexHead">
                                 <div className="TrendPar">
                                     <div className="trend">
-                                        <span>Trending News</span>
+                                        <span>Товч</span>
                                     </div>
                                     <div className="trendCont">
                                         <Slider {...settings}>
@@ -67,7 +68,7 @@ export default function Home(props) {
                             <div className="logo">
                                 {/* <img src={`${this.props.Logo.logo.url}`} /> */}
                                 <Link href="/">
-                                    <img src={require('../components/image/busness.png')} />
+                                    <img className="indexNews" src={require('../components/image/Logo.png')} />
                                 </Link>
                             </div>
                             <div className="SliderPAr">

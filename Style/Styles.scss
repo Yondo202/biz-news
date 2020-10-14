@@ -1,7 +1,10 @@
-$myFontFamily: "medium-content-serif-font";
-$myFontFamily2: "Roboto";
-$myFavColor: #ff1744;
-$myFontFamilyBold: "medium-content-sans-serif-font";
+// $myFontFamily: "Roboto";
+// $myFontFamily2: "Roboto";
+$myFontFamily: "Montserrat", sans-serif;
+$myFontFamily2: "Montserrat", sans-serif;
+// $myFavColor: #ff1744;
+$myFavColor: #014955;
+// $myFontFamilyBold: "medium-content-sans-serif-font";
 // @import '../Style/Fonts/georgia.ttf';
 
 @font-face {
@@ -30,7 +33,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   // color: #6c6c6c;
   // font: normal 14px/22px PT Sans,sans-serif;
-  font-family: "Roboto", sans-serif !important;
+  //   font-family: "Roboto", sans-serif !important;
+  font-family: "Montserrat", sans-serif !important;
   letter-spacing: 0px;
   overflow-x: hidden;
   &::-webkit-scrollbar {
@@ -247,13 +251,19 @@ body {
     justify-content: space-between;
     .logo {
       margin: 10px 0px;
-      width: 30%;
-      text-align: center;
-      height: 120px;
+      width: 100%;
+      text-align: left;
+      height: 130px;
       img {
         cursor: pointer;
-        width: 120px;
-        height: 120px;
+        width: 128px;
+        height: 130px;
+        object-fit: cover;
+      }
+      .indexNews {
+        cursor: pointer;
+        width: 108px;
+        height: 130px;
         object-fit: cover;
       }
     }
@@ -692,7 +702,7 @@ body {
           padding: 3px 4px;
           font-size: 13px;
           background-color: $myFavColor;
-          width: 60px;
+          width: 65px;
           margin-bottom: 10px;
         }
         .Title {
@@ -781,7 +791,7 @@ body {
         padding: 3px 4px;
         font-size: 13px;
         background-color: $myFavColor;
-        width: 60px;
+        width: 65px;
         margin-bottom: 10px;
       }
       .Title {
@@ -870,7 +880,7 @@ body {
         padding: 3px 4px;
         font-size: 13px;
         background-color: $myFavColor;
-        width: 60px;
+        width: 65px;
         margin-bottom: 10px;
       }
       .Title {
@@ -1783,7 +1793,7 @@ body {
   .footLogo {
     color: white;
     img {
-      height: 70px;
+      height: 150px;
       width: 150px;
       margin-bottom: 20px;
     }
@@ -1915,7 +1925,6 @@ body {
   }
   .containers {
     width: 60%;
-
     .ScrollHead2 {
       background-color: white;
       display: flex;
@@ -1923,7 +1932,7 @@ body {
       justify-content: flex-start;
       align-items: center;
       position: fixed;
-      top: -60px;
+      top: -90px;
       left: 0;
       width: 100%;
       height: 60px;
@@ -1942,8 +1951,8 @@ body {
       }
       img {
         cursor: pointer;
-        width: 150px;
-        height: 100%;
+        width: 35px;
+        height: 35px;
         object-fit: cover;
         margin-left: 7%;
       }
@@ -1962,7 +1971,7 @@ body {
       top: 0;
       left: 0;
       width: 100%;
-      height: 60px;
+      height: 70px;
       z-index: 99;
       .TitlePar {
         margin-left: 1%;
@@ -1982,8 +1991,8 @@ body {
         margin-left: 2%;
       }
       img {
-        width: 120px;
-        height: 80%;
+        width: 50px;
+        height: 60px;
         object-fit: cover;
         cursor: pointer;
         margin-left: 5%;
@@ -2241,19 +2250,18 @@ body {
           word-break: break-word;
           letter-spacing: -0.003em;
           p {
-            font-size: 22px !important;
+            font-size: 20px !important;
             // color: rgba(0, 0, 0, 1);
-            color: rgba(41, 41, 41, 1);
+            // color: rgba(41, 41, 41, 1);
             font-family: $myFontFamily !important;
             line-height: 32px;
             letter-spacing: -0.003em;
             word-break: break-word;
           }
           span {
-            font-size: 22px !important;
-
+            font-size: 20px !important;
             // color: rgba(0, 0, 0, 1);
-            color: rgba(41, 41, 41, 1);
+            // color: rgba(41, 41, 41, 1);
             font-family: $myFontFamily !important;
             line-height: 32px;
             transition: font-size 0.2s ease-in-out;
@@ -2304,7 +2312,7 @@ body {
       .dailyTitle {
         margin-bottom: 10px;
         h1 {
-          font-size: 28px;
+          font-size: 24px;
           font-weight: 600;
           margin-bottom: 12px;
         }
@@ -3823,120 +3831,72 @@ $rhap_font-family: inherit !default;
   }
 
   .BackMainNewsPar {
-    .ProfileCon {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      img {
-        width: 60px;
-        height: 60px;
-        object-fit: cover;
-        margin: 12px 10px;
-        align-self: flex-start;
-        display: none;
-      }
-      .textPar {
-        display: none;
-        display: flex;
-        flex-direction: column;
-        font-size: 14px;
-        .Name {
-          display: none;
-          margin-bottom: 10px;
-          font-weight: 600;
-        }
-        .other {
-          display: none;
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-          margin-bottom: 10px;
-          .filter {
-            display: none;
-            color: $myFavColor;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.4);
-            padding-right: 0px;
-            cursor: pointer;
-            &:hover {
-              color: black;
-            }
-            margin-bottom: 5px;
-          }
-          .filter2 {
-            display: none;
-            margin-bottom: 5px;
-            margin-left: 0px;
-            color: $myFavColor;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.4);
-            padding-right: 5px;
-            cursor: pointer;
-            &:hover {
-              color: black;
-            }
-          }
-          .date {
-            display: none;
-            margin-left: 0px;
-          }
-        }
-      }
-    }
-    .shareBtnPar2 {
-      display: flex;
-      flex-direction: row;
-      // position: fixed;
-      transition: all 0.4s ease-in;
-      margin-bottom: 10px;
-      justify-content: space-between;
-      align-items: center;
-      .react-share__ShareButton {
+    .containers {
+      .styles_scroll-to-top__2A70v {
+        background-color: white;
+        padding: 5px 5px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        height: 40px;
+        width: 40px;
+        -webkit-box-shadow: 1px 6px 18px -7px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 1px 6px 18px -7px rgba(0, 0, 0, 0.75);
+        box-shadow: 8px 2px 8px -8px rgba(0, 0, 0, 0.75);
         transition: all 0.4s ease;
+        border-radius: 50%;
+        border: 0.1px solid rgba(0, 0, 0, 0.3);
         svg {
-          // display: block;
-          width: 40px;
-          height: 40px;
-          transition: all 0.2s ease-in;
-          &:hover {
-            left: 0px;
-            // width: 56px;
-            // height: 56px;
-            transform: scale(1.4);
-          }
+          font-size: 33px;
+        }
+        &:hover {
+          margin-bottom: 35px;
         }
       }
       .ProfileCon {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
         img {
           width: 60px;
           height: 60px;
           object-fit: cover;
           margin: 12px 10px;
+          align-self: flex-start;
+          display: none;
         }
         .textPar {
+          display: none;
           display: flex;
           flex-direction: column;
           font-size: 14px;
           .Name {
+            display: none;
+            margin-bottom: 10px;
             font-weight: 600;
           }
           .other {
+            display: none;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 10px;
             .filter {
               display: none;
               color: $myFavColor;
-              border-right: 1px solid rgba(0, 0, 0, 0.4);
-              padding-right: 5px;
+              border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+              padding-right: 0px;
               cursor: pointer;
               &:hover {
                 color: black;
               }
+              margin-bottom: 5px;
             }
             .filter2 {
               display: none;
-              margin-left: 5px;
+              margin-bottom: 5px;
+              margin-left: 0px;
               color: $myFavColor;
-              border-right: 1px solid rgba(0, 0, 0, 0.4);
+              border-bottom: 1px solid rgba(0, 0, 0, 0.4);
               padding-right: 5px;
               cursor: pointer;
               &:hover {
@@ -3944,91 +3904,470 @@ $rhap_font-family: inherit !default;
               }
             }
             .date {
-              margin-left: 5px;
+              display: none;
+              margin-left: 0px;
             }
           }
         }
       }
-    }
-
-    .ScrollPar {
-      overflow-y: scroll;
-      height: 100vh;
-      &::-webkit-scrollbar {
-        width: 3px;
-      }
-
-      /* Track */
-      &::-webkit-scrollbar-track {
-        box-shadow: inset 0 0 5px grey;
-        border-radius: 10px;
-      }
-
-      /* Handle */
-      &::-webkit-scrollbar-thumb {
-        background: #fbb03b;
-        border-radius: 10px;
-      }
-
-      /* Handle on hover */
-      &::-webkit-scrollbar-thumb:hover {
-        background: #fbb03b;
-      }
-
-      .contentPar {
-        height: 130px;
-        z-index: 2;
-        background-color: white;
-        padding: 5px 10px;
-        width: 95%;
-        border-radius: 10px;
-        -webkit-box-shadow: 1px 6px 18px -7px rgba(0, 0, 0, 0.75);
-        -moz-box-shadow: 1px 6px 18px -7px rgba(0, 0, 0, 0.75);
-        box-shadow: 1px 6px 18px -7px rgba(0, 0, 0, 0.75);
-        margin-bottom: 16px;
-        span {
-          font-size: 14px;
-          opacity: 0.6;
+      .shareBtnPar2 {
+        display: flex;
+        flex-direction: row;
+        // position: fixed;
+        transition: all 0.4s ease-in;
+        margin-bottom: 10px;
+        justify-content: space-between;
+        align-items: center;
+        .react-share__ShareButton {
+          transition: all 0.4s ease;
+          svg {
+            // display: block;
+            width: 40px;
+            height: 40px;
+            transition: all 0.2s ease-in;
+            &:hover {
+              left: 0px;
+              // width: 56px;
+              // height: 56px;
+              transform: scale(1.4);
+            }
+          }
         }
-        .flexPar {
+        .ProfileCon {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            margin: 12px 10px;
+          }
+          .textPar {
+            display: flex;
+            flex-direction: column;
+            font-size: 14px;
+            .Name {
+              font-weight: 600;
+            }
+            .other {
+              .filter {
+                display: none;
+                color: $myFavColor;
+                border-right: 1px solid rgba(0, 0, 0, 0.4);
+                padding-right: 5px;
+                cursor: pointer;
+                &:hover {
+                  color: black;
+                }
+              }
+              .filter2 {
+                display: none;
+                margin-left: 5px;
+                color: $myFavColor;
+                border-right: 1px solid rgba(0, 0, 0, 0.4);
+                padding-right: 5px;
+                cursor: pointer;
+                &:hover {
+                  color: black;
+                }
+              }
+              .date {
+                margin-left: 5px;
+              }
+            }
+          }
+        }
+      }
+
+      .ScrollPar {
+        overflow-y: scroll;
+        height: 100vh;
+        &::-webkit-scrollbar {
+          width: 3px;
+        }
+
+        /* Track */
+        &::-webkit-scrollbar-track {
+          box-shadow: inset 0 0 5px grey;
+          border-radius: 10px;
+        }
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+          background: #fbb03b;
+          border-radius: 10px;
+        }
+
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+          background: #fbb03b;
+        }
+
+        .contentPar {
+          height: 130px;
+          z-index: 2;
+          background-color: white;
+          padding: 5px 10px;
+          width: 95%;
+          border-radius: 10px;
+          -webkit-box-shadow: 1px 6px 18px -7px rgba(0, 0, 0, 0.75);
+          -moz-box-shadow: 1px 6px 18px -7px rgba(0, 0, 0, 0.75);
+          box-shadow: 1px 6px 18px -7px rgba(0, 0, 0, 0.75);
+          margin-bottom: 16px;
+          span {
+            font-size: 14px;
+            opacity: 0.6;
+          }
+          .flexPar {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            .flex1 {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-around;
+              align-items: center;
+              padding-left: 5px;
+              img {
+                width: 90px;
+                height: 90px;
+                object-fit: cover;
+              }
+              .flex1Text {
+                padding-left: 20px;
+                h6 {
+                  width: 200px;
+                  height: 41px;
+                  font-weight: 600;
+                  margin-bottom: 0px;
+                  overflow: hidden;
+                  transition: all ease 0.3s;
+                  cursor: pointer;
+                  &:hover {
+                    color: #00c8fa;
+                  }
+                }
+              }
+            }
+            .flex2 {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              button {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+
+
+      .mainCon {
+        padding: 20px 0px;
+        padding-left: 0px;
+        .smMenu {
           display: flex;
           flex-direction: row;
           justify-content: space-between;
+          align-items: center;
+          line-height: 28px;
+          margin-bottom: 20px;
           .flex1 {
             display: flex;
             flex-direction: row;
-            justify-content: space-around;
-            align-items: center;
-            padding-left: 5px;
-            img {
-              width: 90px;
-              height: 90px;
-              object-fit: cover;
+            justify-content: space-evenly;
+            width: 42%;
+            span {
+              // color: #888888;
+              color: rgba(0, 0, 0, 0.7);
+              font-size: 14px;
             }
-            .flex1Text {
-              padding-left: 20px;
-              h6 {
-                width: 200px;
-                height: 41px;
-                font-weight: 600;
-                margin-bottom: 0px;
-                overflow: hidden;
-                transition: all ease 0.3s;
-                cursor: pointer;
-                &:hover {
-                  color: #00c8fa;
-                }
-              }
+            svg {
+              margin-right: 5px;
+              font-size: 20px;
+              color: $myFavColor;
             }
           }
           .flex2 {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            button {
-              display: none;
+            flex-direction: row;
+            justify-content: space-evenly;
+            width: 34%;
+            span {
+              // color: #888888;
+              color: rgba(0, 0, 0, 0.7);
+              font-size: 14px;
+            }
+            svg {
+              margin-right: 5px;
+              font-size: 22px;
+              color: $myFavColor;
             }
           }
+        }
+        .title {
+          h2 {
+            --x-height-multiplier: 0.375;
+            --baseline-multiplier: 0.17;
+            // font-weight: 600;
+            font-size: 40px;
+          }
+          .shareBtnPar {
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            top: 0px;
+            right: 0px;
+            transition: all 0.4s ease-in;
+            align-items: center;
+            margin-right: 20px;
+            z-index: 999;
+            align-items: flex-end;
+            .ButtonsPAr {
+              display: flex;
+              flex-direction: row;
+              .react-share__ShareButton {
+                transition: all 0.4s ease;
+                top: 0px;
+                left: 0px;
+                width: 35px !important;
+                height: 35px !important;
+                svg {
+                  // display: block;
+                  width: 30px;
+                  height: 30px;
+                  transition: all 0.2s ease-in;
+                  &:hover {
+                    left: 0px;
+                    // width: 56px;
+                    // height: 56px;
+                    transform: scale(1.4);
+                  }
+                }
+              }
+            }
+  
+            .ProfileCon {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              img {
+                border-radius: 50%;
+                width: 45px;
+                height: 45px;
+                object-fit: cover;
+                margin: 12px 10px;
+                align-self: flex-start;
+              }
+              .textPar {
+                display: flex;
+                flex-direction: column;
+                font-size: 13px;
+                .Name {
+                  margin-bottom: 10px;
+                  font-weight: 600;
+                }
+                .other {
+                  display: flex;
+                  flex-direction: column;
+                  align-items: flex-start;
+                  margin-bottom: 10px;
+                  .filter {
+                    color: rgb(87, 118, 154);
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+                    padding-right: 0px;
+                    cursor: pointer;
+                    &:hover {
+                      color: black;
+                    }
+                    margin-bottom: 5px;
+                  }
+                  .filter2 {
+                    margin-bottom: 5px;
+                    margin-left: 0px;
+                    color: rgb(87, 118, 154);
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+                    padding-right: 5px;
+                    cursor: pointer;
+                    &:hover {
+                      color: black;
+                    }
+                  }
+                  .date {
+                    margin-left: 0px;
+                    font-size: 12px;
+                  }
+                }
+              }
+            }
+          }
+          .shareBtnPar2 {
+            display: flex;
+            flex-direction: row;
+            // position: fixed;
+            transition: all 0.4s ease-in;
+            margin-bottom: 10px;
+            justify-content: space-between;
+            align-items: center;
+            margin-right: 13px;
+            .react-share__ShareButton {
+              width: 35px !important;
+              height: 35px !important;
+              transition: all 0.4s ease;
+              svg {
+                // display: block;
+                width: 30px;
+                height: 30px;
+                transition: all 0.2s ease-in;
+                &:hover {
+                  left: 0px;
+                  // width: 56px;
+                  // height: 56px;
+                  transform: scale(1.4);
+                }
+              }
+            }
+            .ProfileCon {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              img {
+                border-radius: 50%;
+                width: 45px;
+                height: 45px;
+                object-fit: cover;
+                margin: 12px 10px;
+              }
+              .textPar {
+                display: flex;
+                flex-direction: column;
+                font-size: 14px;
+                .Name {
+                  font-weight: 600;
+                }
+                .other {
+                  .filter {
+                    color: rgb(87, 118, 154);
+                    border-right: 1px solid rgba(0, 0, 0, 0.4);
+                    padding-right: 5px;
+                    cursor: pointer;
+                    &:hover {
+                      color: black;
+                    }
+                  }
+                  .filter2 {
+                    margin-left: 5px;
+                    color: rgb(87, 118, 154);
+                    border-right: 1px solid rgba(0, 0, 0, 0.4);
+                    padding-right: 5px;
+                    cursor: pointer;
+                    &:hover {
+                      color: black;
+                    }
+                  }
+                  .date {
+                    font-size: 14px;
+                    margin-left: 5px;
+                  }
+                }
+              }
+            }
+          }
+          .linePAr {
+            position: relative;
+            height: 6px;
+            .line {
+              width: 100%;
+              border-top: 1px solid rgba(0, 0, 0, 0.2);
+              border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+              height: 100%;
+            }
+            .line2 {
+              position: absolute;
+              width: 50%;
+              background-color: $myFavColor;
+              height: 6px;
+              height: 100%;
+              top: 0;
+              left: 0;
+            }
+          }
+          img {
+            margin-bottom: 20px;
+            margin-top: 10px;
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+          }
+          .content {
+            // margin-right:50px;
+            // margin-left:50px;
+            padding-left: 0px;
+            padding-right: 0px;
+            word-spacing: 1px;
+            word-break: break-word;
+            line-height: 32px;
+            // color: #888888;
+            color: rgba(41, 41, 41, 1);
+            width: 100%;
+            font-family: $myFontFamily !important;
+            word-break: break-word;
+            letter-spacing: -0.003em;
+            p {
+              font-size: 16px !important;
+              // color: rgba(0, 0, 0, 1);
+              // color: rgba(41, 41, 41, 1);
+              font-family: $myFontFamily !important;
+              line-height: 32px;
+              letter-spacing: -0.003em;
+              word-break: break-word;
+            }
+            span {
+              font-size: 16px !important;
+              // color: rgba(0, 0, 0, 1);
+              // color: rgba(41, 41, 41, 1);
+              font-family: $myFontFamily !important;
+              line-height: 32px;
+              transition: font-size 0.2s ease-in-out;
+              // word-spacing: 2px;
+              letter-spacing: -0.003em;
+              word-break: break-word;
+            }
+            figure {
+              overflow: hidden;
+              img {
+                height: 330px !important;
+                width: 100% !important;
+                object-fit: cover;
+                overflow: hidden;
+                transition: transform 1s, filter 1s ease-in-out;
+                transform-origin: center center;
+                cursor: pointer;
+                &:hover {
+                  transform: scale(1.05);
+                }
+              }
+            }
+          }
+          .sun-editor-editable .sun-editor {
+            font-family: $myFontFamily !important;
+            // .sun-editor-editable table td,
+            // .sun-editor-editable table th {
+            //     border: 1px solid #c2e8f8 !important;
+            //     padding: 10em;
+            //     background-clip: padding-box;
+            //     span {
+            //     }
+            // }
+          }
+          // p {
+          //     line-height: 28px;
+          //     // color: #888888;
+          //     color: black;
+          //     letter-spacing: 0.31px;
+          //     width: 95%;
+          // }
         }
       }
     }
