@@ -68,7 +68,7 @@ export default function Home(props) {
                             <div className="logo">
                                 {/* <img src={`${this.props.Logo.logo.url}`} /> */}
                                 <Link href="/">
-                                    <img className="indexNews" src={require('../components/image/logo.png')} />
+                                    <img className="indexNews" src={require('../components/image/Logo.png')} />
                                 </Link>
                             </div>
                             <div className="SliderPAr">
