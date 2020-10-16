@@ -24,6 +24,7 @@ export default function Home(props) {
        ReactGa.pageview(window.location.pathname + window.location.search)
     }, [])
 
+
     console.log(props.bunner1, ' this is bunner')
     return (
         <div>

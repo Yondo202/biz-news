@@ -22,7 +22,7 @@ export class indexNews extends Component {
     render() {
         const allVideo = this.props.allVideo
         return (
-            <Container className="betweenNewsPar" fluid style={{width:'70%'}}>
+            <Container className="betweenNewsPar" fluid style={{width:'60%'}}>
                     <Row style={{ marginTop: 30 }}>
                         {allVideo.map((el, i) => {
                             return (

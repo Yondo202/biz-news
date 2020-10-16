@@ -3,17 +3,9 @@ import axios from 'axios'
 import Layout from '../../components/Layout'
 import HomeVideo from '../../components/Video/HomeVideo'
 import Head from 'next/head'
-import ReactGa from 'react-ga';
-import {useEffect} from 'react'
+
 
 function Home(props) {
-
-  useEffect(() => {
-    ReactGa.initialize('UA-180671141-1')
-    ReactGa.pageview(window.location.pathname + window.location.search)
- }, [])
-  
-
     return (
         <div>
             <div>

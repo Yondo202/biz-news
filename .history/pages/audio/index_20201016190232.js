@@ -51,11 +51,6 @@ export class audio extends Component {
     state = {
         curTime: new Date().toLocaleString()
     }
-
-    componentDidMount(){
-        ReactGa.initialize('UA-180671141-1')
-        ReactGa.pageview(window.location.pathname + window.location.search)
-    }
     render() {
         const Dates = this.state.curTime.slice(0, 9);
         // console.log(this.props.test)

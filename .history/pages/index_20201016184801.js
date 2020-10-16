@@ -21,8 +21,10 @@ export default function Home(props) {
     // const myRoute = router.pathname
     useEffect(() => {
        ReactGa.initialize('UA-180671141-1')
+
        ReactGa.pageview(window.location.pathname + window.location.search)
     }, [])
+
 
     console.log(props.bunner1, ' this is bunner')
     return (

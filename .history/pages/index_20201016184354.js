@@ -9,20 +9,21 @@ import { AiOutlineTwitter, AiOutlineGooglePlus, AiFillInstagram } from 'react-ic
 import Slider from "react-slick";
 import Link from 'next/link';
 import ReactGa from 'react-ga';
-import {useEffect} from 'react'
-import {useRouter} from 'next/router'
+import {useEffect, useRouter} from 'react'
 
 const Dates = new Date().toLocaleString()
 
 export default function Home(props) {
     // const newsData = props.MainNews
     // console.log(props.VideoNewsHome, 'lalala')
-    // const router = useRouter();
-    // const myRoute = router.pathname
+    const router = useRouter()
+    const myRoute = router.pathname
     useEffect(() => {
        ReactGa.initialize('UA-180671141-1')
+
        ReactGa.pageview(window.location.pathname + window.location.search)
     }, [])
+
 
     console.log(props.bunner1, ' this is bunner')
     return (

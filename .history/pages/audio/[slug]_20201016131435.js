@@ -3,15 +3,9 @@ import Layout from '../../components/Layout'
 import HomePar from '../../components/home'
 import axios from 'axios'
 import Aduios from '../../components/audio/Audio'
-import ReactGa from 'react-ga';
-import {useEffect} from 'react'
+
 
 export default function Home(props) {
-
-  useEffect(() => {
-    ReactGa.initialize('UA-180671141-1')
-    ReactGa.pageview(window.location.pathname + window.location.search)
- }, [])
   // console.log(props.test, 'cscd')
   return (
     <div>

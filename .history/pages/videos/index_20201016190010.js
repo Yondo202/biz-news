@@ -9,7 +9,7 @@ import { GrFacebookOption } from 'react-icons/gr';
 import { AiOutlineTwitter, AiOutlineGooglePlus, AiFillInstagram } from 'react-icons/ai';
 import Slider from "react-slick";
 import Link from 'next/link';
-import ReactGa from 'react-ga';
+
 
 var settings = {
     autoplay: true,

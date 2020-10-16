@@ -6,20 +6,11 @@ import MainNews from '../../components/mainNews/mainNews'
 import BigNews from '../../components/mainNews/bigMain'
 import { GetStaticPaths } from 'next'
 import { execOnce } from 'next/dist/next-server/lib/utils'
-import ReactGa from 'react-ga';
-import {useEffect} from 'react'
 const imageURL = '';
-
-
 
 export default function Home(props) {
 
   console.log(props.big, 'this is my big data')
-
-  useEffect(() => {
-    ReactGa.initialize('UA-180671141-1')
-    ReactGa.pageview(window.location.pathname + window.location.search)
- }, [])
 
   return (
     <div>

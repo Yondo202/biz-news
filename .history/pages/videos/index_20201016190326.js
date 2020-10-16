@@ -10,6 +10,7 @@ import { AiOutlineTwitter, AiOutlineGooglePlus, AiFillInstagram } from 'react-ic
 import Slider from "react-slick";
 import Link from 'next/link';
 import ReactGa from 'react-ga';
+import {useEffect} from 'react'
 
 var settings = {
     autoplay: true,
