@@ -10,6 +10,7 @@ import Slider from "react-slick";
 import Link from 'next/link';
 import ReactGa from 'react-ga';
 import {useEffect} from 'react'
+import {useRouter} from 'next/router'
 
 
 const Dates = new Date().toLocaleString()

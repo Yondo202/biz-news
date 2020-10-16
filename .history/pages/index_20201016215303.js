@@ -10,18 +10,38 @@ import Slider from "react-slick";
 import Link from 'next/link';
 import ReactGa from 'react-ga';
 import {useEffect} from 'react'
+import {useRouter} from 'next/router'
+
+import ReactPixel from 'react-facebook-pixel';
+
+const advancedMatching = { em: 'some@email.com' }; // optional, more info: https://developers.facebook.com/docs/facebook-pixel/advanced/advanced-matching
+const options = {
+  autoConfig: true, // set pixel's autoConfig
+  debug: false, // enable logs
+};
+ReactPixel.init('yourPixelIdGoesHere', advancedMatching, options);
+
+ReactPixel.pageView(); // For tracking page view
+ReactPixel.track(event, data); // For tracking default events, more info about events and data https://developers.facebook.com/docs/ads-for-websites/pixel-events/v2.9
+ReactPixel.trackSingle('PixelId', event, data); // For tracking default events, more info about events and data https://developers.facebook.com/docs/ads-for-websites/pixel-events/v2.9
+ReactPixel.trackCustom(event, data); // For tracking custom events
+ReactPixel.trackSingleCustom('PixelId', event, data); // For tracking custom events
+
 
 
 const Dates = new Date().toLocaleString()
 
 export default function Home(props) {
-
+    // const newsData = props.MainNews
+    // console.log(props.VideoNewsHome, 'lalala')
+    // const router = useRouter();
+    // const myRoute = router.pathname
     useEffect(() => {
        ReactGa.initialize('UA-180671141-1')
        ReactGa.pageview(window.location.pathname + window.location.search)
     }, [])
 
-    // console.log(props.bunner1, ' this is bunner')
+    console.log(props.bunner1, ' this is bunner')
     return (
         <div>
             <Head>

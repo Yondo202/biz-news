@@ -10,18 +10,19 @@ import Slider from "react-slick";
 import Link from 'next/link';
 import ReactGa from 'react-ga';
 import {useEffect} from 'react'
+import {useRouter} from 'next/router'
 
 
 const Dates = new Date().toLocaleString()
 
 export default function Home(props) {
-
+    
     useEffect(() => {
        ReactGa.initialize('UA-180671141-1')
        ReactGa.pageview(window.location.pathname + window.location.search)
     }, [])
 
-    // console.log(props.bunner1, ' this is bunner')
+    console.log(props.bunner1, ' this is bunner')
     return (
         <div>
             <Head>

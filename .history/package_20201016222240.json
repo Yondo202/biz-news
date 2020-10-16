@@ -1,0 +1,42 @@
+{
+  "name": "biz-news",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "@zeit/next-sass": "^1.0.1",
+    "@zeit/next-typescript": "^1.1.1",
+    "axios": "^0.19.2",
+    "bootstrap": "^4.5.0",
+    "framer-motion": "^2.6.1",
+    "html-to-react": "^1.4.3",
+    "module-alias": "^2.2.2",
+    "next": "^9.5.3",
+    "next-optimized-images": "^2.6.1",
+    "next-videos": "^1.2.0",
+    "node-sass": "^4.14.1",
+    "react": "^16.13.1",
+    "react-bootstrap": "^1.2.2",
+    "react-dom": "^16.13.1",
+    "react-ga": "^3.2.0",
+    "react-h5-audio-player": "^3.2.0",
+    "react-hamburger-menu": "^1.2.1",
+    "react-icons": "^3.11.0",
+    "react-parallax": "^3.0.3",
+    "react-player": "^2.6.0",
+    "react-sanfona": "^1.5.0",
+    "react-scroll-parallax": "^2.3.4",
+    "react-scroll-to-top": "^1.0.5",
+    "react-share": "^4.3.0",
+    "react-slick": "^0.27.0",
+    "video-react": "^0.14.1"
+  },
+  "_moduleAliases": {
+    "@comp": "./components"
+  }
+}
