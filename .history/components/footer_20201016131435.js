@@ -18,7 +18,7 @@ class footer extends Component {
                             </Col>
                             <Col md={3}>
                                 <div className="footLogo">
-                                    <img src={require('./image/logo.png')} />
+                                    <img src={require('./image/Logo.png')} />
                                     <p>Завгүй хүмүүст зориулав. Бизнесийн болон бусад мэдээллийг нэг дороос.</p>
                                 </div>
                             </Col>

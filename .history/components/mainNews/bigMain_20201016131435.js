@@ -78,7 +78,7 @@ export class bigMain extends Component {
             <Col md={8}>
                 <div className={this.state.className2}>
                     <Link href="/">
-                        <img src={require('../image/logo.png')}></img>
+                        <img src={require('../image/Logo.png')}></img>
                     </Link>
                     <div className="Line"></div>
                     <div className="TitlePar">
