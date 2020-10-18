@@ -16,7 +16,7 @@ function Home(props) {
   const router = useRouter()
   const myRoute = router.query.slug
 
-  console.log(props.big, 'this is my video slug big')
+  console.log(props.big)
 
   return (
     <div>
@@ -31,7 +31,7 @@ function Home(props) {
           <meta property="og:image" content={props.big.image.url}></meta>
           <meta property="og:type" content="website" />
           <meta property="fb:app_id" content="2645260245750776" />
-          <meta property="og:url" content={`https://biznet-news.vercel.app/videos/${myRoute}`} />
+          <meta property="og:url" content={`https://biznet-news.vercel.app/posts/${myRoute}`} />
           <meta property="og:site_name" content="BIZI.mn" />
 
 
