@@ -21,9 +21,8 @@ class footer extends Component {
                                     <p>Завгүй хүмүүст зориулав. Бизнесийн болон бусад мэдээллийг нэг дороос.</p>
                                 </div>
                             </Col>
-                            <Col md={1}>
-                            </Col >
-                            <Col md={2}>
+                          
+                            <Col md={3}>
                                 <div className="footMenu1">
                                     <h5>Quick Links</h5>
                                     <div className="menu">
@@ -83,7 +82,6 @@ class footer extends Component {
                                 </div>
                             </Col>
                         </Row>
-
                     </Container>
                 </div>
                 <div className="footEnd">

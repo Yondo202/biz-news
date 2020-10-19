@@ -1,7 +1,9 @@
-import Head from 'next/head'
-import '../Style/Styles.scss'
-import '../Style/suneditor.scss'
-function createMarkup() { return {__html: `<script>
+import Head from "next/head";
+import "../Style/Styles.scss";
+import "../Style/suneditor.scss";
+function createMarkup() {
+  return {
+    __html: `<script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -15,19 +17,23 @@ fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=467948500805836&ev=PageView&noscript=1"
-/></noscript>`}; };
+/></noscript>`,
+  };
+}
+function shareSelectedText(){
+  return{
+    __html: `<script src="dist/shareSelectedText.js"></script>`
+  }
+}
 // This default export is required in a new `pages/_app.js` file.
 export default function MyApp({ Component, pageProps }) {
-    return (
-      <>
+  return (
+    <>
       <Head>
         <div dangerouslySetInnerHTML={createMarkup()}></div>
+        <div dangerouslySetInnerHTML={shareSelectedText()}></div>
       </Head>
       <Component {...pageProps} />
-      </>
-    )
-  }
-
-
-
-  
+    </>
+  );
+}

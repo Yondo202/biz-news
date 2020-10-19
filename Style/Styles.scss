@@ -1804,13 +1804,13 @@ body {
       margin-bottom: 20px;
     }
     p{
-      font-size: 14px;
+      font-size: 13px;
     }
   }
   .footMenu1 {
     h5 {
       color: white;
-      font-size: 17px;
+      font-size: 16px;
     }
     .menu {
       padding-top: 10px;
@@ -1824,7 +1824,7 @@ body {
           color: white;
           transition: all 0.2s;
           cursor: pointer;
-          font-size: 14px;
+          font-size: 13px;
           &:hover {
             color: #4db7fe;
           }
@@ -1839,7 +1839,7 @@ body {
   .footMenu2 {
     h5 {
       color: white;
-      font-size: 17px;
+      font-size: 16px;
     }
     .menu {
       padding-top: 10px;
@@ -1852,7 +1852,7 @@ body {
         color: white;
         cursor: pointer;
         transition: all 0.2s;
-        font-size: 14px;
+        font-size: 13px;
         margin-bottom: 0px;
         &:hover {
           color: $myFavColor;
@@ -1882,14 +1882,14 @@ body {
   .footMenu3 {
     h5 {
       color: white;
-      font-size: 17px;
+      font-size: 16px;
     }
     .menu {
       padding-top: 10px;
       svg {
         color: white;
-        font-size: 42px;
-        padding: 12px 12px;
+        font-size: 36px;
+        padding: 10px 10px;
         background-color: $myFavColor;
         border-radius: 50px;
         margin-right: 8px;

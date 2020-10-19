@@ -34,6 +34,7 @@
     "react-scroll-to-top": "^1.0.5",
     "react-share": "^4.3.0",
     "react-slick": "^0.27.0",
+    "share-selected-text": "^1.1.4",
     "video-react": "^0.14.1"
   },
   "_moduleAliases": {
