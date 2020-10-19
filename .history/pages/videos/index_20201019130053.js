@@ -11,7 +11,8 @@ import Slider from "react-slick";
 import Link from 'next/link';
 import ReactGa from 'react-ga';
 
-
+const Dates = new Date()
+const date = Dates.getFullYear() + '.' + (Dates.getMonth()+1) + '.' + Dates.getDate();
 
 var settings = {
     autoplay: true,
@@ -63,8 +64,7 @@ export class videoNews extends Component {
         ReactGa.pageview(window.location.pathname + window.location.search)
     }
     render() {
-        const Dates = new Date()
-        const date = Dates.getFullYear() + '.' + (Dates.getMonth() + 1) + '.' + Dates.getDate();
+        const Dates = this.state.curTime.slice(0, 10)
         return (
             <div>
                 <Head>

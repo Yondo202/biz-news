@@ -98,7 +98,7 @@ export class audio extends Component {
                                 </div>
                                 <div className="icons">
                                     <div className="date">
-                                        <span style={{ letterSpacing: 2 }}>{date}</span>
+                                        <span style={{ letterSpacing: 2 }}>{Dates}</span>
                                     </div>
                                     <div className="icons">
                                         <GrFacebookOption />

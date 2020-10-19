@@ -1,15 +1,20 @@
-import React, { Component } from 'react'
 import Head from 'next/head'
-import Layout from '../../components/Layout'
-import Audio from '../../components/audio/indexAudio'
+import Layout from '../components/Layout'
+import HomePar from '../components/home'
 import axios from 'axios'
+import OtherNav from '../components/otherNav'
 import { Container, Row, Col } from 'react-bootstrap'
 import { GrFacebookOption } from 'react-icons/gr';
 import { AiOutlineTwitter, AiOutlineGooglePlus, AiFillInstagram } from 'react-icons/ai';
 import Slider from "react-slick";
 import Link from 'next/link';
 import ReactGa from 'react-ga';
+import { useEffect } from 'react'
+import { useRouter } from 'next/router'
 
+// const Dates = new Date().toLocaleString()
+const Dates = new Date()
+const date = new Dates.getFullYear() + '.' + (Dates.getMonth()+1) + '.' + Dates.getDate();
 
 var settings = {
     autoplay: true,
@@ -31,7 +36,7 @@ var settings = {
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 infinite: true,
-                dots: true,
+                dots: false,
             }
         },
         {
@@ -47,38 +52,38 @@ var settings = {
         },
     ]
 };
-export class audio extends Component {
-    state = {
-        curTime: new Date().toLocaleString()
-    }
 
-    componentDidMount() {
+export default function Home(props) {
+
+    useEffect(() => {
         ReactGa.initialize('UA-180671141-1')
         ReactGa.pageview(window.location.pathname + window.location.search)
-    }
-    render() {
-        const Dates = new Date()
-        const date = Dates.getFullYear() + '.' + (Dates.getMonth()+1) + '.' + Dates.getDate();)
+    }, [])
 
-        return (
+    const router = useRouter()
+    const myRoute = router.query.slug
+
+    // console.log(props.bunner1, ' this is bunner')
+    return (
+        <div>
+            <Head>
+                <title>BIZI.mn</title>
+                <meta name="description" content="Завгүй хүмүүст зориулав. Бизнесийн болон бусад мэдээллийг нэг дороос." />
+                <meta property="og:type" content="website" />
+                <meta property="fb:app_id" content="2645260245750776" />
+                <meta property="og:url" content={`https://biznet-news.vercel.app`} />
+                <meta property="og:site_name" content="BIZI.mn" />
+
+                <link rel="icon" href="/business.png" />
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"></link>
+                <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
+                <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
+                <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet"></link>
+            </Head>
             <>
-                <Head>
-                    <title>BIZI.mn</title>
-                    <meta name="description" content="Завгүй хүмүүст зориулав. Бизнесийн болон бусад мэдээллийг нэг дороос." />
-                    <meta property="og:type" content="website" />
-                    <meta property="fb:app_id" content="2645260245750776" />
-                    <meta property="og:url" content={`https://biznet-news.vercel.app/posts/audio`} />
-                    <meta property="og:site_name" content="BIZI.mn" />
-                    <link rel="icon" href="/business.png" />
-                    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"></link>
-                    <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
-                    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
-                    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet"></link>
-                </Head>
-
                 <div className="OtherHeader">
                     <div className="TopHead">
-                        <Container fluid style={{ height: '100%', width: '70%' }} >
+                        <Container fluid style={{ height: '100%', width: '70%' }}>
                             <div className="flexHead">
                                 <div className="TrendPar">
                                     <div className="trend">
@@ -86,9 +91,9 @@ export class audio extends Component {
                                     </div>
                                     <div className="trendCont">
                                         <Slider {...settings}>
-                                            {this.props.allPost.map((el, i) => {
+                                            {props.AllNews.map((el, i) => {
                                                 return (
-                                                    <Link key={i} href='/audio/[slug]' as={`/audio/${el.slug}`}>
+                                                    <Link key={i} href='/posts/[slug]' as={`/posts/${el.slug}`}>
                                                         <span key={i} >{el.title}</span>
                                                     </Link>
                                                 )
@@ -98,7 +103,7 @@ export class audio extends Component {
                                 </div>
                                 <div className="icons">
                                     <div className="date">
-                                        <span style={{ letterSpacing: 2 }}>{date}</span>
+                                        <span style={{ letterSpacing: 2 }}>{Date}</span>
                                     </div>
                                     <div className="icons">
                                         <GrFacebookOption />
@@ -111,40 +116,36 @@ export class audio extends Component {
 
                         </Container>
                     </div>
-
-
                     <Container fluid style={{ width: '70%' }}>
                         <div className="golMenu22">
                             <div className="logo">
                                 {/* <img src={`${this.props.Logo.logo.url}`} /> */}
                                 <Link href="/">
-                                    <img src={require('../../components/image/audio.png')} alt="myImageHere" />
+                                    <img className="indexNews" src={require('../components/image/logo.png')} alt="myLogo" />
                                 </Link>
                             </div>
                             <div className="SliderPAr">
                                 <Slider {...settings}>
-                                    {this.props.bunner1.map((el, i) => {
+                                    {props.bunner1.map((el, i) => {
                                         return (
                                             <div key={i}>
                                                 <Link href={el.url} target="_blank">
                                                     <div className="TopBunner">
                                                         <div className="text">
-                                                            <a target="_blank">
-                                                                <h5>
-                                                                    {el.title}
-                                                                    {/* {bunner1.title} */}
-                                                                </h5>
-                                                            </a>
+                                                            <h5>
+                                                                {el.title}
+                                                                {/* {bunner1.title} */}
+                                                            </h5>
                                                         </div>
                                                         <div className="image">
-                                                            <img src={`${el.image.url}`} alt="myImageHere" />
+                                                            <img src={`${el.image.url}`} alt="myBunner Image" />
                                                             <div className="title">
                                                                 {el.nemelt}
                                                                 {/* <h5>{bunner1.nemelt}</h5> */}
                                                             </div>
                                                         </div>
-                                                        <div className="ghost">
-                                                        </div>
+                                                        {/* <div className="ghost">
+                                                    </div> */}
                                                     </div>
                                                 </Link>
                                             </div>
@@ -154,31 +155,42 @@ export class audio extends Component {
                             </div>
                         </div>
                     </Container>
-
                 </div>
 
-
-                <Layout AllNews={this.props.allPost}>
-                    <Audio MainAudio={this.props.allPost} />
-                </Layout>
+                <Layout AllNews={props.AllNews}>
+                    {/* <HomePar homeVideo={props.homeVideo} allData={newsData} VideoNews={props.VideoNewsHome} AuidoNews={props.AuidoNews} /> */}
+                    <HomePar HomeAudio={props.HomeAudio} AllNews={props.AllNews} HomeVideos={props.HomeVideos} />
+                </Layout >
             </>
-
-        )
-    }
+        </div>
+    )
 }
 
-export default audio
 
 export async function getStaticProps() {
-    const MainAudio = await axios('https://biz-admin.herokuapp.com/audio');
+    const AllNews = await axios(`https://biz-admin.herokuapp.com/posts`);
     const bunner1 = await axios(`https://biz-admin.herokuapp.com/bunner-1-s`);
-    //  console.log(ctx.params.id,'heehehe')
-    // let param = ctx.params.id
+    const HomeVideos = await axios(`https://biz-admin.herokuapp.com/videos`);
+    const HomeAudio = await axios(`https://biz-admin.herokuapp.com/audio`);
+    // const bunner2 = await axios(`https://biz-admin.herokuapp.com/Bunner-2`);
+    // const Logo = await axios(`https://biz-admin.herokuapp.com/logo`);
+    // const Vbunner = await axios(`http://localhost:1337/video-bunner`);
     return {
         props: {
-            allPost: MainAudio.data,
-            bunner1: bunner1.data
+            AllNews: AllNews.data,
+            HomeVideos: HomeVideos.data,
+            bunner1: bunner1.data,
+            HomeAudio: HomeAudio.data
+            // TopNews1: TopNews1.data,
+            // TopNews2: TopNews2.data,
+            // TopNews3: TopNews3.data,
+            // Logo: Logo.data,
+            // bunner2: bunner2.data
         },
         revalidate: 1
     }
 }
+
+
+
+
