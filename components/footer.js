@@ -12,16 +12,17 @@ class footer extends Component {
         return (
             <>
                 <div className="footPar">
-                    <Container fluid >
+                    <Container fluid style={{width:'70%'}} >
                         <Row style={{ paddingTop: 36}} >
-                            <Col md={1}>
-                            </Col>
+                            
                             <Col md={3}>
                                 <div className="footLogo">
                                     <img src={require('./image/logo.png')} alt="myImageHere" />
                                     <p>Завгүй хүмүүст зориулав. Бизнесийн болон бусад мэдээллийг нэг дороос.</p>
                                 </div>
                             </Col>
+                            <Col md={1}>
+                            </Col >
                             <Col md={2}>
                                 <div className="footMenu1">
                                     <h5>Quick Links</h5>
@@ -52,7 +53,7 @@ class footer extends Component {
                                     </div>
                                 </div>
                             </Col>
-                            <Col md={2}>
+                            <Col md={3}>
                                 <div className="footMenu2">
                                     <h5>Холбоо барих</h5>
                                     <div className="menu">
@@ -80,9 +81,6 @@ class footer extends Component {
                                         <TiSocialYoutubeCircular />
                                     </div>
                                 </div>
-                            </Col>
-                            <Col md={1}>
-
                             </Col>
                         </Row>
 
