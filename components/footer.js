@@ -14,7 +14,6 @@ class footer extends Component {
                 <div className="footPar">
                     <Container fluid style={{width:'70%'}} >
                         <Row style={{ paddingTop: 36}} >
-                            
                             <Col md={3}>
                                 <div className="footLogo">
                                     <img src={require('./image/logo.png')} alt="myImageHere" />
@@ -75,7 +74,6 @@ class footer extends Component {
                                     <div className="menu">
                                         <GrFacebookOption />
                                         <AiOutlineTwitter />
-                                        <AiOutlineGooglePlus />
                                         <AiFillInstagram />
                                         <TiSocialYoutubeCircular />
                                     </div>
