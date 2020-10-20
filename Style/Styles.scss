@@ -4,7 +4,10 @@ $myFontFamily: "Montserrat", sans-serif;
 $myFontFamily2: "Montserrat", sans-serif;
 // $myFavColor: #ff1744;
 // $myFavColor: #014955;
-$myFavColor: #02577e;
+
+
+$myFavColor:#00818A;
+// $myFavColor:#014955;
 // $myFontFamilyBold: "medium-content-sans-serif-font";
 // @import '../Style/Fonts/georgia.ttf';
 
@@ -36,7 +39,7 @@ body {
   // font: normal 14px/22px PT Sans,sans-serif;
   //   font-family: "Roboto", sans-serif !important;
   font-family: "Montserrat", sans-serif !important;
-  letter-spacing: 0px;
+  letter-spacing: -0.3px;
   overflow-x: hidden;
   &::-webkit-scrollbar {
     width: 8px;
@@ -1257,7 +1260,10 @@ body {
       padding-right: 15px;
       display: flex;
       flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
       transition: all 0.3s ease;
+      padding-top: 15px;
       .catigory {
         padding: 3px 0px;
         font-size: 12px;
@@ -1329,19 +1335,52 @@ body {
   .NewsPar {
     .Title {
       margin-bottom: 40px;
-      h3 {
-        font-weight: 600;
+      .childTitles{
+        display: flex;
+        h5 {
+          cursor: pointer;
+          font-weight: 600;
+          border: 1px solid $myFavColor;
+          padding: 5px 5px;
+          border-radius: 4px;
+          transition: all 0.4s ease;
+          &:hover{
+            color: white;
+            background-color: $myFavColor;
+          }
+        }
+        .title2{
+          margin-left: 20px;
+        }
+        .active{
+          color: white;
+          background-color: $myFavColor;
+        }
+        .active2{
+          color: white;
+          background-color: $myFavColor;
+        }
       }
+    
       .line {
-        height: 8px;
+        height: 4px;
         width: 100%;
         border-top: 1px solid rgba(0, 0, 0, 0.2);
         border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        
         .line2 {
           height: 110%;
-          width: 8%;
+          width: 15%;
           background-color: $myFavColor;
+          transition: all 0.3s ease;
         }
+        // .line3 {
+        //   height: 110%;
+        //   width: 14%;
+        //   background-color: $myFavColor;
+        //   margin-left: 150px;
+        //   transition: all 0.4s ease;
+        // }
       }
     }
   }
@@ -2349,6 +2388,7 @@ body {
       // position: fixed;
       // top: -220px;
       .dailyTitle {
+        padding-left: 10px;
         margin-bottom: 10px;
         h1 {
           font-size: 24px;
@@ -4753,7 +4793,7 @@ $rhap_font-family: inherit !default;
   }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 400px),(max-width: 500px) {
   .container-fluid {
     width: 100% !important;
   }
@@ -4913,10 +4953,11 @@ $rhap_font-family: inherit !default;
             padding: 0px 10px;
             display: none;
             h5 {
-              height: 50px;
-              width: 200px;
+              height: 40px;
+              width: 210px;
               overflow: hidden;
               color: white;
+              font-size: 12px;
             }
           }
           .image {

@@ -7,27 +7,70 @@ import { AiOutlineEye } from 'react-icons/ai'
 import { FaRegComment } from 'react-icons/fa'
 import { MdDateRange } from 'react-icons/md'
 
+
 export class topReadNews extends Component {
+    state = {
+        selectedContent: this.props.AllNews,
+        ClickBtnClass: '',
+        ClickBtnClass2: '',
+        styles: '0',
+        // stylesScale: 'scale(1)',
+        // stylesScale2: 'scale(1)'
+    }
+
+    clickHandler = (e) => {
+        // console.log(e.target, 'heey');
+
+        const myData = this.props.AllNews.slice(0, 3);
+        const myDataLatest = this.props.AllNews.slice(0, 2);
+        if(e.target.tabIndex == 1){
+            this.setState({ 
+                selectedContent: myData,
+                ClickBtnClass: 'active',
+                ClickBtnClass2: '',
+                styles: '0'
+             })
+        }else if(e.target.tabIndex == 2){
+            this.setState({ 
+            selectedContent: myDataLatest,
+            ClickBtnClass2: 'active2',
+            ClickBtnClass: '',
+            styles: '150px'
+         })
+        }else{
+            this.setState({
+                selectedContent: myData,
+                styles: `0`
+            })
+            
+        }
+        // this.setState({ selectedContent: this.props.AllNews[e.target.tabIndex] })
+    }
+
+    
     render() {
-        const AllNews = this.props.AllNews
-        const myData = AllNews.reverse().slice(0, 3);
-        console.log(myData[0].desc.slice(600, 1000), 'odoo jinken');
+        // const AllNews = this.props.AllNews
+        // const myData = AllNews.reverse().slice(0, 3);
+        // console.log(myData[0].desc.slice(600, 1000), 'odoo jinken');
         return (
             <Container fluid style={{width:'70%'}} className="topReadNews">
                 <Row style={{ marginTop: 50 }}>
-                    <Col md={9}>
+                    <Col md={8}>
                         <div className="NewsPar">
                             <div className="Title">
-                                <h3>Их уншсан</h3>
-                                <div className="line"><div className="line2"></div></div>
+                                    <div className="childTitles">
+                                        <h5 tabIndex={1} onClick={this.clickHandler}className={this.state.ClickBtnClass} >Их уншсан</h5>
+                                        <h5 tabIndex={2} onClick={this.clickHandler} className={`${this.state.ClickBtnClass2} + title2`}>Сүүлд орсон</h5>
+                                    </div>
+                                    <div className="line"><div style={{marginLeft: this.state.styles}} className="line2"></div></div>
                             </div>
 
-                            {AllNews.slice(0, 3).map((el, index) => {
+                            {this.state.selectedContent.slice(0, 3).map((el, index) => {
                                 console.log(index, ' this is index')
                                 return (
                                     <div className='contPar' key={index}>
-                                        <Row>
-                                            <Col md={3}>
+                                        <Row >
+                                            <Col md={3} style={{transform: 'scale(1)'}}>
                                                 <div className="imgPar">
                                                     <img src={`${el.image.url}`} alt="myImage" />
                                                     <div className="hover1"></div>
@@ -72,7 +115,7 @@ export class topReadNews extends Component {
                         </div>
                     </Col>
 
-                    <Col md={3}>
+                    <Col md={4}>
                         <div className="BunnerPaR">
                             <Row>
                                 <Col md={12}>

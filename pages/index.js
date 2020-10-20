@@ -18,7 +18,7 @@ const date = Dates.getFullYear() + '.' + (Dates.getMonth()+1) + '.' + Dates.getD
 
 var settings = {
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 4000,
     dots: false,
     infinite: true,
     speed: 1000,
@@ -74,7 +74,6 @@ export default function Home(props) {
                 <meta property="og:url" content={`https://biznet-news.vercel.app`} />
                 <meta property="og:site_name" content="BIZI.mn" />
 
-                <link rel="icon" href="/business.png" />
                 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"></link>
                 <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
                 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
@@ -141,10 +140,6 @@ export default function Home(props) {
                                                         </div>
                                                         <div className="image">
                                                             <img src={`${el.image.url}`} alt="myBunner Image" />
-                                                            <div className="title">
-                                                                {el.nemelt}
-                                                                {/* <h5>{bunner1.nemelt}</h5> */}
-                                                            </div>
                                                         </div>
                                                         {/* <div className="ghost">
                                                     </div> */}

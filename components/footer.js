@@ -16,7 +16,7 @@ class footer extends Component {
                         <Row style={{ paddingTop: 36}} >
                             <Col md={3}>
                                 <div className="footLogo">
-                                    <img src={require('./image/logo.png')} alt="myImageHere" />
+                                    <img src={require('./image/bizi.png')} alt="myImageHere" />
                                     <p>Завгүй хүмүүст зориулав. Бизнесийн болон бусад мэдээллийг нэг дороос.</p>
                                 </div>
                             </Col>

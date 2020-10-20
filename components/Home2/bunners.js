@@ -35,9 +35,6 @@ export class bunners extends Component {
                                     </div>
                                     <div className="image">
                                         <img src={require('../image/forest.jpg')} alt="myImage" />
-                                        <div className="title">
-                                            <h5>" Bunner Ads "</h5>
-                                        </div>
                                     </div>
                                     <div className="ghost">
                                     </div>

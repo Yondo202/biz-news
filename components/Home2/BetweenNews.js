@@ -79,9 +79,9 @@ export class BetweenNews extends Component {
                                             </Col>
                                             <Col style={{paddingLeft: 0}} md={8} sm={8} xs={8}>
                                                 <div className="content">
-                                                    <div className="catigory">
+                                                    {/* <div className="catigory">
                                                         <span>{el.filter}</span>
-                                                    </div>
+                                                    </div> */}
                                                     <div className="Title1">
                                                         <Link href={`${el.path}/[slug]`} as={`${el.path}/${el.slug}`}>
                                                             <span>
@@ -200,9 +200,9 @@ export class BetweenNews extends Component {
                                             </Col>
                                             <Col style={{paddingLeft: 0}} md={8} sm={8} xs={8}>
                                                 <div className="content">
-                                                    <div className="catigory">
+                                                    {/* <div className="catigory">
                                                         <span>{el.filter}</span>
-                                                    </div>
+                                                    </div> */}
                                                     <div className="Title1">
                                                         <Link href={`${el.path}/[slug]`} as={`${el.path}/${el.slug}`}>
                                                             <span>
@@ -288,9 +288,9 @@ export class BetweenNews extends Component {
                                             </Col>
                                             <Col style={{paddingLeft: 0}} md={8} sm={8} xs={8}>
                                                 <div className="content">
-                                                    <div className="catigory">
+                                                    {/* <div className="catigory">
                                                         <span>{el.filter}</span>
-                                                    </div>
+                                                    </div> */}
                                                     <div className="Title1">
                                                         <Link href={`${el.path}/[slug]`} as={`${el.path}/${el.slug}`}>
                                                             <span>
