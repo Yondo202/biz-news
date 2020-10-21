@@ -5426,23 +5426,29 @@ $rhap_font-family: inherit !default;
   .container-fluid{
     width: 80% !important;
   }
-  .otherNewsParent2{
-    width: 20%;
+  .BackMainNewsPar{
+    .otherNewsParent2{
+      width: 22% !important;
+    }
   }
 }
 @media only screen and (max-width: 1400px){
   .BackMainNewsPar{
     .otherNewsParent2{
-      width: 22%;
+      width: 22% !important;
     }
   }
- 
   .container-fluid{
     width: 85% !important;
   }
 }
 @media only screen and (max-width: 1300px){
+  .BackMainNewsPar{
+    .otherNewsParent2{
+      width: 22% !important;
+    }
+  }
   .container-fluid{
-    width: 90% !important;
+    width: 100% !important;
   }
 }
