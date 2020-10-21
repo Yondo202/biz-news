@@ -16,7 +16,7 @@ function mainNews(props) {
             <Container className="containers" fluid >
                 <Row style={{ marginTop: 20, position:'relative' }}>
                     < BigMain big={props.big} />
-                    <Allmain small={props.all} />
+                    <Allmain Vbunner={props.Vbunner} Vbunner2={props.Vbunner2} small={props.all} />
                 </Row>
             </Container>
         </div>

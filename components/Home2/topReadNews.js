@@ -52,6 +52,8 @@ export class topReadNews extends Component {
         // const AllNews = this.props.AllNews
         // const myData = AllNews.reverse().slice(0, 3);
         // console.log(myData[0].desc.slice(600, 1000), 'odoo jinken');
+        console.log(this.props.Vbunner, ' my data kkk')
+        console.log(this.props.Vbunner2, ' my data kkk22222222')
         return (
             <Container fluid style={{width:'70%'}} className="topReadNews">
                 <Row style={{ marginTop: 50 }}>
@@ -119,6 +121,8 @@ export class topReadNews extends Component {
                         <div className="BunnerPaR">
                             <Row>
                                 <Col md={12}>
+                                <Link href={`${this.props.Vbunner.url}`} >
+                                    <a target="_blank">
                                     <div className="bunner">
                                         <section className="homeVide"
                                             style={{
@@ -135,37 +139,21 @@ export class topReadNews extends Component {
                                         >
                                             <div className="background">
                                             </div>
-                                            <video
-                                                autoPlay
-                                                loop
-                                                muted
-                                                playsInline
-                                                style={{
-                                                    position: `absolute`,
-                                                    left: `50%`,
-                                                    top: `50%`,
-                                                    transform: `translate(-50%,-50%)`,
-                                                    width: `auto`,
-                                                    height: `auto`,
-                                                    minHeight: `100%`,
-                                                    minWidth: `100%`,
-                                                }}
-                                            >
-                                                {/* <source src='/videos/back1.mp4' type="video/mp4" /> */}
-
-
-                                                {/* <source src={`http://localhost:1337${videoUrl}`} type={this.props.homeVideo.video.mime} /> */}
-                                            </video>
+                                             <img src={`${this.props.Vbunner.video.url}`} />
                                         </section>
-                                        {/* <img src={require('../image/forest.jpg')} /> */}
-                                        <div className="contents">
+                                        {/* <div className="contents">
                                             <span>Banner Area Banner Area
                                             250 x 300
                                             </span>
-                                        </div>
+                                        </div> */}
                                     </div>
+                                    </a>
+                                   
+                                </Link>
                                 </Col>
                                 <Col md={12}>
+                                <Link href={`${this.props.Vbunner2.url}`} >
+                                    <a target="_blank">
                                     <div className="bunner">
                                         <section className="homeVide"
                                             style={{
@@ -182,36 +170,20 @@ export class topReadNews extends Component {
                                         >
                                             <div className="background">
                                             </div>
-                                            <video
-                                                autoPlay
-                                                loop
-                                                muted
-                                                playsInline
-                                                style={{
-                                                    position: `absolute`,
-                                                    left: `50%`,
-                                                    top: `50%`,
-                                                    transform: `translate(-50%,-50%)`,
-                                                    width: `auto`,
-                                                    height: `auto`,
-                                                    minHeight: `100%`,
-                                                    minWidth: `100%`,
-                                                }}
-                                            >
-                                                {/* <source src='/videos/back1.mp4' type="video/mp4" /> */}
-
-
-                                                {/* <source src={`http://localhost:1337${videoUrl}`} type={this.props.homeVideo.video.mime} /> */}
-                                            </video>
+                                             <img src={`${this.props.Vbunner2.video.url}`} />
                                         </section>
-                                        {/* <img src={require('../image/forest.jpg')} /> */}
-                                        <div className="contents">
+                                        {/* <div className="contents">
                                             <span>Banner Area Banner Area
                                             250 x 300
                                             </span>
-                                        </div>
+                                        </div> */}
                                     </div>
+                                    </a>
+                                   
+                                </Link>
                                 </Col>
+                               
+                                
                             </Row>
                         </div>
                     </Col>

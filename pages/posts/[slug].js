@@ -52,7 +52,7 @@ export default function Home(props) {
       </Head>
       <>
         <Layout AllNews={props.all}>
-          <MainNews big={props.big} all={props.all} />
+          <MainNews Vbunner={props.Vbunner} Vbunner2={props.Vbunner2} big={props.big} all={props.all} />
         </Layout>
       </>
 
@@ -80,11 +80,15 @@ export const getStaticProps = async ({ params }) => {
     `https://biz-admin.herokuapp.com/posts?slug=${params.slug}`
   );
   const allData = await axios(`https://biz-admin.herokuapp.com/posts`);
-  console.log(MainNews, 'дэдэдэдэ')
+  const Vbunner = await axios(`https://biz-admin.herokuapp.com/video-bunner`);
+  const Vbunner2 = await axios(`https://biz-admin.herokuapp.com/video-bunner-2`);
+  // console.log(MainNews, 'дэдэдэдэ')
   return {
     props: {
       big: MainNews.data[0],
-      all: allData.data
+      all: allData.data,
+      Vbunner : Vbunner.data,
+      Vbunner2 : Vbunner2.data
     },
     revalidate: 1
   };

@@ -156,7 +156,7 @@ export default function Home(props) {
 
                 <Layout AllNews={props.AllNews}>
                     {/* <HomePar homeVideo={props.homeVideo} allData={newsData} VideoNews={props.VideoNewsHome} AuidoNews={props.AuidoNews} /> */}
-                    <HomePar HomeAudio={props.HomeAudio} AllNews={props.AllNews} HomeVideos={props.HomeVideos} />
+                    <HomePar bunner2={props.bunner2} Vbunner={props.Vbunner} Vbunner2={props.Vbunner2} HomeAudio={props.HomeAudio} AllNews={props.AllNews} HomeVideos={props.HomeVideos} />
                 </Layout >
             </>
         </div>
@@ -169,20 +169,23 @@ export async function getStaticProps() {
     const bunner1 = await axios(`https://biz-admin.herokuapp.com/bunner-1-s`);
     const HomeVideos = await axios(`https://biz-admin.herokuapp.com/videos`);
     const HomeAudio = await axios(`https://biz-admin.herokuapp.com/audio`);
-    // const bunner2 = await axios(`https://biz-admin.herokuapp.com/Bunner-2`);
+    const bunner2 = await axios(`https://biz-admin.herokuapp.com/Bunner-2`);
     // const Logo = await axios(`https://biz-admin.herokuapp.com/logo`);
-    // const Vbunner = await axios(`http://localhost:1337/video-bunner`);
+    const Vbunner = await axios(`https://biz-admin.herokuapp.com/video-bunner`);
+    const Vbunner2 = await axios(`https://biz-admin.herokuapp.com/video-bunner-2`);
     return {
         props: {
             AllNews: AllNews.data,
             HomeVideos: HomeVideos.data,
             bunner1: bunner1.data,
-            HomeAudio: HomeAudio.data
+            HomeAudio: HomeAudio.data,
             // TopNews1: TopNews1.data,
             // TopNews2: TopNews2.data,
             // TopNews3: TopNews3.data,
             // Logo: Logo.data,
-            // bunner2: bunner2.data
+            bunner2: bunner2.data,
+            Vbunner : Vbunner.data,
+            Vbunner2: Vbunner2.data
         },
         revalidate: 1
     }

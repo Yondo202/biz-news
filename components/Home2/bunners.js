@@ -16,33 +16,39 @@ const textVariants = {
 
 export class bunners extends Component {
     render() {
-        // console.log(this.props.bunner2, 'bunner yma')
+        console.log(this.props.bunner2, 'bunner yma')
         const bunner2 = this.props.bunner2
         return (
             <Container fluid style={{ width: '70%' }} className="bunnerPar">
-                <motion.div initial="exit" animate="enter" exit="exit" variants={textVariants}>
-
                     <Row>
                         <div className="golMenu">
-                            <Col md={12} sm={12} xs={12}>
-                                <div className="TopBunner">
-                                    <div className="text">
-                                        <Link href="http://youtube.com" target="_blank">
-                                            <h5>
-                                                Best Business websiteees
-                                        </h5>
-                                        </Link>
+                            <Col md={12} >
+                            <Link href={bunner2.url}>
+                                <a target="_blank">
+                        <motion.div initial="exit" animate="enter" exit="exit" variants={textVariants}>
+                              <div className="TopBunner">
+                                        <div className="text">
+                                                <h5>
+                                                    Best Business websiteees
+                                            </h5>
+                                        
+                                        </div>
+                                        <div className="image">
+                                            <img src={`${bunner2.image.url}`} alt="myImage" />
+                                        </div>
+                                        <div className="ghost">
+                                        </div>
                                     </div>
-                                    <div className="image">
-                                        <img src={require('../image/forest.jpg')} alt="myImage" />
-                                    </div>
-                                    <div className="ghost">
-                                    </div>
-                                </div>
+                                 </motion.div>
+
+                                   
+                                </a>
+                            </Link>
+
+                                
                             </Col>
                         </div>
                     </Row>
-                </motion.div>
 
             </Container>
         )
