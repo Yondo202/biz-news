@@ -35,7 +35,7 @@ export class topReadNews extends Component {
             selectedContent: myDataLatest,
             ClickBtnClass2: 'active2',
             ClickBtnClass: '',
-            styles: '150px'
+            styles: '124px'
          })
         }else{
             this.setState({
@@ -55,12 +55,12 @@ export class topReadNews extends Component {
         return (
             <Container fluid style={{width:'70%'}} className="topReadNews">
                 <Row style={{ marginTop: 50 }}>
-                    <Col md={8}>
+                    <Col md={9}>
                         <div className="NewsPar">
                             <div className="Title">
                                     <div className="childTitles">
-                                        <h5 tabIndex={1} onClick={this.clickHandler}className={this.state.ClickBtnClass} >Их уншсан</h5>
-                                        <h5 tabIndex={2} onClick={this.clickHandler} className={`${this.state.ClickBtnClass2} + title2`}>Сүүлд орсон</h5>
+                                        <h6 tabIndex={1} onClick={this.clickHandler} className={this.state.ClickBtnClass} >Их уншсан</h6>
+                                        <h6 tabIndex={2} onClick={this.clickHandler} className={`${this.state.ClickBtnClass2} + title2`}>Сүүлд орсон</h6>
                                     </div>
                                     <div className="line"><div style={{marginLeft: this.state.styles}} className="line2"></div></div>
                             </div>
@@ -115,7 +115,7 @@ export class topReadNews extends Component {
                         </div>
                     </Col>
 
-                    <Col md={4}>
+                    <Col md={3}>
                         <div className="BunnerPaR">
                             <Row>
                                 <Col md={12}>

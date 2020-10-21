@@ -27,12 +27,18 @@ function Nav(props) {
         },
         {
             id: 3,
+            name: "Бизнес",
+            to: "/posts",
+            className: "lineActive"
+        },
+        {
+            id: 4,
             name: "Ярилцлага",
             to: "/audio",
             className: "lineActive"
         },
         {
-            id: 4,
+            id: 5,
             name: "Видео",
             to: "/videos",
             className: "lineActive"

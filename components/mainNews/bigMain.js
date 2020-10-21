@@ -68,7 +68,7 @@ function bigMain(props) {
       const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fbiznet-news.vercel.app%2Fposts%2F${slugData.slug}`;
       const twitterUrl = `https://twitter.com/intent/tweet?url=${slugData.slug}`;
     return (
-                    <Col md={8}>
+                    <Col md={9}>
                 <div className={className}>
                     <Link href="/">
                         <img src={require('../image/logo.png')} alt="myImageHere"></img>
@@ -82,9 +82,7 @@ function bigMain(props) {
                     <motion.div variants={textVariants}>
                         <div className="mainCon">
                             <div className="title">
-                            
                              <h2 >{slugData.title}</h2>
-                          
                                 <div className={classNameBtn}>
                                     <div className="ProfileCon">
                                         <img src={require('../image/103804281_10220809760368036_8805337625036517462_n.jpg')} alt="myImageHere"></img>

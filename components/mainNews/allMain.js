@@ -5,6 +5,8 @@ import { motion } from 'framer-motion'
 import React, { Component, useEffect, useState } from 'react'
 export const config = { amp: 'hybrid' }
 import {useAmp} from 'next/amp'
+import {ImFire} from 'react-icons/im'
+import {FiClock} from 'react-icons/fi'
 
 
 let easing = [0.5, 0.9, 0.16, 0.95];
@@ -19,35 +21,100 @@ const textVariants = {
 
 function allMain(props) {
     const [className, setClassName] = useState('headPar');
+    const [selectedContent, setSelectedContent] = useState(props.small);
+    const [ClickBtnClass, setClickBtnClass] = useState('active');
+    const [ClickBtnClass2, setClickBtnClass2] = useState('');
+    const [styles, setStyles] = useState('0');
+    const [flexClassName, setflexClassName] = useState('otherNewsParent');
+    const [scaleStyle, setScaleStyle] = useState('scale(1)');
+    const [opacity, setOpacity] = useState('1');
+    const [bunnerScale, setBunnerScale] = useState('block');
+
+
+
     useEffect(() => {
         window.addEventListener("scroll", handleScroll);
     })
+
     const handleScroll = () => {
         if (window.pageYOffset > 1) {
             setClassName('scrollDown');
         }
+
+
+        if(window.pageYOffset > 1500 ){
+            setflexClassName('otherNewsParent2')
+            setBunnerScale('none')
+        }else{
+            setflexClassName('otherNewsParent')
+            setBunnerScale('block')
+        }
+
+        if(window.pageYOffset > 1200 && window.pageYOffset < 1600 ){
+            setScaleStyle('scale(0.5)')
+            setOpacity('0')
+        } else {
+            setScaleStyle('scale(1)')
+            setOpacity('1')
+        }
+
+
+       
+        // if(window.pageYOffset >= 1510 ){
+        //     setScaleStyle('scale(1)')
+        // }else{
+        //     setScaleStyle('scale(1)')
+        // }
         // console.log('lalalall', window.pageYOffset)
     }
 
+    const clickHandler = (e) => {
+  
+        const topSeeNews = props.small.slice(0, 10)
+        
+        const latestNews = props.small.slice(0, 4).reverse()
+        if(e.target.tabIndex == 1){
+            setSelectedContent(topSeeNews);
+            setClickBtnClass('active')
+            setClickBtnClass2('')
+            setStyles('0%')
+        }else if(e.target.tabIndex == 2){
+            setSelectedContent(latestNews);
+            setClickBtnClass('')
+            setClickBtnClass2('active2')
+            setStyles('50%')
+        }else{
+            setSelectedContent(topSeeNews);
+            setStyles('0%')
+        }
+    }
+
+
+
+
+
     const router = useRouter()
     const myRoute = router.query.slug
-
     const myAmp = useAmp();
     console.log(myAmp, 'this is my Amp ........')
     console.log(config , 'my Config')
     return (
-        <Col md={4} style={{ position: "relative" }}>
-            <div className="otherNewsParent">
+        <Col className="fixCol" md={3} >
+            <div className={flexClassName} style={{transform: scaleStyle, opacity:opacity}}>
                 <div className="dailyTitle">
-                    <h1 >Мэдээнүүд</h1>
+                    <div className="titleChild">
+                        <ImFire tabIndex={1} onClick={clickHandler}  className={ClickBtnClass}/>
+                        <FiClock tabIndex={2} onClick={clickHandler}  className={ClickBtnClass2} />
+                        {/* <h1>Мэдээнүүд</h1> */}
+                    </div>
                     <div className="linePAr">
                         <div className="line"></div>
-                        <div className="line2"></div>
+                        <div style={{marginLeft: styles}} className="line2"></div>
                     </div>
-
                 </div>
+
                 <div className="ScrollPar">
-                    {props.small.map((el, i) => {
+                    {selectedContent.map((el, i) => {
                         return (
                             <motion.div initial="exit" animate="enter" exit="exit">
                                 <motion.div variants={textVariants} >
@@ -125,7 +192,7 @@ function allMain(props) {
                                     </span>
                     </div>
                 </div>
-                <div className="bunner">
+                <div className="bunner bunner2" style={{display:bunnerScale}}>
                     <section className="homeVide"
                         style={{
                             position: `relative`, height: `100%`, height: `-moz-available`, height: `-webkit-fill-available`, height: `fill-available`,
