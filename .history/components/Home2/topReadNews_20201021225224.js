@@ -120,35 +120,6 @@ export class topReadNews extends Component {
                     <Col md={3}>
                         <div className="BunnerPaR">
                             <Row>
-                            <Col md={12}>
-                                <Link href={`${this.props.Vbunner2.url}`} >
-                                    <a target="_blank">
-                                    <div className="bunner">
-                                        <section className="homeVide"
-                                            style={{
-                                                position: `relative`,
-                                                height: `100%`,
-                                                height: `-moz-available`,
-                                                height: `-webkit-fill-available`,
-                                                height: `fill-available`,
-                                                minHeight: `100%`,
-                                                width: `100%`,
-                                                zIndex: `1`,
-                                                overflow: `hidden`,
-                                            }}
-                                        >
-                                             <img src={`${this.props.Vbunner2.video.url}`} />
-                                        </section>
-                                        {/* <div className="contents">
-                                            <span>Banner Area Banner Area
-                                            250 x 300
-                                            </span>
-                                        </div> */}
-                                    </div>
-                                    </a>
-                                   
-                                </Link>
-                                </Col>
                                 <Col md={12}>
                                 <Link href={`${this.props.Vbunner.url}`} >
                                     <a target="_blank">
@@ -166,6 +137,8 @@ export class topReadNews extends Component {
                                                 overflow: `hidden`,
                                             }}
                                         >
+                                            <div className="background">
+                                            </div>
                                              <img src={`${this.props.Vbunner.video.url}`} />
                                         </section>
                                         {/* <div className="contents">
@@ -178,6 +151,38 @@ export class topReadNews extends Component {
                                    
                                 </Link>
                                 </Col>
+                                <Col md={12}>
+                                <Link href={`${this.props.Vbunner2.url}`} >
+                                    <a target="_blank">
+                                    <div className="bunner">
+                                        <section className="homeVide"
+                                            style={{
+                                                position: `relative`,
+                                                height: `100%`,
+                                                height: `-moz-available`,
+                                                height: `-webkit-fill-available`,
+                                                height: `fill-available`,
+                                                minHeight: `100%`,
+                                                width: `100%`,
+                                                zIndex: `1`,
+                                                overflow: `hidden`,
+                                            }}
+                                        >
+                                            
+                                             <img src={`${this.props.Vbunner2.video.url}`} />
+                                        </section>
+                                        {/* <div className="contents">
+                                            <span>Banner Area Banner Area
+                                            250 x 300
+                                            </span>
+                                        </div> */}
+                                    </div>
+                                    </a>
+                                   
+                                </Link>
+                                </Col>
+                               
+                                
                             </Row>
                         </div>
                     </Col>
