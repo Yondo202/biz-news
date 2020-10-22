@@ -36,13 +36,8 @@ export default function Home(props) {
                 width:'100vw',
                 height: '100vh'
             }}>
-                <div className="background">
-
-                </div>
                 <div className="ComingParentchild">
-                    <div className="imageAmiluulagch">
-                     <img src={require('../components/image/logo.png')}></img>
-                    </div>
+                    <img src={require('../components/image/logo.png')}></img>
                     <h1>Тун удахгүй...</h1>
                 </div>
             </div>

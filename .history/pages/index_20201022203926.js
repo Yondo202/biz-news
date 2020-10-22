@@ -2,7 +2,6 @@ import Head from 'next/head'
 import ReactGa from 'react-ga';
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
-import { Background } from 'react-parallax';
 
 export default function Home(props) {
 
@@ -33,17 +32,11 @@ export default function Home(props) {
             <div className="ComingParent" style={{
                 backgroundImage: "url(" + `${require("../components/image/coming1.jpg")}` + ")", backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
-                width:'100vw',
-                height: '100vh'
+                width:'100%',
+                height: '100%'
             }}>
-                <div className="background">
-
-                </div>
                 <div className="ComingParentchild">
-                    <div className="imageAmiluulagch">
-                     <img src={require('../components/image/logo.png')}></img>
-                    </div>
-                    <h1>Тун удахгүй...</h1>
+                    <h1>Hello its me</h1>
                 </div>
             </div>
         </div>

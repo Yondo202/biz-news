@@ -34,16 +34,10 @@ export default function Home(props) {
                 backgroundImage: "url(" + `${require("../components/image/coming1.jpg")}` + ")", backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
                 width:'100vw',
-                height: '100vh'
+                height: '99vh'
             }}>
-                <div className="background">
-
-                </div>
                 <div className="ComingParentchild">
-                    <div className="imageAmiluulagch">
-                     <img src={require('../components/image/logo.png')}></img>
-                    </div>
-                    <h1>Тун удахгүй...</h1>
+                    <h1>Hello its me</h1>
                 </div>
             </div>
         </div>

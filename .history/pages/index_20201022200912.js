@@ -1,8 +1,21 @@
 import Head from 'next/head'
+import Layout from '../components/Layout'
+import HomePar from '../components/home'
+import axios from 'axios'
+import OtherNav from '../components/otherNav'
+import { Container, Row, Col } from 'react-bootstrap'
+import { GrFacebookOption } from 'react-icons/gr';
+import { AiOutlineTwitter, AiOutlineGooglePlus, AiFillInstagram } from 'react-icons/ai';
+import Slider from "react-slick";
+import Link from 'next/link';
 import ReactGa from 'react-ga';
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
-import { Background } from 'react-parallax';
+
+const Dates = new Date()
+const date = Dates.getFullYear() + '.' + (Dates.getMonth()+1) + '.' + Dates.getDate();
+
+
 
 export default function Home(props) {
 
@@ -13,6 +26,8 @@ export default function Home(props) {
 
     const router = useRouter()
     const myRoute = router.query.slug
+
+    // console.log(props.bunner1, ' this is bunner')
     return (
         <div>
             <Head>
@@ -28,23 +43,10 @@ export default function Home(props) {
                 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
                 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet"></link>
 
-                <link rel="stylesheet" href="dist/shareSelectedText.min.css" />
+                <link rel="stylesheet" href="dist/shareSelectedText.min.css"/>
             </Head>
-            <div className="ComingParent" style={{
-                backgroundImage: "url(" + `${require("../components/image/coming1.jpg")}` + ")", backgroundRepeat: "no-repeat",
-                backgroundSize: "cover",
-                width:'100vw',
-                height: '100vh'
-            }}>
-                <div className="background">
-
-                </div>
-                <div className="ComingParentchild">
-                    <div className="imageAmiluulagch">
-                     <img src={require('../components/image/logo.png')}></img>
-                    </div>
-                    <h1>Тун удахгүй...</h1>
-                </div>
+            <div>
+                <h1>Hello its me</h1>
             </div>
         </div>
     )
