@@ -741,7 +741,7 @@ body {
           justify-content: flex-start;
           align-items: center;
           font-size: 15px;
-          margin-top: 8px;
+          margin-top: 12px;
           .date {
             font-size: 14px;
           }
@@ -908,15 +908,11 @@ body {
       flex-direction: column;
       transition: all 0.3s ease;
       .catigory {
-   
+        padding: 3px 4px;
+        font-size: 13px;
+        background-color: $myFavColor;
+        width: 65px;
         margin-bottom: 10px;
-        span{
-          background-color: $myFavColor;
-          padding: 3px 5px;
-          font-size: 12px;
-          margin-bottom: 10px;
-          border-radius: 2px;
-        }
       }
       .Title {
         cursor: pointer;
@@ -942,15 +938,13 @@ body {
         // justify-content: space-between;
         font-size: 15px;
         .date {
-          font-size: 13px;
         }
         .SeeCount {
           display: flex;
           flex-direction: row;
           align-items: center;
           padding-left: 20px;
-          span {
-            font-size: 13px;
+          .span {
             padding-left: 5px;
           }
         }
@@ -960,7 +954,6 @@ body {
           align-items: center;
           padding-left: 20px;
           span {
-            font-size: 13px;
             padding-left: 5px;
           }
         }

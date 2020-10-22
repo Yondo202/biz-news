@@ -741,7 +741,7 @@ body {
           justify-content: flex-start;
           align-items: center;
           font-size: 15px;
-          margin-top: 8px;
+          margin-top: 12px;
           .date {
             font-size: 14px;
           }
@@ -942,15 +942,14 @@ body {
         // justify-content: space-between;
         font-size: 15px;
         .date {
-          font-size: 13px;
+          font-size: 14px;
         }
         .SeeCount {
           display: flex;
           flex-direction: row;
           align-items: center;
           padding-left: 20px;
-          span {
-            font-size: 13px;
+          .span {
             padding-left: 5px;
           }
         }
@@ -960,7 +959,6 @@ body {
           align-items: center;
           padding-left: 20px;
           span {
-            font-size: 13px;
             padding-left: 5px;
           }
         }
