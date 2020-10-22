@@ -30,11 +30,11 @@ const item = {
 export class indexNews extends Component {
     render() {
         const Data = this.props.allPost
-        // const filterData = Data.filter(e => e.filter === "Ярилцлага")
+        const filterData = Data.filter(e => e.filter === "Ярилцлага")
         return (
             <Container className="betweenNewsPar" fluid style={{width:'70%'}}>
                     <Row style={{ marginTop: 30 }}>
-                        {Data.map((el, i) => {
+                        {filterData.map((el, i) => {
                             return (
                                 <Col key={i} md={4}>
                                     <motion.div initial="exit" animate="enter" exit="exit" variants={textVariants}>

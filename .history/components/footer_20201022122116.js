@@ -37,7 +37,7 @@ class footer extends Component {
                                             </div>
                                         </Link>
 
-                                        <Link href="posts/business">
+                                        <Link href="posts/conversation">
                                             <div className="float">
                                                 <MdKeyboardArrowRight /><p>Бизнес</p>
                                             </div>

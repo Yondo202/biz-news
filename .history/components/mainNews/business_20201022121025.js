@@ -27,10 +27,10 @@ const item = {
     }
   };
 
-export class indexNews extends Component {
+export class Business extends Component {
     render() {
         const Data = this.props.allPost
-        // const filterData = Data.filter(e => e.filter === "Ярилцлага")
+        const filterData = Data.filter(e => e.filter === "Ярилцлага")
         return (
             <Container className="betweenNewsPar" fluid style={{width:'70%'}}>
                     <Row style={{ marginTop: 30 }}>
@@ -81,6 +81,6 @@ export class indexNews extends Component {
     }
 }
 
-export default indexNews
+export default Business
 
 

@@ -37,12 +37,7 @@ class footer extends Component {
                                             </div>
                                         </Link>
 
-                                        <Link href="posts/business">
-                                            <div className="float">
-                                                <MdKeyboardArrowRight /><p>Бизнес</p>
-                                            </div>
-                                        </Link>
-                                        <Link href="posts/conversation">
+                                        <Link href="/audio">
                                             <div className="float">
                                                 <MdKeyboardArrowRight /><p>Ярилцлага</p>
                                             </div>

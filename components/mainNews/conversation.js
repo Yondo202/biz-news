@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
+import { Container, Row, Col } from 'react-bootstrap'
+// import {ImEye} from 'react-icons';
 import { AiOutlineEye } from 'react-icons/ai'
+import { FaRegComment } from 'react-icons/fa'
 import { MdDateRange } from 'react-icons/md'
-import { Container, Row, Col } from 'react-bootstrap';
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 
@@ -16,37 +18,46 @@ const textVariants = {
     }
 };
 
-export class Audio extends Component {
+
+const item = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1
+    }
+  };
+
+export class Business extends Component {
     render() {
-        console.log(this.props.MainAudio, 'keke')
-        const MainAudio = this.props.MainAudio
+        const Data = this.props.allPost
+        const filterData = Data.filter(e => e.filter === "Ярилцлага")
         return (
-            <div className="audioPar">
-                <Container className="betweenNewsPar" fluid style={{ width: '70%' }}>
+            <Container className="betweenNewsPar" fluid style={{width:'70%'}}>
                     <Row style={{ marginTop: 30 }}>
-                        {MainAudio.map((el, i) => {
+                        {filterData.map((el, i) => {
                             return (
-                                <Col md={4} key={i}>
+                                <Col key={i} md={4}>
                                     <motion.div initial="exit" animate="enter" exit="exit" variants={textVariants}>
                                         <div className="TopSmall">
                                             <img src={`${el.image.url}`} alt="myImageHere" />
                                             <div className="background"></div>
                                             <div className="content">
                                                 <div className="catigory">
-                                                    <span>Audio</span>
+                                                    <span>{el.filter}</span>
                                                 </div>
                                                 <div className="Title">
-                                                    <Link href="/audio/[slug]" as={`/audio/${el.slug}`} >
+                                                    <Link href="/posts/[slug]" as={`/posts/${el.slug}`} >
                                                         <h2>
+                                                            {/* 8Bit Coin Sets Market Alight With Initial Performance */}
                                                             {el.title}
                                                         </h2>
                                                     </Link>
-
                                                 </div>
                                                 <div className="smallCont">
                                                     <div className="date">
                                                         <MdDateRange />
                                                         <span>
+                                                            {/* March 23, 2019 */}
                                                             {el.date}
                                                         </span>
                                                     </div>
@@ -54,7 +65,7 @@ export class Audio extends Component {
                                                         <AiOutlineEye />
                                                         <span>
                                                             185
-                                                </span>
+                                                    </span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -65,10 +76,11 @@ export class Audio extends Component {
                             )
                         })}
                     </Row>
-                </Container>
-            </div>
+            </Container>
         )
     }
 }
 
-export default Audio
+export default Business
+
+

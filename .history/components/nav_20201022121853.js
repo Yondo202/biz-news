@@ -34,7 +34,7 @@ function Nav(props) {
         {
             id: 4,
             name: "Ярилцлага",
-            to: "/posts/conversation",
+            to: "/audio",
             className: "lineActive"
         },
         {
