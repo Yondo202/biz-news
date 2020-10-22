@@ -195,7 +195,7 @@ function allMain(props) {
                                                 overflow: `hidden`,
                                             }}
                                         >
-                                             <img src={`${props.Vbunner.video.url}`} alt="myBunnerImg" />
+                                             <img src={`${props.Vbunner.video.url}`} />
                                         </section>
                                         {/* <div className="contents">
                                             <span>Banner Area Banner Area

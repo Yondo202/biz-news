@@ -166,7 +166,7 @@ export class topReadNews extends Component {
                                                 overflow: `hidden`,
                                             }}
                                         >
-                                             <img src={`${this.props.Vbunner.video.url}`} alt="bunnerImage" />
+                                             <img src={`${this.props.Vbunner.video.url}`} />
                                         </section>
                                         {/* <div className="contents">
                                             <span>Banner Area Banner Area
