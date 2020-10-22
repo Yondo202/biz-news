@@ -41,7 +41,7 @@ export default function Home(props) {
                 </div>
                 <div className="ComingParentchild">
                     <div className="imageAmiluulagch">
-                     <img src={require('../components/image/biziwhite.png')}></img>
+                     <img src={require('../components/image/bizi.png')}></img>
                     </div>
                     <h1>Тун удахгүй...</h1>
                 </div>
