@@ -323,21 +323,9 @@ body {
             width: 100%;
             background-color: $myFavColor;
             display: flex;
-            .text {
-              display: flex;
-              width: 30%;
-              justify-content: center;
-              align-items: center;
-              padding: 0px 10px;
-              h5 {
-                height: 50px;
-                width: 100%;
-                overflow: hidden;
-                color: white;
-              }
-            }
             .image {
-              width: 64%;
+              cursor: pointer;
+              width: 100%;
               height: 100%;
               position: relative;
               object-fit: cover;
@@ -345,22 +333,9 @@ body {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
-                clip-path: polygon(5% 0, 100% 0, 95% 100%, 0% 100%);
               }
-              .title {
-                position: absolute;
-                top: 30%;
-                left: 20%;
-                color: white;
-                height: 48px;
-                width: 300px;
-                object-fit: cover;
-              }
+            
             }
-            // .ghost {
-            //     height: 100%;
-            //     width: 2%;
-            // }
           }
         }
       }
@@ -1015,57 +990,31 @@ body {
   }
 }
 
-.bunnerPar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  .golMenu {
-    width: 100%;
+
+.bunnerPar{
+  .contPar{
+    margin: 20px 0px;
+    display: flex;
     flex-direction: row;
-    align-items: center;
-    margin: 25px 0px;
-    .TopBunner {
-      margin: 10px 0px;
-      height: 100px;
+    justify-content: space-between;
+    .TopBunner12{
+      padding-right: 20px;
       width: 100%;
-      background-color: $myFavColor;
-      display: flex;
-      .text {
-        display: flex;
-        width: 30%;
-        justify-content: center;
-        align-items: center;
-        padding: 0px 10px;
-        h5 {
-          height: 50px;
-          width: 200px;
-          overflow: hidden;
-          color: white;
-        }
+      img{
+        width: 100%;
       }
-      .image {
-        width: 64%;
-        height: 100%;
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          clip-path: polygon(5% 0, 100% 0, 95% 100%, 0% 100%);
-        }
-        .title {
-          position: absolute;
-          top: 30%;
-          left: 50%;
-          color: white;
-        }
-      }
-      .ghost {
-        height: 100%;
-        width: 6%;
+    }
+    .TopBunner123{
+      padding-left: 20px;
+      width: 100%;
+      img{
+        width: 100%;
       }
     }
   }
+
 }
+
 
 .VideoConPar {
   .TopSmall {
@@ -2374,7 +2323,7 @@ body {
           margin-bottom: 20px;
           margin-top: 10px;
           width: 100%;
-          height: 500px;
+          height: 100%;
           object-fit: cover;
         }
         .content {
@@ -2387,15 +2336,13 @@ body {
           line-height: 32px;
           // color: #888888;
           // color: rgba(41, 41, 41, 1);
-          color: black !important;
           width: 100%;
           font-family: $myFontFamily !important;
           word-break: break-word;
           letter-spacing: -0.003em;
           p {
             font-size: 16px !important;
-            // color: rgba(0, 0, 0, 1);
-            // color: rgba(41, 41, 41, 1);
+
             font-family: $myFontFamily !important;
             line-height: 26px;
             letter-spacing: -0.003em;
@@ -2403,8 +2350,6 @@ body {
           }
           span {
             font-size: 16px !important;
-            // color: rgba(0, 0, 0, 1);
-            // color: rgba(41, 41, 41, 1);
             font-family: $myFontFamily !important;
             line-height: 26px;
             transition: font-size 0.2s ease-in-out;
@@ -2412,12 +2357,11 @@ body {
             letter-spacing: -0.003em;
             word-break: break-word;
             font-weight: 400;
-            color: black !important;
           }
           figure {
             overflow: hidden;
             img {
-              height: 330px !important;
+              height: 100% !important;
               width: 100% !important;
               object-fit: cover;
               overflow: hidden;
@@ -3519,21 +3463,9 @@ $rhap_font-family: inherit !default;
               width: 100%;
               background-color: $myFavColor;
               display: flex;
-              .text {
-                display: flex;
-                width: 30%;
-                justify-content: center;
-                align-items: center;
-                padding: 0px 10px;
-                h5 {
-                  height: 50px;
-                  width: 100%;
-                  overflow: hidden;
-                  color: white;
-                }
-              }
+             
               .image {
-                width: 64%;
+                width: 100%;
                 height: 100%;
                 position: relative;
                 object-fit: cover;
@@ -3541,17 +3473,9 @@ $rhap_font-family: inherit !default;
                   width: 100%;
                   height: 100%;
                   object-fit: cover;
-                  clip-path: polygon(5% 0, 100% 0, 95% 100%, 0% 100%);
+                  
                 }
-                .title {
-                  position: absolute;
-                  top: 30%;
-                  left: 20%;
-                  color: white;
-                  height: 48px;
-                  width: 300px;
-                  object-fit: cover;
-                }
+                
               }
               // .ghost {
               //     height: 100%;
@@ -3712,6 +3636,29 @@ $rhap_font-family: inherit !default;
 }
 
 @media only screen and (max-width: 770px) {
+  .bunnerPar{
+    .contPar{
+      margin: 20px 0px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .TopBunner12{
+        padding-right: 0;
+        width: 100%;
+        margin-bottom: 15px;
+        img{
+          width: 100%;
+        }
+      }
+      .TopBunner123{
+        padding-left: 0px;
+        width: 100%;
+        img{
+          width: 100%;
+        }
+      }
+    }
+  }
   .container-fluid {
     width: 100% !important;
   }
@@ -3872,32 +3819,21 @@ $rhap_font-family: inherit !default;
         }
       }
       .SliderPAr {
-        width: 80%;
+        width: 100% !important;
         .slick-slider {
+          width: 100% !important;
           .slick-list {
             // width: 600px !important;
             width: 100% !important;
             .TopBunner {
               margin: 10px 0px;
-              height: 90px;
+              height: 80px;
               width: 100%;
               background-color: $myFavColor;
               display: flex;
-              .text {
-                display: flex;
-                width: 30%;
-                justify-content: center;
-                align-items: center;
-                padding: 0px 10px;
-                h5 {
-                  height: 50px;
-                  width: 100%;
-                  overflow: hidden;
-                  color: white;
-                }
-              }
+              
               .image {
-                width: 64%;
+                width: 100%;
                 height: 100%;
                 position: relative;
                 object-fit: cover;
@@ -3905,17 +3841,9 @@ $rhap_font-family: inherit !default;
                   width: 100%;
                   height: 100%;
                   object-fit: cover;
-                  clip-path: polygon(5% 0, 100% 0, 95% 100%, 0% 100%);
+                 
                 }
-                .title {
-                  position: absolute;
-                  top: 30%;
-                  left: 20%;
-                  color: white;
-                  height: 48px;
-                  width: 300px;
-                  object-fit: cover;
-                }
+               
               }
               // .ghost {
               //     height: 100%;
@@ -4645,7 +4573,7 @@ $rhap_font-family: inherit !default;
             margin-bottom: 20px;
             margin-top: 10px;
             width: 100%;
-            height: 500px;
+            height: 100%;
             object-fit: cover;
           }
           .content {
@@ -4670,6 +4598,7 @@ $rhap_font-family: inherit !default;
               line-height: 32px;
               letter-spacing: -0.003em;
               word-break: break-word;
+             
             }
             span {
               font-size: 16px !important;
@@ -4681,11 +4610,12 @@ $rhap_font-family: inherit !default;
               // word-spacing: 2px;
               letter-spacing: -0.003em;
               word-break: break-word;
+              
             }
             figure {
               overflow: hidden;
               img {
-                height: 330px !important;
+                height: 100% !important;
                 width: 100% !important;
                 object-fit: cover;
                 overflow: hidden;
@@ -5207,73 +5137,47 @@ $rhap_font-family: inherit !default;
         }
       }
     }
-    .container-fluid {
-      width: 100% !important;
-      .golMenu22 {
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        margin: 15px 0px;
-        align-items: center;
-        justify-content: center;
-        .logo {
-          display: flex;
-          margin: 10px 0px;
-          width: 100%;
-          height: 80px;
-          justify-content: center;
-          align-items: ce;
-          img {
-            cursor: pointer;
-            width: 86px;
-            height: 100px;
-            object-fit: cover;
-          }
-        }
-        .TopBunner {
-          margin: 10px 0px;
-          height: 90px;
-          width: 100%;
-          background-color: $myFavColor;
-          display: flex;
-          .text {
-            display: flex;
-            width: 30%;
-            justify-content: center;
-            align-items: center;
-            padding: 0px 10px;
-            display: none;
-            h5 {
-              height: 40px;
-              width: 210px;
-              overflow: hidden;
-              color: white;
-              font-size: 12px;
-            }
-          }
-          .image {
-            width: 94%;
-            height: 100%;
-            img {
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-              clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
-            }
-            .title {
-              position: absolute;
-              top: 30%;
-              left: 20%;
-              color: white;
-            }
-          }
-          .ghost {
-            height: 100%;
-            width: 6%;
-          }
-        }
-      }
-    }
+    // .container-fluid {
+    //   width: 100% !important;
+    //   .golMenu22 {
+    //     width: 100%;
+    //     flex-direction: column;
+    //     align-items: center;
+    //     margin: 15px 0px;
+    //     align-items: center;
+    //     justify-content: center;
+    //     .logo {
+    //       display: flex;
+    //       margin: 10px 0px;
+    //       width: 100%;
+    //       height: 80px;
+    //       justify-content: center;
+    //       align-items: ce;
+    //       img {
+    //         cursor: pointer;
+    //         width: 86px;
+    //         height: 100px;
+    //         object-fit: cover;
+    //       }
+    //     }
+    //     .TopBunner {
+    //       margin: 10px 0px;
+    //       height: 80px;
+    //       width: 100%;
+    //       background-color: $myFavColor;
+    //       display: flex;
+    //       .image {
+    //         width: 100%;
+    //         height: 100%;
+    //         img {
+    //           width: 100%;
+    //           height: 100%;
+    //           object-fit: cover;
+    //         }
+    //       }
+    //     }
+    //   }
+    // }
   }
   .TopestHeader {
     .Headerghost {

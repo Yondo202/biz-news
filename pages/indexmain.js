@@ -130,20 +130,15 @@ export default function Home(props) {
                                     {props.bunner1.map((el, i) => {
                                         return (
                                             <div key={i}>
-                                                <Link href={el.url} target="_blank">
-                                                    <div className="TopBunner">
-                                                        <div className="text">
-                                                            <h5>
-                                                                {el.title}
-                                                                {/* {bunner1.title} */}
-                                                            </h5>
-                                                        </div>
+                                                <Link href={el.url} >
+                                                    <a target="_blank">
+                                                     <div className="TopBunner">
                                                         <div className="image">
                                                             <img src={`${el.image.url}`} alt="myBunner Image" />
                                                         </div>
-                                                        {/* <div className="ghost">
-                                                    </div> */}
                                                     </div>
+                                                    </a>
+                                                    
                                                 </Link>
                                             </div>
                                         )
