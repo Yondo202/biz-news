@@ -126,7 +126,7 @@ export class videoNews extends Component {
                                 <div className="logo">
                                     {/* <img src={`${this.props.Logo.logo.url}`} /> */}
                                     <Link href="/">
-                                        <img src={require('../../components/image/video.png')} alt="myImage" />
+                                        <img className="indexNews2" src={require('../../components/image/video.png')} alt="myImage" />
                                     </Link>
                                 </div>
                                 <div className="SliderPAr">

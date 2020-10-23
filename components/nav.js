@@ -42,6 +42,12 @@ function Nav(props) {
             name: "Видео",
             to: "/videos",
             className: "lineActive"
+        },
+        {
+            id: 6,
+            name: "Нийтлэл",
+            to: "/posts",
+            className: "lineActive"
         }
     ]);
 

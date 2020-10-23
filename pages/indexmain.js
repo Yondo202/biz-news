@@ -1,21 +1,24 @@
-import React, { Component } from 'react'
 import Head from 'next/head'
-import Layout from '../../components/Layout'
-import MainNews from '../../components/mainNews/mainNews'
+import Layout from '../components/Layout'
+import HomePar from '../components/home'
+import axios from 'axios'
+import OtherNav from '../components/otherNav'
 import { Container, Row, Col } from 'react-bootstrap'
 import { GrFacebookOption } from 'react-icons/gr';
 import { AiOutlineTwitter, AiOutlineGooglePlus, AiFillInstagram } from 'react-icons/ai';
 import Slider from "react-slick";
 import Link from 'next/link';
-import axios from 'axios'
 import ReactGa from 'react-ga';
 import { useEffect } from 'react'
-import Business from '../../components/mainNews/business'
+import { useRouter } from 'next/router'
 
+// const Dates = new Date().toLocaleString()
+const Dates = new Date()
+const date = Dates.getFullYear() + '.' + (Dates.getMonth()+1) + '.' + Dates.getDate();
 
 var settings = {
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 4000,
     dots: false,
     infinite: true,
     speed: 1000,
@@ -33,7 +36,7 @@ var settings = {
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 infinite: true,
-                dots: true,
+                dots: false,
             }
         },
         {
@@ -49,41 +52,36 @@ var settings = {
         },
     ]
 };
-export class news extends Component {
-    constructor(props) {
-        super(props)
 
-        this.state = {
-            curTime: new Date().toLocaleString(),
-        }
-    }
+export default function Home(props) {
 
-    componentDidMount() {
+    useEffect(() => {
         ReactGa.initialize('UA-180671141-1')
         ReactGa.pageview(window.location.pathname + window.location.search)
-    }
+    }, [])
 
-    render() {
-        const Dates = new Date()
-        const date = Dates.getFullYear() + '.' + (Dates.getMonth()+1) + '.' + Dates.getDate();
+    const router = useRouter()
+    const myRoute = router.query.slug
 
-        return (
+    // console.log(props.bunner1, ' this is bunner')
+    return (
+        <div>
+            <Head>
+                <title>BIZI.mn</title>
+                <meta name="description" content="Завгүй хүмүүст зориулав. Бизнесийн болон бусад мэдээллийг нэг дороос." />
+                <meta property="og:type" content="website" />
+                <meta property="fb:app_id" content="2645260245750776" />
+                <meta property="og:url" content={`https://biznet-news.vercel.app`} />
+                <meta property="og:site_name" content="BIZI.mn" />
+
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"></link>
+                <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
+                <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
+                <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet"></link>
+
+                <link rel="stylesheet" href="dist/shareSelectedText.min.css"/>
+            </Head>
             <>
-                <Head>
-                    <title>BIZI.mn</title>
-                    <meta name="description" content="Завгүй хүмүүст зориулав. Бизнесийн болон бусад мэдээллийг нэг дороос." />
-                    <meta property="og:type" content="website" />
-                    <meta property="fb:app_id" content="2645260245750776" />
-                    <meta property="og:url" content={`https://biznet-news.vercel.app/posts`} />
-                    <meta property="og:site_name" content="BIZI.mn" />
-                    <link rel="icon" href="/business.png" />
-                    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"></link>
-                    <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
-                    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
-                    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet"></link>
-                </Head>
-
-
                 <div className="OtherHeader">
                     <div className="TopHead">
                         <Container fluid style={{ height: '100%', width: '70%' }}>
@@ -94,7 +92,7 @@ export class news extends Component {
                                     </div>
                                     <div className="trendCont">
                                         <Slider {...settings}>
-                                            {this.props.allPost.map((el, i) => {
+                                            {props.AllNews.map((el, i) => {
                                                 return (
                                                     <Link key={i} href='/posts/[slug]' as={`/posts/${el.slug}`}>
                                                         <span key={i} >{el.title}</span>
@@ -119,18 +117,17 @@ export class news extends Component {
 
                         </Container>
                     </div>
-
                     <Container fluid style={{ width: '70%' }}>
                         <div className="golMenu22">
                             <div className="logo">
                                 {/* <img src={`${this.props.Logo.logo.url}`} /> */}
                                 <Link href="/">
-                                    <img className="indexNews2" src={require('../../components/image/news.png')} alt="myImage" />
+                                    <img className="indexNews" src={require('../components/image/logo.png')} alt="myLogo" />
                                 </Link>
                             </div>
                             <div className="SliderPAr">
                                 <Slider {...settings}>
-                                    {this.props.bunner1.map((el, i) => {
+                                    {props.bunner1.map((el, i) => {
                                         return (
                                             <div key={i}>
                                                 <Link href={el.url} >
@@ -149,31 +146,45 @@ export class news extends Component {
                             </div>
                         </div>
                     </Container>
-
                 </div>
 
-                <Layout AllNews={this.props.allPost}>
-                    <Business allPost={this.props.allPost} />
-                </Layout>
+                <Layout AllNews={props.AllNews}>
+                    {/* <HomePar homeVideo={props.homeVideo} allData={newsData} VideoNews={props.VideoNewsHome} AuidoNews={props.AuidoNews} /> */}
+                    <HomePar bunner2={props.bunner2} Vbunner={props.Vbunner} Vbunner2={props.Vbunner2} HomeAudio={props.HomeAudio} AllNews={props.AllNews} HomeVideos={props.HomeVideos} />
+                </Layout >
             </>
-
-        )
-    }
+        </div>
+    )
 }
-export default news
+
 
 export async function getStaticProps() {
-    const MainNews = await axios('https://biz-admin.herokuapp.com/posts');
+    const AllNews = await axios(`https://biz-admin.herokuapp.com/posts`);
     const bunner1 = await axios(`https://biz-admin.herokuapp.com/bunner-1-s`);
-    //  console.log(ctx.params.id,'heehehe')
-    // let param = ctx.params.id
+    const HomeVideos = await axios(`https://biz-admin.herokuapp.com/videos`);
+    const HomeAudio = await axios(`https://biz-admin.herokuapp.com/audio`);
+    const bunner2 = await axios(`https://biz-admin.herokuapp.com/Bunner-2`);
+    // const Logo = await axios(`https://biz-admin.herokuapp.com/logo`);
+    const Vbunner = await axios(`https://biz-admin.herokuapp.com/video-bunner`);
+    const Vbunner2 = await axios(`https://biz-admin.herokuapp.com/video-bunner-2`);
     return {
         props: {
-            allPost: MainNews.data,
-            bunner1: bunner1.data
+            AllNews: AllNews.data,
+            HomeVideos: HomeVideos.data,
+            bunner1: bunner1.data,
+            HomeAudio: HomeAudio.data,
+            // TopNews1: TopNews1.data,
+            // TopNews2: TopNews2.data,
+            // TopNews3: TopNews3.data,
+            // Logo: Logo.data,
+            bunner2: bunner2.data,
+            Vbunner : Vbunner.data,
+            Vbunner2: Vbunner2.data
         },
         revalidate: 1
     }
 }
+
+
 
 

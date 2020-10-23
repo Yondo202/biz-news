@@ -310,6 +310,12 @@ body {
         height: 130px;
         object-fit: cover;
       }
+      .indexNews2 {
+        cursor: pointer;
+        width: 130px;
+        height: 130px;
+        object-fit: cover;
+      }
     }
     .SliderPAr {
       width: 60%;
@@ -455,6 +461,9 @@ body {
           }
           .ln5 {
             background-color: #ff17d1;
+          }
+          .ln6 {
+            background-color: #0f28b3;
           }
           &:hover {
             .line {
