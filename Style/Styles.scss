@@ -1775,7 +1775,7 @@ body {
     .bigNewsBackground {
       width: 100%;
       height: 118vh;
-      max-height: 120vh;
+      max-height: 105vh;
       background-color: rgba(77, 24, 24, 0.3);
       .videoPAr {
         // display: flex;
@@ -4731,9 +4731,10 @@ $rhap_font-family: inherit !default;
 
       .bigNewsBackground {
         width: 100%;
-        height: 130vh;
+        height: 116vh;
+        max-height: 116vh;
         // background-color: rgba(0, 0, 0, 0.5);
-
+      
         .videoPAr {
           display: flex;
           flex-direction: column;
@@ -5064,6 +5065,16 @@ $rhap_font-family: inherit !default;
 }
 
 @media only screen and (max-width: 400px),(max-width: 500px) {
+  .VideoParent{
+    .bigNews{
+      .bigNewsBackground {
+        width: 100%;
+        height: 134vh;
+        max-height: 134vh;
+      }
+    }
+  }
+  
   .BackMainNewsPar{
     .otherNewsParent2{
         display: none;
@@ -5473,6 +5484,8 @@ $rhap_font-family: inherit !default;
       color: wheat;
     }
   }
+
+
 }
 
 

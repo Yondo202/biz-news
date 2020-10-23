@@ -197,18 +197,9 @@ function allMain(props) {
                                         >
                                              <img src={`${props.Vbunner.video.url}`} alt="myBunnerImg" />
                                         </section>
-                                        {/* <div className="contents">
-                                            <span>Banner Area Banner Area
-                                            250 x 300
-                                            </span>
-                                        </div> */}
                                     </div>
                                     </a>
-                                   
                                 </Link>
-                          
-
-               
             </div>
         </Col>
     );
