@@ -133,26 +133,14 @@ export class news extends Component {
                                     {this.props.bunner1.map((el, i) => {
                                         return (
                                             <div key={i}>
-                                                <Link href={el.url} target="_blank" >
-                                                    <div className="TopBunner">
-                                                        <div className="text">
-                                                            <a target="_blank">
-                                                                <h5>
-                                                                    {el.title}
-                                                                    {/* {bunner1.title} */}
-                                                                </h5>
-                                                            </a>
-                                                        </div>
+                                                <Link href={el.url} >
+                                                    <a target="_blank">
+                                                     <div className="TopBunner">
                                                         <div className="image">
-                                                            <img src={`${el.image.url}`} alt="myImage" />
-                                                            <div className="title">
-                                                                {el.nemelt}
-                                                                {/* <h5>{bunner1.nemelt}</h5> */}
-                                                            </div>
-                                                        </div>
-                                                        <div className="ghost">
+                                                            <img src={`${el.image.url}`} alt="myBunner Image" />
                                                         </div>
                                                     </div>
+                                                    </a>
                                                 </Link>
                                             </div>
                                         )

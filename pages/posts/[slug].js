@@ -62,7 +62,22 @@ export default function Home(props) {
 
 
 
-export const getStaticPaths = async () => {
+// // pages/blog/[slug].js
+// export async function getStaticProps({ params }) {
+//   const post = await getBlogPostBySlug(params.slug);
+//   console.log(post, ' this is my slug shuuu')
+//   return {
+//     // Set the timeout for generating to 1 second
+//     // This timeout could be longer depending on how often data changes
+//     revalidate: 1,
+//     props: {
+//       post,
+//     },
+//   };
+// }
+
+
+export const getStaticPaths = async () => { 
   const allData = await axios.get(
     `https://biz-admin.herokuapp.com/posts`
   );
@@ -76,13 +91,14 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps = async ({ params }) => {
+
   const MainNews = await axios.get(
     `https://biz-admin.herokuapp.com/posts?slug=${params.slug}`
   );
   const allData = await axios(`https://biz-admin.herokuapp.com/posts`);
   const Vbunner = await axios(`https://biz-admin.herokuapp.com/video-bunner`);
   const Vbunner2 = await axios(`https://biz-admin.herokuapp.com/video-bunner-2`);
-  // console.log(MainNews, 'дэдэдэдэ')
+  console.log(MainNews, 'дэдэдэдэ')
   return {
     props: {
       big: MainNews.data[0],
