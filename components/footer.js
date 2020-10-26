@@ -17,7 +17,7 @@ class footer extends Component {
                             <Col md={3}>
                                 <div className="footLogo">
                                     <img src={require('./image/bizi.png')} alt="myImageHere" />
-                                    <p>Завгүй хүмүүст зориулав. Бизнесийн болон бусад мэдээллийг нэг дороос.</p>
+                                    <p>Завгүй хүмүүст зориулав.</p>
                                 </div>
                             </Col>
                           
@@ -76,8 +76,12 @@ class footer extends Component {
                             <Col md={3}>
                                 <div className="footMenu3">
                                     <h5>Follow us</h5>
-                                    <div className="menu">
-                                        <GrFacebookOption />
+                                    <div className="menu">\
+                                        <Link href='https://www.facebook.com/www.bizi.mn' >
+                                            <a target="_blank">
+                                                 <GrFacebookOption />
+                                            </a>
+                                        </Link>
                                         <AiOutlineTwitter />
                                         <AiFillInstagram />
                                         <TiSocialYoutubeCircular />

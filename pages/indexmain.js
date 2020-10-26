@@ -63,7 +63,7 @@ export default function Home(props) {
     const router = useRouter()
     const myRoute = router.query.slug
 
-    // console.log(props.bunner1, ' this is bunner')
+    console.log(props.Khansh, ' this is my khansh')
     return (
         <div>
             <Head>
@@ -73,11 +73,13 @@ export default function Home(props) {
                 <meta property="fb:app_id" content="2645260245750776" />
                 <meta property="og:url" content={`https://biznet-news.vercel.app`} />
                 <meta property="og:site_name" content="BIZI.mn" />
+                <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+               
 
                 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"></link>
                 <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
                 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
-                <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet"></link>
+        
 
                 <link rel="stylesheet" href="dist/shareSelectedText.min.css"/>
             </Head>
@@ -102,12 +104,18 @@ export default function Home(props) {
                                         </Slider>
                                     </div>
                                 </div>
+                                <div>
+                                    hahaha
+                                    <h1>dadada</h1>
+                                </div>
                                 <div className="icons">
                                     <div className="date">
                                         <span style={{ letterSpacing: 2 }}>{date}</span>
                                     </div>
                                     <div className="icons">
-                                        <GrFacebookOption />
+                                    <Link href='https://www.facebook.com/www.bizi.mn' target="_blank" >
+                                            <GrFacebookOption />
+                                    </Link>
                                         <AiOutlineTwitter />
                                         <AiOutlineGooglePlus />
                                         <AiFillInstagram />
@@ -146,6 +154,9 @@ export default function Home(props) {
                             </div>
                         </div>
                     </Container>
+                    {/* <iframe
+                        style="width:180px;font-size:11px;height:210px;border: none;overflow:hidden;margin:0;"
+                        src="//monxansh.appspot.com/xansh.html?currency=USD|EUR|JPY|GBP|RUB|CNY|KRW"></iframe> */}
                 </div>
 
                 <Layout AllNews={props.AllNews}>
@@ -167,19 +178,21 @@ export async function getStaticProps() {
     // const Logo = await axios(`https://biz-admin.herokuapp.com/logo`);
     const Vbunner = await axios(`https://biz-admin.herokuapp.com/video-bunner`);
     const Vbunner2 = await axios(`https://biz-admin.herokuapp.com/video-bunner-2`);
+    const Khansh = await axios(`https://monxansh.appspot.com/xansh.json?currency=USD|EUR|JPY|GBP|RUB|CNY|KRW`);
     return {
         props: {
             AllNews: AllNews.data,
             HomeVideos: HomeVideos.data,
             bunner1: bunner1.data,
             HomeAudio: HomeAudio.data,
-            // TopNews1: TopNews1.data,
+            // TopNews1: TopNews1.data,x
             // TopNews2: TopNews2.data,
             // TopNews3: TopNews3.data,
             // Logo: Logo.data,
             bunner2: bunner2.data,
             Vbunner : Vbunner.data,
-            Vbunner2: Vbunner2.data
+            Vbunner2: Vbunner2.data,
+            Khansh: Khansh.data
         },
         revalidate: 1
     }

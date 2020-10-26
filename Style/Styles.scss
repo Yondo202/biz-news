@@ -212,7 +212,7 @@ body {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        width: 50%;
+        width: 40%;
         .trend {
           clip-path: polygon(1% 0, 83% 0, 100% 50%, 83% 99%, 0 100%);
           background-color: $myFavColor;
@@ -263,7 +263,7 @@ body {
       }
       .icons {
         display: flex;
-        color: white;
+        color: white !important;
         width: 30%;
         justify-content: space-around;
         border-right: 1px solid rgba(255, 255, 255, 0.2);
@@ -5004,6 +5004,7 @@ $rhap_font-family: inherit !default;
 }
 
 @media only screen and (max-width: 400px),(max-width: 500px) {
+
   .VideoParent{
     .bigNews{
       .bigNewsBackground {

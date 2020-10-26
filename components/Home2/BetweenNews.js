@@ -21,7 +21,7 @@ export class BetweenNews extends Component {
         const HomeVideos1 = this.props.HomeVideos;
         const AllNews = this.props.AllNews
         const HomeAudio = this.props.HomeAudio
-        const myAllData = [...HomeVideos1, ...AllNews, ...HomeAudio]
+        const myAllData = [ ...AllNews,...HomeVideos1]
         // console.log(myAllData, 'myall Data');
         const Brandfilter = myAllData.filter(x => x.filter == 'Brand');
         const Businessfilter = myAllData.filter(x => x.filter == 'Business');
@@ -40,7 +40,7 @@ export class BetweenNews extends Component {
                                 <div className="background"></div>
                                 <div className="content">
                                     <div className="catigory">
-                                        <span>{Brandfilter[0].filter}</span>
+                                        <span>{Brandfilter[0].filter.toUpperCase()}</span>
                                     </div>
                                     <div className="Title">
                                         <Link href={`${Brandfilter[0].path}/[slug]`} as={`${Brandfilter[0].path}/${Brandfilter[0].slug}`}>
@@ -60,7 +60,7 @@ export class BetweenNews extends Component {
                                             <AiOutlineEye />
                                             <span>
                                                 185
-                                                </span>
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
@@ -161,7 +161,7 @@ export class BetweenNews extends Component {
                                 <div className="background"></div>
                                 <div className="content">
                                     <div className="catigory">
-                                        <span>{Businessfilter[0].filter}</span>
+                                        <span>{Businessfilter[0].filter.toUpperCase()}</span>
                                     </div>
                                     <div className="Title">
                                         <Link href={`${Businessfilter[0].path}/[slug]`} as={`${Businessfilter[0].path}/${Businessfilter[0].slug}`}>
@@ -249,7 +249,7 @@ export class BetweenNews extends Component {
                                 <div className="background"></div>
                                 <div className="content">
                                     <div className="catigory">
-                                        <span>{Startup[0].filter}</span>
+                                        <span>{Startup[0].filter.toUpperCase()}</span>
                                     </div>
                                     <div className="Title">
                                         <Link href={`${Startup[0].path}/[slug]`} as={`${Startup[0].path}/${Startup[0].slug}`}>

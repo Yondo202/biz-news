@@ -87,7 +87,7 @@ export class topNews extends Component {
                                     <div className="background"></div>
                                     <div className="content">
                                         <div className="catigory">
-                                            <span>Business</span>
+                                            <span>{myData2[0].filter}</span>
                                         </div>
                                         <div className="Title">
                                             <Link href="/posts/[slug]" as={`/posts/${myData2[0].slug}`}>
@@ -125,7 +125,7 @@ export class topNews extends Component {
                                     <div className="background"></div>
                                     <div className="content">
                                         <div className="catigory">
-                                            <span>Business</span>
+                                            <span>{myData3[0].filter}</span>
                                         </div>
                                         <div className="Title">
                                             <Link href="/posts/[slug]" as={`/posts/${myData3[0].slug}`}>

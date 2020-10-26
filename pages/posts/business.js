@@ -109,7 +109,9 @@ export class news extends Component {
                                         <span style={{ letterSpacing: 2 }}>{date}</span>
                                     </div>
                                     <div className="icons">
-                                        <GrFacebookOption />
+                                        <Link href='https://www.facebook.com/www.bizi.mn' target="_blank" >
+                                                    <GrFacebookOption />
+                                        </Link>
                                         <AiOutlineTwitter />
                                         <AiOutlineGooglePlus />
                                         <AiFillInstagram />
