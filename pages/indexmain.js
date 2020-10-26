@@ -197,8 +197,8 @@ export async function getServerSideProps() {
             // Logo: Logo.data,
             bunner2: bunner2.data,
             Vbunner : Vbunner.data,
-            Vbunner2: Vbunner2.data,
-            Khansh: Khansh.data
+            Vbunner2: Vbunner2.data
+            // Khansh: Khansh.data
         }
         // revalidate: 1
     }
