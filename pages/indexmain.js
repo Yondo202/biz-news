@@ -176,7 +176,7 @@ export default function Home(props) {
 }
 
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
     const AllNews = await axios(`https://biz-admin.herokuapp.com/posts`);
     const bunner1 = await axios(`https://biz-admin.herokuapp.com/bunner-1-s`);
     const HomeVideos = await axios(`https://biz-admin.herokuapp.com/videos`);
@@ -184,7 +184,7 @@ export async function getServerSideProps() {
     const bunner2 = await axios(`https://biz-admin.herokuapp.com/Bunner-2`);
     const Vbunner = await axios(`https://biz-admin.herokuapp.com/video-bunner`);
     const Vbunner2 = await axios(`https://biz-admin.herokuapp.com/video-bunner-2`);
-    // const Khansh = await axios(`https://monxansh.appspot.com/xansh.json?currency=USD|EUR|JPY|GBP|RUB|CNY|KRW`);
+    const Khansh = await axios(`https://monxansh.appspot.com/xansh.json?currency=USD|EUR|JPY|GBP|RUB|CNY|KRW`);
     return {
         props: {
             AllNews: AllNews.data,
@@ -197,10 +197,10 @@ export async function getServerSideProps() {
             // Logo: Logo.data,
             bunner2: bunner2.data,
             Vbunner : Vbunner.data,
-            Vbunner2: Vbunner2.data
-            // Khansh: Khansh.data
-        }
-        // revalidate: 1
+            Vbunner2: Vbunner2.data,
+            Khansh: Khansh.data
+        },
+        revalidate: 1
     }
 }
 
