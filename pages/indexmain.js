@@ -129,7 +129,6 @@ export default function Home(props) {
                                     </div>
                                 </div>
                             </div>
-
                         </Container>
                     </div>
                     <Container fluid style={{ width: '70%' }}>

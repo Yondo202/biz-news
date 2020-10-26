@@ -61,11 +61,12 @@ export const getStaticPaths = async () => {
   );
   const parks = allData.data;
 
-  const paths = parks.map((allDatas) => ({
+  const params = parks.map((allDatas) => ({
     params: { slug: allDatas.slug },
   }));
 
-  return { paths, fallback: false };
+  return { paths, fallback: false,
+    revalidate: 1 };
 };
 
 export const getStaticProps = async ({ params }) => {
@@ -79,7 +80,6 @@ export const getStaticProps = async ({ params }) => {
       big: VideoNews.data[0],
       all: allData.data
     }
-    // revalidate: 1
   };
 };
 

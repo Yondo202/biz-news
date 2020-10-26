@@ -128,8 +128,8 @@ export const getStaticProps = async ({ params }) => {
       all: allData.data,
       Vbunner : Vbunner.data,
       Vbunner2 : Vbunner2.data
-    }
-    // revalidate: 1
+    },
+    revalidate: 1
   };
 };
 
