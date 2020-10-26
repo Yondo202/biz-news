@@ -94,6 +94,7 @@ export async function getServerSideProps(context) {
             big: VideoNews.data[0],
             all: allData.data
         }
+        // revalidate: 1
     }
 }
 

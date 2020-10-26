@@ -169,7 +169,7 @@ export default function Home(props) {
 }
 
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     const AllNews = await axios(`https://biz-admin.herokuapp.com/posts`);
     const bunner1 = await axios(`https://biz-admin.herokuapp.com/bunner-1-s`);
     const HomeVideos = await axios(`https://biz-admin.herokuapp.com/videos`);
@@ -193,8 +193,8 @@ export async function getStaticProps() {
             Vbunner : Vbunner.data,
             Vbunner2: Vbunner2.data,
             Khansh: Khansh.data
-        },
-        revalidate: 1
+        }
+        // revalidate: 1
     }
 }
 

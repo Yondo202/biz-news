@@ -74,6 +74,7 @@ export async function getServerSideProps(context) {
           all: allData.data,
           Vbunner : Vbunner.data,
           Vbunner2 : Vbunner2.data
+
       }
   }
 }
