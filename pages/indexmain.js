@@ -63,7 +63,7 @@ export default function Home(props) {
     const router = useRouter()
     const myRoute = router.query.slug
 
-    console.log(props.Khansh, ' this is my khansh')
+    // console.log(props.Khansh, ' this is my khansh')
     return (
         <div>
             <Head>
@@ -75,7 +75,7 @@ export default function Home(props) {
                 <meta property="og:site_name" content="BIZI.mn" />
                 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-                
+
                     <meta name="viewport" content="viewport-fit=cover" />
                     <meta name="viewport" content="width=device-width, initial-scale=1" />
                     <meta name="description" content="Завгүй хүмүүст зориулав. Бизнесийн болон бусад мэдээллийг нэг дороос." />
@@ -182,10 +182,9 @@ export async function getServerSideProps() {
     const HomeVideos = await axios(`https://biz-admin.herokuapp.com/videos`);
     const HomeAudio = await axios(`https://biz-admin.herokuapp.com/audio`);
     const bunner2 = await axios(`https://biz-admin.herokuapp.com/Bunner-2`);
-    // const Logo = await axios(`https://biz-admin.herokuapp.com/logo`);
     const Vbunner = await axios(`https://biz-admin.herokuapp.com/video-bunner`);
     const Vbunner2 = await axios(`https://biz-admin.herokuapp.com/video-bunner-2`);
-    const Khansh = await axios(`https://monxansh.appspot.com/xansh.json?currency=USD|EUR|JPY|GBP|RUB|CNY|KRW`);
+    // const Khansh = await axios(`https://monxansh.appspot.com/xansh.json?currency=USD|EUR|JPY|GBP|RUB|CNY|KRW`);
     return {
         props: {
             AllNews: AllNews.data,
