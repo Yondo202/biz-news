@@ -65,8 +65,7 @@ export const getStaticPaths = async () => {
     params: { slug: allDatas.slug },
   }));
 
-  return { paths, fallback: false,
-    revalidate: 1 };
+  return { paths, fallback: false};
 };
 
 export const getStaticProps = async ({ params }) => {
