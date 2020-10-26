@@ -61,7 +61,7 @@ export const getStaticPaths = async () => {
   );
   const parks = allData.data;
 
-  const params = parks.map((allDatas) => ({
+  const paths = parks.map((allDatas) => ({
     params: { slug: allDatas.slug },
   }));
 
