@@ -69,6 +69,11 @@ export class videoNews extends Component {
             <div>
                 <Head>
                     <title>BIZI.mn</title>
+                    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+                    <meta name="viewport" content="viewport-fit=cover" />
+                    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
                     <meta name="description" content="Завгүй хүмүүст зориулав. Бизнесийн болон бусад мэдээллийг нэг дороос." />
                     <meta property="og:type" content="website" />
                     <meta property="fb:app_id" content="2645260245750776" />
