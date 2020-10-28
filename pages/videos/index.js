@@ -172,14 +172,14 @@ export class videoNews extends Component {
 export default videoNews
 
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     const MainNews = await axios('http://3.15.205.212:1337/videos');
     // const AllNews = await axios(`https://biz-admin.herokuapp.com/posts`);
     const bunner1 = await axios(`http://3.15.205.212:1337/bunner-1-s`);
     //  console.log(ctx.params.id,'heehehe')
     // let param = ctx.params.id
     return {
-        revalidate: 1,
+        // revalidate: 1,
         props: {
             allVideo: MainNews.data,
             bunner1: bunner1.data

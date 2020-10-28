@@ -63,7 +63,7 @@ export default function Home(props) {
     const router = useRouter()
     const myRoute = router.query.slug
 
-    // console.log(props.Khansh, ' this is my khansh')
+    console.log(props.Khansh, ' this is my khansh')
     return (
         <div>
             <Head>
@@ -111,12 +111,19 @@ export default function Home(props) {
                                         </Slider>
                                     </div>
                                 </div>
-                                {/* <div className="ValiutParent">
-                                    <span>2852</span>
+                                <div className="ValiutParent">
+                                    <div className="ImgPar">
+                                      <img src={require('../components/image/usd.png')} alt="usd" />
+                                      {/* <span className="usdText">USD</span> */}
+                                    </div>
+                                    <span className="cash">2852</span>
+                                    <span className="cash2">₮</span>
                                 </div>
                                 <div className="WeatherParent">
-                                    hahaha
-                                </div> */}
+                                    <img src={require('../components/image/cloudy.png')} />
+                                    <span className="odor">9°</span>
+                                    <span className="shono">-9°</span>
+                                </div>
                                 <div className="icons">
                                     <div className="date">
                                         <span style={{ letterSpacing: 2 }}>{date}</span>
@@ -177,7 +184,7 @@ export default function Home(props) {
 }
 
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     const AllNews = await axios(`http://3.15.205.212:1337/posts`);
     const bunner1 = await axios(`http://3.15.205.212:1337/bunner-1-s`);
     const HomeVideos = await axios(`http://3.15.205.212:1337/videos`);
@@ -186,16 +193,11 @@ export async function getStaticProps() {
     const Vbunner2 = await axios(`http://3.15.205.212:1337/video-bunner-2`);
     const Khansh = await axios(`https://monxansh.appspot.com/xansh.json?currency=USD|EUR|JPY|GBP|RUB|CNY|KRW`);
     return {
-        revalidate: 1,
+        // revalidate: 1,
         props: {
             AllNews: AllNews.data,
             HomeVideos: HomeVideos.data,
             bunner1: bunner1.data,
-          
-            // TopNews1: TopNews1.data,x
-            // TopNews2: TopNews2.data,
-            // TopNews3: TopNews3.data,
-            // Logo: Logo.data,
             bunner2: bunner2.data,
             Vbunner : Vbunner.data,
             Vbunner2: Vbunner2.data,

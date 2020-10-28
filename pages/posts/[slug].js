@@ -61,23 +61,23 @@ export default function Home(props) {
 }
 
 
-// export async function getStaticProps(context) {
-//   const { slug } = context.query
-//   const VideoNews = await axios(`https://biz-admin.herokuapp.com/posts?slug=${slug}`);
-//   const allData = await axios(`https://biz-admin.herokuapp.com/posts`);
-//   const Vbunner = await axios(`https://biz-admin.herokuapp.com/video-bunner`);
-//   const Vbunner2 = await axios(`https://biz-admin.herokuapp.com/video-bunner-2`);
-//   //  const data = await VideoNews.json()
-//   return {
-//     revalidate: 1,
-//       props: {
-//           big: VideoNews.data[0],
-//           all: allData.data,
-//           Vbunner : Vbunner.data,
-//           Vbunner2 : Vbunner2.data
-//       }
-//   }
-// }
+export async function getServerSideProps(context) {
+  const { slug } = context.query
+  const VideoNews = await axios(`http://3.15.205.212:1337/posts?slug=${slug}`);
+  const allData = await axios(`http://3.15.205.212:1337/posts`);
+  const Vbunner = await axios(`http://3.15.205.212:1337/video-bunner`);
+  const Vbunner2 = await axios(`http://3.15.205.212:1337/video-bunner-2`);
+  //  const data = await VideoNews.json()
+  return {
+    // revalidate: 1,
+      props: {
+          big: VideoNews.data[0],
+          all: allData.data,
+          Vbunner : Vbunner.data,
+          Vbunner2 : Vbunner2.data
+      }
+  }
+}
 
 
 // // // pages/blog/[slug].js
@@ -101,36 +101,36 @@ export default function Home(props) {
 
 
 
-export const getStaticPaths = async () => { 
-  const allData = await axios.get(
-    `http://3.15.205.212:1337/posts`
-  );
-  const parks = allData.data;
+// export const getStaticPaths = async () => { 
+//   const allData = await axios.get(
+//     `http://3.15.205.212:1337/posts`
+//   );
+//   const parks = allData.data;
 
-  const paths = parks.map((allDatas) => ({
-    params: { slug: allDatas.slug },
-  }));
+//   const paths = parks.map((allDatas) => ({
+//     params: { slug: allDatas.slug },
+//   }));
 
-  return { paths, fallback: false };
-};
+//   return { paths, fallback: false };
+// };
 
-export const getStaticProps = async ({ params }) => {
+// export const getStaticProps = async ({ params }) => {
 
-  const MainNews = await axios.get(
-    `http://3.15.205.212:1337/posts?slug=${params.slug}`
-  );
-  const allData = await axios(`http://3.15.205.212:1337/posts`);
-  const Vbunner = await axios(`http://3.15.205.212:1337/video-bunner`);
-  const Vbunner2 = await axios(`http://3.15.205.212:1337/video-bunner-2`);
-  console.log(MainNews, 'дэдэдэдэ')
-  return {
-    props: {
-      big: MainNews.data[0],
-      all: allData.data,
-      Vbunner : Vbunner.data,
-      Vbunner2 : Vbunner2.data
-    },
-    revalidate: 1
-  };
-};
+//   const MainNews = await axios.get(
+//     `http://3.15.205.212:1337/posts?slug=${params.slug}`
+//   );
+//   const allData = await axios(`http://3.15.205.212:1337/posts`);
+//   const Vbunner = await axios(`http://3.15.205.212:1337/video-bunner`);
+//   const Vbunner2 = await axios(`http://3.15.205.212:1337/video-bunner-2`);
+//   console.log(MainNews, 'дэдэдэдэ')
+//   return {
+//     props: {
+//       big: MainNews.data[0],
+//       all: allData.data,
+//       Vbunner : Vbunner.data,
+//       Vbunner2 : Vbunner2.data
+//     },
+//     revalidate: 1
+//   };
+// };
 

@@ -209,10 +209,60 @@ body {
       justify-content: space-between;
 
       .ValiutParent{
-        color: wheat;
+        background-color: #2c2e30;
+        padding: 6px 10px;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        .ImgPar{
+          display: flex;
+          flex-direction: column;
+          width: 24px;
+          height: 100%;
+          float: left;
+          img{
+            width: 24px;
+            height: 20px;
+          }
+          .usdText{
+            font-size: 10px;
+          }
+        }
+        .cash{
+          margin-left: 6px;
+          font-weight: 500;
+          padding-right: 5px;
+          border-right: 1px solid rgba(255, 255,255, 0.5);
+        }
+        .cash2{
+          margin-left: 6px;
+        }
+        // span{
+        //   margin-left: 5px;
+        // }
       }
       .WeatherParent{
-        color: wheat;
+        background-color: #2c2e30;
+        padding: 6px 10px;
+        color: white;
+        font-size: 14px;
+        img{
+          width: 24px;
+          height: 20px;
+        }
+        .odor{
+          margin-left: 6px;
+          font-weight: 500;
+          padding-right: 5px;
+          border-right: 1px solid rgba(255, 255,255, 0.5);
+        }
+        .shono{
+          margin-left: 6px;
+          font-weight: 500;
+          color: rgba(255, 255, 255, 0.5);
+        }
       }
       .TrendPar {
         display: flex;
@@ -255,7 +305,7 @@ body {
       display: flex;
       flex-direction: row;
       width: 30%;
-      justify-content: flex-end;
+      justify-content: space-between;
       align-items: center;
       height: 100%;
       .date {
@@ -263,6 +313,8 @@ body {
         padding: 6px 10px;
         background-color: #2c2e30;
         color: white;
+        // justify-self: flex-start !important;
+        float: left;
         span {
           font-weight: 500;
           font-size: 14px;
@@ -271,7 +323,7 @@ body {
       .icons {
         display: flex;
         color: white !important;
-        width: 50%;
+        width: 60%;
         justify-content: space-around;
         border-right: 1px solid rgba(255, 255, 255, 0.2);
         border-left: 1px solid rgba(255, 255, 255, 0.2);
