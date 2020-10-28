@@ -182,7 +182,7 @@ export async function getServerSideProps() {
         props: {
             allVideo: MainNews.data,
             bunner1: bunner1.data
-        },
-        revalidate: 1
+        }
+        // revalidate: 1
     }
 }

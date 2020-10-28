@@ -199,8 +199,8 @@ export async function getServerSideProps() {
             Vbunner : Vbunner.data,
             Vbunner2: Vbunner2.data,
             Khansh: Khansh.data
-        },
-        revalidate: 1
+        }
+        // revalidate: 1
     }
 }
 
