@@ -22,7 +22,7 @@ export class BetweenNews extends Component {
         const AllNews = this.props.AllNews
         const myAllData = [ ...AllNews,...HomeVideos1]
         // console.log(myAllData, 'myall Data');
-        const Brandfilter = myAllData.filter(x => x.filter == 'Brand');
+        const Brandfilter = AllNews.filter(x => x.filter == 'Brand');
         const Businessfilter = myAllData.filter(x => x.filter == 'Business');
         const Startup = myAllData.filter(x => x.filter == 'Startup')
         // console.log(Brandfilter[0], 'ene bol filter brand')
