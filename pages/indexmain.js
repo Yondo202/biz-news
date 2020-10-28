@@ -177,7 +177,7 @@ export default function Home(props) {
 }
 
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
     const AllNews = await axios(`http://3.15.205.212:1337/posts`);
     const bunner1 = await axios(`http://3.15.205.212:1337/bunner-1-s`);
     const HomeVideos = await axios(`http://3.15.205.212:1337/videos`);
@@ -186,6 +186,7 @@ export async function getServerSideProps() {
     const Vbunner2 = await axios(`http://3.15.205.212:1337/video-bunner-2`);
     const Khansh = await axios(`https://monxansh.appspot.com/xansh.json?currency=USD|EUR|JPY|GBP|RUB|CNY|KRW`);
     return {
+        revalidate: 1,
         props: {
             AllNews: AllNews.data,
             HomeVideos: HomeVideos.data,
@@ -200,7 +201,7 @@ export async function getServerSideProps() {
             Vbunner2: Vbunner2.data,
             Khansh: Khansh.data
         }
-        // revalidate: 1
+        
     }
 }
 
