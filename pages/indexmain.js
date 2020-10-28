@@ -111,10 +111,12 @@ export default function Home(props) {
                                         </Slider>
                                     </div>
                                 </div>
-                                <div>
-                                    hahaha
-                                    <h1>dadada</h1>
+                                {/* <div className="ValiutParent">
+                                    <span>2852</span>
                                 </div>
+                                <div className="WeatherParent">
+                                    hahaha
+                                </div> */}
                                 <div className="icons">
                                     <div className="date">
                                         <span style={{ letterSpacing: 2 }}>{date}</span>
@@ -175,7 +177,7 @@ export default function Home(props) {
 }
 
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     const AllNews = await axios(`http://3.15.205.212:1337/posts`);
     const bunner1 = await axios(`http://3.15.205.212:1337/bunner-1-s`);
     const HomeVideos = await axios(`http://3.15.205.212:1337/videos`);

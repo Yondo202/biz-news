@@ -61,7 +61,7 @@ class footer extends Component {
                                     <h5>Холбоо барих</h5>
                                     <div className="menu">
                                         <span>Утас:</span>
-                                        <p>(976) 99132989</p>
+                                        <p>72101072</p>
                                     </div>
                                     <div className="menu">
                                         <span>Хаяг:</span>

@@ -207,6 +207,13 @@ body {
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
+
+      .ValiutParent{
+        color: wheat;
+      }
+      .WeatherParent{
+        color: wheat;
+      }
       .TrendPar {
         display: flex;
         flex-direction: row;
@@ -247,7 +254,7 @@ body {
     .icons {
       display: flex;
       flex-direction: row;
-      width: 50%;
+      width: 30%;
       justify-content: flex-end;
       align-items: center;
       height: 100%;
@@ -264,7 +271,7 @@ body {
       .icons {
         display: flex;
         color: white !important;
-        width: 30%;
+        width: 50%;
         justify-content: space-around;
         border-right: 1px solid rgba(255, 255, 255, 0.2);
         border-left: 1px solid rgba(255, 255, 255, 0.2);
@@ -640,6 +647,9 @@ body {
           }
           .ln5 {
             background-color: #ff17d1;
+          }
+          .ln6 {
+            background-color: #0f28b3;
           }
           &:hover {
             .line {
