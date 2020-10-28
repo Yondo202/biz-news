@@ -55,46 +55,46 @@ function Home(props) {
 export default Home
 
 
-// export const getStaticPaths = async () => {
-//   const allData = await axios.get(
-//     `http://3.15.205.212:1337/videos`
-//   );
-//   const parks = allData.data;
+export const getStaticPaths = async () => {
+  const allData = await axios.get(
+    `http://3.15.205.212:1337/videos`
+  );
+  const parks = allData.data;
 
-//   const paths = parks.map((allDatas) => ({
-//     params: { slug: allDatas.slug },
-//   }));
+  const paths = parks.map((allDatas) => ({
+    params: { slug: allDatas.slug },
+  }));
 
-//   return { paths, fallback: false};
-// };
+  return { paths, fallback: false};
+};
 
-// export const getStaticProps = async ({ params }) => {
-//   const VideoNews = await axios.get(
-//     `http://3.15.205.212:1337/videos?slug=${params.slug}`
-//   );
-//   const allData = await axios(`http://3.15.205.212:1337/videos`);
-//   console.log(VideoNews, 'дэдэдэдэ')
-//   return {
-//     props: {
-//       big: VideoNews.data[0],
-//       all: allData.data
-//     }
-//   };
-// };
+export const getStaticProps = async ({ params }) => {
+  const VideoNews = await axios.get(
+    `http://3.15.205.212:1337/videos?slug=${params.slug}`
+  );
+  const allData = await axios(`http://3.15.205.212:1337/videos`);
+  console.log(VideoNews, 'дэдэдэдэ')
+  return {
+    props: {
+      big: VideoNews.data[0],
+      all: allData.data
+    }
+  };
+};
 
   
-export async function getStaticProps(context) {
-    const { slug } = context.query
-    const VideoNews = await axios(`https://biz-admin.herokuapp.com/videos?slug=${slug}`);
-    const allData = await axios(`https://biz-admin.herokuapp.com/videos`);
-    //  const data = await VideoNews.json()
-    return {
-      revalidate: 1,
-        props: {
-            big: VideoNews.data[0],
-            all: allData.data
-        }
-        // revalidate: 1
-    }
-}
+// export async function getStaticProps(context) {
+//     const { slug } = context.query
+//     const VideoNews = await axios(`https://biz-admin.herokuapp.com/videos?slug=${slug}`);
+//     const allData = await axios(`https://biz-admin.herokuapp.com/videos`);
+//     //  const data = await VideoNews.json()
+//     return {
+//       revalidate: 1,
+//         props: {
+//             big: VideoNews.data[0],
+//             all: allData.data
+//         }
+//         // revalidate: 1
+//     }
+// }
 
