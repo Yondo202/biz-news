@@ -104,6 +104,37 @@ export class news extends Component {
                                         </Slider>
                                     </div>
                                 </div>
+                                <div className="ValiutSliderPar">
+                                    <Slider {...settings}>
+
+                                        {this.props.Khansh.map((el, i)=>{
+                                            return(
+                                            <div className="ValiutParent" key={i}>
+                                                <div className="ImgPar">
+                                                <img src={require(`../../components/image/khansh/${el.code}.png`)} alt="usd" />
+                                                {/* <span className="usdText">USD</span> */}
+                                                </div>
+                                                <span className="cash" style={{letterSpacing:'1px'}}>{el.rate_float}</span>
+                                                <span className="cash2">₮</span>
+                                            </div>
+                                            )
+                                        })}
+                                        {/* <div className="ValiutParent">
+                                                <div className="ImgPar">
+                                                <img src={require('../components/image/usd.png')} alt="usd" />
+                                                <span className="usdText">USD</span>
+                                                </div>
+                                                <span className="cash">{props.Khansh.rate_float}</span>
+                                                <span className="cash2">₮</span>
+                                        </div> */}
+                                    </Slider>
+                                </div>
+                             
+                                <div className="WeatherParent">
+                                    <img src={require('../../components/image/cloudy.png')} />
+                                    <span className="odor">9°</span>
+                                    <span className="shono">-9°</span>
+                                </div>
                                 <div className="icons">
                                     <div className="date">
                                         <span style={{ letterSpacing: 2 }}>{date}</span>
@@ -167,13 +198,15 @@ export default news
 export async function getServerSideProps() {
     const MainNews = await axios('http://3.15.205.212:1337/posts');
     const bunner1 = await axios(`http://3.15.205.212:1337/bunner-1-s`);
+    const Khansh = await axios(`https://monxansh.appspot.com/xansh.json?currency=USD|EUR|JPY|GBP|RUB|CNY|KRW`);
     //  console.log(ctx.params.id,'heehehe')
     // let param = ctx.params.id
     return {
         // revalidate: 1,
         props: {
             allPost: MainNews.data,
-            bunner1: bunner1.data
+            bunner1: bunner1.data,
+            Khansh: Khansh.data
         }
     // revalidate: 1
 }}

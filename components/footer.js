@@ -65,7 +65,7 @@ class footer extends Component {
                                     </div>
                                     <div className="menu">
                                         <span>Хаяг:</span>
-                                        <p>СХД - 15-р хорооо 34р байр 55тоот</p>
+                                        <p>Сүхбаатар дүүрэг, Атимос 48</p>
                                     </div>
                                     <div className="menu">
                                         <span>Е мэйл:</span>
