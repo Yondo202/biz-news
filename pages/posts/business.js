@@ -165,8 +165,8 @@ export class news extends Component {
 export default news
 
 export async function getStaticProps() {
-    const MainNews = await axios('https://biz-admin.herokuapp.com/posts');
-    const bunner1 = await axios(`https://biz-admin.herokuapp.com/bunner-1-s`);
+    const MainNews = await axios('http://3.15.205.212:1337/posts');
+    const bunner1 = await axios(`http://3.15.205.212:1337/bunner-1-s`);
     //  console.log(ctx.params.id,'heehehe')
     // let param = ctx.params.id
     return {

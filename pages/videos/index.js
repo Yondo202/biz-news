@@ -173,9 +173,9 @@ export default videoNews
 
 
 export async function getStaticProps() {
-    const MainNews = await axios('https://biz-admin.herokuapp.com/videos');
+    const MainNews = await axios('http://3.15.205.212:1337/videos');
     // const AllNews = await axios(`https://biz-admin.herokuapp.com/posts`);
-    const bunner1 = await axios(`https://biz-admin.herokuapp.com/bunner-1-s`);
+    const bunner1 = await axios(`http://3.15.205.212:1337/bunner-1-s`);
     //  console.log(ctx.params.id,'heehehe')
     // let param = ctx.params.id
     return {

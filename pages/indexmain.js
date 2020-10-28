@@ -167,7 +167,7 @@ export default function Home(props) {
 
                 <Layout AllNews={props.AllNews}>
                     {/* <HomePar homeVideo={props.homeVideo} allData={newsData} VideoNews={props.VideoNewsHome} AuidoNews={props.AuidoNews} /> */}
-                    <HomePar bunner2={props.bunner2} Vbunner={props.Vbunner} Vbunner2={props.Vbunner2} HomeAudio={props.HomeAudio} AllNews={props.AllNews} HomeVideos={props.HomeVideos} />
+                    <HomePar bunner2={props.bunner2} Vbunner={props.Vbunner} Vbunner2={props.Vbunner2} AllNews={props.AllNews} HomeVideos={props.HomeVideos} />
                 </Layout >
             </>
         </div>
@@ -176,20 +176,19 @@ export default function Home(props) {
 
 
 export async function getStaticProps() {
-    const AllNews = await axios(`https://biz-admin.herokuapp.com/posts`);
-    const bunner1 = await axios(`https://biz-admin.herokuapp.com/bunner-1-s`);
-    const HomeVideos = await axios(`https://biz-admin.herokuapp.com/videos`);
-    const HomeAudio = await axios(`https://biz-admin.herokuapp.com/audio`);
-    const bunner2 = await axios(`https://biz-admin.herokuapp.com/Bunner-2`);
-    const Vbunner = await axios(`https://biz-admin.herokuapp.com/video-bunner`);
-    const Vbunner2 = await axios(`https://biz-admin.herokuapp.com/video-bunner-2`);
+    const AllNews = await axios(`http://3.15.205.212:1337/posts`);
+    const bunner1 = await axios(`http://3.15.205.212:1337/bunner-1-s`);
+    const HomeVideos = await axios(`http://3.15.205.212:1337/videos`);
+    const bunner2 = await axios(`http://3.15.205.212:1337/Bunner-2`);
+    const Vbunner = await axios(`http://3.15.205.212:1337/video-bunner`);
+    const Vbunner2 = await axios(`http://3.15.205.212:1337/video-bunner-2`);
     const Khansh = await axios(`https://monxansh.appspot.com/xansh.json?currency=USD|EUR|JPY|GBP|RUB|CNY|KRW`);
     return {
         props: {
             AllNews: AllNews.data,
             HomeVideos: HomeVideos.data,
             bunner1: bunner1.data,
-            HomeAudio: HomeAudio.data,
+          
             // TopNews1: TopNews1.data,x
             // TopNews2: TopNews2.data,
             // TopNews3: TopNews3.data,

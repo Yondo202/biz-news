@@ -13,7 +13,7 @@ export class homePar extends Component {
             <>
                 <TopNews AllNews={this.props.AllNews}  />
                 <Bunner bunner2={this.props.bunner2}  />
-                <BetweenNews HomeAudio={this.props.HomeAudio} HomeVideos={this.props.HomeVideos} AllNews={this.props.AllNews} />
+                <BetweenNews HomeVideos={this.props.HomeVideos} AllNews={this.props.AllNews} />
                 <VideoNews HomeVideos={this.props.HomeVideos} />
                 <TopReadNews  Vbunner={this.props.Vbunner} Vbunner2={this.props.Vbunner2} AllNews={this.props.AllNews}  />
                 {/* <HomeCon homeVideo={this.props.homeVideo} />

@@ -20,7 +20,6 @@ export class BetweenNews extends Component {
         // const HomeVideos = this.props.HomeVideos;
         const HomeVideos1 = this.props.HomeVideos;
         const AllNews = this.props.AllNews
-        const HomeAudio = this.props.HomeAudio
         const myAllData = [ ...AllNews,...HomeVideos1]
         // console.log(myAllData, 'myall Data');
         const Brandfilter = myAllData.filter(x => x.filter == 'Brand');
