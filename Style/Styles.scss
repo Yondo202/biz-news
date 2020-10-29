@@ -5476,20 +5476,22 @@ $rhap_font-family: inherit !default;
         ul {
           z-index: 99;
           position: fixed;
-          width: 50%;
+          width: 60%;
           height: 100vh;
           // background: rgb(23, 23, 23);
           background-color: #252525;
           background-repeat: no-repeat, repeat;
           background-position: center;
           background-size: cover;
-          left: -50%;
+          left: -60%;
           text-align: center;
           transition: all 0.5s;
           padding-top: 60px;
           flex-direction: column;
           justify-content: flex-start;
           top: 0;
+          opacity: 0;
+          transform: scale(0.8);
           .homeMenu {
             display: flex;
             align-items: center;
@@ -5504,6 +5506,23 @@ $rhap_font-family: inherit !default;
             }
             display: none;
           }
+          .li{
+            // margin-right: 200px;
+            transform: scale(0);
+            transition: all 0.8s ease;
+            span{
+              
+            }
+            .line {
+              height: 1px;
+              transition: width ease 0.3s;
+              width: 100%;
+              position: absolute;
+              bottom: 0;
+              z-index: 0;
+              transition: all 0.4s ease;
+            }
+          }
           li {
             display: block;
             margin: 30px 0px;
@@ -5511,6 +5530,7 @@ $rhap_font-family: inherit !default;
             a {
               color: white;
               font-size: 19px;
+
               &:hover {
                 color: wheat;
                 transition: 0.5px;
@@ -5521,7 +5541,16 @@ $rhap_font-family: inherit !default;
         #check:checked ~ ul {
           top: 0;
           left: 0;
+          opacity: 1;
+          transform: scale(1);
+          .li{
+            transform: scale(1);
+            span{
+              
+            }
+          }
         }
+     
         .checkBtn {
           margin-right: 20px;
         }
@@ -5577,20 +5606,22 @@ $rhap_font-family: inherit !default;
         ul {
           z-index: 99;
           position: fixed;
-          width: 50%;
+          width: 60%;
           height: 100vh;
           // background: rgb(23, 23, 23);
           background-color: #252525;
           background-repeat: no-repeat, repeat;
           background-position: center;
           background-size: cover;
-          left: -50%;
+          left: -60%;
           text-align: center;
           transition: all 0.5s;
           padding-top: 60px;
           flex-direction: column;
           justify-content: flex-start;
           top: 0;
+          opacity: 0;
+          transform: scale(0.8);
           .homeMenu {
             display: flex;
             align-items: center;
@@ -5618,10 +5649,35 @@ $rhap_font-family: inherit !default;
               }
             }
           }
+          .li{
+            // margin-right: 200px;
+            transform: scale(0);
+            transition: all 0.8s ease;
+            span{
+              
+            }
+            .line {
+              height: 1px;
+              transition: width ease 0.3s;
+              width: 100%;
+              position: absolute;
+              bottom: 0;
+              z-index: 0;
+              transition: all 0.4s ease;
+            }
+          }
         }
         #check:checked ~ ul {
           top: 0;
           left: 0;
+          opacity: 1;
+          transform: scale(1);
+          .li{
+            transform: scale(1);
+            span{
+              
+            }
+          }
         }
         .checkBtn {
           margin-right: 20px;
