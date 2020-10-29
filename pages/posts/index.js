@@ -49,6 +49,7 @@ var settings = {
         },
     ]
 };
+const ApiKey = "fabb3807954fd4c008986cfe9a041860"
 export class news extends Component {
     constructor(props) {
         super(props)
@@ -67,6 +68,8 @@ export class news extends Component {
         const Dates = new Date()
         const date = Dates.getFullYear() + '.' + (Dates.getMonth()+1) + '.' + Dates.getDate();
 
+        const MaxTemp = Math.floor(this.props.TsagAgaar.main.temp_max - 273.15)
+        const MinTemp = Math.floor(this.props.TsagAgaar.main.temp_min - 273.15)
         return (
             <>
                 <Head>
@@ -132,8 +135,8 @@ export class news extends Component {
                              
                                 <div className="WeatherParent">
                                     <img src={require('../../components/image/cloudy.png')} />
-                                    <span className="odor">9°</span>
-                                    <span className="shono">-9°</span>
+                                    <span className="odor">{MaxTemp}°</span>
+                                    <span className="shono">{MinTemp}°</span>
                                 </div>
                                 <div className="icons">
                                     <div className="date">
@@ -199,6 +202,7 @@ export async function getServerSideProps() {
     const MainNews = await axios('http://3.15.205.212:1337/posts');
     const bunner1 = await axios(`http://3.15.205.212:1337/bunner-1-s`);
     const Khansh = await axios(`https://monxansh.appspot.com/xansh.json?currency=USD|EUR|JPY|GBP|RUB|CNY|KRW`);
+    const TsagAgaar = await axios(`https://api.openweathermap.org/data/2.5/weather?q=Ulaanbaatar,mn&APPID=${ApiKey}`);
     //  console.log(ctx.params.id,'heehehe')
     // let param = ctx.params.id
     return {
@@ -206,7 +210,8 @@ export async function getServerSideProps() {
         props: {
             allPost: MainNews.data,
             bunner1: bunner1.data,
-            Khansh: Khansh.data
+            Khansh: Khansh.data,
+            TsagAgaar: TsagAgaar.data
         }
         // revalidate: 1
     }

@@ -73,13 +73,12 @@ export default function Home(props) {
     const router = useRouter()
     const myRoute = router.query.slug
 
-    console.log(props.Khansh, ' this is my khansh')
-    // const JinkenKansh = props.Khansh.map((el, i)=>{
-    //     if(el.code == "USD"){
-    //         el.push
-    //     }
-    // })
-    console.log(props.TsagAgaar, 'ene bol tsag agaar')
+    // console.log(props.Khansh, ' this is my khansh')
+    // console.log(props.TsagAgaar, 'ene bol tsag agaar')
+    const MaxTemp = Math.floor(props.TsagAgaar.main.temp_max - 273.15)
+    const MinTemp = Math.floor(props.TsagAgaar.main.temp_min - 273.15)
+    // console.log(MaxTemp, 'this is my max temp')
+    // console.log(MinTemp, 'this is my min temp')
 
     return (
         <div>
@@ -156,8 +155,8 @@ export default function Home(props) {
                              
                                 <div className="WeatherParent">
                                     <img src={require('../components/image/cloudy.png')} />
-                                    <span className="odor">9°</span>
-                                    <span className="shono">-9°</span>
+                                    <span className="odor">{MaxTemp}°</span>
+                                    <span className="shono">{MinTemp}°</span>
                                 </div>
                                 <div className="icons">
                                     <div className="date">
@@ -230,7 +229,7 @@ export async function getServerSideProps() {
     const Vbunner = await axios(`http://3.15.205.212:1337/video-bunner`);
     const Vbunner2 = await axios(`http://3.15.205.212:1337/video-bunner-2`);
     const Khansh = await axios(`https://monxansh.appspot.com/xansh.json?currency=USD|EUR|JPY|GBP|RUB|CNY|KRW`);
-    const TsagAgaar = await axios(`https://api.openweathermap.org/data/2.5/weather?q=taipei,tw&APPID=${ApiKey}`);
+    const TsagAgaar = await axios(`https://api.openweathermap.org/data/2.5/weather?q=Ulaanbaatar,mn&APPID=${ApiKey}`);
     return {
         // revalidate: 1,
         props: {
