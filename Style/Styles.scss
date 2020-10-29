@@ -1998,6 +1998,15 @@ body {
     p{
       font-size: 13px;
     }
+    h5{
+      cursor: pointer;
+      font-size: 16px;
+      transition: all 0.4s ease;
+      &:hover{
+        color: $myFavColor;
+      }
+      
+    }
   }
   .footMenu1 {
     h5 {

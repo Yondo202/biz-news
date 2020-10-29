@@ -18,6 +18,9 @@ class footer extends Component {
                                 <div className="footLogo">
                                     <img src={require('./image/bizi.png')} alt="myImageHere" />
                                     <p>Завгүй хүмүүст зориулав.</p>
+                                    <Link href="/ridacts">
+                                        <h5>Редакцын бодлого</h5>
+                                    </Link>
                                 </div>
                             </Col>
                           
