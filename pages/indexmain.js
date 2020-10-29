@@ -6,6 +6,7 @@ import OtherNav from '../components/otherNav'
 import { Container, Row, Col } from 'react-bootstrap'
 import { GrFacebookOption } from 'react-icons/gr';
 import { AiOutlineTwitter, AiOutlineGooglePlus, AiFillInstagram } from 'react-icons/ai';
+import { TiWeatherPartlySunny} from 'react-icons/ti';
 import Slider from "react-slick";
 import Link from 'next/link';
 import ReactGa from 'react-ga';
@@ -129,7 +130,6 @@ export default function Home(props) {
                                 </div>
                                 <div className="ValiutSliderPar">
                                     <Slider {...settings}>
-
                                         {props.Khansh.map((el, i)=>{
                                             return(
                                             <div className="ValiutParent" key={i}>
@@ -154,7 +154,8 @@ export default function Home(props) {
                                 </div>
                              
                                 <div className="WeatherParent">
-                                    <img src={require('../components/image/cloudy.png')} />
+                                    {/* <img src={require('../components/image/cloudy.png')} /> */}
+                                    <TiWeatherPartlySunny />
                                     <span className="odor">{MaxTemp}°</span>
                                     <span className="shono">{MinTemp}°</span>
                                 </div>
