@@ -79,7 +79,7 @@ class footer extends Component {
                             <Col md={3}>
                                 <div className="footMenu3">
                                     <h5>Follow us</h5>
-                                    <div className="menu">\
+                                    <div className="menu">
                                         <Link href='https://www.facebook.com/www.bizi.mn' >
                                             <a target="_blank">
                                                  <GrFacebookOption />
