@@ -200,7 +200,7 @@ export class news extends Component {
 }
 export default news
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     const MainNews = await axios('http://3.15.205.212:1337/posts');
     const bunner1 = await axios(`http://3.15.205.212:1337/bunner-1-s`);
     const Khansh = await axios(`https://monxansh.appspot.com/xansh.json?currency=USD|EUR|JPY|GBP|RUB|CNY|KRW`);
