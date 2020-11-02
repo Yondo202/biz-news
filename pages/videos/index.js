@@ -10,6 +10,7 @@ import { AiOutlineTwitter, AiOutlineGooglePlus, AiFillInstagram } from 'react-ic
 import Slider from "react-slick";
 import Link from 'next/link';
 import ReactGa from 'react-ga';
+import { TiWeatherPartlySunny} from 'react-icons/ti';
 
 
 
@@ -142,7 +143,8 @@ export class videoNews extends Component {
                                 </div>
                              
                                 <div className="WeatherParent">
-                                    <img src={require('../../components/image/cloudy.png')} />
+                                    {/* <img src={require('../../components/image/cloudy.png')} /> */}
+                                    <TiWeatherPartlySunny />
                                     <span className="odor">{MaxTemp}°</span>
                                     <span className="shono">{MinTemp}°</span>
                                 </div>
@@ -208,7 +210,7 @@ export class videoNews extends Component {
 export default videoNews
 
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
     const MainNews = await axios('http://3.15.205.212:1337/videos');
     // const AllNews = await axios(`https://biz-admin.herokuapp.com/posts`);
     const bunner1 = await axios(`http://3.15.205.212:1337/bunner-1-s`);
@@ -217,7 +219,7 @@ export async function getServerSideProps() {
     //  console.log(ctx.params.id,'heehehe')
     // let param = ctx.params.id
     return {
-        // revalidate: 1,
+        revalidate: 1,
         props: {
             allVideo: MainNews.data,
             bunner1: bunner1.data,

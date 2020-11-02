@@ -11,6 +11,7 @@ import axios from 'axios'
 import ReactGa from 'react-ga';
 import { useEffect } from 'react'
 import Business from '../../components/mainNews/business'
+import { TiWeatherPartlySunny} from 'react-icons/ti';
 
 
 var settings = {
@@ -134,7 +135,8 @@ export class news extends Component {
                                 </div>
                              
                                 <div className="WeatherParent">
-                                    <img src={require('../../components/image/cloudy.png')} />
+                                    {/* <img src={require('../../components/image/cloudy.png')} /> */}
+                                    <TiWeatherPartlySunny />
                                     <span className="odor">{MaxTemp}°</span>
                                     <span className="shono">{MinTemp}°</span>
                                 </div>
@@ -198,7 +200,7 @@ export class news extends Component {
 }
 export default news
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
     const MainNews = await axios('http://3.15.205.212:1337/posts');
     const bunner1 = await axios(`http://3.15.205.212:1337/bunner-1-s`);
     const Khansh = await axios(`https://monxansh.appspot.com/xansh.json?currency=USD|EUR|JPY|GBP|RUB|CNY|KRW`);

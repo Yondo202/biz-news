@@ -103,7 +103,7 @@ export default function Home(props) {
 }
 
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const allData = await axios(`http://3.15.205.212:1337/posts`);
   return {
     // revalidate: 1,
