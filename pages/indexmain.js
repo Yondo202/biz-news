@@ -223,12 +223,12 @@ export default function Home(props) {
 
 
 export async function getServerSideProps() {
-    const AllNews = await axios(`http://3.15.205.212:1337/posts`);
-    const bunner1 = await axios(`http://3.15.205.212:1337/bunner-1-s`);
-    const HomeVideos = await axios(`http://3.15.205.212:1337/videos`);
-    const bunner2 = await axios(`http://3.15.205.212:1337/Bunner-2`);
-    const Vbunner = await axios(`http://3.15.205.212:1337/video-bunner`);
-    const Vbunner2 = await axios(`http://3.15.205.212:1337/video-bunner-2`);
+    const AllNews = await axios(`http://3.15.183.116:1337/posts`);
+    const bunner1 = await axios(`http://3.15.183.116:1337/bunner-1-s`);
+    const HomeVideos = await axios(`http://3.15.183.116:1337/videos`);
+    const bunner2 = await axios(`http://3.15.183.116:1337/Bunner-2`);
+    const Vbunner = await axios(`http://3.15.183.116:1337/video-bunner`);
+    const Vbunner2 = await axios(`http://3.15.183.116:1337/video-bunner-2`);
     const Khansh = await axios(`https://monxansh.appspot.com/xansh.json?currency=USD|EUR|JPY|GBP|RUB|CNY|KRW`);
     const TsagAgaar = await axios(`https://api.openweathermap.org/data/2.5/weather?q=Ulaanbaatar,mn&APPID=${ApiKey}`);
     return {

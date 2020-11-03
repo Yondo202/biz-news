@@ -57,7 +57,7 @@ export default Home
 
 export const getStaticPaths = async () => {
   const allData = await axios.get(
-    `http://3.15.205.212:1337/videos`
+    `http://3.15.183.116:1337/videos`
   );
   const parks = allData.data;
 
@@ -70,9 +70,9 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async ({ params }) => {
   const VideoNews = await axios.get(
-    `http://3.15.205.212:1337/videos?slug=${params.slug}`
+    `http://3.15.183.116:1337/videos?slug=${params.slug}`
   );
-  const allData = await axios(`http://3.15.205.212:1337/videos`);
+  const allData = await axios(`http://3.15.183.116:1337/videos`);
   // console.log(VideoNews, 'дэдэдэдэ')
   return {
     revalidate: 1,

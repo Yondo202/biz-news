@@ -98,8 +98,6 @@ class footer extends Component {
                     <h5>© 2020. Powered By rete agency. All Right Reserved. Term and Condition | Privacy Policy</h5>
                 </div>
             </>
-
-
         );
     }
 }
