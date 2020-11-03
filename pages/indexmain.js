@@ -222,7 +222,7 @@ export default function Home(props) {
 }
 
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
     const AllNews = await axios(`http://3.15.183.116:1337/posts`);
     const bunner1 = await axios(`http://3.15.183.116:1337/bunner-1-s`);
     const HomeVideos = await axios(`http://3.15.183.116:1337/videos`);
