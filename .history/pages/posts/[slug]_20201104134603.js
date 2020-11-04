@@ -101,7 +101,7 @@ export default function Home(props) {
 
 
 
-export const getStaticPaths = async () => {
+export const getStaticPaths = async () => { 
   const allData = await axios.get(
     `http://3.15.183.116:1337/posts`
   );
@@ -124,6 +124,7 @@ export const getStaticProps = async ({ params }) => {
   const Vbunner2 = await axios(`http://3.15.183.116:1337/video-bunner-2`);
   // console.log(MainNews, 'дэдэдэдэ')
   return {
+    
     revalidate: 1,
     props: {
       big: MainNews.data[0],

@@ -255,6 +255,13 @@ export async function getStaticProps({params}) {
     const AllNews = await axios(`http://3.15.183.116:1337/posts`);
 
 
+    const AllNews = AllNews.data.find(
+        (route) =>
+          route.slug.current ===
+          (params.slug === undefined ? "/" : params.slug.join(""))
+      );
+
+
     const bunner1 = await axios(`http://3.15.183.116:1337/bunner-1-s`);
     const HomeVideos = await axios(`http://3.15.183.116:1337/videos`);
     const bunner2 = await axios(`http://3.15.183.116:1337/Bunner-2`);

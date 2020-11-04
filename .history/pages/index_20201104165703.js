@@ -224,9 +224,9 @@ export default function Home(props) {
 // export const getStaticPaths = async () => {
 //     const AllNews = await axios(`http://3.15.183.116:1337/posts`);
 
-//     const parks = AllNews.data;
+//     const parks = allData.data;
   
-//     const paths = parks.map((allDatas) => ({
+//     const paths = AllNews.map((allDatas) => ({
 //       params: { slug: allDatas.slug },
 //     }));
   
@@ -237,7 +237,7 @@ export async function getStaticPaths() {
     const AllNews = await axios.get(`http://3.15.183.116:1337/posts`);
   
     // Get the paths we want to pre-render based on routes
-    const paths = AllNews.data.map((route) => {
+    const paths = AllNews.map((route) => {
       const slug = route.slug.current;
       return {
         params: { slug: slug === "/" ? false : [slug] },
@@ -251,10 +251,8 @@ export async function getStaticPaths() {
   }
 
 
-export async function getStaticProps({params}) {
+export async function getStaticProps() {
     const AllNews = await axios(`http://3.15.183.116:1337/posts`);
-
-
     const bunner1 = await axios(`http://3.15.183.116:1337/bunner-1-s`);
     const HomeVideos = await axios(`http://3.15.183.116:1337/videos`);
     const bunner2 = await axios(`http://3.15.183.116:1337/Bunner-2`);

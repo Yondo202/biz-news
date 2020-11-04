@@ -101,7 +101,7 @@ export default function Home(props) {
 
 
 
-export const getStaticPaths = async () => {
+export const getStaticPaths = async () => { 
   const allData = await axios.get(
     `http://3.15.183.116:1337/posts`
   );
