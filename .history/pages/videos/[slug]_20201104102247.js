@@ -32,7 +32,7 @@ function Home(props) {
           <meta property="og:type" content="website" />
           <meta property="fb:app_id" content="2645260245750776" />
           <meta property="og:url" content={`https://bizi.mn/videos/${myRoute}`} />
-          <meta property="og:site_name" content="bizi.mn" />
+          <meta property="og:site_name" content="BIZI.mn" />
 
 
           <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"></link>

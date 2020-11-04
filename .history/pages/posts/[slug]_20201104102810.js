@@ -27,21 +27,20 @@ export default function Home(props) {
     <div>
       <Head>
         {props.big.map((el,i)=>{
-
+          <title>{props.big.title}</title>
+          <meta property="og:title" content={props.big.title} />
+          <meta name="description" content={props.big.title} />
+          <meta property="og:description" content={props.big.title} />
+          <meta property="og:image" content={props.big.image.url}></meta>
+          <meta property="og:type" content="website" />
+          <meta property="fb:app_id" content="2645260245750776" />
+          <meta property="og:url" content={`https://bizi.mn/posts/${myRoute}`} />
+          <meta property="og:site_name" content="BIZI" />
         })}
-        <title>{props.big.title}</title>
-        <meta property="og:title" content={props.big.title} />
-        <meta name="description" content={props.big.title} />
-        <meta property="og:description" content={props.big.title} />
-        <meta property="og:image" content={props.big.image.url}></meta>
-        <meta property="og:type" content="website" />
-        <meta property="fb:app_id" content="2645260245750776" />
-        <meta property="og:url" content={`https://bizi.mn/posts/${myRoute}`} />
-        <meta property="og:site_name" content="bizi.mn" />
-        <meta property="og:image:secure_url" content={props.big.image.url}></meta>
-
+       
         {/* <meta property="og:image" content={props.big.image.url}></meta> */}
         {/* <meta property="og:image" content={`%PUBLIC_URL%/${props.big.image.url}`}></meta> */}
+        {/* <meta property="og:image:secure_url" content={props.big.image.url}></meta> */}
         {/* <meta property="og:image" content={imageURL !== '' ? `${props.big.image.url}` : ''} /> */}
 
 

@@ -10,8 +10,8 @@ import Link from 'next/link';
 import axios from 'axios'
 import ReactGa from 'react-ga';
 import { useEffect } from 'react'
+import Business from '../../components/mainNews/business'
 import { TiWeatherPartlySunny} from 'react-icons/ti';
-import Conversation from '../../components/mainNews/conversation'
 
 
 var settings = {
@@ -79,7 +79,7 @@ export class news extends Component {
                     <meta property="og:type" content="website" />
                     <meta property="fb:app_id" content="2645260245750776" />
                     <meta property="og:url" content={`https://bizi.mn/posts`} />
-                    <meta property="og:site_name" content="bizi.mn" />
+                    <meta property="og:site_name" content="BIZI.mn" />
                     <link rel="icon" href="/business.png" />
                     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"></link>
                     <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
@@ -146,7 +146,7 @@ export class news extends Component {
                                     </div>
                                     <div className="icons">
                                         <Link href='https://www.facebook.com/www.bizi.mn' target="_blank" >
-                                                <GrFacebookOption />
+                                                    <GrFacebookOption />
                                         </Link>
                                         <AiOutlineTwitter />
                                         <AiOutlineGooglePlus />
@@ -191,7 +191,7 @@ export class news extends Component {
                 </div>
 
                 <Layout AllNews={this.props.allPost}>
-                    <Conversation allPost={this.props.allPost} />
+                    <Business allPost={this.props.allPost} />
                 </Layout>
             </>
 
@@ -215,8 +215,6 @@ export async function getStaticProps() {
             Khansh: Khansh.data,
             TsagAgaar: TsagAgaar.data
         }
-        // revalidate: 1
-    }
-}
-
+    // revalidate: 1
+}}
 
