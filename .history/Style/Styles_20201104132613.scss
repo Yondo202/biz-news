@@ -6082,7 +6082,7 @@ $rhap_font-family: inherit !default;
           }
         }
         .WeatherParent{
-          background-color: #2c2e30;
+          background-color: #1b1c1d;
           padding: 6px 10px;
           color: white;
           font-size: 14px;
@@ -6111,11 +6111,6 @@ $rhap_font-family: inherit !default;
               font-size: 13px;
             }
           }
-          .icons{
-            svg{
-              font-size: 20px;
-            }
-          }
         }
       }
     }}
@@ -6128,7 +6123,7 @@ $rhap_font-family: inherit !default;
     }
   }
   .container-fluid{
-    width: 87% !important;
+    width: 85% !important;
   }
 }
 @media only screen and (max-width: 1300px){

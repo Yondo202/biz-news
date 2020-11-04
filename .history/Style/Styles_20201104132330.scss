@@ -6105,18 +6105,6 @@ $rhap_font-family: inherit !default;
             font-size: 13px;
           }
         }
-        .icons{
-          .date{
-            span{
-              font-size: 13px;
-            }
-          }
-          .icons{
-            svg{
-              font-size: 20px;
-            }
-          }
-        }
       }
     }}
   .BackMainNewsPar{
@@ -6128,7 +6116,7 @@ $rhap_font-family: inherit !default;
     }
   }
   .container-fluid{
-    width: 87% !important;
+    width: 85% !important;
   }
 }
 @media only screen and (max-width: 1300px){

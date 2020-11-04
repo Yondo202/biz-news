@@ -200,7 +200,7 @@ export class news extends Component {
 }
 export default news
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     const MainNews = await axios('http://3.15.183.116:1337/posts');
     const bunner1 = await axios(`http://3.15.183.116:1337/bunner-1-s`);
     const Khansh = await axios(`https://monxansh.appspot.com/xansh.json?currency=USD|EUR|JPY|GBP|RUB|CNY|KRW`);
@@ -208,7 +208,7 @@ export async function getStaticProps() {
     //  console.log(ctx.params.id,'heehehe')
     // let param = ctx.params.id
     return {
-        revalidate: 1,
+        // revalidate: 1,
         props: {
             allPost: MainNews.data,
             bunner1: bunner1.data,

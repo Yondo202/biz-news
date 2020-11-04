@@ -208,7 +208,7 @@ export async function getStaticProps() {
     //  console.log(ctx.params.id,'heehehe')
     // let param = ctx.params.id
     return {
-        revalidate: 1,
+        // revalidate: 1,
         props: {
             allPost: MainNews.data,
             bunner1: bunner1.data,

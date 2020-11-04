@@ -21,7 +21,6 @@ function Home(props) {
   return (
     <div>
       <div>
-
         <Head>
           <title>{props.big.title}</title>
           <link rel="icon" href="/business.png" />
