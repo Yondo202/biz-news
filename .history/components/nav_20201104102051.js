@@ -16,7 +16,7 @@ function Nav(props) {
         {
             id: 1,
             name: "Нүүр",
-            to: "/",
+            to: "/indexmain",
             className: "lineActive"
         },
         {
