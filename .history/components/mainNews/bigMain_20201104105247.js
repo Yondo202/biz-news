@@ -85,12 +85,12 @@ function bigMain(props) {
                              <h2 >{slugData.title}</h2>
                                 <div className={classNameBtn}>
                                     <div className="ProfileCon">
-                                        <img src={`${slugData.NiitlegchZurag.url}`} alt="myImageHere"></img>
+                                        <img src={require('../image/103804281_10220809760368036_8805337625036517462_n.jpg')} alt="myImageHere"></img>
                                         <div className="textPar">
                                             <span className="Name">{slugData.niitlegchNer}</span>
                                             <div className="other">
                                                 <span className="filter">{slugData.filter}</span>
-                                                {/* <span className="filter2">Ярилцлага</span> */}
+                                                <span className="filter2">{slugData.NiitlegchZurag}</span>
                                                 <span className="date">{slugData.date}</span>
                                             </div>
                                         </div>
