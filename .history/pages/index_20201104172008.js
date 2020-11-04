@@ -253,6 +253,21 @@ export default function Home(props) {
 
 export async function getStaticProps({params}) {
     const AllNews = await axios(`http://3.15.183.116:1337/posts`);
+
+    let slug;
+    if (Array.isArray(params.slug)) {
+      if (params.slug.length === 1 && params.slug[0] === "index") {
+        slug = "/";
+      } else {
+        slug = params.slug.join("");
+      }
+    } else {
+      slug = "/";
+    }
+
+    const AllNews2 = AllNews.find((route) => route.slug.current === slug);
+
+
     const bunner1 = await axios(`http://3.15.183.116:1337/bunner-1-s`);
     const HomeVideos = await axios(`http://3.15.183.116:1337/videos`);
     const bunner2 = await axios(`http://3.15.183.116:1337/Bunner-2`);
@@ -263,7 +278,7 @@ export async function getStaticProps({params}) {
     return {
         revalidate: 1,
         props: {
-            AllNews: AllNews.data,
+            AllNews: AllNews2.data,
             HomeVideos: HomeVideos.data,
             bunner1: bunner1.data,
             bunner2: bunner2.data,

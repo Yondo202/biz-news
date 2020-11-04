@@ -1,8 +1,8 @@
 import Head from 'next/head'
-import Layout from '../components/Layout'
-import HomePar from '../components/home'
+import Layout from '../../components/Layout'
+import HomePar from '../../components/home'
 import axios from 'axios'
-import OtherNav from '../components/otherNav'
+import OtherNav from '../../components/otherNav'
 import { Container, Row, Col } from 'react-bootstrap'
 import { GrFacebookOption } from 'react-icons/gr';
 import { AiOutlineTwitter, AiOutlineGooglePlus, AiFillInstagram } from 'react-icons/ai';
@@ -253,6 +253,11 @@ export default function Home(props) {
 
 export async function getStaticProps({params}) {
     const AllNews = await axios(`http://3.15.183.116:1337/posts`);
+
+  
+
+
+
     const bunner1 = await axios(`http://3.15.183.116:1337/bunner-1-s`);
     const HomeVideos = await axios(`http://3.15.183.116:1337/videos`);
     const bunner2 = await axios(`http://3.15.183.116:1337/Bunner-2`);
