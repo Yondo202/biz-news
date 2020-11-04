@@ -229,8 +229,8 @@ export async function getStaticProps() {
     const bunner2 = await axios(`http://3.15.183.116:1337/Bunner-2`);
     const Vbunner = await axios(`http://3.15.183.116:1337/video-bunner`);
     const Vbunner2 = await axios(`http://3.15.183.116:1337/video-bunner-2`);
-    const Khansh = await axios(`https://monxansh.appspot.com/xansh.json?currency=USD|EUR|JPY|GBP|RUB|CNY|KRW`);
-    const TsagAgaar = await axios(`https://api.openweathermap.org/data/2.5/weather?q=Ulaanbaatar,mn&APPID=${ApiKey}`);
+    // const Khansh = await axios(`https://monxansh.appspot.com/xansh.json?currency=USD|EUR|JPY|GBP|RUB|CNY|KRW`);
+    // const TsagAgaar = await axios(`https://api.openweathermap.org/data/2.5/weather?q=Ulaanbaatar,mn&APPID=${ApiKey}`);
     return {
         revalidate: 1,
         props: {
@@ -240,12 +240,21 @@ export async function getStaticProps() {
             bunner2: bunner2.data,
             Vbunner : Vbunner.data,
             Vbunner2: Vbunner2.data,
+            // Khansh: Khansh.data,
+            // TsagAgaar: TsagAgaar.data
+        }
+    }
+}
+export async function getServerSideProps() {
+    const Khansh = await axios(`https://monxansh.appspot.com/xansh.json?currency=USD|EUR|JPY|GBP|RUB|CNY|KRW`);
+    const TsagAgaar = await axios(`https://api.openweathermap.org/data/2.5/weather?q=Ulaanbaatar,mn&APPID=${ApiKey}`);
+    return {
+        props: {
             Khansh: Khansh.data,
             TsagAgaar: TsagAgaar.data
         }
     }
 }
-
 
 
 

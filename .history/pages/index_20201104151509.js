@@ -243,11 +243,9 @@ export async function getStaticProps() {
             Khansh: Khansh.data,
             TsagAgaar: TsagAgaar.data
         }
+        
     }
 }
-
-
-
 
 
 
