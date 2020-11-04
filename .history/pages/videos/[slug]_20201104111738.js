@@ -27,7 +27,7 @@ function Home(props) {
           <link rel="icon" href="/business.png" />
           <meta property="og:title" content={props.big.title} />
           <meta name="description" content={props.big.desc2} />
-          <meta property="og:description" content={props.big.desc2} />
+          <meta property="og:description" content={props.big.title} />
           <meta property="og:image" content={props.big.image.url}></meta>
           <meta property="og:type" content="website" />
           <meta property="fb:app_id" content="2645260245750776" />
