@@ -103,7 +103,7 @@ export class HomeVideo extends Component {
                                             <TwitterIcon size={30} ></TwitterIcon>
                                         </TwitterShareButton>
 
-                                        <EmailShareButton url={`https://bizi.mn/${big.path}/${big.slug}`} style={{ width: 50, height: 50 }} >
+                                        <EmailShareButton url={`https://biznet-news.vercel.app/${big.path}/${big.slug}`} style={{ width: 50, height: 50 }} >
                                             <EmailIcon size={30} ></EmailIcon>
                                         </EmailShareButton>
                                     </div>

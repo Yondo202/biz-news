@@ -98,11 +98,11 @@ function bigMain(props) {
                                     <div className="ButtonsPAr">
                                         <FacebookShareButton  imageURL={slugData.image.url} title="hahaha" media={slugData.image.url} resetButtonStyle={true} url={`https://bizi.mn/${slugData.path}/${slugData.slug}`} style={{ width: 50, height: 50 }} >
                                             <FacebookIcon />
-                                            <FacebookShareCount url={`https://bizi.mn/${slugData.path}/${slugData.slug}`}>
+                                            <FacebookShareCount url={`https://biznet-news.vercel.app/${slugData.path}/${slugData.slug}`}>
                                                 {shareCount => <h1 className="myShareCountWrapper">{shareCount}</h1>}
                                             </FacebookShareCount>
                                         </FacebookShareButton>
-                                        <TwitterShareButton   media={slugData.image.url} resetButtonStyle={true} url={`https://bizi.mn/${slugData.path}/${slugData.slug}`} style={{ width: 50, height: 50 }} >
+                                        <TwitterShareButton   media={slugData.image.url} resetButtonStyle={true} url={`https://biznet-news.vercel.app/${slugData.path}/${slugData.slug}`} style={{ width: 50, height: 50 }} >
                                             <TwitterIcon   ></TwitterIcon>
                                         </TwitterShareButton>
                                     </div>

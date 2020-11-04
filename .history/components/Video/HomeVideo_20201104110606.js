@@ -94,16 +94,16 @@ export class HomeVideo extends Component {
                                     <div className="shareParents">
                                         <FacebookShareButton url={`https://bizi.mn/${big.path}/${big.slug}`} style={{ width: 50, height: 50 }} >
                                             <FacebookIcon size={30} ></FacebookIcon>
-                                            <FacebookShareCount url={`https://bizi.mn/${big.path}/${big.slug}`}>
+                                            <FacebookShareCount url={`https://biznet-news.vercel.app/${big.path}/${big.slug}`}>
                                                 {shareCount => <h1 className="myShareCountWrapper">{shareCount}</h1>}
                                             </FacebookShareCount>
                                         </FacebookShareButton>
 
-                                        <TwitterShareButton url={`https://bizi.mn/${big.path}/${big.slug}`} style={{ width: 50, height: 50 }} >
+                                        <TwitterShareButton url={`https://biznet-news.vercel.app/${big.path}/${big.slug}`} style={{ width: 50, height: 50 }} >
                                             <TwitterIcon size={30} ></TwitterIcon>
                                         </TwitterShareButton>
 
-                                        <EmailShareButton url={`https://bizi.mn/${big.path}/${big.slug}`} style={{ width: 50, height: 50 }} >
+                                        <EmailShareButton url={`https://biznet-news.vercel.app/${big.path}/${big.slug}`} style={{ width: 50, height: 50 }} >
                                             <EmailIcon size={30} ></EmailIcon>
                                         </EmailShareButton>
                                     </div>
