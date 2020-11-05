@@ -263,7 +263,7 @@ const testReq = `
 
 export async function getStaticProps() {
     const AllNews = await axios(`http://3.15.183.116:1337/posts`);
-    // const test = await axios.post('http://localhost:1337/graphql', {query: `query ${testReq}`})
+    const test = await axios.post('http://localhost:1337/graphql', {query: `query ${testReq}`})
     const bunner1 = await axios(`http://3.15.183.116:1337/bunner-1-s`);
     const HomeVideos = await axios(`http://3.15.183.116:1337/videos`);
     const bunner2 = await axios(`http://3.15.183.116:1337/Bunner-2`);
@@ -274,8 +274,7 @@ export async function getStaticProps() {
     return {
         revalidate: 1,
         props: {
-            // AllNews: test.data.data.posts,
-            AllNews: AllNews.data,
+            AllNews: test.data.data.posts,
             HomeVideos: HomeVideos.data,
             bunner1: bunner1.data,
             bunner2: bunner2.data,

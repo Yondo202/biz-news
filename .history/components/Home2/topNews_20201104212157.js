@@ -62,18 +62,18 @@ export class topNews extends Component {
                                                     {myData1[0].date}
                                                 </span>
                                             </div>
-                                            {/* <div className="SeeCount">
+                                            <div className="SeeCount">
                                                 <AiOutlineEye />
                                                 <span>
                                                     {this.state.count}
                                                 </span>
-                                            </div> */}
-                                            {/* <div className="comments">
+                                            </div>
+                                            <div className="comments">
                                                 <FaRegComment />
                                                 <span>
                                                     5
                                             </span>
-                                            </div> */}
+                                            </div>
 
                                         </div>
                                     </div>
@@ -103,7 +103,7 @@ export class topNews extends Component {
                                                     {myData2[0].date}
                                                 </span>
                                             </div>
-                                            {/* <div className="SeeCount">
+                                            <div className="SeeCount">
                                                 <AiOutlineEye />
                                                 <span>
                                                     185
@@ -114,7 +114,7 @@ export class topNews extends Component {
                                                 <span>
                                                     5
                                             </span>
-                                            </div> */}
+                                            </div>
 
                                         </div>
                                     </div>
@@ -141,7 +141,7 @@ export class topNews extends Component {
                                                     {myData3[0].date}
                                                 </span>
                                             </div>
-                                            {/* <div className="SeeCount">
+                                            <div className="SeeCount">
                                                 <AiOutlineEye />
                                                 <span>
                                                     185
@@ -152,7 +152,7 @@ export class topNews extends Component {
                                                 <span>
                                                     5
                                             </span>
-                                            </div> */}
+                                            </div>
 
                                         </div>
                                     </div>

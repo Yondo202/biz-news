@@ -62,12 +62,12 @@ export class topNews extends Component {
                                                     {myData1[0].date}
                                                 </span>
                                             </div>
-                                            {/* <div className="SeeCount">
+                                            <div className="SeeCount">
                                                 <AiOutlineEye />
                                                 <span>
                                                     {this.state.count}
                                                 </span>
-                                            </div> */}
+                                            </div>
                                             {/* <div className="comments">
                                                 <FaRegComment />
                                                 <span>

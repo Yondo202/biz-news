@@ -308,8 +308,8 @@ export class BetweenNews extends Component {
                                                             <AiOutlineEye />
                                                             <span>
                                                                 185
-                                                     </span>
-                                                        </div> */}
+                                                     </span> */}
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </Col>

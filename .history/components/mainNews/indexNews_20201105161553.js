@@ -61,12 +61,12 @@ export class indexNews extends Component {
                                                             {el.date}
                                                         </span>
                                                     </div>
-                                                    {/* <div className="SeeCount">
+                                                    <div className="SeeCount">
                                                         <AiOutlineEye />
                                                         <span>
                                                             185
                                                     </span>
-                                                    </div> */}
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>

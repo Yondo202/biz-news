@@ -65,6 +65,7 @@ export default function Home(props) {
 
     const [weatherData, setweatherData] = useState(null);
 
+
    useEffect(() => {
         ReactGa.initialize('UA-180671141-1')
         ReactGa.pageview(window.location.pathname + window.location.search)
@@ -249,21 +250,9 @@ export default function Home(props) {
 //     };
 //   }
 
-const testReq = `
-{
-    posts {
-    title
-    date
-    image{url}
-    slug
-    filter
-  }
-}
-`
 
 export async function getStaticProps() {
     const AllNews = await axios(`http://3.15.183.116:1337/posts`);
-    // const test = await axios.post('http://localhost:1337/graphql', {query: `query ${testReq}`})
     const bunner1 = await axios(`http://3.15.183.116:1337/bunner-1-s`);
     const HomeVideos = await axios(`http://3.15.183.116:1337/videos`);
     const bunner2 = await axios(`http://3.15.183.116:1337/Bunner-2`);
@@ -274,7 +263,6 @@ export async function getStaticProps() {
     return {
         revalidate: 1,
         props: {
-            // AllNews: test.data.data.posts,
             AllNews: AllNews.data,
             HomeVideos: HomeVideos.data,
             bunner1: bunner1.data,
@@ -282,7 +270,7 @@ export async function getStaticProps() {
             Vbunner : Vbunner.data,
             Vbunner2: Vbunner2.data,
             Khansh: Khansh.data,
-            TsagAgaar: TsagAgaar.data,
+            TsagAgaar: TsagAgaar.data
         }
     }
 }
