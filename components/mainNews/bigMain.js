@@ -63,12 +63,12 @@ function bigMain(props) {
         console.log('lalalall', window.pageYOffset)
     }
     const slugData = props.big
-    console.log(slugData, 'this my slug data')
+    // console.log(slugData, 'this my slug data')
 
-      const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fbiznet-news.vercel.app%2Fposts%2F${slugData.slug}`;
-      const twitterUrl = `https://twitter.com/intent/tweet?url=${slugData.slug}`;
+      const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fbizi.mn%2Fposts%2F${slugData.slug}`;
+      const twitterUrl = `https://twitter.com/intent/tweet?url=bizi.mn/posts/${slugData.slug}`;
     return (
-                    <Col md={9}>
+            <Col md={9}>
                 <div className={className}>
                     <Link href="/">
                         <img src={require('../image/logo.png')} alt="myImageHere"></img>
@@ -119,10 +119,10 @@ function bigMain(props) {
                                                 share
                                             </span> */}
                                             <a className={itemClass} href={facebookUrl} target="_blank">
-                                                <GrFacebookOption />
+                                                <GrFacebookOption target="_blank" />
                                             </a>
                                             <a className={itemClass} href={twitterUrl} target="_blank">
-                                                <AiOutlineTwitter />
+                                                <AiOutlineTwitter target="_blank" />
                                             </a>
                                     </div>
                                            
@@ -140,120 +140,3 @@ function bigMain(props) {
 
 export default bigMain;
 
-
-
-
-
-
-// export class bigMain extends Component {
-//     constructor(props) {
-//         super(props)
-
-//         this.state = {
-//             className: "shareBtnPar2",
-//             color: 'white',
-//             className2: 'ScrollHead2'
-//         }
-//     }
-
-
-
-//     componentDidMount() {
-//         window.addEventListener("scroll", this.handleScroll);
-//     }
-
-//     handleScroll = () => {
-//         if (window.pageYOffset > 100) {
-//             this.setState({ className: "shareBtnPar" });
-//             this.setState({ className2: "ScrollHead" });
-
-//         } else {
-//             this.setState({ className: "shareBtnPar2" });
-//             this.setState({ className2: "ScrollHead2" });
-
-//         }
-//         console.log('lalalall', window)
-//     }
-
-//     render() {
-//         console.log(this.props.big, 'hiahia big big big')
-//         console.log(this.props.small, 'small hehe')
-//         const slugData = this.props.big
-
-
-
-//         // const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
-//         // const twitterUrl = `https://twitter.com/intent/tweet?url=${url}`;
-//         // const linkedinUrl = `https://www.linkedin.com/shareArticle?mini=true&url=${url}`;
-//         return (
-//             <Col md={8}>
-//                 <div className={this.state.className2}>
-//                     <Link href="/">
-//                         <img src={require('../image/logo.png')} alt="myImageHere"></img>
-//                     </Link>
-//                     <div className="Line"></div>
-//                     <div className="TitlePar">
-//                         "{slugData.title}"
-//                     </div>
-//                 </div>
-//                 <motion.div initial="exit" animate="enter" exit="exit">
-//                     <motion.div variants={textVariants}>
-//                         <div className="mainCon">
-//                             <div className="title">
-                            
-//                              <h2 >{slugData.title}</h2>
-                          
-//                                 <div className={this.state.className}>
-//                                     <div className="ProfileCon">
-//                                         <img src={require('../image/103804281_10220809760368036_8805337625036517462_n.jpg')} alt="myImageHere"></img>
-//                                         <div className="textPar">
-//                                             <span className="Name">Д.Цацрал</span>
-//                                             <div className="other">
-//                                                 <span className="filter">{slugData.filter}</span>
-//                                                 <span className="filter2">Ярилцлага</span>
-//                                                 <span className="date">{slugData.date}</span>
-//                                             </div>
-//                                         </div>
-//                                     </div>
-//                                     <div className="ButtonsPAr">
-//                                         <FacebookShareButton  imageURL={slugData.image.url} title="hahaha" media={slugData.image.url} resetButtonStyle={true} url={`https://biznet-news.vercel.app/${slugData.path}/${slugData.slug}`} style={{ width: 50, height: 50 }} >
-//                                             <FacebookIcon />
-//                                             <FacebookShareCount url={`https://biznet-news.vercel.app/${slugData.path}/${slugData.slug}`}>
-//                                                 {shareCount => <h1 className="myShareCountWrapper">{shareCount}</h1>}
-//                                             </FacebookShareCount>
-//                                         </FacebookShareButton>
-//                                         <TwitterShareButton   media={slugData.image.url} resetButtonStyle={true} url={`https://biznet-news.vercel.app/${slugData.path}/${slugData.slug}`} style={{ width: 50, height: 50 }} >
-//                                             <TwitterIcon   ></TwitterIcon>
-//                                         </TwitterShareButton>
-//                                     </div>
-//                                 </div>
-//                                 {/* <div className="linePAr">
-//                                     <div className="line"></div>
-//                                     <div className="line2"></div>
-//                                 </div> */}
-//                                 <img src={`${slugData.image.url}`} alt="myImageHere" />
-//                                 <HighlightPop popoverItems={itemClass => (
-//                                     <div>
-//                                             <span 
-//                                                 className={itemClass} onClick={() => alert('sharing')}>
-//                                                 share
-//                                             </span>
-//                                             {/* <a href={facebookUrl}>
-//                                                 click em
-//                                             </a> */}
-//                                     </div>
-                                           
-//                                         )}>
-//                                 <div className="content sun-editor-editable sun-editor">{huwirgagch.parse(slugData.desc)}</div>
-
-//                                 </HighlightPop>
-//                             </div>
-//                         </div>
-//                     </motion.div>
-//                 </motion.div>
-//             </Col>
-//         )
-//     }
-// }
-
-// export default bigMain
